@@ -4,10 +4,17 @@ import React, { useState, useEffect, useRef } from "react";
 import { Container /*, Nav */, Navbar } from "react-bootstrap";
 // import { LinkContainer } from "react-router-bootstrap";
 
+// TODO: move this to an utils file
+const scrollToTop = () => {
+  document.documentElement.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+};
+
 const NavbarComponent: React.FC = () => {
   const [expanded, setExpanded] = useState<boolean>(false);
-
-  // const { pathname } = useLocation();
 
   const navbarRef = useRef<HTMLDivElement>(null);
 
@@ -37,11 +44,7 @@ const NavbarComponent: React.FC = () => {
 
   const handleLogoClick = () => {
     closeNavbarDropdown();
-    document.documentElement.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
+    scrollToTop();
   };
 
   return (
@@ -53,27 +56,24 @@ const NavbarComponent: React.FC = () => {
         expanded={expanded}
         ref={navbarRef as React.RefObject<HTMLDivElement>}
       >
-        {/*
-        Use key={pathname} to force the update of the component make links have correct classes
-        https://github.com/react-bootstrap/react-router-bootstrap/issues/242#issuecomment-613761912
-      */}
-        <Container /* key={pathname} */>
+        <Container>
           <Navbar.Brand onClick={handleLogoClick} className="py-0">
             CaneGattoStivali
           </Navbar.Brand>
+          {/* TODO: add here a button to toggle dark-light theme */}
           {/* <Navbar.Toggle
             aria-controls="navbar-collpsable"
             onClick={toggleNavbarDropdownStatus}
           />
           <Navbar.Collapse onClick={closeNavbarDropdown} id="navbar-collpsable">
             <Nav className="ms-auto">
-              <LinkContainer to={`/${language}/`}>
+              <LinkContainer to={`/one`}>
                 <Nav.Link>Link One</Nav.Link>
               </LinkContainer>
-              <LinkContainer to={`/${language}/`}>
+              <LinkContainer to={`/two`}>
                 <Nav.Link>Link Two</Nav.Link>
               </LinkContainer>
-              <LinkContainer to={`/${language}/`}>
+              <LinkContainer to={`/three`}>
                 <Nav.Link>Link Three</Nav.Link>
               </LinkContainer>
             </Nav>
