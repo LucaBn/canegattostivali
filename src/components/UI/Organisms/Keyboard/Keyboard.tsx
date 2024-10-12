@@ -4,7 +4,7 @@ import { Button, Container, Row, Col } from "react-bootstrap";
 const keys: string[][] = [
   ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
   ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
-  ["INVIO", "Z", "X", "C", "V", "B", "N", "M", "DEL"],
+  ["INVIO", "Z", "X", "C", "V", "B", "N", "M", "DEL"], // TODO: put delete icon instead of "DEL"
 ];
 
 interface KeyboardProps {
