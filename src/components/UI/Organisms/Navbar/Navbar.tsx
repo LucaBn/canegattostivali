@@ -4,6 +4,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { Container /*, Nav */, Navbar } from "react-bootstrap";
 // import { LinkContainer } from "react-router-bootstrap";
 
+// Constants
+import { APP_NAME } from "@/constants/app";
+
 // TODO: move this to an utils file
 const scrollToTop = () => {
   document.documentElement.scrollTo({
@@ -58,7 +61,7 @@ const NavbarComponent: React.FC = () => {
       >
         <Container>
           <Navbar.Brand onClick={handleLogoClick} className="py-0">
-            CaneGattoStivali
+            {APP_NAME}
           </Navbar.Brand>
           {/* TODO: add here a button to toggle dark-light theme */}
           {/* <Navbar.Toggle

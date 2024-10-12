@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 // Components
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
+import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
 
 const wordData = [
   {
@@ -52,6 +53,19 @@ const HomePage: React.FC = () => {
     setScore(100);
   };
 
+  const handleKeyPress = (key: string) => {
+    if (key === "ENTER") {
+      // TODO: submit
+    } else if (key === "DEL") {
+      if (guessedWord.length) {
+        const guessedWordWithoutLastLetter = guessedWord.slice(0, -1);
+        setGuessedWord(guessedWordWithoutLastLetter);
+      }
+    } else {
+      setGuessedWord(guessedWord + key);
+    }
+  };
+
   return (
     <Container className="mt-5">
       <Row>
@@ -100,6 +114,9 @@ const HomePage: React.FC = () => {
             </Card.Body>
           </Card>
         </Col>
+      </Row>
+      <Row>
+        <Keyboard onKeyPress={handleKeyPress} />
       </Row>
     </Container>
   );
