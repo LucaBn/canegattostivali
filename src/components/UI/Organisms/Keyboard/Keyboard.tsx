@@ -1,5 +1,10 @@
 import React from "react";
+
+// Components
 import { Button, Container, Row, Col } from "react-bootstrap";
+
+// Types
+import { ButtonVariant } from "react-bootstrap/esm/types";
 
 const keys: string[][] = [
   ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
@@ -12,8 +17,22 @@ interface KeyboardProps {
 }
 
 const Keyboard: React.FC<KeyboardProps> = ({ onKeyPress }) => {
-  const handleKeyClick = (key: string) => {
+  const handleKeyClick = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    key: string
+  ) => {
+    e.currentTarget.blur();
     onKeyPress(key);
+  };
+
+  const getButtonVariant = (key: string): ButtonVariant => {
+    if (key === "INVIO") {
+      return "success";
+    } else if (key === "DEL") {
+      return "danger";
+    } else {
+      return "secondary";
+    }
   };
 
   return (
@@ -26,8 +45,8 @@ const Keyboard: React.FC<KeyboardProps> = ({ onKeyPress }) => {
           {row.map((key) => (
             <Col xs="auto" key={key} className="mb-1 p-0">
               <Button
-                variant="secondary"
-                onClick={() => handleKeyClick(key)}
+                variant={getButtonVariant(key)}
+                onClick={(e) => handleKeyClick(e, key)}
                 className="keyboard__btn p-1"
               >
                 {key}
