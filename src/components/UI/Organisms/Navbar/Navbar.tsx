@@ -1,8 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 
 // Components
-import { Container /*, Nav */, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 // import { LinkContainer } from "react-router-bootstrap";
+
+// Hook
+import { useTheme } from "@/components/providers/ThemeProvider";
+
+// Typings
+import { ThemeList } from "@/constants/themes";
 
 // Constants
 import { APP_NAME } from "@/constants/app";
@@ -21,6 +27,8 @@ const NavbarComponent: React.FC = () => {
 
   const navbarRef = useRef<HTMLDivElement>(null);
 
+  const { changeTheme } = useTheme();
+
   const handleOutsideClick = (event: MouseEvent) => {
     if (
       navbarRef.current &&
@@ -37,9 +45,9 @@ const NavbarComponent: React.FC = () => {
     };
   }, []);
 
-  // const toggleNavbarDropdownStatus = () => {
-  //   setExpanded((prevValue) => !prevValue);
-  // };
+  const toggleNavbarDropdownStatus = () => {
+    setExpanded((prevValue) => !prevValue);
+  };
 
   const closeNavbarDropdown = () => {
     setExpanded(false);
@@ -63,14 +71,19 @@ const NavbarComponent: React.FC = () => {
           <Navbar.Brand onClick={handleLogoClick} className="py-0">
             {APP_NAME}
           </Navbar.Brand>
-          {/* TODO: add here a button to toggle dark-light theme */}
-          {/* <Navbar.Toggle
+          <Navbar.Toggle
             aria-controls="navbar-collpsable"
             onClick={toggleNavbarDropdownStatus}
           />
           <Navbar.Collapse onClick={closeNavbarDropdown} id="navbar-collpsable">
-            <Nav className="ms-auto">
-              <LinkContainer to={`/one`}>
+            <Nav className="ms-auto gap-1">
+              <Button onClick={() => changeTheme("light" as ThemeList)}>
+                Light
+              </Button>
+              <Button onClick={() => changeTheme("dark" as ThemeList)}>
+                Dark
+              </Button>
+              {/* <LinkContainer to={`/one`}>
                 <Nav.Link>Link One</Nav.Link>
               </LinkContainer>
               <LinkContainer to={`/two`}>
@@ -78,9 +91,9 @@ const NavbarComponent: React.FC = () => {
               </LinkContainer>
               <LinkContainer to={`/three`}>
                 <Nav.Link>Link Three</Nav.Link>
-              </LinkContainer>
+              </LinkContainer> */}
             </Nav>
-          </Navbar.Collapse> */}
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </>

@@ -1,23 +1,41 @@
-import React, { useEffect, useState, useCallback } from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
+
+// Components
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
 
-const wordData = [
-  {
-    word: "GATTO",
-    clues: ["BAFFI", "CODA", "STIVALI"],
-  },
-];
+// Constants
+import { wordList as originalWordList } from "@/constants/wordList";
+
+// Utils
+import { shuffle } from "@/utils/array";
+import { getRandomIntInclusive } from "@/utils/number";
+
+const initialIndex = getRandomIntInclusive(0, originalWordList.length - 1);
 
 const HomePage: React.FC = () => {
-  const [currentWordIndex] = useState<number>(0);
+  const [wordList, setWordList] = useState(originalWordList);
+  const [currentWordIndex, setCurrentWordIndex] =
+    useState<number>(initialIndex);
   const [guessedWord, setGuessedWord] = useState<string>("");
+  const [previousGuessedWords, setPreviousGuessedWords] = useState<string[]>(
+    []
+  );
   const [guessedWordButtonVariant, setGuessedWordButtonVariant] = useState<
     string[]
   >([]);
   const [message, setMessage] = useState<string>("");
 
-  const { word, clues } = wordData[currentWordIndex];
+  const { word, clues, previousWord } = wordList[currentWordIndex];
+
+  const shuffledSlicedClues = useMemo(() => {
+    const shuffledClues = shuffle(clues);
+    const centralWord =
+      previousGuessedWords.length === 0
+        ? shuffle(previousWord)[0]
+        : previousGuessedWords[previousGuessedWords.length - 1];
+    return [shuffledClues[0], centralWord, shuffledClues[1]];
+  }, [currentWordIndex]);
 
   const handleKeyPress = useCallback(
     (key: string) => {
@@ -28,9 +46,20 @@ const HomePage: React.FC = () => {
 
       if (key === "INVIO") {
         if (guessedWord.length === word.length) {
-          setMessage(
-            guessedWord === word ? "Corretto!" : "Prova un'altra parola!"
-          );
+          if (guessedWord === word) {
+            setPreviousGuessedWords((prevValue) => [...prevValue, guessedWord]);
+            setMessage("Corretto!");
+
+            // TODO: disable writing event here
+            setTimeout(() => {
+              setWordList((prevValue) =>
+                prevValue.filter((wordObj) => wordObj.word !== guessedWord)
+              );
+              goToNextWord(guessedWord);
+            }, 1000);
+          } else {
+            setMessage("Prova un'altra parola!");
+          }
         }
         return;
       }
@@ -41,6 +70,23 @@ const HomePage: React.FC = () => {
     },
     [guessedWord, word]
   );
+
+  const goToNextWord = (previousWord: string) => {
+    const validNewWordList = wordList.filter((wordObj) =>
+      wordObj.previousWord.includes(previousWord)
+    );
+    if (validNewWordList.length) {
+      const shuffledWordList = shuffle(validNewWordList);
+      const wordToGuessIndex = wordList.findIndex(
+        (wordObj) => wordObj.word === shuffledWordList[0].word
+      );
+
+      setGuessedWord("");
+      setCurrentWordIndex(wordToGuessIndex);
+    } else {
+      setMessage("Fine!");
+    }
+  };
 
   const updateButtonVariants = useCallback(() => {
     const buttonVariants = word
@@ -81,45 +127,35 @@ const HomePage: React.FC = () => {
     <Container className="mt-5">
       <Row>
         <Col>
-          <Card>
-            <Card.Body>
-              <Card.Title className="text-center">
-                Indovina la parola!
-              </Card.Title>
+          <h1 className="text-center">Indovina la parola!</h1>
 
-              <p className="mb-0 text-center">Parole di aiuto:</p>
-              <Row className="justify-content-center mb-1 gap-1 gap-md-2">
-                {clues.map((clue) => (
-                  <Col xs="auto" key={clue} className="mb-1 p-0">
-                    <Button variant="warning" className="pointer-events-none">
-                      {clue}
-                    </Button>
-                  </Col>
-                ))}
-              </Row>
+          <p className="mb-1 text-center">Parole di aiuto:</p>
+          <Row className="justify-content-center mb-1 gap-1 gap-md-2">
+            {shuffledSlicedClues.map((clue) => (
+              <Col xs="auto" key={clue} className="mb-1 p-0">
+                <Button variant="warning" className="pointer-events-none">
+                  {clue}
+                </Button>
+              </Col>
+            ))}
+          </Row>
 
-              <Row className="guessedword justify-content-center mt-3 mb-1 gap-1 gap-md-2 pointer-events-none">
-                {word.split("").map((_, index) => (
-                  <Col
-                    xs="auto"
-                    key={index}
-                    className="guessedword__slot mb-1 p-0"
-                  >
-                    <Button
-                      variant={
-                        guessedWordButtonVariant[index] ?? "outline-secondary"
-                      }
-                      className="keyboard__btn p-1"
-                    >
-                      {guessedWord[index]}
-                    </Button>
-                  </Col>
-                ))}
+          <Row className="guessedword justify-content-center mt-3 mb-1 gap-1 gap-md-2 pointer-events-none">
+            {word.split("").map((_, index) => (
+              <Col xs="auto" key={index} className="guessedword__slot mb-1 p-0">
+                <Button
+                  variant={
+                    guessedWordButtonVariant[index] ?? "outline-secondary"
+                  }
+                  className="keyboard__btn p-1"
+                >
+                  {guessedWord[index]}
+                </Button>
+              </Col>
+            ))}
 
-                <p className="text-center">{message}</p>
-              </Row>
-            </Card.Body>
-          </Card>
+            <p className="text-center">{message}</p>
+          </Row>
         </Col>
       </Row>
 
