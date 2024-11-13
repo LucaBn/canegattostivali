@@ -1,124 +1,107 @@
-const wordList = [
+type Word = {
+  word: string;
+  nextWordList: string[];
+};
+
+type WordList = Word[];
+
+const wordList: WordList = [
   {
     word: "GATTO",
-    clues: ["SIBERIANO", "STIVALI", "NEVI"],
-    previousWord: ["CODA", "NERO", "BAFFI"],
+    nextWordList: ["CODA", "NERO", "BAFFI"],
   },
   {
     word: "CODA",
-    clues: ["STAMPA", "RAVIOLI", "AUTOSTRADA"],
-    previousWord: ["GATTO", "SERPENTE", "CANE"],
+    nextWordList: ["GATTO", "SERPENTE", "CANE"],
   },
   {
     word: "BAFFI",
-    clues: ["FACCIA", "FOLTI", "MANUBRIO"],
-    previousWord: ["GATTO", "VOLPE", "UOMO"],
+    nextWordList: ["GATTO", "VOLPE", "UOMO"],
   },
   {
     word: "CANE",
-    clues: ["ABBAIA", "CUCCIA", "OSSO"],
-    previousWord: ["CODA", "VOLPE", "GIOCO"],
+    nextWordList: ["CODA", "VOLPE", "GIOCO"],
   },
   {
     word: "VOLPE",
-    clues: ["ROSSA", "FURBA", "CACCIA"],
-    previousWord: ["CANE", "BAFFI", "CODA"],
+    nextWordList: ["CANE", "BAFFI", "CODA"],
   },
   {
     word: "SERPENTE",
-    clues: ["STRISCE", "VELENOSO", "RETTILE"],
-    previousWord: ["CODA", "AUTOSTRADA", "CANE"],
+    nextWordList: ["CODA", "AUTOSTRADA", "CANE"],
   },
   {
     word: "NEVI",
-    clues: ["INVERNO", "BIANCO", "GHIACCIO"],
-    previousWord: ["GATTO", "STIVALI", "MONTAGNA"],
+    nextWordList: ["GATTO", "STIVALI", "MONTAGNA"],
   },
   {
     word: "NERO",
-    clues: ["COLORE", "BUIO", "OCCHIO"],
-    previousWord: ["GATTO", "STIVALI", "FUOCO"],
+    nextWordList: ["GATTO", "STIVALI", "FUOCO"],
   },
   {
     word: "STIVALI",
-    clues: ["SCARPE", "INVERNO", "PIOGGIA"],
-    previousWord: ["GATTO", "NEVI", "NERO"],
+    nextWordList: ["GATTO", "NEVI", "NERO"],
   },
   {
     word: "MONTAGNA",
-    clues: ["VETTA", "NEVE", "SCALATA"],
-    previousWord: ["NEVI", "CIELO", "PIUMA"],
+    nextWordList: ["NEVI", "CIELO", "PIUMA"],
   },
   {
     word: "AUTOSTRADA",
-    clues: ["MACCHINA", "STRADA", "PEDAGGIO"],
-    previousWord: ["SERPENTE", "CODA", "POSTA"],
+    nextWordList: ["SERPENTE", "CODA", "POSTA"],
   },
   {
     word: "POSTA",
-    clues: ["LETTERA", "SERVIZIO", "SPEDIZIONE"],
-    previousWord: ["AUTOSTRADA", "CODA", "LIBRO"],
+    nextWordList: ["AUTOSTRADA", "CODA", "LIBRO"],
   },
   {
     word: "LIBRO",
-    clues: ["PAGINE", "LEGGERE", "BIBLIOTECA"],
-    previousWord: ["POSTA", "SOGNO", "NOTTE"],
+    nextWordList: ["POSTA", "SOGNO", "NOTTE"],
   },
   {
     word: "SOGNO",
-    clues: ["DESTO", "IMMAGINAZIONE", "DORMIRE"],
-    previousWord: ["LIBRO", "NOTTE", "STELLE"],
+    nextWordList: ["LIBRO", "NOTTE", "STELLE"],
   },
   {
     word: "NOTTE",
-    clues: ["PROFONDA", "BUIO", "STELLE"],
-    previousWord: ["SOGNO", "NERO", "LUNA"],
+    nextWordList: ["SOGNO", "NERO", "LUNA"],
   },
   {
     word: "LUNA",
-    clues: ["ROSSA", "SATELLITE", "CELESTE"],
-    previousWord: ["NOTTE", "STELLE", "SOLE"],
+    nextWordList: ["NOTTE", "STELLE", "SOLE"],
   },
   {
     word: "SOLE",
-    clues: ["LUCE", "CALORE", "STELLA"],
-    previousWord: ["LUNA", "STELLE", "FUOCO"],
+    nextWordList: ["LUNA", "STELLE", "FUOCO"],
   },
   {
     word: "STELLE",
-    clues: ["LUCE", "CELESTE", "NOTTE"],
-    previousWord: ["SOLE", "LUNA", "SOGNO"],
+    nextWordList: ["SOLE", "LUNA", "SOGNO"],
   },
   {
     word: "FUOCO",
-    clues: ["FIAMMA", "CALORE", "INCENDIO"],
-    previousWord: ["NERO", "SOLE", "LEGNA"],
+    nextWordList: ["NERO", "SOLE", "LEGNA"],
   },
   {
     word: "LEGNA",
-    clues: ["ARDERE", "FOGLIE", "CASA"],
-    previousWord: ["FUOCO", "ALBERO", "PIUMA"],
+    nextWordList: ["FUOCO", "ALBERO", "PIUMA"],
   },
   {
     word: "ALBERO",
-    clues: ["FOGLIE", "RADICI", "FORESTA"],
-    previousWord: ["LEGNA", "PIUMA", "FOGLIA"],
+    nextWordList: ["LEGNA", "PIUMA", "FOGLIA"],
   },
   {
     word: "FOGLIA",
-    clues: ["VERDE", "AUTUNNO", "FICO"],
-    previousWord: ["ALBERO", "PIUMA", "FIORE"],
+    nextWordList: ["ALBERO", "PIUMA", "FIORE"],
   },
   {
     word: "FIORE",
-    clues: ["COLORI", "PROFUMO", "PRIMAVERA"],
-    previousWord: ["FOGLIA", "PIUMA", "LIBRO"],
+    nextWordList: ["FOGLIA", "PIUMA", "LIBRO"],
   },
   {
     word: "PIUMA",
-    clues: ["UCCELLO", "LEGGERO", "VOLARE"],
-    previousWord: ["ALBERO", "FOGLIA", "MONTAGNA"],
+    nextWordList: ["ALBERO", "FOGLIA", "MONTAGNA"],
   },
 ];
 
-export { wordList };
+export { wordList, type Word, type WordList };
