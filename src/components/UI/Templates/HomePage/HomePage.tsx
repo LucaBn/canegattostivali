@@ -32,6 +32,7 @@ const HomePage: React.FC = () => {
   const [message, setMessage] = useState<string>("");
 
   const isKeyPressEnabled = useRef<boolean>(true);
+  const guessedWordRef = useRef<HTMLDivElement>(null);
 
   const { word, nextWordList } = wordList[currentWordIndex];
 
@@ -71,6 +72,12 @@ const HomePage: React.FC = () => {
     );
     if (newIndex !== -1) {
       setCurrentWordIndex(newIndex);
+      if (guessedWordRef.current) {
+        guessedWordRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
     } else {
       setGuessedWord("");
       setMessage("Fine!");
@@ -152,7 +159,10 @@ const HomePage: React.FC = () => {
         ))}
       </Row>
 
-      <Row className="guessedword justify-content-center mt-3 mb-1 gap-1 gap-md-2 pointer-events-none">
+      <Row
+        ref={guessedWordRef}
+        className="guessedword justify-content-center mt-3 mb-1 gap-1 gap-md-2 pointer-events-none"
+      >
         {nextWord.split("").map((_, index) => (
           <Col xs="auto" key={index} className="guessedword__slot mb-1 p-0">
             <Button
