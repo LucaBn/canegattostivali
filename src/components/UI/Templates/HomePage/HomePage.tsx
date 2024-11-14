@@ -30,18 +30,29 @@ const HomePage: React.FC = () => {
   );
   const [buttonVariants, setButtonVariants] = useState<string[]>([]);
   const [message, setMessage] = useState<string>("");
+
   const isKeyPressEnabled = useRef<boolean>(true);
 
   const { word, nextWordList } = wordList[currentWordIndex];
 
   const nextWord = useMemo(() => {
-    const filteredNextWords = shuffle(
-      nextWordList.filter((word) => !previousGuessedWords.includes(word))
+    const filteredNextWords = nextWordList.filter(
+      (word) => !previousGuessedWords.includes(word)
     );
+    if (filteredNextWords.length === 0) {
+      setMessage("Fine!");
+      return "";
+    }
+
+    const shuffedFilteredNextWords = shuffle(filteredNextWords);
+
     if (previousGuessedWords.length === 0) {
       setPreviousGuessedWords([word]);
     }
-    return filteredNextWords[0];
+
+    const nextWordFirstLetter = shuffedFilteredNextWords[0][0];
+    setGuessedWord(nextWordFirstLetter);
+    return shuffedFilteredNextWords[0];
   }, [currentWordIndex]);
 
   const updateButtonVariants = useCallback(() => {
@@ -54,12 +65,14 @@ const HomePage: React.FC = () => {
     );
   }, [guessedWord, nextWord]);
 
-  const goToNextWord = (next: string) => {
-    const newIndex = wordList.findIndex((w) => w.word === next);
+  const goToNextWord = (nextWord: string) => {
+    const newIndex = wordList.findIndex(
+      (wordObject) => wordObject.word === nextWord
+    );
     if (newIndex !== -1) {
       setCurrentWordIndex(newIndex);
-      setGuessedWord("");
     } else {
+      setGuessedWord("");
       setMessage("Fine!");
     }
   };
@@ -71,7 +84,9 @@ const HomePage: React.FC = () => {
       }
 
       if (key === "DEL") {
-        setGuessedWord((prev) => prev.slice(0, -1));
+        if (guessedWord.length >= 2) {
+          setGuessedWord((prev) => prev.slice(0, -1));
+        }
       } else if (key === "INVIO") {
         if (guessedWord === nextWord) {
           isKeyPressEnabled.current = false;
@@ -104,7 +119,9 @@ const HomePage: React.FC = () => {
   );
 
   useEffect(() => {
-    setMessage("");
+    if (nextWord !== "") {
+      setMessage("");
+    }
     updateButtonVariants();
     window.addEventListener("keydown", handleKeydown);
     return () => window.removeEventListener("keydown", handleKeydown);

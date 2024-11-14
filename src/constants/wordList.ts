@@ -16,11 +16,11 @@ const wordList: WordList = [
   },
   {
     word: "BAFFI",
-    nextWordList: ["GATTO", "VOLPE", "UOMO"],
+    nextWordList: ["GATTO", "VOLPE"],
   },
   {
     word: "CANE",
-    nextWordList: ["CODA", "VOLPE", "GIOCO"],
+    nextWordList: ["CODA", "VOLPE"],
   },
   {
     word: "VOLPE",
