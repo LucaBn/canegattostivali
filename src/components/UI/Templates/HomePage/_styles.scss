@@ -1,12 +1,33 @@
-.guessedword {
-  &__slot {
-    width: auto;
-    min-width: 30px;
-    height: 40px;
+$slot-height-mobile: 40px;
+$slot-min-width-mobile: 30px;
+$slot-height-desktop: 48px;
+$slot-min-width-desktop: 36px;
+
+$margin: 16px;
+
+$container-max-height-mobile: $slot-height-mobile * 3 + $margin * 2;
+$container-max-height-desktop: $slot-height-desktop * 3 + $margin * 2;
+
+.guessed-word {
+  margin-bottom: $margin;
+  transition: transform 0.3s;
+
+  &__container {
+    max-height: $container-max-height-mobile;
 
     @media screen and (min-width: 768px) {
-      min-width: 36px;
-      height: 48px;
+      max-height: $container-max-height-desktop;
+    }
+  }
+
+  &__slot {
+    height: $slot-height-mobile;
+    min-width: $slot-min-width-mobile;
+    width: auto;
+
+    @media screen and (min-width: 768px) {
+      height: $slot-height-desktop;
+      min-width: $slot-min-width-desktop;
     }
   }
 }
