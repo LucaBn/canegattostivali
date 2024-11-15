@@ -11,11 +11,13 @@ const WORD_SEQUENCE_LENGTH = 20;
 
 const createWordSequence = (): string[] => {
   const usedWords = new Set<string>();
+  const sequence: string[] = [];
 
   const getRandomUnusedWord = (): Word | undefined => {
     const unusedWords = wordList.filter((w) => !usedWords.has(w.word));
-    if (unusedWords.length === 0) return undefined;
-    return unusedWords[Math.floor(Math.random() * unusedWords.length)];
+    return unusedWords.length > 0
+      ? unusedWords[Math.floor(Math.random() * unusedWords.length)]
+      : undefined;
   };
 
   const getNextUnusedWord = (currentWord: Word): Word | undefined => {
@@ -24,40 +26,30 @@ const createWordSequence = (): string[] => {
         wordList.find((w) => w.word === nextWord && !usedWords.has(w.word))
       )
       .filter((w): w is Word => w !== undefined);
-    if (possibleNextWords.length === 0) return undefined;
-    return possibleNextWords[
-      Math.floor(Math.random() * possibleNextWords.length)
-    ];
+    return possibleNextWords.length > 0
+      ? possibleNextWords[Math.floor(Math.random() * possibleNextWords.length)]
+      : undefined;
   };
-
-  const sequence: string[] = [];
 
   let currentWord = getRandomUnusedWord();
 
   while (currentWord && sequence.length < WORD_SEQUENCE_LENGTH) {
     sequence.push(currentWord.word);
     usedWords.add(currentWord.word);
-
     currentWord = getNextUnusedWord(currentWord);
   }
 
   return sequence;
 };
 
-let wordSequence: string[] = [];
-
-while (wordSequence.length < WORD_SEQUENCE_LENGTH) {
-  wordSequence = createWordSequence();
-}
-
-console.log({ wordSequence });
+const wordSequence = createWordSequence();
 
 const HomePage: React.FC = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState<number>(1);
   const [guessedWord, setGuessedWord] = useState<string>(wordSequence[1][0]);
   const [buttonVariants, setButtonVariants] = useState<string[]>([]);
   const [message, setMessage] = useState<string>("🤔");
-  const [slotHeight, setSlotHeight] = useState(56);
+  const [slotHeight, setSlotHeight] = useState<number>(56);
 
   const isKeyPressEnabled = useRef<boolean>(true);
 
@@ -69,20 +61,16 @@ const HomePage: React.FC = () => {
           guessedWord[index] ? "primary" : "outline-secondary"
         )
     );
-  }, [guessedWord]);
+  }, [guessedWord, currentWordIndex]);
 
   const handleKeyPress = useCallback(
     (key: string) => {
-      if (!isKeyPressEnabled.current) {
-        return;
-      }
+      if (!isKeyPressEnabled.current) return;
 
       setMessage("🤔");
 
       if (key === "DEL") {
-        if (guessedWord.length >= 2) {
-          setGuessedWord((prev) => prev.slice(0, -1));
-        }
+        setGuessedWord((prev) => (prev.length > 1 ? prev.slice(0, -1) : prev));
       } else if (key === "INVIO") {
         if (guessedWord === wordSequence[currentWordIndex]) {
           isKeyPressEnabled.current = false;
@@ -93,7 +81,7 @@ const HomePage: React.FC = () => {
             } else {
               setMessage("🤔");
               setGuessedWord(wordSequence[currentWordIndex + 1][0]);
-              setCurrentWordIndex((prevValue) => prevValue + 1);
+              setCurrentWordIndex((prev) => prev + 1);
               isKeyPressEnabled.current = true;
             }
           }, 1000);
@@ -104,9 +92,6 @@ const HomePage: React.FC = () => {
         /^[A-Za-z]$/.test(key) &&
         guessedWord.length < wordSequence[currentWordIndex].length
       ) {
-        console.log(wordSequence[currentWordIndex]);
-        console.log({ key });
-
         setGuessedWord((prev) => prev + key.toUpperCase());
       }
     },
@@ -130,11 +115,7 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     const updateSlotHeight = () => {
-      if (window.innerWidth >= 768) {
-        setSlotHeight(64);
-      } else {
-        setSlotHeight(56);
-      }
+      setSlotHeight(window.innerWidth >= 768 ? 64 : 56);
     };
 
     updateSlotHeight();
@@ -171,23 +152,22 @@ const HomePage: React.FC = () => {
             >
               {word.split("").map((_, index) => (
                 <Col xs="auto" key={index} className="guessed-word__slot p-0">
-                  {wordSequenceIndex < currentWordIndex ? (
-                    <Button variant="primary" className="keyboard__btn p-1">
-                      {wordSequence[wordSequenceIndex][index]}
-                    </Button>
-                  ) : wordSequenceIndex === currentWordIndex ? (
-                    <Button
-                      variant={buttonVariants[index] || "outline-secondary"}
-                      className="keyboard__btn p-1"
-                    >
-                      {guessedWord[index]}
-                    </Button>
-                  ) : (
-                    <Button
-                      variant="outline-secondary"
-                      className="keyboard__btn p-1"
-                    ></Button>
-                  )}
+                  <Button
+                    variant={
+                      wordSequenceIndex < currentWordIndex
+                        ? "primary"
+                        : wordSequenceIndex === currentWordIndex
+                        ? buttonVariants[index] || "outline-secondary"
+                        : "outline-secondary"
+                    }
+                    className="keyboard__btn p-1"
+                  >
+                    {wordSequenceIndex < currentWordIndex
+                      ? wordSequence[wordSequenceIndex][index]
+                      : wordSequenceIndex === currentWordIndex
+                      ? guessedWord[index]
+                      : ""}
+                  </Button>
                 </Col>
               ))}
             </Row>
