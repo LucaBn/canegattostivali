@@ -1,25 +1,33 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
 
 // Components
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+// import { LinkContainer } from "react-router-bootstrap";
 
-// Locales
-import { useTranslation } from "react-i18next";
+// Hook
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 // Typings
-import { LanguageList } from "@/typings/i18next";
+import { ThemeList } from "@/constants/themes";
+
+// Constants
+import { APP_NAME } from "@/constants/app";
+
+// TODO: move this to an utils file
+const scrollToTop = () => {
+  document.documentElement.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+};
 
 const NavbarComponent: React.FC = () => {
   const [expanded, setExpanded] = useState<boolean>(false);
 
-  const { i18n } = useTranslation("common");
-  const { language } = i18n;
-
-  const { pathname } = useLocation();
-
   const navbarRef = useRef<HTMLDivElement>(null);
+
+  const { changeTheme } = useTheme();
 
   const handleOutsideClick = (event: MouseEvent) => {
     if (
@@ -40,19 +48,14 @@ const NavbarComponent: React.FC = () => {
   const toggleNavbarDropdownStatus = () => {
     setExpanded((prevValue) => !prevValue);
   };
+
   const closeNavbarDropdown = () => {
     setExpanded(false);
   };
 
   const handleLogoClick = () => {
-    const regex = new RegExp(`^/(${Object.values(LanguageList).join("|")})$`);
-    if (regex.test(pathname)) {
-      document.documentElement.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-      });
-    }
+    closeNavbarDropdown();
+    scrollToTop();
   };
 
   return (
@@ -64,31 +67,31 @@ const NavbarComponent: React.FC = () => {
         expanded={expanded}
         ref={navbarRef as React.RefObject<HTMLDivElement>}
       >
-        {/*
-        Use key={pathname} to force the update of the component make links have correct classes
-        https://github.com/react-bootstrap/react-router-bootstrap/issues/242#issuecomment-613761912
-      */}
-        <Container key={pathname}>
-          <LinkContainer to={`/${language}`} onClick={handleLogoClick}>
-            <Navbar.Brand onClick={closeNavbarDropdown} className="py-0">
-              Website Name or Logo
-            </Navbar.Brand>
-          </LinkContainer>
+        <Container>
+          <Navbar.Brand onClick={handleLogoClick} className="py-0">
+            {APP_NAME}
+          </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="navbar-collpsable"
             onClick={toggleNavbarDropdownStatus}
           />
           <Navbar.Collapse onClick={closeNavbarDropdown} id="navbar-collpsable">
-            <Nav className="ms-auto">
-              <LinkContainer to={`/${language}/`}>
+            <Nav className="ms-auto gap-1">
+              <Button onClick={() => changeTheme("light" as ThemeList)}>
+                Light
+              </Button>
+              <Button onClick={() => changeTheme("dark" as ThemeList)}>
+                Dark
+              </Button>
+              {/* <LinkContainer to={`/one`}>
                 <Nav.Link>Link One</Nav.Link>
               </LinkContainer>
-              <LinkContainer to={`/${language}/`}>
+              <LinkContainer to={`/two`}>
                 <Nav.Link>Link Two</Nav.Link>
               </LinkContainer>
-              <LinkContainer to={`/${language}/`}>
+              <LinkContainer to={`/three`}>
                 <Nav.Link>Link Three</Nav.Link>
-              </LinkContainer>
+              </LinkContainer> */}
             </Nav>
           </Navbar.Collapse>
         </Container>

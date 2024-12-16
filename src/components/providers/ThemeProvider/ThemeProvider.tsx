@@ -10,6 +10,7 @@ import {
 import { IGenericComponent } from "@/typings/components";
 
 // Constants
+import { APP_NAME_SHORT } from "@/constants/app";
 import { ThemeList } from "@/constants/themes";
 
 // Define the context
@@ -18,11 +19,12 @@ export interface IThemeContext {
   changeTheme: (newTheme: ThemeList) => void;
 }
 
-const LS_THEME_VARIABLE = `Theme`;
+const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
+const LS_THEME_VARIABLE = `${lowercaseAppName}Theme`;
 
 // Default createContextValue
 const defaultCreateContextValue = {
-  theme: ThemeList.Dark,
+  theme: ThemeList.Light,
   changeTheme: () => {},
 };
 
