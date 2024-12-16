@@ -56,6 +56,9 @@ const HomePage: React.FC = () => {
           }, 1000);
         } else {
           setMessage("😓");
+          if (navigator.vibrate) {
+            navigator.vibrate(200);
+          }
         }
       } else if (
         /^[A-Za-z]$/.test(key) &&
