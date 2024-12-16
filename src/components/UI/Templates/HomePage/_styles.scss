@@ -24,10 +24,31 @@ $container-max-height-desktop: $slot-height-desktop * 3 + $margin * 2;
     height: $slot-height-mobile;
     min-width: $slot-min-width-mobile;
     width: auto;
+    transition: all 0.3s;
 
     @media screen and (min-width: 768px) {
       height: $slot-height-desktop;
       min-width: $slot-min-width-desktop;
+    }
+
+    button {
+      height: $slot-height-mobile;
+      min-width: $slot-min-width-mobile;
+
+      @media screen and (min-width: 768px) {
+        height: $slot-height-desktop;
+        min-width: $slot-min-width-desktop;
+      }
+    }
+
+    &--previous {
+      min-width: $slot-min-width-desktop / 2;
+      transform: translateY(20%);
+      transform-origin: bottom;
+
+      button {
+        min-width: $slot-min-width-desktop / 2;
+      }
     }
   }
 }

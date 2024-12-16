@@ -13,3 +13,11 @@
 .pointer-events-none {
   pointer-events: none;
 }
+
+[data-bs-theme="light"] .theme-sensitive-button {
+  color: var(--bs-heading-color);
+}
+
+[data-bs-theme="dark"] .theme-sensitive-button {
+  color: rgba(var(--bs-light-rgb), var(--bs-text-opacity));
+}

@@ -5,7 +5,7 @@ type Word = {
 
 type WordList = Word[];
 
-const wordList: WordList = [
+const WORD_LIST: WordList = [
   {
     word: "GATTO",
     nextWordList: ["CODA", "NERO", "BAFFI"],
@@ -104,4 +104,6 @@ const wordList: WordList = [
   },
 ];
 
-export { wordList, type Word, type WordList };
+const WORD_SEQUENCE_LENGTH = 5;
+
+export { WORD_LIST, WORD_SEQUENCE_LENGTH, type Word, type WordList };

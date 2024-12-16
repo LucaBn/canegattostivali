@@ -36,7 +36,7 @@ const Keyboard: React.FC<KeyboardProps> = ({ onKeyPress }) => {
   };
 
   return (
-    <Container className="keyboard mt-3">
+    <Container className="keyboard mt-5">
       {keys.map((row, rowIndex) => (
         <Row
           key={rowIndex}

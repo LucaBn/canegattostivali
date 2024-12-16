@@ -2,45 +2,14 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 
 // Components
 import { Container, Row, Col, Button } from "react-bootstrap";
+import TopSection from "@/components/UI/Molecules/TopSection/TopSection";
 import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
 
+// Utils
+import { createWordSequence } from "@/utils/game-logic";
+
 // Constants
-import { type Word, wordList } from "@/constants/wordList";
-
-const WORD_SEQUENCE_LENGTH = 20;
-
-const createWordSequence = (): string[] => {
-  const usedWords = new Set<string>();
-  const sequence: string[] = [];
-
-  const getRandomUnusedWord = (): Word | undefined => {
-    const unusedWords = wordList.filter((w) => !usedWords.has(w.word));
-    return unusedWords.length > 0
-      ? unusedWords[Math.floor(Math.random() * unusedWords.length)]
-      : undefined;
-  };
-
-  const getNextUnusedWord = (currentWord: Word): Word | undefined => {
-    const possibleNextWords = currentWord.nextWordList
-      .map((nextWord) =>
-        wordList.find((w) => w.word === nextWord && !usedWords.has(w.word))
-      )
-      .filter((w): w is Word => w !== undefined);
-    return possibleNextWords.length > 0
-      ? possibleNextWords[Math.floor(Math.random() * possibleNextWords.length)]
-      : undefined;
-  };
-
-  let currentWord = getRandomUnusedWord();
-
-  while (currentWord && sequence.length < WORD_SEQUENCE_LENGTH) {
-    sequence.push(currentWord.word);
-    usedWords.add(currentWord.word);
-    currentWord = getNextUnusedWord(currentWord);
-  }
-
-  return sequence;
-};
+import { WORD_SEQUENCE_LENGTH } from "@/constants/wordList";
 
 const wordSequence = createWordSequence();
 
@@ -77,7 +46,7 @@ const HomePage: React.FC = () => {
           setMessage("😃");
           setTimeout(() => {
             if (currentWordIndex === WORD_SEQUENCE_LENGTH - 1) {
-              setMessage("Fine!");
+              setMessage("🥳");
             } else {
               setMessage("🤔");
               setGuessedWord(wordSequence[currentWordIndex + 1][0]);
@@ -126,17 +95,48 @@ const HomePage: React.FC = () => {
     };
   }, []);
 
+  const getButtonVariant = (
+    index: number,
+    wordSequenceIndex: number,
+    currentWordIndex: number
+  ): string => {
+    return wordSequenceIndex < currentWordIndex
+      ? "primary"
+      : wordSequenceIndex === currentWordIndex
+      ? buttonVariants[index] || "outline-secondary"
+      : "outline-secondary";
+  };
+
+  const getButtonClass = (
+    wordSequenceIndex: number,
+    currentWordIndex: number
+  ): string => {
+    return `p-1 ${
+      wordSequenceIndex < currentWordIndex
+        ? "theme-sensitive-button bg-transparent border-0"
+        : wordSequenceIndex === currentWordIndex + 1
+        ? "opacity-50"
+        : wordSequenceIndex > currentWordIndex + 1
+        ? "opacity-0"
+        : ""
+    }`;
+  };
+
+  const getButtonLetter = (
+    index: number,
+    wordSequenceIndex: number,
+    currentWordIndex: number
+  ) => {
+    return wordSequenceIndex < currentWordIndex
+      ? wordSequence[wordSequenceIndex][index]
+      : wordSequenceIndex === currentWordIndex
+      ? guessedWord[index]
+      : "";
+  };
+
   return (
     <Container className="mt-5">
-      {/* TODO: move this to a heading section */}
-      <Row className="justify-content-center">
-        <Col xs="auto" md="8" lg="6">
-          <h1 className="text-center">Cane Gatto Stivali</h1>
-          <p className="mb-4 text-center">
-            Indovina la parola usando quella precedente come indizio!
-          </p>
-        </Col>
-      </Row>
+      <TopSection />
 
       <Row>
         <Col className="guessed-word__container overflow-hidden">
@@ -145,28 +145,42 @@ const HomePage: React.FC = () => {
               key={word}
               className="guessed-word flex-nowrap justify-content-center gap-1 gap-md-2 pointer-events-none"
               style={{
-                transform: `translateY(-${
-                  (currentWordIndex - 1) * slotHeight
-                }px)`,
+                transform: `translateY(${
+                  -(currentWordIndex - 1) * slotHeight
+                }px) ${
+                  wordSequenceIndex === currentWordIndex + 1
+                    ? "scale(0.85)"
+                    : ""
+                }`,
+                transformOrigin: "bottom",
               }}
             >
               {word.split("").map((_, index) => (
-                <Col xs="auto" key={index} className="guessed-word__slot p-0">
+                <Col
+                  xs="auto"
+                  key={index}
+                  className={`guessed-word__slot text-center p-0 ${
+                    wordSequenceIndex < currentWordIndex
+                      ? "guessed-word__slot--previous"
+                      : ""
+                  }`}
+                >
                   <Button
-                    variant={
-                      wordSequenceIndex < currentWordIndex
-                        ? "primary"
-                        : wordSequenceIndex === currentWordIndex
-                        ? buttonVariants[index] || "outline-secondary"
-                        : "outline-secondary"
-                    }
-                    className="keyboard__btn p-1"
+                    variant={getButtonVariant(
+                      index,
+                      wordSequenceIndex,
+                      currentWordIndex
+                    )}
+                    className={getButtonClass(
+                      wordSequenceIndex,
+                      currentWordIndex
+                    )}
                   >
-                    {wordSequenceIndex < currentWordIndex
-                      ? wordSequence[wordSequenceIndex][index]
-                      : wordSequenceIndex === currentWordIndex
-                      ? guessedWord[index]
-                      : ""}
+                    {getButtonLetter(
+                      index,
+                      wordSequenceIndex,
+                      currentWordIndex
+                    )}
                   </Button>
                 </Col>
               ))}
@@ -175,7 +189,8 @@ const HomePage: React.FC = () => {
         </Col>
       </Row>
 
-      <p className="text-center mt-3">{message}</p>
+      {/* TODO: create a component for this */}
+      <p className="h2 text-center mt-5">{message}</p>
 
       <Keyboard onKeyPress={handleKeyPress} />
     </Container>
