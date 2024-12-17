@@ -104,6 +104,6 @@ const WORD_LIST: WordList = [
   },
 ];
 
-const WORD_SEQUENCE_LENGTH = 5;
+const WORD_LIST_LENGTH = 5;
 
-export { WORD_LIST, WORD_SEQUENCE_LENGTH, type Word, type WordList };
+export { WORD_LIST, WORD_LIST_LENGTH, type Word, type WordList };

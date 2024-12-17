@@ -9,7 +9,7 @@ import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
 import { createWordSequence } from "@/utils/game-logic";
 
 // Constants
-import { WORD_SEQUENCE_LENGTH } from "@/constants/wordList";
+import { WORD_LIST_LENGTH } from "@/constants/wordList";
 
 const wordSequence = createWordSequence();
 
@@ -45,7 +45,7 @@ const HomePage: React.FC = () => {
           isKeyPressEnabled.current = false;
           setMessage("😃");
           setTimeout(() => {
-            if (currentWordIndex === WORD_SEQUENCE_LENGTH - 1) {
+            if (currentWordIndex === WORD_LIST_LENGTH - 1) {
               setMessage("🥳");
             } else {
               setMessage("🤔");
