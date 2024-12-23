@@ -13,6 +13,8 @@ import { WORD_LIST_LENGTH } from "@/constants/wordList";
 
 const wordSequence = createWordSequence();
 
+console.log({ wordSequence });
+
 const HomePage: React.FC = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState<number>(1);
   const [guessedWord, setGuessedWord] = useState<string>(wordSequence[1][0]);

@@ -189,7 +189,7 @@ const WORD_LIST: WordList = [
   },
   {
     word: "ROSSA",
-    nextWordList: ["VOLPE", "MELA", "CROCE", "LUNA", "BIRRA", "CARNE"],
+    nextWordList: ["VOLPE", "MELA", "CROCE", "LUNA", "BIRRA", "CARNE", "LINEA"],
   },
   {
     word: "BIANCA",
@@ -220,7 +220,7 @@ const WORD_LIST: WordList = [
   },
   {
     word: "MUTA",
-    nextWordList: ["SERPENTE", "ZITTA", "SUB", "NUOTO"],
+    nextWordList: ["SERPENTE", "ZITTA", "SOMMOZZATORE"],
   },
   {
     word: "CORALLO",
@@ -307,10 +307,6 @@ const WORD_LIST: WordList = [
     nextWordList: ["MILITARE", "MONDO", "CAMBIO"],
   },
   {
-    word: "CAMBIO",
-    nextWordList: ["LEVA"],
-  },
-  {
     word: "MONDO",
     nextWordList: ["LEVA", "TERRA", "BENE"],
   },
@@ -360,7 +356,67 @@ const WORD_LIST: WordList = [
   },
   {
     word: "SACRO",
-    nextWordList: ["OSSO"],
+    nextWordList: ["OSSO", "FUOCO"],
+  },
+  {
+    word: "FUOCO",
+    nextWordList: ["SACRO", "AMICO"],
+  },
+  {
+    word: "AMICO",
+    nextWordList: ["FUOCO", "PENNA"],
+  },
+  {
+    word: "PENNA",
+    nextWordList: ["AMICO", "SFERA"],
+  },
+  {
+    word: "SFERA",
+    nextWordList: ["PENNA", "CRISTALLO", "CELESTE"],
+  },
+  {
+    word: "CELESTE",
+    nextWordList: ["SFERA", "CORPO"],
+  },
+  {
+    word: "CORPO",
+    nextWordList: ["CELESTE", "BALLO", "POLIZIA"],
+  },
+  {
+    word: "BALLO",
+    nextWordList: ["CORPO", "GRUPPO", "COPPIA"],
+  },
+  {
+    word: "GRUPPO",
+    nextWordList: ["BALLO", "CHAT"],
+  },
+  {
+    word: "CHAT",
+    nextWordList: ["GRUPPO", "MESSAGGIO"],
+  },
+  {
+    word: "MESSAGGIO",
+    nextWordList: ["CHAT", "POSTA"],
+  },
+  {
+    word: "COPPIA",
+    nextWordList: ["BALLO", "FISSA"],
+  },
+  {
+    word: "FISSA",
+    nextWordList: ["COPPIA", "RATA", "LINEA"],
+  },
+  {
+    word: "RATA",
+    nextWordList: ["FISSA"],
+  },
+  {
+    word: "LINEA",
+    nextWordList: ["FISSA", "AEREO", "ROSSA"],
+  },
+  {
+    word: "AEREO",
+    nextWordList: ["LINEA", "VIAGGIO"],
   },
   {
     word: "TEMPORALE",
@@ -368,7 +424,7 @@ const WORD_LIST: WordList = [
   },
   {
     word: "COMPAGNO",
-    nextWordList: ["FEDELE"],
+    nextWordList: ["FEDELE", "SCUOLA"],
   },
   {
     word: "CREDENTE",
@@ -384,11 +440,15 @@ const WORD_LIST: WordList = [
   },
   {
     word: "SECCA",
-    nextWordList: ["PELLE", "TERRA", "FRUTTA"],
+    nextWordList: ["PELLE", "FRUTTA", "TOSSE"],
+  },
+  {
+    word: "TOSSE",
+    nextWordList: ["SECCA", "COLPO"],
   },
   {
     word: "TERRA",
-    nextWordList: ["SECCA", "SOLE", "MONDO", "UOMO"],
+    nextWordList: ["SOLE", "MONDO", "UOMO"],
   },
   {
     word: "SOLE",
@@ -408,7 +468,7 @@ const WORD_LIST: WordList = [
   },
   {
     word: "SCUOLA",
-    nextWordList: ["MAESTRO", "MILITARE", "POLIZIA"],
+    nextWordList: ["MAESTRO", "MILITARE", "POLIZIA", "COMPAGNO"],
   },
   {
     word: "LEGNO",
@@ -495,7 +555,7 @@ const WORD_LIST: WordList = [
   },
   {
     word: "POSTA",
-    nextWordList: ["ELETTRONICA", "CASSETTA", "LETTERA"],
+    nextWordList: ["ELETTRONICA", "CASSETTA", "LETTERA", "MESSAGGIO"],
   },
   {
     word: "CASSETTA",
@@ -623,7 +683,11 @@ const WORD_LIST: WordList = [
   },
   {
     word: "STAGIONE",
-    nextWordList: ["VERDURE"],
+    nextWordList: ["VERDURE", "CAMBIO"],
+  },
+  {
+    word: "CAMBIO",
+    nextWordList: ["STAGIONE", "LEVA"],
   },
   {
     word: "UFFICIO",
@@ -917,12 +981,16 @@ const WORD_LIST: WordList = [
     nextWordList: ["MUTA"],
   },
   {
-    word: "SUB",
-    nextWordList: ["MUTA"],
+    word: "SOMMOZZATORE",
+    nextWordList: ["MUTA", "MASCHERA"],
   },
   {
-    word: "NUOTO",
-    nextWordList: ["MUTA"],
+    word: "MASCHERA",
+    nextWordList: ["SOMMOZZATORE", "CARNEVALE"],
+  },
+  {
+    word: "CARNEVALE",
+    nextWordList: ["MASCHERA"],
   },
   {
     word: "NOZZE",
@@ -966,7 +1034,7 @@ const WORD_LIST: WordList = [
   },
   {
     word: "VIAGGIO",
-    nextWordList: ["BORSA", "TRENO"],
+    nextWordList: ["BORSA", "TRENO", "AEREO"],
   },
   {
     word: "TRENO",
@@ -986,7 +1054,7 @@ const WORD_LIST: WordList = [
   },
   {
     word: "POLIZIA",
-    nextWordList: ["AGENTE", "SCUOLA"],
+    nextWordList: ["AGENTE", "SCUOLA", "CORPO"],
   },
   {
     word: "STATO",
@@ -1150,7 +1218,7 @@ const WORD_LIST: WordList = [
   },
   {
     word: "COLPO",
-    nextWordList: ["SPARO", "STREGA"],
+    nextWordList: ["SPARO", "STREGA", "TOSSE"],
   },
   {
     word: "SANTA",
@@ -1281,7 +1349,7 @@ const WORD_LIST: WordList = [
   },
   {
     word: "CRISTALLO",
-    nextWordList: ["SALE", "BICCHIERE"],
+    nextWordList: ["SALE", "BICCHIERE", "SFERA"],
   },
   {
     word: "BICCHIERE",
@@ -1357,7 +1425,7 @@ const WORD_LIST: WordList = [
   },
 ];
 
-const WORD_LIST_LENGTH = 5;
+const WORD_LIST_LENGTH = 20;
 
 if (RUN_TEST) {
   runWordListTest();
