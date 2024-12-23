@@ -9,7 +9,7 @@ import { ButtonVariant } from "react-bootstrap/esm/types";
 const keys: string[][] = [
   ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
   ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
-  ["INVIO", "Z", "X", "C", "V", "B", "N", "M", "DEL"], // TODO: put delete icon instead of "DEL"
+  ["INVIO", "Z", "X", "C", "V", "B", "N", "M", "CANC"], // TODO: put delete icon instead of "CANC"
 ];
 
 interface KeyboardProps {
@@ -28,7 +28,7 @@ const Keyboard: React.FC<KeyboardProps> = ({ onKeyPress }) => {
   const getButtonVariant = (key: string): ButtonVariant => {
     if (key === "INVIO") {
       return "success";
-    } else if (key === "DEL") {
+    } else if (key === "CANC") {
       return "danger";
     } else {
       return "secondary";
