@@ -31,8 +31,6 @@ const createWordSequence = (): string[] => {
       usedWords.add(currentWord.word);
       currentWord = getNextUnusedWord(currentWord);
     } else {
-      console.log("HERE");
-
       sequence.length = 0;
       usedWords.clear();
       currentWord = getRandomUnusedWord();

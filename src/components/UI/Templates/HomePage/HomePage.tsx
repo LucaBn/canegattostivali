@@ -40,7 +40,7 @@ const HomePage: React.FC = () => {
 
       setMessage("🤔");
 
-      if (key === "DEL") {
+      if (key === "CANC") {
         setGuessedWord((prev) => (prev.length > 1 ? prev.slice(0, -1) : prev));
       } else if (key === "INVIO") {
         if (guessedWord === wordSequence[currentWordIndex]) {
@@ -75,7 +75,7 @@ const HomePage: React.FC = () => {
   const handleKeydown = useCallback(
     ({ key }: KeyboardEvent) => {
       const mappedKey =
-        { Backspace: "DEL", Enter: "INVIO" }[key] || key.toUpperCase();
+        { Backspace: "CANC", Enter: "INVIO" }[key] || key.toUpperCase();
       handleKeyPress(mappedKey);
     },
     [handleKeyPress]
