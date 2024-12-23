@@ -25,10 +25,18 @@ const createWordSequence = (): string[] => {
 
   let currentWord = getRandomUnusedWord();
 
-  while (currentWord && sequence.length < WORD_LIST_LENGTH) {
-    sequence.push(currentWord.word);
-    usedWords.add(currentWord.word);
-    currentWord = getNextUnusedWord(currentWord);
+  while (sequence.length < WORD_LIST_LENGTH) {
+    if (currentWord) {
+      sequence.push(currentWord.word);
+      usedWords.add(currentWord.word);
+      currentWord = getNextUnusedWord(currentWord);
+    } else {
+      console.log("HERE");
+
+      sequence.length = 0;
+      usedWords.clear();
+      currentWord = getRandomUnusedWord();
+    }
   }
 
   return sequence;
