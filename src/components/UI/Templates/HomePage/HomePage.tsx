@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 
 // Components
 import { Container, Row, Col, Button } from "react-bootstrap";
+import Confetti from "@/components/UI/Atoms/Confetti/Confetti";
 import TopSection from "@/components/UI/Molecules/TopSection/TopSection";
 import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
 
@@ -22,6 +23,7 @@ const HomePage: React.FC = () => {
   const [message, setMessage] = useState<string>("🤔");
   const [slotHeight, setSlotHeight] = useState<number>(56);
   const [isBuzzing, setIsBuzzing] = useState<boolean>(false);
+  const [showConfetti, setShowConfetti] = useState<boolean>(false);
 
   const isKeyPressEnabled = useRef<boolean>(true);
 
@@ -60,6 +62,10 @@ const HomePage: React.FC = () => {
           setTimeout(() => {
             if (currentWordIndex === WORD_LIST_LENGTH - 1) {
               setMessage("🥳");
+              setShowConfetti(true);
+              setTimeout(() => {
+                setShowConfetti(false);
+              }, 3000);
             } else {
               setMessage("🤔");
               setGuessedWord(wordSequence[currentWordIndex + 1][0]);
@@ -214,7 +220,10 @@ const HomePage: React.FC = () => {
       </Row>
 
       {/* TODO: create a component for this */}
-      <p className="h2 text-center mt-5">{message}</p>
+      <p className="position-relative d-block h2 text-center mt-5">
+        {message}
+        {showConfetti && <Confetti />}
+      </p>
 
       <Keyboard currentWord={currentWord} onKeyPress={handleKeyPress} />
     </Container>
