@@ -23,6 +23,7 @@ const HomePage: React.FC = () => {
   const [message, setMessage] = useState<string>("🤔");
   const [slotHeight, setSlotHeight] = useState<number>(56);
   const [isBuzzing, setIsBuzzing] = useState<boolean>(false);
+  const [isCorrect, setIsCorrect] = useState<boolean>(false);
   const [showConfetti, setShowConfetti] = useState<boolean>(false);
 
   const isKeyPressEnabled = useRef<boolean>(true);
@@ -59,6 +60,10 @@ const HomePage: React.FC = () => {
         if (guessedWord === currentWord) {
           isKeyPressEnabled.current = false;
           setMessage("😃");
+          setIsCorrect(true);
+          setTimeout(() => {
+            setIsCorrect(false);
+          }, 450);
           setTimeout(() => {
             if (currentWordIndex === WORD_LIST_LENGTH - 1) {
               setMessage("🥳");
@@ -126,6 +131,10 @@ const HomePage: React.FC = () => {
     wordSequenceIndex: number,
     currentWordIndex: number
   ): string => {
+    if (wordSequenceIndex === currentWordIndex && isCorrect) {
+      return "success";
+    }
+
     return wordSequenceIndex < currentWordIndex
       ? "primary"
       : wordSequenceIndex === currentWordIndex
@@ -192,6 +201,10 @@ const HomePage: React.FC = () => {
                   } ${
                     wordSequenceIndex === currentWordIndex && isBuzzing
                       ? "buzz"
+                      : ""
+                  } ${
+                    wordSequenceIndex === currentWordIndex && isCorrect
+                      ? "correct"
                       : ""
                   }`}
                 >
