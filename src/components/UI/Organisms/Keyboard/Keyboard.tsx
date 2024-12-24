@@ -38,7 +38,17 @@ const Keyboard: React.FC<KeyboardProps> = ({ currentWord, onKeyPress }) => {
 
   const isKeyDisabled = (key: string) => {
     // TODO: enable/disable this in easy/hard mode
-    return key !== "INVIO" && key !== "CANC" && !currentWord.includes(key);
+    return (
+      key !== "INVIO" &&
+      key !== "CANC" &&
+      !currentWord.substring(1).includes(key)
+    );
+  };
+
+  const isSpecialKey = (key: string) => {
+    return key === "INVIO" || key === "CANC"
+      ? "keyboard__btn--no-width-rules"
+      : "";
   };
 
   return (
@@ -53,7 +63,7 @@ const Keyboard: React.FC<KeyboardProps> = ({ currentWord, onKeyPress }) => {
               <Button
                 variant={getButtonVariant(key)}
                 onClick={(e) => handleKeyClick(e, key)}
-                className="keyboard__btn p-1"
+                className={`keyboard__btn ${isSpecialKey(key)} p-1`}
                 disabled={isKeyDisabled(key)}
               >
                 {key}

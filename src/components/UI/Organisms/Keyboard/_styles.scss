@@ -1,12 +1,25 @@
+$button-width: calc(
+  (100vw - 185px) / 7
+); // This is calculated considering that INVIO and CANC buttons have fixed width and then there are seven other keys in the bottom row (the widest one);
+$button-width-desktop: 36px;
+$button-height: 40px;
+$button-height-desktop: 48px;
+
 .keyboard {
   &__btn {
-    width: auto;
-    min-width: 30px;
-    height: 40px;
+    width: $button-width;
+    max-width: 30px;
+    height: $button-height;
 
     @media screen and (min-width: 768px) {
-      min-width: 36px;
-      height: 48px;
+      width: $button-width-desktop;
+      max-width: unset;
+      height: $button-height-desktop;
+    }
+
+    &--no-width-rules {
+      width: auto;
+      max-width: unset;
     }
   }
 }

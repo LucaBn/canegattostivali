@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 
 // Components
 import { Container, Row, Col, Button } from "react-bootstrap";
+import Confetti from "@/components/UI/Atoms/Confetti/Confetti";
 import TopSection from "@/components/UI/Molecules/TopSection/TopSection";
 import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
 
@@ -21,6 +22,9 @@ const HomePage: React.FC = () => {
   const [buttonVariants, setButtonVariants] = useState<string[]>([]);
   const [message, setMessage] = useState<string>("🤔");
   const [slotHeight, setSlotHeight] = useState<number>(56);
+  const [isBuzzing, setIsBuzzing] = useState<boolean>(false);
+  const [isCorrect, setIsCorrect] = useState<boolean>(false);
+  const [showConfetti, setShowConfetti] = useState<boolean>(false);
 
   const isKeyPressEnabled = useRef<boolean>(true);
 
@@ -41,7 +45,11 @@ const HomePage: React.FC = () => {
       if (!isKeyPressEnabled.current) return;
 
       // TODO: enable/disable this in easy/hard mode
-      if (key !== "INVIO" && key !== "CANC" && !currentWord.includes(key))
+      if (
+        key !== "INVIO" &&
+        key !== "CANC" &&
+        !currentWord.substring(1).includes(key)
+      )
         return;
 
       setMessage("🤔");
@@ -52,9 +60,17 @@ const HomePage: React.FC = () => {
         if (guessedWord === currentWord) {
           isKeyPressEnabled.current = false;
           setMessage("😃");
+          setIsCorrect(true);
+          setTimeout(() => {
+            setIsCorrect(false);
+          }, 450);
           setTimeout(() => {
             if (currentWordIndex === WORD_LIST_LENGTH - 1) {
               setMessage("🥳");
+              setShowConfetti(true);
+              setTimeout(() => {
+                setShowConfetti(false);
+              }, 3000);
             } else {
               setMessage("🤔");
               setGuessedWord(wordSequence[currentWordIndex + 1][0]);
@@ -64,6 +80,10 @@ const HomePage: React.FC = () => {
           }, 1000);
         } else {
           setMessage("😓");
+          setIsBuzzing(true);
+          setTimeout(() => {
+            setIsBuzzing(false);
+          }, 500);
           if (navigator.vibrate) {
             navigator.vibrate(200);
           }
@@ -111,6 +131,10 @@ const HomePage: React.FC = () => {
     wordSequenceIndex: number,
     currentWordIndex: number
   ): string => {
+    if (wordSequenceIndex === currentWordIndex && isCorrect) {
+      return "success";
+    }
+
     return wordSequenceIndex < currentWordIndex
       ? "primary"
       : wordSequenceIndex === currentWordIndex
@@ -174,6 +198,14 @@ const HomePage: React.FC = () => {
                     wordSequenceIndex < currentWordIndex
                       ? "guessed-word__slot--previous"
                       : ""
+                  } ${
+                    wordSequenceIndex === currentWordIndex && isBuzzing
+                      ? "buzz"
+                      : ""
+                  } ${
+                    wordSequenceIndex === currentWordIndex && isCorrect
+                      ? "correct"
+                      : ""
                   }`}
                 >
                   <Button
@@ -201,7 +233,10 @@ const HomePage: React.FC = () => {
       </Row>
 
       {/* TODO: create a component for this */}
-      <p className="h2 text-center mt-5">{message}</p>
+      <p className="position-relative d-block h2 text-center mt-5">
+        {message}
+        {showConfetti && <Confetti />}
+      </p>
 
       <Keyboard currentWord={currentWord} onKeyPress={handleKeyPress} />
     </Container>
