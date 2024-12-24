@@ -13,10 +13,11 @@ const keys: string[][] = [
 ];
 
 interface KeyboardProps {
+  currentWord: string;
   onKeyPress: (key: string) => void;
 }
 
-const Keyboard: React.FC<KeyboardProps> = ({ onKeyPress }) => {
+const Keyboard: React.FC<KeyboardProps> = ({ currentWord, onKeyPress }) => {
   const handleKeyClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     key: string
@@ -35,6 +36,11 @@ const Keyboard: React.FC<KeyboardProps> = ({ onKeyPress }) => {
     }
   };
 
+  const isKeyDisabled = (key: string) => {
+    // TODO: enable/disable this in easy/hard mode
+    return key !== "INVIO" && key !== "CANC" && !currentWord.includes(key);
+  };
+
   return (
     <Container className="keyboard mt-5">
       {keys.map((row, rowIndex) => (
@@ -48,6 +54,7 @@ const Keyboard: React.FC<KeyboardProps> = ({ onKeyPress }) => {
                 variant={getButtonVariant(key)}
                 onClick={(e) => handleKeyClick(e, key)}
                 className="keyboard__btn p-1"
+                disabled={isKeyDisabled(key)}
               >
                 {key}
               </Button>

@@ -24,9 +24,11 @@ const HomePage: React.FC = () => {
 
   const isKeyPressEnabled = useRef<boolean>(true);
 
+  const currentWord = wordSequence[currentWordIndex];
+
   const updateButtonVariants = useCallback(() => {
     setButtonVariants(
-      wordSequence[currentWordIndex]
+      currentWord
         .split("")
         .map((_, index) =>
           guessedWord[index] ? "primary" : "outline-secondary"
@@ -38,12 +40,16 @@ const HomePage: React.FC = () => {
     (key: string) => {
       if (!isKeyPressEnabled.current) return;
 
+      // TODO: enable/disable this in easy/hard mode
+      if (key !== "INVIO" && key !== "CANC" && !currentWord.includes(key))
+        return;
+
       setMessage("🤔");
 
       if (key === "CANC") {
         setGuessedWord((prev) => (prev.length > 1 ? prev.slice(0, -1) : prev));
       } else if (key === "INVIO") {
-        if (guessedWord === wordSequence[currentWordIndex]) {
+        if (guessedWord === currentWord) {
           isKeyPressEnabled.current = false;
           setMessage("😃");
           setTimeout(() => {
@@ -64,7 +70,7 @@ const HomePage: React.FC = () => {
         }
       } else if (
         /^[A-Za-z]$/.test(key) &&
-        guessedWord.length < wordSequence[currentWordIndex].length
+        guessedWord.length < currentWord.length
       ) {
         setGuessedWord((prev) => prev + key.toUpperCase());
       }
@@ -197,7 +203,7 @@ const HomePage: React.FC = () => {
       {/* TODO: create a component for this */}
       <p className="h2 text-center mt-5">{message}</p>
 
-      <Keyboard onKeyPress={handleKeyPress} />
+      <Keyboard currentWord={currentWord} onKeyPress={handleKeyPress} />
     </Container>
   );
 };
