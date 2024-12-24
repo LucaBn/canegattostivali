@@ -1,0 +1,9 @@
+$slot-height-mobile: 40px;
+$slot-min-width-mobile: 30px;
+$slot-height-desktop: 48px;
+$slot-min-width-desktop: 36px;
+
+$margin: 16px;
+
+$word-container-max-height-mobile: $slot-height-mobile * 3 + $margin * 2;
+$word-container-max-height-desktop: $slot-height-desktop * 3 + $margin * 2;
