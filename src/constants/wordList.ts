@@ -13,7 +13,8 @@ const WORD_LIST: WordList = wordList;
 
 const WORD_LIST_LENGTH = 20;
 
-if (RUN_TEST) {
+// Check like this because RUN_TEST value is stored as a string in .env file
+if (RUN_TEST === "true") {
   runWordListTest();
 }
 
