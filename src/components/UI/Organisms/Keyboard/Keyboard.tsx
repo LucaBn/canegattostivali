@@ -38,7 +38,11 @@ const Keyboard: React.FC<KeyboardProps> = ({ currentWord, onKeyPress }) => {
 
   const isKeyDisabled = (key: string) => {
     // TODO: enable/disable this in easy/hard mode
-    return key !== "INVIO" && key !== "CANC" && !currentWord.includes(key);
+    return (
+      key !== "INVIO" &&
+      key !== "CANC" &&
+      !currentWord.substring(1).includes(key)
+    );
   };
 
   return (

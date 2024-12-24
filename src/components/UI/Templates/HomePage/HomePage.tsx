@@ -41,7 +41,11 @@ const HomePage: React.FC = () => {
       if (!isKeyPressEnabled.current) return;
 
       // TODO: enable/disable this in easy/hard mode
-      if (key !== "INVIO" && key !== "CANC" && !currentWord.includes(key))
+      if (
+        key !== "INVIO" &&
+        key !== "CANC" &&
+        !currentWord.substring(1).includes(key)
+      )
         return;
 
       setMessage("🤔");
