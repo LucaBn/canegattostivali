@@ -10,3 +10,29 @@ body {
   text-rendering: optimizeSpeed;
   min-height: 100dvh;
 }
+
+.buzz {
+  display: inline-block;
+  animation: buzz 0.3s linear 0s 1;
+
+  @keyframes buzz {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-4px);
+    }
+    45% {
+      transform: translateX(4px);
+    }
+    55% {
+      transform: translateX(-4px);
+    }
+    75% {
+      transform: translateX(4px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

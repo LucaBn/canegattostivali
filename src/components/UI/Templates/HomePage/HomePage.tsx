@@ -21,6 +21,7 @@ const HomePage: React.FC = () => {
   const [buttonVariants, setButtonVariants] = useState<string[]>([]);
   const [message, setMessage] = useState<string>("🤔");
   const [slotHeight, setSlotHeight] = useState<number>(56);
+  const [isBuzzing, setIsBuzzing] = useState<boolean>(false);
 
   const isKeyPressEnabled = useRef<boolean>(true);
 
@@ -68,6 +69,10 @@ const HomePage: React.FC = () => {
           }, 1000);
         } else {
           setMessage("😓");
+          setIsBuzzing(true);
+          setTimeout(() => {
+            setIsBuzzing(false);
+          }, 500);
           if (navigator.vibrate) {
             navigator.vibrate(200);
           }
@@ -177,6 +182,10 @@ const HomePage: React.FC = () => {
                   className={`guessed-word__slot text-center p-0 ${
                     wordSequenceIndex < currentWordIndex
                       ? "guessed-word__slot--previous"
+                      : ""
+                  } ${
+                    wordSequenceIndex === currentWordIndex && isBuzzing
+                      ? "buzz"
                       : ""
                   }`}
                 >
