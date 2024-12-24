@@ -1,9 +1,5 @@
 // Constants
-import {
-  type Word,
-  WORD_SEQUENCE_LENGTH,
-  WORD_LIST,
-} from "@/constants/wordList";
+import { type Word, WORD_LIST_LENGTH, WORD_LIST } from "@/constants/wordList";
 
 const createWordSequence = (): string[] => {
   const usedWords = new Set<string>();
@@ -29,10 +25,16 @@ const createWordSequence = (): string[] => {
 
   let currentWord = getRandomUnusedWord();
 
-  while (currentWord && sequence.length < WORD_SEQUENCE_LENGTH) {
-    sequence.push(currentWord.word);
-    usedWords.add(currentWord.word);
-    currentWord = getNextUnusedWord(currentWord);
+  while (sequence.length < WORD_LIST_LENGTH) {
+    if (currentWord) {
+      sequence.push(currentWord.word);
+      usedWords.add(currentWord.word);
+      currentWord = getNextUnusedWord(currentWord);
+    } else {
+      sequence.length = 0;
+      usedWords.clear();
+      currentWord = getRandomUnusedWord();
+    }
   }
 
   return sequence;
