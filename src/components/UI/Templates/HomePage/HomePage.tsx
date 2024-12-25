@@ -207,6 +207,11 @@ const HomePage: React.FC = () => {
                       ? "correct"
                       : ""
                   }`}
+                  style={{
+                    maxWidth: `calc((100dvw / ${
+                      word.split("").length
+                    }) - 0.5rem)`, // Remove 0.5rem because of the gap
+                  }}
                 >
                   <Button
                     variant={getButtonVariant(
@@ -218,6 +223,11 @@ const HomePage: React.FC = () => {
                       wordSequenceIndex,
                       currentWordIndex
                     )}
+                    style={{
+                      maxWidth: `calc((100dvw / ${
+                        word.split("").length
+                      }) - 0.5rem)`, // Remove 0.5rem because of the gap
+                    }}
                   >
                     {getButtonLetter(
                       index,
