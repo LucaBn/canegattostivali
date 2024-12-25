@@ -11,7 +11,7 @@ type WordList = Word[];
 
 const WORD_LIST: WordList = wordList;
 
-const WORD_LIST_LENGTH = 20;
+const WORD_LIST_LENGTH = 21;
 
 // Check like this because RUN_TEST value is stored as a string in .env file
 if (RUN_TEST === "true") {
