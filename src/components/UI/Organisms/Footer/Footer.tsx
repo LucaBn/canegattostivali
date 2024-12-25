@@ -15,7 +15,18 @@ const Footer: React.FC = () => {
         <Row>
           <Col xs={12}>
             <p className="text-center mb-1">© 2&zwj;024-2381 {siteUrl}</p>
-            <p className="text-center">Made with ♥ by LucaBn</p>
+            <p className="text-center">
+              Made with ♥ by{" "}
+              <a
+                title="Visita la Pagina GitHub di LucaBn"
+                rel="noopener noreferrer nofollow"
+                className="text-white"
+                href="https://github.com/LucaBn"
+                target="_blank"
+              >
+                LucaBn
+              </a>
+            </p>
           </Col>
         </Row>
       </Container>

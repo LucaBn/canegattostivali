@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 
 // Components
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Badge } from "react-bootstrap";
 import Confetti from "@/components/UI/Atoms/Confetti/Confetti";
 import TopSection from "@/components/UI/Molecules/TopSection/TopSection";
 import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
@@ -173,6 +173,18 @@ const HomePage: React.FC = () => {
     <Container className="mt-5">
       <TopSection />
 
+      <div className="d-flex justify-content-center mb-3">
+        <Badge
+          bg="secondary"
+          pill
+          title={`Devi indovinare la parola numero ${currentWordIndex} su ${
+            WORD_LIST_LENGTH - 1
+          }`}
+        >
+          {currentWordIndex} / {WORD_LIST_LENGTH - 1}
+        </Badge>
+      </div>
+
       <Row>
         <Col className="guessed-word__container overflow-hidden">
           {wordSequence.map((word, wordSequenceIndex) => (
@@ -207,6 +219,11 @@ const HomePage: React.FC = () => {
                       ? "correct"
                       : ""
                   }`}
+                  style={{
+                    maxWidth: `calc((100dvw / ${
+                      word.split("").length
+                    }) - 0.5rem)`, // Remove 0.5rem because of the gap
+                  }}
                 >
                   <Button
                     variant={getButtonVariant(
@@ -218,6 +235,11 @@ const HomePage: React.FC = () => {
                       wordSequenceIndex,
                       currentWordIndex
                     )}
+                    style={{
+                      maxWidth: `calc((100dvw / ${
+                        word.split("").length
+                      }) - 0.5rem)`, // Remove 0.5rem because of the gap
+                    }}
                   >
                     {getButtonLetter(
                       index,

@@ -14,33 +14,34 @@
 
   &__slot {
     height: $slot-height-mobile;
-    min-width: $slot-min-width-mobile;
-    width: auto;
+    width: $slot-width-mobile;
     transition: all 0.3s;
 
     @media screen and (min-width: 768px) {
       height: $slot-height-desktop;
-      min-width: $slot-min-width-desktop;
+      width: $slot-width-desktop;
     }
 
     button {
       height: $slot-height-mobile;
-      min-width: $slot-min-width-mobile;
+      width: $slot-width-mobile;
+      margin-left: 2px;
+      margin-right: 2px;
       transition: all 0.25s;
 
       @media screen and (min-width: 768px) {
         height: $slot-height-desktop;
-        min-width: $slot-min-width-desktop;
+        width: $slot-width-desktop;
       }
     }
 
     &--previous {
-      min-width: math.div($slot-min-width-desktop, 2);
+      width: math.div($slot-width-desktop, 2);
       transform: translateY(20%);
       transform-origin: bottom;
 
       button {
-        min-width: math.div($slot-min-width-desktop, 2);
+        width: math.div($slot-width-desktop, 2);
       }
     }
   }
