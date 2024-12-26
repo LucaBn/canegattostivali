@@ -2,18 +2,21 @@ import React from "react";
 
 // Components
 import { Container, Row, Col } from "react-bootstrap";
+import IconTwitter from "@/components/UI/Atoms/IconTwitter/IconTwitter";
 
 // Constants
-import { WEBSITE_URL } from "@/constants/app";
+import { AUTHOR_NAME, WEBSITE_URL } from "@/constants/app";
 
 const Footer: React.FC = () => {
-  const siteUrl = WEBSITE_URL;
+  const siteUrl: string = WEBSITE_URL;
+  const authorName: string = AUTHOR_NAME;
+  const authorLink: string = "https://github.com/LucaBn";
 
   return (
     <footer className="bg-dark text-white py-4 border-top">
       <Container>
         <Row>
-          <Col xs={12}>
+          <Col xs={12} className="my-4">
             <p className="text-center mb-1">© 2&zwj;024-2381 {siteUrl}</p>
             <p className="text-center">
               Made with ♥ by{" "}
@@ -21,11 +24,55 @@ const Footer: React.FC = () => {
                 title="Visita la Pagina GitHub di LucaBn"
                 rel="noopener noreferrer nofollow"
                 className="text-white"
-                href="https://github.com/LucaBn"
+                href={authorLink}
                 target="_blank"
               >
-                LucaBn
+                {authorName}
               </a>
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} className="mb-4">
+            <p className="mb-1 text-center">Rimani aggiornato</p>
+            <ul className="footer__social-list list-unstyled d-flex justify-content-center gap-2">
+              <li>
+                <a
+                  href="https://twitter.com/CaneGattoStivali"
+                  title="Vai a X (ex Twitter)"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <IconTwitter forceColor="#fff" />
+                </a>
+              </li>
+            </ul>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} className="mb-4">
+            <p>
+              <a
+                href="https://www.buymeacoffee.com/lucabn"
+                title="Offrimi un Caffè"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="d-contents"
+              >
+                <img
+                  src="/assets/img/buy-me-a-coffee.png"
+                  height={56}
+                  width={200}
+                  className="d-block mx-auto rounded"
+                  alt="Offrimi un Caffè"
+                  draggable={false}
+                />
+              </a>
+            </p>
+            <p className="text-center">
+              O, se mi vuoi davvero bene,
+              <br />
+              ETH 0x7470cf0460d96a857094f748a18669585ea5c185
             </p>
           </Col>
         </Row>
