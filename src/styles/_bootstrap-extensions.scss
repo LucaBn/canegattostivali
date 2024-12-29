@@ -18,10 +18,10 @@
   user-select: none;
 }
 
-[data-bs-theme="light"] .theme-sensitive-button {
+[data-bs-theme="light"] .theme-sensitive-color {
   color: var(--bs-heading-color);
 }
 
-[data-bs-theme="dark"] .theme-sensitive-button {
+[data-bs-theme="dark"] .theme-sensitive-color {
   color: rgba(var(--bs-light-rgb), var(--bs-text-opacity));
 }

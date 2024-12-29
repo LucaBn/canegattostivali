@@ -31,6 +31,8 @@ const HomePage: React.FC = () => {
   const [isGameRunning, setIsGameRunning] = useState<boolean>(false);
   const [isGameEnded, setIsGameEnded] = useState<boolean>(false);
   const [time, setTime] = useState<number>(0);
+  const [showExtraTimeTooltip, setShowExtraTimeTooltip] =
+    useState<boolean>(false);
 
   const isKeyPressEnabled = useRef<boolean>(true);
 
@@ -178,7 +180,7 @@ const HomePage: React.FC = () => {
   ): string => {
     return `p-1 ${
       wordSequenceIndex < currentWordIndex
-        ? "theme-sensitive-button bg-transparent border-0"
+        ? "theme-sensitive-color bg-transparent border-0"
         : wordSequenceIndex === currentWordIndex + 1
         ? "opacity-50"
         : wordSequenceIndex > currentWordIndex + 1
@@ -213,30 +215,42 @@ const HomePage: React.FC = () => {
     setFilterKeys(true);
     setTime((prevTime) => prevTime + 10);
     setGuessedWord(wordSequence[currentWordIndex][0]);
+    setShowExtraTimeTooltip(true);
+    setTimeout(() => {
+      setShowExtraTimeTooltip(false);
+    }, 1500);
   };
 
   return (
     <Container className="mt-5">
       <TopSection />
 
-      <div className="d-flex justify-content-center align-items-center mb-3 gap-3 user-select-none">
+      <div className="d-flex justify-content-center align-items-center mb-3 gap-4 user-select-none">
         <Badge
-          bg="secondary"
+          bg="dark"
           pill
           title={`Devi indovinare la parola numero ${currentWordIndex} su ${
             WORD_LIST_LENGTH - 1
           }`}
+          className="fs-6"
         >
           {currentWordIndex} / {WORD_LIST_LENGTH - 1}
         </Badge>
         <span
           title="Chiedi un aiuto!"
-          className="fs-3 cursor-pointer"
+          className="fs-2 cursor-pointer"
           onClick={useHelp}
         >
           💡
         </span>
-        <Badge bg="primary" pill title="Timer">
+        <Badge bg="dark" pill title="Timer" className="position-relative fs-6">
+          <span
+            className={`extra-time-tooltip ${
+              showExtraTimeTooltip ? "extra-time-tooltip--visible" : ""
+            } text-secondary`}
+          >
+            +10s
+          </span>
           {formatTime(time)}
         </Badge>
       </div>
