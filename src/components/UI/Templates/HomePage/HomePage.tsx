@@ -8,6 +8,7 @@ import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
 
 // Utils
 import { createWordSequence } from "@/utils/game-logic";
+import { normalizeLetter } from "@/utils/string";
 
 // Constants
 import { WORD_LIST_LENGTH } from "@/constants/wordList";
@@ -44,11 +45,13 @@ const HomePage: React.FC = () => {
     (key: string) => {
       if (!isKeyPressEnabled.current) return;
 
+      const normalizedKey = normalizeLetter(key);
+
       // TODO: enable/disable this in easy/hard mode
       if (
         key !== "INVIO" &&
         key !== "CANC" &&
-        !currentWord.substring(1).includes(key)
+        !currentWord.substring(1).includes(normalizedKey)
       )
         return;
 
@@ -89,10 +92,10 @@ const HomePage: React.FC = () => {
           }
         }
       } else if (
-        /^[A-Za-z]$/.test(key) &&
+        /^[A-Za-z]$/.test(normalizedKey) &&
         guessedWord.length < currentWord.length
       ) {
-        setGuessedWord((prev) => prev + key.toUpperCase());
+        setGuessedWord((prev) => prev + normalizedKey.toUpperCase());
       }
     },
     [guessedWord, currentWordIndex]

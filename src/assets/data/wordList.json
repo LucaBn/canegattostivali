@@ -165,7 +165,8 @@
       "PALLA",
       "PUPAZZO",
       "TEMPESTA",
-      "GOMME"
+      "GOMME",
+      "CANNONE"
     ]
   },
   {
@@ -2912,7 +2913,7 @@
   },
   {
     "word": "CANNONE",
-    "nextWordList": ["DONNA", "PALLA"]
+    "nextWordList": ["DONNA", "PALLA", "NEVE"]
   },
   {
     "word": "PAGINA",
