@@ -14,10 +14,15 @@ const keys: string[][] = [
 
 interface KeyboardProps {
   currentWord: string;
+  filterKeys: boolean;
   onKeyPress: (key: string) => void;
 }
 
-const Keyboard: React.FC<KeyboardProps> = ({ currentWord, onKeyPress }) => {
+const Keyboard: React.FC<KeyboardProps> = ({
+  currentWord,
+  filterKeys,
+  onKeyPress,
+}) => {
   const handleKeyClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     key: string
@@ -37,10 +42,10 @@ const Keyboard: React.FC<KeyboardProps> = ({ currentWord, onKeyPress }) => {
   };
 
   const isKeyDisabled = (key: string) => {
-    // TODO: enable/disable this in easy/hard mode
     return (
       key !== "INVIO" &&
       key !== "CANC" &&
+      filterKeys &&
       !currentWord.substring(1).includes(key)
     );
   };

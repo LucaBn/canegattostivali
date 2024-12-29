@@ -9,6 +9,7 @@ import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
 // Utils
 import { createWordSequence } from "@/utils/game-logic";
 import { normalizeLetter } from "@/utils/string";
+import { formatTime } from "@/utils/time";
 
 // Constants
 import { WORD_LIST_LENGTH } from "@/constants/wordList";
@@ -26,6 +27,10 @@ const HomePage: React.FC = () => {
   const [isBuzzing, setIsBuzzing] = useState<boolean>(false);
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
   const [showConfetti, setShowConfetti] = useState<boolean>(false);
+  const [filterKeys, setFilterKeys] = useState<boolean>(false);
+  const [isGameRunning, setIsGameRunning] = useState<boolean>(false);
+  const [isGameEnded, setIsGameEnded] = useState<boolean>(false);
+  const [time, setTime] = useState<number>(0);
 
   const isKeyPressEnabled = useRef<boolean>(true);
 
@@ -41,34 +46,46 @@ const HomePage: React.FC = () => {
     );
   }, [guessedWord, currentWordIndex]);
 
+  const isLastWord = currentWordIndex === WORD_LIST_LENGTH - 1;
+
   const handleKeyPress = useCallback(
     (key: string) => {
       if (!isKeyPressEnabled.current) return;
 
       const normalizedKey = normalizeLetter(key);
 
-      // TODO: enable/disable this in easy/hard mode
       if (
         key !== "INVIO" &&
         key !== "CANC" &&
+        filterKeys &&
         !currentWord.substring(1).includes(normalizedKey)
       )
         return;
 
+      if (!isGameEnded) {
+        setIsGameRunning(true);
+      }
       setMessage("🤔");
 
       if (key === "CANC") {
         setGuessedWord((prev) => (prev.length > 1 ? prev.slice(0, -1) : prev));
       } else if (key === "INVIO") {
         if (guessedWord === currentWord) {
+          if (isLastWord) {
+            setIsGameEnded(true);
+            setIsGameRunning(false);
+          }
           isKeyPressEnabled.current = false;
           setMessage("😃");
           setIsCorrect(true);
           setTimeout(() => {
             setIsCorrect(false);
           }, 450);
+
           setTimeout(() => {
-            if (currentWordIndex === WORD_LIST_LENGTH - 1) {
+            setFilterKeys(false);
+
+            if (isLastWord) {
               setMessage("🥳");
               setShowConfetti(true);
               setTimeout(() => {
@@ -115,6 +132,16 @@ const HomePage: React.FC = () => {
     window.addEventListener("keydown", handleKeydown);
     return () => window.removeEventListener("keydown", handleKeydown);
   }, [guessedWord]);
+
+  useEffect(() => {
+    if (isGameRunning) {
+      const interval = setInterval(() => {
+        setTime((prevTime) => prevTime + 1);
+      }, 1000);
+
+      return () => clearInterval(interval);
+    }
+  }, [isGameRunning]);
 
   useEffect(() => {
     const updateSlotHeight = () => {
@@ -172,11 +199,27 @@ const HomePage: React.FC = () => {
       : "";
   };
 
+  const useHelp = () => {
+    if (isGameEnded) {
+      return;
+    }
+
+    setIsGameRunning(true);
+
+    if (filterKeys) {
+      return;
+    }
+
+    setFilterKeys(true);
+    setTime((prevTime) => prevTime + 10);
+    setGuessedWord(wordSequence[currentWordIndex][0]);
+  };
+
   return (
     <Container className="mt-5">
       <TopSection />
 
-      <div className="d-flex justify-content-center mb-3">
+      <div className="d-flex justify-content-center align-items-center mb-3 gap-3 user-select-none">
         <Badge
           bg="secondary"
           pill
@@ -185,6 +228,16 @@ const HomePage: React.FC = () => {
           }`}
         >
           {currentWordIndex} / {WORD_LIST_LENGTH - 1}
+        </Badge>
+        <span
+          title="Chiedi un aiuto!"
+          className="fs-3 cursor-pointer"
+          onClick={useHelp}
+        >
+          💡
+        </span>
+        <Badge bg="primary" pill title="Timer">
+          {formatTime(time)}
         </Badge>
       </div>
 
@@ -263,7 +316,11 @@ const HomePage: React.FC = () => {
         {showConfetti && <Confetti />}
       </p>
 
-      <Keyboard currentWord={currentWord} onKeyPress={handleKeyPress} />
+      <Keyboard
+        currentWord={currentWord}
+        filterKeys={filterKeys}
+        onKeyPress={handleKeyPress}
+      />
     </Container>
   );
 };
