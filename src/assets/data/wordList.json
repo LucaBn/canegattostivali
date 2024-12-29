@@ -134,7 +134,8 @@
       "BIANCA",
       "NERA",
       "FINTA",
-      "AMICO"
+      "AMICO",
+      "POLTRONA"
     ]
   },
   {
@@ -184,12 +185,21 @@
       "UNIFORME",
       "AMBIENTE",
       "SICURO",
-      "CAMPO"
+      "CAMPO",
+      "PERMESSO"
     ]
   },
   {
     "word": "PESCA",
-    "nextWordList": ["STIVALI", "FRUTTO", "CANNA", "RETE", "FRUTTA", "BARCA"]
+    "nextWordList": [
+      "STIVALI",
+      "FRUTTO",
+      "CANNA",
+      "RETE",
+      "FRUTTA",
+      "BARCA",
+      "LICENZA"
+    ]
   },
   {
     "word": "TIGRE",
@@ -777,7 +787,7 @@
   },
   {
     "word": "BALLO",
-    "nextWordList": ["CORPO", "GRUPPO", "COPPIA"]
+    "nextWordList": ["CORPO", "GRUPPO", "COPPIA", "SALA"]
   },
   {
     "word": "GRUPPO",
@@ -893,7 +903,8 @@
       "STATALE",
       "GINNASTICA",
       "AULA",
-      "CLASSE"
+      "CLASSE",
+      "MEDIA"
     ]
   },
   {
@@ -937,7 +948,7 @@
   },
   {
     "word": "ALBERGO",
-    "nextWordList": ["PENSIONE", "CAMERA", "COLAZIONE"]
+    "nextWordList": ["PENSIONE", "CAMERA", "COLAZIONE", "SOGGIORNO"]
   },
   {
     "word": "CAMERA",
@@ -2005,7 +2016,8 @@
       "FUNZIONE",
       "PRODOTTO",
       "ESERCIZIO",
-      "FORMULA"
+      "FORMULA",
+      "MEDIA"
     ]
   },
   {
@@ -2091,7 +2103,7 @@
   },
   {
     "word": "BIRRA",
-    "nextWordList": ["ROSSA", "SPINA"]
+    "nextWordList": ["ROSSA", "SPINA", "MEDIA"]
   },
   {
     "word": "PIZZA",
@@ -2692,7 +2704,8 @@
       "TITOLO",
       "AZIONE",
       "VEDERE",
-      "PAURA"
+      "PAURA",
+      "CINEMA"
     ]
   },
   {
@@ -2905,7 +2918,35 @@
   },
   {
     "word": "ATTESA",
-    "nextWordList": ["LISTA", "DOLCE", "PIACERE", "TEMPO"]
+    "nextWordList": ["LISTA", "DOLCE", "PIACERE", "TEMPO", "SALA"]
+  },
+  {
+    "word": "SALA",
+    "nextWordList": ["ATTESA", "BALLO", "CINEMA"]
+  },
+  {
+    "word": "CINEMA",
+    "nextWordList": ["SALA", "FILM", "POLTRONA"]
+  },
+  {
+    "word": "POLTRONA",
+    "nextWordList": ["CINEMA", "PELLE", "SOGGIORNO"]
+  },
+  {
+    "word": "SOGGIORNO",
+    "nextWordList": ["POLTRONA", "ALBERGO", "PERMESSO"]
+  },
+  {
+    "word": "PERMESSO",
+    "nextWordList": ["SOGGIORNO", "LAVORO", "LICENZA"]
+  },
+  {
+    "word": "LICENZA",
+    "nextWordList": ["PERMESSO", "MEDIA", "PESCA"]
+  },
+  {
+    "word": "MEDIA",
+    "nextWordList": ["LICENZA", "BIRRA", "SCUOLA", "MATEMATICA"]
   },
   {
     "word": "CARRELLO",
