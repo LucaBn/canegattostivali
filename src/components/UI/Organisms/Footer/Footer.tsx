@@ -2,7 +2,7 @@ import React from "react";
 
 // Components
 import { Container, Row, Col } from "react-bootstrap";
-import IconTwitter from "@/components/UI/Atoms/IconTwitter/IconTwitter";
+// import IconTwitter from "@/components/UI/Atoms/IconTwitter/IconTwitter";
 
 // Constants
 import { AUTHOR_NAME, WEBSITE_URL } from "@/constants/app";
@@ -34,6 +34,30 @@ const Footer: React.FC = () => {
         </Row>
         <Row>
           <Col xs={12} className="mb-4">
+            <p className="mb-2 text-center">Powered by</p>
+            <p className="d-flex flex-column align-items-center">
+              <a
+                href="https://www.pimpmyjpg.com/it"
+                title="Pimp my Jpg"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="d-contents text-white"
+              >
+                <img
+                  src="/assets/img/pimp-my-jpg.png"
+                  height="50"
+                  width="100"
+                  alt="Logo di Pimp my Jpg con bicipiti assurdi"
+                  draggable="false"
+                  className="pmj__logo"
+                />
+                <span className="pmj__logo-label">PIMP MY JPG</span>
+              </a>
+            </p>
+          </Col>
+        </Row>
+        {/* <Row>
+          <Col xs={12} className="mb-4">
             <p className="mb-1 text-center">Rimani aggiornato</p>
             <ul className="footer__social-list list-unstyled d-flex justify-content-center gap-2">
               <li>
@@ -48,7 +72,7 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </Col>
-        </Row>
+        </Row> */}
         <Row>
           <Col xs={12} className="mb-4">
             <p>
