@@ -511,7 +511,8 @@
       "DISEGNO",
       "VIGORE",
       "OPERA",
-      "TEATRO"
+      "TEATRO",
+      "UNIVERSITA"
     ]
   },
   {
@@ -933,7 +934,7 @@
   },
   {
     "word": "COMUNE",
-    "nextWordList": ["INTERESSE", "PAESE", "FUORI", "CITTA"]
+    "nextWordList": ["INTERESSE", "PAESE", "FUORI", "CITTA", "NOME"]
   },
   {
     "word": "LINEA",
@@ -943,7 +944,9 @@
       "ROSSA",
       "CONTINUA",
       "METRO",
-      "TRAGUARDO"
+      "TRAGUARDO",
+      "RETTA",
+      "CONDOTTA"
     ]
   },
   {
@@ -952,7 +955,7 @@
   },
   {
     "word": "TEMPORALE",
-    "nextWordList": ["OSSO", "PIOGGIA", "POTERE"]
+    "nextWordList": ["OSSO", "PIOGGIA", "POTERE", "FINESTRA"]
   },
   {
     "word": "POTERE",
@@ -1188,7 +1191,14 @@
   },
   {
     "word": "CARTE",
-    "nextWordList": ["SCOPA", "CASTELLO", "POKER", "BRISCOLA", "GIOCARE"]
+    "nextWordList": [
+      "SCOPA",
+      "CASTELLO",
+      "POKER",
+      "BRISCOLA",
+      "GIOCARE",
+      "MAZZO"
+    ]
   },
   {
     "word": "GIOCARE",
@@ -1243,7 +1253,8 @@
       "ASCENSORE",
       "CHIAVE",
       "BATTENTE",
-      "ENTRATA"
+      "ENTRATA",
+      "FINESTRA"
     ]
   },
   {
@@ -1765,7 +1776,15 @@
   },
   {
     "word": "VIA",
-    "nextWordList": ["SETA", "STRADA", "VENTO", "SPARO"]
+    "nextWordList": ["SETA", "STRADA", "VENTO", "SPARO", "RETTA"]
+  },
+  {
+    "word": "RETTA",
+    "nextWordList": ["VIA", "LINEA", "UNIVERSITA"]
+  },
+  {
+    "word": "UNIVERSITA",
+    "nextWordList": ["RETTA", "CORSO", "ESAME"]
   },
   {
     "word": "STRADA",
@@ -1777,7 +1796,7 @@
   },
   {
     "word": "CONDOTTA",
-    "nextWordList": ["BUONA", "VOTO"]
+    "nextWordList": ["BUONA", "VOTO", "LINEA"]
   },
   {
     "word": "VOTO",
@@ -2188,7 +2207,11 @@
   },
   {
     "word": "IMPOSTA",
-    "nextWordList": ["CREDITO", "IVA"]
+    "nextWordList": ["CREDITO", "IVA", "FINESTRA"]
+  },
+  {
+    "word": "FINESTRA",
+    "nextWordList": ["IMPOSTA", "TEMPORALE", "VETRO", "PORTA"]
   },
   {
     "word": "ZUCCHERO",
@@ -2204,7 +2227,15 @@
   },
   {
     "word": "SPOSA",
-    "nextWordList": ["VELO", "ABITO"]
+    "nextWordList": ["VELO", "ABITO", "BOUQUET"]
+  },
+  {
+    "word": "BOUQUET",
+    "nextWordList": ["SPOSA", "MAZZO"]
+  },
+  {
+    "word": "MAZZO",
+    "nextWordList": ["BOUQUET", "CARTE"]
   },
   {
     "word": "FRUTTO",
@@ -2427,7 +2458,9 @@
       "SECONDA",
       "MARE",
       "MONTAGNA",
-      "ENTRATA"
+      "PALAZZO",
+      "ENTRATA",
+      "VICINO"
     ]
   },
   {
@@ -2475,8 +2508,33 @@
       "SPINA",
       "FIOCCO",
       "QUARZO",
-      "BOCCA"
+      "BOCCA",
+      "NOME"
     ]
+  },
+  {
+    "word": "NOME",
+    "nextWordList": ["ROSA", "CODICE", "COMUNE", "UTENTE"]
+  },
+  {
+    "word": "UTENTE",
+    "nextWordList": ["NOME", "NUOVO"]
+  },
+  {
+    "word": "NUOVO",
+    "nextWordList": ["UTENTE", "ANNO"]
+  },
+  {
+    "word": "ANNO",
+    "nextWordList": ["NUOVO", "PROSSIMO"]
+  },
+  {
+    "word": "PROSSIMO",
+    "nextWordList": ["ANNO", "VICINO"]
+  },
+  {
+    "word": "VICINO",
+    "nextWordList": ["PROSSIMO", "CASA"]
   },
   {
     "word": "SPINA",
@@ -2833,7 +2891,15 @@
   },
   {
     "word": "CODICE",
-    "nextWordList": ["CIVILE", "SEGRETO", "CONSUMO", "ONORE", "ROSSO", "STRADA"]
+    "nextWordList": [
+      "CIVILE",
+      "SEGRETO",
+      "CONSUMO",
+      "ONORE",
+      "ROSSO",
+      "STRADA",
+      "NOME"
+    ]
   },
   {
     "word": "SEGRETO",
@@ -2966,7 +3032,7 @@
   },
   {
     "word": "ESAME",
-    "nextWordList": ["VISITA", "VOTO", "STATO", "PATENTE"]
+    "nextWordList": ["VISITA", "VOTO", "STATO", "PATENTE", "UNIVERSITA"]
   },
   {
     "word": "ENERGIA",
@@ -3523,7 +3589,7 @@
   },
   {
     "word": "VETRO",
-    "nextWordList": ["ACQUARIO", "TRASPARENTE"]
+    "nextWordList": ["ACQUARIO", "TRASPARENTE", "FINESTRA"]
   },
   {
     "word": "TRASPARENTE",

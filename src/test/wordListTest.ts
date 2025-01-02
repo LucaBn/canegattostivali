@@ -81,4 +81,16 @@ const runWordListTest = () => {
   }
 };
 
-export { runWordListTest };
+function sortWordsByNextWordListLength() {
+  const sortedWordList = WORD_LIST.sort((a, b) => {
+    const lengthDifference = a.nextWordList.length - b.nextWordList.length;
+    if (lengthDifference !== 0) {
+      return lengthDifference;
+    }
+    return a.word.localeCompare(b.word); // Ordine alfabetico in caso di parità
+  });
+
+  console.log({ sortedWordList });
+}
+
+export { runWordListTest, sortWordsByNextWordListLength };
