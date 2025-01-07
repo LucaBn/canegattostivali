@@ -57,7 +57,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
   };
 
   return (
-    <Container className="keyboard mt-5">
+    <Container className="keyboard mt-3">
       {keys.map((row, rowIndex) => (
         <Row
           key={rowIndex}

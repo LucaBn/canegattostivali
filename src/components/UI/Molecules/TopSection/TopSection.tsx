@@ -3,10 +3,12 @@ import { Col, Row } from "react-bootstrap";
 const TopSection: React.FC = () => {
   return (
     <Row className="justify-content-center">
-      <Col xs="auto" md="8" lg="6">
-        <h1 className="text-center">Cane Gatto Stivali</h1>
-        <p className="mb-5 text-center">
-          Indovina la parola usando quella precedente come indizio!
+      <Col xs="auto" md="8" lg="6" className="text-center">
+        <h1 className="mb-3">Cane Gatto Stivali</h1>
+        <p className="mb-5 user-select-none">
+          Indovina la parola usando quella precedente come indizio.
+          <br />
+          Sei bloccato? Clicca sulla lampadina 💡 e ricevi un aiutino!
         </p>
       </Col>
     </Row>

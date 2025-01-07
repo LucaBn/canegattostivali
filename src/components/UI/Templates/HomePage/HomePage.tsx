@@ -225,7 +225,8 @@ const HomePage: React.FC = () => {
     <Container className="mt-5">
       <TopSection />
 
-      <div className="d-flex justify-content-center align-items-center mb-3 gap-4 user-select-none">
+      {/* TODO: rewrite this as a <Row> component */}
+      <div className="d-flex justify-content-center align-items-center mb-1 mb-lg-2 gap-4 user-select-none">
         <Badge
           bg="dark"
           pill
@@ -236,13 +237,10 @@ const HomePage: React.FC = () => {
         >
           {currentWordIndex} / {WORD_LIST_LENGTH - 1}
         </Badge>
-        <span
-          title="Chiedi un aiuto!"
-          className="fs-2 cursor-pointer"
-          onClick={useHelp}
-        >
-          💡
-        </span>
+
+        {/* TODO: create a component for this */}
+        <p className="position-relative d-block fs-2 text-center">{message}</p>
+
         <Badge bg="dark" pill title="Timer" className="position-relative fs-6">
           <span
             className={`extra-time-tooltip ${
@@ -324,11 +322,17 @@ const HomePage: React.FC = () => {
         </Col>
       </Row>
 
-      {/* TODO: create a component for this */}
-      <p className="position-relative d-block h2 text-center mt-5">
-        {message}
-        {showConfetti && <Confetti />}
-      </p>
+      {showConfetti && <Confetti />}
+
+      <div className="d-flex justify-content-center align-items-center user-select-none">
+        <span
+          title="Chiedi un aiuto!"
+          className="mt-5 fs-2 cursor-pointer"
+          onClick={useHelp}
+        >
+          💡
+        </span>
+      </div>
 
       <Keyboard
         currentWord={currentWord}
