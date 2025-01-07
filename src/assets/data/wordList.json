@@ -2380,7 +2380,6 @@
       "TERRA",
       "CAMICIA",
       "INVISIBILE",
-      "SARTO",
       "ACCIAIO"
     ]
   },
@@ -2996,7 +2995,7 @@
   },
   {
     "word": "SARTO",
-    "nextWordList": ["SPILLO", "ABITO", "UOMO", "METRO"]
+    "nextWordList": ["SPILLO", "ABITO", "METRO"]
   },
   {
     "word": "TRIBUNALE",
