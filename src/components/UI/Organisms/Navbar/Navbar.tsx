@@ -11,7 +11,6 @@ import { useTheme } from "@/components/providers/ThemeProvider";
 import { ThemeList } from "@/constants/themes";
 
 // Constants
-import { APP_NAME } from "@/constants/app";
 import IconSun from "../../Atoms/IconSun/IconSun";
 import IconMoon from "../../Atoms/IconMoon/IconMoon";
 
@@ -76,8 +75,12 @@ const NavbarComponent: React.FC = () => {
         ref={navbarRef as React.RefObject<HTMLDivElement>}
       >
         <Container>
-          <Navbar.Brand onClick={handleLogoClick} className="py-0">
-            {APP_NAME}
+          <Navbar.Brand
+            onClick={handleLogoClick}
+            className="py-0 user-select-none cursor-pointer"
+            title="Cane Gatto Stivali"
+          >
+            🐶🐱👢
           </Navbar.Brand>
 
           <span
