@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 // Components
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
 // import { LinkContainer } from "react-router-bootstrap";
 
 // Hook
@@ -11,7 +11,8 @@ import { useTheme } from "@/components/providers/ThemeProvider";
 import { ThemeList } from "@/constants/themes";
 
 // Constants
-import { APP_NAME } from "@/constants/app";
+import IconSun from "../../Atoms/IconSun/IconSun";
+import IconMoon from "../../Atoms/IconMoon/IconMoon";
 
 // TODO: move this to an utils file
 const scrollToTop = () => {
@@ -27,7 +28,7 @@ const NavbarComponent: React.FC = () => {
 
   const navbarRef = useRef<HTMLDivElement>(null);
 
-  const { changeTheme } = useTheme();
+  const { theme, changeTheme } = useTheme();
 
   const handleOutsideClick = (event: MouseEvent) => {
     if (
@@ -45,9 +46,9 @@ const NavbarComponent: React.FC = () => {
     };
   }, []);
 
-  const toggleNavbarDropdownStatus = () => {
-    setExpanded((prevValue) => !prevValue);
-  };
+  // const toggleNavbarDropdownStatus = () => {
+  //   setExpanded((prevValue) => !prevValue);
+  // };
 
   const closeNavbarDropdown = () => {
     setExpanded(false);
@@ -56,6 +57,12 @@ const NavbarComponent: React.FC = () => {
   const handleLogoClick = () => {
     closeNavbarDropdown();
     scrollToTop();
+  };
+
+  const toggleTheme = () => {
+    theme === "light"
+      ? changeTheme("dark" as ThemeList)
+      : changeTheme("light" as ThemeList);
   };
 
   return (
@@ -68,22 +75,34 @@ const NavbarComponent: React.FC = () => {
         ref={navbarRef as React.RefObject<HTMLDivElement>}
       >
         <Container>
-          <Navbar.Brand onClick={handleLogoClick} className="py-0">
-            {APP_NAME}
+          <Navbar.Brand
+            onClick={handleLogoClick}
+            className="py-0 user-select-none cursor-pointer"
+            title="Cane Gatto Stivali"
+          >
+            🐶🐱👢
           </Navbar.Brand>
-          <Navbar.Toggle
+
+          <span
+            onClick={toggleTheme}
+            className="cursor-pointer"
+            title="Cambia il tema"
+          >
+            {theme === "light" ? (
+              <IconMoon forceColor="#fff" />
+            ) : (
+              <IconSun forceColor="#fff" />
+            )}
+          </span>
+          {/* <LinkContainer to={`/one`}>
+
+          {/* <Navbar.Toggle
             aria-controls="navbar-collpsable"
             onClick={toggleNavbarDropdownStatus}
-          />
-          <Navbar.Collapse onClick={closeNavbarDropdown} id="navbar-collpsable">
+          /> */}
+          {/* <Navbar.Collapse onClick={closeNavbarDropdown} id="navbar-collpsable">
             <Nav className="ms-auto gap-1">
-              <Button onClick={() => changeTheme("light" as ThemeList)}>
-                Light
-              </Button>
-              <Button onClick={() => changeTheme("dark" as ThemeList)}>
-                Dark
-              </Button>
-              {/* <LinkContainer to={`/one`}>
+              <LinkContainer to={`/one`}>
                 <Nav.Link>Link One</Nav.Link>
               </LinkContainer>
               <LinkContainer to={`/two`}>
@@ -91,9 +110,9 @@ const NavbarComponent: React.FC = () => {
               </LinkContainer>
               <LinkContainer to={`/three`}>
                 <Nav.Link>Link Three</Nav.Link>
-              </LinkContainer> */}
+              </LinkContainer>
             </Nav>
-          </Navbar.Collapse>
+          </Navbar.Collapse> */}
         </Container>
       </Navbar>
     </>

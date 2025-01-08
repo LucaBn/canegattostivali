@@ -56,7 +56,8 @@
       "COWBOY",
       "NEVE",
       "LAVORO",
-      "PESCA"
+      "PESCA",
+      "CUOIO"
     ]
   },
   {
@@ -143,7 +144,8 @@
       "NERA",
       "FINTA",
       "AMICO",
-      "POLTRONA"
+      "POLTRONA",
+      "CUOIO"
     ]
   },
   {
@@ -198,7 +200,8 @@
       "CAMPO",
       "PERMESSO",
       "AVVOCATO",
-      "APPUNTAMENTO"
+      "APPUNTAMENTO",
+      "GIORNATA"
     ]
   },
   {
@@ -420,7 +423,7 @@
   },
   {
     "word": "ASSOLUTO",
-    "nextWordList": ["ZERO", "VALORE", "SILENZIO"]
+    "nextWordList": ["ZERO", "VALORE", "SILENZIO", "ORECCHIO"]
   },
   {
     "word": "SILENZIO",
@@ -516,7 +519,7 @@
   },
   {
     "word": "RUOTA",
-    "nextWordList": ["BICICLETTA", "SCORTA", "RAGGI", "CARRO", "CARRELLO"]
+    "nextWordList": ["BICICLETTA", "SCORTA", "CARRO", "CARRELLO"]
   },
   {
     "word": "SCORTA",
@@ -1089,11 +1092,12 @@
       "LUNA",
       "LUCE",
       "TENDA",
-      "RAGGI",
+      "RAGGIO",
       "SOTTO",
       "BACIATA",
       "COLPO",
-      "OCCHIALI"
+      "OCCHIALI",
+      "GIORNATA"
     ]
   },
   {
@@ -1223,7 +1227,15 @@
   },
   {
     "word": "STREGA",
-    "nextWordList": ["FATTURA", "SCOPA", "CAPPELLO", "GATTO", "MAGIA", "COLPO"]
+    "nextWordList": [
+      "FATTURA",
+      "SCOPA",
+      "CAPPELLO",
+      "GATTO",
+      "MAGIA",
+      "COLPO",
+      "PREMIO"
+    ]
   },
   {
     "word": "SCOPA",
@@ -1364,7 +1376,8 @@
       "RAPA",
       "COLPO",
       "FUORI",
-      "LEGNO"
+      "LEGNO",
+      "CLASSIFICA"
     ]
   },
   {
@@ -1507,7 +1520,14 @@
   },
   {
     "word": "OLIO",
-    "nextWordList": ["DIPINTO", "LAMPADA", "MOTORE", "GOMITO", "SPIA"]
+    "nextWordList": [
+      "DIPINTO",
+      "LAMPADA",
+      "MOTORE",
+      "GOMITO",
+      "SPIA",
+      "FOCACCIA"
+    ]
   },
   {
     "word": "MOTORE",
@@ -1608,11 +1628,23 @@
   },
   {
     "word": "POLLO",
-    "nextWordList": ["BRODO", "PETTO", "INSALATA"]
+    "nextWordList": ["BRODO", "PETTO", "INSALATA", "COSCIA"]
   },
   {
     "word": "PETTO",
-    "nextWordList": ["POLLO", "FUORI"]
+    "nextWordList": ["POLLO", "FUORI", "COSCIA"]
+  },
+  {
+    "word": "COSCIA",
+    "nextWordList": ["PETTO", "POLLO", "INTERNO"]
+  },
+  {
+    "word": "INTERNO",
+    "nextWordList": ["COSCIA", "MINISTRO"]
+  },
+  {
+    "word": "MINISTRO",
+    "nextWordList": ["INTERNO", "POLITICO", "PRIMO", "SPORT"]
   },
   {
     "word": "FUORI",
@@ -1632,7 +1664,10 @@
       "LISTA",
       "CAPITOLO",
       "MOMENTO",
-      "ATTO"
+      "ATTO",
+      "CLASSIFICA",
+      "MINISTRO",
+      "PREMIO"
     ]
   },
   {
@@ -1955,7 +1990,14 @@
   },
   {
     "word": "PISTOLA",
-    "nextWordList": ["COWBOY", "CANNA", "SPARO", "SILICONE", "GITTATA"]
+    "nextWordList": [
+      "COWBOY",
+      "CANNA",
+      "SPARO",
+      "SILICONE",
+      "GITTATA",
+      "CARTUCCIA"
+    ]
   },
   {
     "word": "MONTAGNA",
@@ -2005,7 +2047,8 @@
       "CAMPO",
       "MAGLIA",
       "ARBITRO",
-      "SQUADRA"
+      "SQUADRA",
+      "CAMPIONATO"
     ]
   },
   {
@@ -2097,7 +2140,8 @@
       "MOMENTO",
       "VIGORE",
       "ABUSO",
-      "ATTO"
+      "ATTO",
+      "ANIMO"
     ]
   },
   {
@@ -2413,7 +2457,14 @@
   },
   {
     "word": "POLITICO",
-    "nextWordList": ["ASILO", "PARTITO", "CORROTTO", "IMPEGNO", "REGIME"]
+    "nextWordList": [
+      "ASILO",
+      "PARTITO",
+      "CORROTTO",
+      "IMPEGNO",
+      "REGIME",
+      "MINISTRO"
+    ]
   },
   {
     "word": "CORROTTO",
@@ -2528,7 +2579,7 @@
   },
   {
     "word": "ANELLO",
-    "nextWordList": ["GIOIELLO", "NASO", "CALAMARO", "FEDE"]
+    "nextWordList": ["GIOIELLO", "NASO", "CALAMARO", "FEDE", "CIPOLLA"]
   },
   {
     "word": "NASO",
@@ -2557,7 +2608,7 @@
   },
   {
     "word": "MARTELLO",
-    "nextWordList": ["PIEDE", "CHIODO", "OSSO", "LANCIO"]
+    "nextWordList": ["PIEDE", "CHIODO", "OSSO", "LANCIO", "ORECCHIO"]
   },
   {
     "word": "CHIODO",
@@ -2605,7 +2656,7 @@
   },
   {
     "word": "PIZZA",
-    "nextWordList": ["BIANCA", "METRO", "TAGLIO", "FETTA"]
+    "nextWordList": ["BIANCA", "METRO", "TAGLIO", "FETTA", "IMPASTO"]
   },
   {
     "word": "LUCE",
@@ -2613,7 +2664,7 @@
   },
   {
     "word": "GAS",
-    "nextWordList": ["LUCE", "FORNO", "NOBILE"]
+    "nextWordList": ["LUCE", "FORNO", "NOBILE", "BOMBOLA", "OSSIGENO"]
   },
   {
     "word": "VOCE",
@@ -2828,7 +2879,8 @@
       "MOTORE",
       "BATTERIA",
       "EPOCA",
-      "COLLEZIONE"
+      "COLLEZIONE",
+      "ASSICURAZIONE"
     ]
   },
   {
@@ -2928,7 +2980,7 @@
   },
   {
     "word": "TENDA",
-    "nextWordList": ["LINO", "SOLE"]
+    "nextWordList": ["LINO", "SOLE", "DOCCIA"]
   },
   {
     "word": "BOTTIGLIA",
@@ -2956,11 +3008,15 @@
   },
   {
     "word": "BUCO",
-    "nextWordList": ["FORO", "NERO", "BILANCIO", "ACQUA"]
+    "nextWordList": ["FORO", "NERO", "BILANCIO", "ACQUA", "ORECCHIO"]
+  },
+  {
+    "word": "ORECCHIO",
+    "nextWordList": ["BUCO", "ASSOLUTO", "MARTELLO"]
   },
   {
     "word": "BILANCIO",
-    "nextWordList": ["BUCO", "STATO", "ESERCIZIO", "LEGGE"]
+    "nextWordList": ["BUCO", "STATO", "ESERCIZIO", "LEGGE", "PASSIVO"]
   },
   {
     "word": "ESERCIZIO",
@@ -2968,7 +3024,7 @@
   },
   {
     "word": "GINNASTICA",
-    "nextWordList": ["ESERCIZIO", "SCUOLA", "PALESTRA", "SCARPE"]
+    "nextWordList": ["ESERCIZIO", "SCUOLA", "PALESTRA", "SCARPE", "PARALLELE"]
   },
   {
     "word": "SCARPE",
@@ -2978,7 +3034,8 @@
       "TACCO",
       "NEGOZIO",
       "CHIODO",
-      "STRAPPO"
+      "STRAPPO",
+      "CUOIO"
     ]
   },
   {
@@ -3029,7 +3086,31 @@
   },
   {
     "word": "SOMMOZZATORE",
-    "nextWordList": ["MUTA", "MASCHERA"]
+    "nextWordList": ["MUTA", "MASCHERA", "BOMBOLA"]
+  },
+  {
+    "word": "BOMBOLA",
+    "nextWordList": ["SOMMOZZATORE", "GAS", "OSSIGENO"]
+  },
+  {
+    "word": "OSSIGENO",
+    "nextWordList": ["BOMBOLA", "GAS", "LIQUIDO"]
+  },
+  {
+    "word": "LIQUIDO",
+    "nextWordList": ["OSSIGENO", "STATO", "DENARO"]
+  },
+  {
+    "word": "DENARO",
+    "nextWordList": ["LIQUIDO", "PREMIO"]
+  },
+  {
+    "word": "PREMIO",
+    "nextWordList": ["DENARO", "STREGA", "PRIMO", "ASSICURAZIONE"]
+  },
+  {
+    "word": "ASSICURAZIONE",
+    "nextWordList": ["PREMIO", "VITA", "AUTO"]
   },
   {
     "word": "MASCHERA",
@@ -3075,7 +3156,11 @@
   },
   {
     "word": "PALLONE",
-    "nextWordList": ["ORO", "CALCIO"]
+    "nextWordList": ["ORO", "CALCIO", "CUOIO"]
+  },
+  {
+    "word": "CUOIO",
+    "nextWordList": ["PALLONE", "PELLE", "SCARPE", "STIVALI"]
   },
   {
     "word": "CLASSE",
@@ -3104,7 +3189,14 @@
   },
   {
     "word": "INCHIOSTRO",
-    "nextWordList": ["INDELEBILE", "PENNA", "CALAMARO", "INVISIBILE", "PIUMA"]
+    "nextWordList": [
+      "INDELEBILE",
+      "PENNA",
+      "CALAMARO",
+      "INVISIBILE",
+      "PIUMA",
+      "STAMPANTE"
+    ]
   },
   {
     "word": "CALAMARO",
@@ -3167,7 +3259,7 @@
   },
   {
     "word": "AZIONE",
-    "nextWordList": ["TITOLO", "FILM", "REAZIONE"]
+    "nextWordList": ["TITOLO", "FILM", "REAZIONE", "RAGGIO"]
   },
   {
     "word": "VIAGGIO",
@@ -3230,12 +3322,13 @@
       "PAESE",
       "ESAME",
       "SOLIDO",
-      "FAMIGLIA"
+      "FAMIGLIA",
+      "LIQUIDO"
     ]
   },
   {
     "word": "ANIMO",
-    "nextWordList": ["STATO", "NOBILE"]
+    "nextWordList": ["STATO", "NOBILE", "FORZA"]
   },
   {
     "word": "NOBILE",
@@ -3299,7 +3392,7 @@
   },
   {
     "word": "PANE",
-    "nextWordList": ["CIABATTA", "FETTA", "VINO"]
+    "nextWordList": ["CIABATTA", "FETTA", "VINO", "IMPASTO"]
   },
   {
     "word": "ENERGIA",
@@ -3481,7 +3574,7 @@
   },
   {
     "word": "SPORT",
-    "nextWordList": ["ACQUATICO", "SQUADRA", "CONTATTO"]
+    "nextWordList": ["ACQUATICO", "SQUADRA", "CONTATTO", "MINISTRO"]
   },
   {
     "word": "SQUADRA",
@@ -3641,7 +3734,15 @@
   },
   {
     "word": "CORTO",
-    "nextWordList": ["FIATO", "TAGLIO", "PASSO", "SOLDI", "CAFFE", "FILM"]
+    "nextWordList": [
+      "FIATO",
+      "TAGLIO",
+      "PASSO",
+      "SOLDI",
+      "CAFFE",
+      "FILM",
+      "RAGGIO"
+    ]
   },
   {
     "word": "SOSPESO",
@@ -3965,7 +4066,15 @@
   },
   {
     "word": "DOCCIA",
-    "nextWordList": ["PIATTO", "ACQUA", "PALESTRA", "CABINA", "BOX", "SILICONE"]
+    "nextWordList": [
+      "PIATTO",
+      "ACQUA",
+      "PALESTRA",
+      "CABINA",
+      "BOX",
+      "SILICONE",
+      "TENDA"
+    ]
   },
   {
     "word": "RETE",
@@ -4021,7 +4130,7 @@
   },
   {
     "word": "PASSIVO",
-    "nextWordList": ["VERBO", "FUMO"]
+    "nextWordList": ["VERBO", "FUMO", "BILANCIO"]
   },
   {
     "word": "FUMO",
@@ -4073,7 +4182,8 @@
       "MAESTRO",
       "INFERNO",
       "SECONDA",
-      "LUNGA"
+      "LUNGA",
+      "ASSICURAZIONE"
     ]
   },
   {
@@ -4098,15 +4208,47 @@
   },
   {
     "word": "VITE",
-    "nextWordList": ["GIRO", "UVA"]
+    "nextWordList": ["GIRO", "UVA", "PARALLELE"]
+  },
+  {
+    "word": "PARALLELE",
+    "nextWordList": ["VITE", "GINNASTICA"]
   },
   {
     "word": "UVA",
-    "nextWordList": ["VITE", "VOLPE", "RAGGI", "VINO"]
+    "nextWordList": ["VITE", "VOLPE", "VINO"]
   },
   {
-    "word": "RAGGI",
-    "nextWordList": ["UVA", "SOLE", "RUOTA"]
+    "word": "RAGGIO",
+    "nextWordList": ["SOLE", "LASER", "AZIONE", "CORTO"]
+  },
+  {
+    "word": "LASER",
+    "nextWordList": ["RAGGIO", "STAMPANTE"]
+  },
+  {
+    "word": "STAMPANTE",
+    "nextWordList": ["LASER", "INCHIOSTRO", "CARTUCCIA"]
+  },
+  {
+    "word": "CARTUCCIA",
+    "nextWordList": ["STAMPANTE", "PISTOLA", "MEZZA"]
+  },
+  {
+    "word": "MEZZA",
+    "nextWordList": ["CARTUCCIA", "GIORNATA"]
+  },
+  {
+    "word": "GIORNATA",
+    "nextWordList": ["MEZZA", "LAVORO", "SOLE", "CAMPIONATO"]
+  },
+  {
+    "word": "CAMPIONATO",
+    "nextWordList": ["GIORNATA", "CALCIO", "CLASSIFICA"]
+  },
+  {
+    "word": "CLASSIFICA",
+    "nextWordList": ["CAMPIONATO", "TESTA", "PRIMO"]
   },
   {
     "word": "DIRE",
@@ -4220,7 +4362,19 @@
   },
   {
     "word": "OROLOGIO",
-    "nextWordList": ["CAMPANILE", "QUARZO"]
+    "nextWordList": ["CAMPANILE", "QUARZO", "CIPOLLA"]
+  },
+  {
+    "word": "CIPOLLA",
+    "nextWordList": ["OROLOGIO", "ANELLO", "FOCACCIA"]
+  },
+  {
+    "word": "FOCACCIA",
+    "nextWordList": ["CIPOLLA", "OLIO", "IMPASTO"]
+  },
+  {
+    "word": "IMPASTO",
+    "nextWordList": ["FOCACCIA", "PIZZA", "PANE"]
   },
   {
     "word": "QUARZO",
