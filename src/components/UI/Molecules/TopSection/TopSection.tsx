@@ -8,7 +8,7 @@ const TopSection: React.FC = () => {
         <p className="mb-5 user-select-none">
           Indovina la parola usando quella precedente come indizio.
           <br />
-          Sei bloccato? Clicca sulla lampadina 💡 e ricevi un aiutino!
+          Se hai un dubbio clicca sulla lampadina 💡 per ricevere un aiutino!
         </p>
       </Col>
     </Row>

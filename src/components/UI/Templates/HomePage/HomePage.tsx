@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 
 // Components
-import { Container, Row, Col, Button, Badge } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Confetti from "@/components/UI/Atoms/Confetti/Confetti";
 import TopSection from "@/components/UI/Molecules/TopSection/TopSection";
+import InfoSection from "@/components/UI/Molecules/InfoSection/InfoSection";
 import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
 
 // Utils
 import { createWordSequence } from "@/utils/game-logic";
 import { normalizeLetter } from "@/utils/string";
-import { formatTime } from "@/utils/time";
 
 // Constants
 import { WORD_LIST_LENGTH } from "@/constants/wordList";
@@ -225,33 +225,13 @@ const HomePage: React.FC = () => {
     <Container className="mt-5">
       <TopSection />
 
-      {/* TODO: rewrite this as a <Row> component */}
-      <div className="d-flex justify-content-center align-items-center mb-1 mb-lg-2 gap-4 user-select-none">
-        <Badge
-          bg="dark"
-          pill
-          title={`Devi indovinare la parola numero ${currentWordIndex} su ${
-            WORD_LIST_LENGTH - 1
-          }`}
-          className="fs-6"
-        >
-          {currentWordIndex} / {WORD_LIST_LENGTH - 1}
-        </Badge>
-
-        {/* TODO: create a component for this */}
-        <p className="position-relative d-block fs-2 text-center">{message}</p>
-
-        <Badge bg="dark" pill title="Timer" className="position-relative fs-6">
-          <span
-            className={`extra-time-tooltip ${
-              showExtraTimeTooltip ? "extra-time-tooltip--visible" : ""
-            } text-secondary`}
-          >
-            +10s
-          </span>
-          {formatTime(time)}
-        </Badge>
-      </div>
+      <InfoSection
+        isGameEnded={isGameEnded}
+        currentWordIndex={currentWordIndex}
+        message={message}
+        showExtraTimeTooltip={showExtraTimeTooltip}
+        time={time}
+      />
 
       <Row>
         <Col className="guessed-word__container overflow-hidden">
@@ -324,15 +304,17 @@ const HomePage: React.FC = () => {
 
       {showConfetti && <Confetti />}
 
-      <div className="d-flex justify-content-center align-items-center user-select-none">
-        <span
-          title="Chiedi un aiuto!"
-          className="mt-5 fs-2 cursor-pointer"
-          onClick={useHelp}
-        >
-          💡
-        </span>
-      </div>
+      <Row className="justify-content-center align-items-center mt-5 user-select-none">
+        <Col xs="auto">
+          <span
+            title="Chiedi un aiuto!"
+            className="fs-2 cursor-pointer"
+            onClick={useHelp}
+          >
+            💡
+          </span>
+        </Col>
+      </Row>
 
       <Keyboard
         currentWord={currentWord}
