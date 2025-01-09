@@ -13,7 +13,8 @@
       "ZAMPA",
       "STREGA",
       "TOPO",
-      "AGILE"
+      "AGILE",
+      "LINGUA"
     ]
   },
   {
@@ -44,7 +45,8 @@
       "RAZZA",
       "RIPORTO",
       "ZAMPA",
-      "LUPO"
+      "LUPO",
+      "PASTORE"
     ]
   },
   {
@@ -70,7 +72,7 @@
   },
   {
     "word": "VOLPE",
-    "nextWordList": ["GATTO", "ROSSA", "BIANCA", "DESERTO", "UVA"]
+    "nextWordList": ["GATTO", "ROSSA", "BIANCA", "DESERTO", "UVA", "CACCIA"]
   },
   {
     "word": "SERPENTE",
@@ -100,7 +102,9 @@
       "RADERE",
       "ZERO",
       "ANGELO",
-      "SPORCHI"
+      "SPORCHI",
+      "CIUFFO",
+      "RIGA"
     ]
   },
   {
@@ -121,7 +125,14 @@
   },
   {
     "word": "OSSO",
-    "nextWordList": ["CANE", "SCHELETRO", "SACRO", "TEMPORALE", "MARTELLO"]
+    "nextWordList": [
+      "CANE",
+      "SCHELETRO",
+      "SACRO",
+      "TEMPORALE",
+      "MARTELLO",
+      "RADIO"
+    ]
   },
   {
     "word": "FEDELE",
@@ -171,11 +182,11 @@
       "FIOCCO",
       "BIANCA",
       "PALLA",
-      "PUPAZZO",
       "TEMPESTA",
       "GOMME",
       "CANNONE",
-      "BOLLETTINO"
+      "BOLLETTINO",
+      "FRESCA"
     ]
   },
   {
@@ -213,7 +224,8 @@
       "RETE",
       "FRUTTA",
       "BARCA",
-      "LICENZA"
+      "LICENZA",
+      "NOCCIOLO"
     ]
   },
   {
@@ -290,7 +302,8 @@
       "PAGINA",
       "SERATA",
       "VOLTA",
-      "TEATRO"
+      "TEATRO",
+      "PROVA"
     ]
   },
   {
@@ -347,7 +360,7 @@
   },
   {
     "word": "DARE",
-    "nextWordList": ["SPALLE", "MATTO", "TESTA", "CORDA"]
+    "nextWordList": ["SPALLE", "MATTO", "TESTA", "CORDA", "PACCO"]
   },
   {
     "word": "MATTO",
@@ -363,11 +376,11 @@
   },
   {
     "word": "MEDIO",
-    "nextWordList": ["DITO", "PUNTO", "PERIODO"]
+    "nextWordList": ["DITO", "PUNTO", "PERIODO", "STIPENDIO"]
   },
   {
     "word": "PERIODO",
-    "nextWordList": ["MEDIO", "LUNGO", "NERO", "FERTILE"]
+    "nextWordList": ["MEDIO", "LUNGO", "NERO", "FERTILE", "PROVA"]
   },
   {
     "word": "FERTILE",
@@ -394,12 +407,13 @@
       "LAVORO",
       "ELETTRICO",
       "FIORE",
-      "SETTORE"
+      "SETTORE",
+      "RISO"
     ]
   },
   {
     "word": "SCATTO",
-    "nextWordList": ["DITO", "FELINO", "FOTO", "FISSO"]
+    "nextWordList": ["DITO", "FELINO", "FOTO", "FISSO", "LIVELLO"]
   },
   {
     "word": "FISSO",
@@ -455,15 +469,19 @@
   },
   {
     "word": "FAMIGLIA",
-    "nextWordList": ["TOMBA", "MEDICO", "STATO"]
+    "nextWordList": ["TOMBA", "MEDICO", "STATO", "PATRIMONIO"]
   },
   {
     "word": "CRESCITA",
-    "nextWordList": ["TASSO", "CAPELLI"]
+    "nextWordList": ["TASSO", "CAPELLI", "PERSONALE"]
+  },
+  {
+    "word": "PERSONALE",
+    "nextWordList": ["CRESCITA", "NEGOZIO"]
   },
   {
     "word": "PREZZO",
-    "nextWordList": ["FISSO", "PAGARE", "GIUSTO"]
+    "nextWordList": ["FISSO", "PAGARE", "GIUSTO", "AUMENTO"]
   },
   {
     "word": "PAGARE",
@@ -491,7 +509,15 @@
   },
   {
     "word": "BOCCA",
-    "nextWordList": ["AMARO", "ROSA", "LABBRA", "BACIO", "ACQUA", "FUOCO"]
+    "nextWordList": [
+      "AMARO",
+      "ROSA",
+      "LABBRA",
+      "BACIO",
+      "ACQUA",
+      "FUOCO",
+      "STOMACO"
+    ]
   },
   {
     "word": "CATTIVO",
@@ -543,7 +569,8 @@
       "VIGORE",
       "OPERA",
       "TEATRO",
-      "UNIVERSITA"
+      "UNIVERSITA",
+      "ANTINCENDIO"
     ]
   },
   {
@@ -632,7 +659,14 @@
   },
   {
     "word": "MEDICO",
-    "nextWordList": ["STUDIO", "BASE", "LEGALE", "SOCCORSO", "FAMIGLIA"]
+    "nextWordList": [
+      "STUDIO",
+      "BASE",
+      "LEGALE",
+      "SOCCORSO",
+      "FAMIGLIA",
+      "PRIMARIO"
+    ]
   },
   {
     "word": "BASE",
@@ -670,12 +704,13 @@
       "SCUOLA",
       "ALLEANZA",
       "MARCIA",
-      "ATTACCO"
+      "ATTACCO",
+      "VERDE"
     ]
   },
   {
     "word": "LEVA",
-    "nextWordList": ["MILITARE", "MONDO", "CAMBIO", "SERVIZIO"]
+    "nextWordList": ["MILITARE", "MONDO", "CAMBIO", "SERVIZIO", "OBBLIGATORIA"]
   },
   {
     "word": "MONDO",
@@ -683,7 +718,7 @@
   },
   {
     "word": "BENE",
-    "nextWordList": ["MONDO", "SERVIZIO", "PACE"]
+    "nextWordList": ["MONDO", "SERVIZIO", "PACE", "MALE"]
   },
   {
     "word": "SERVIZIO",
@@ -695,7 +730,11 @@
   },
   {
     "word": "COLORE",
-    "nextWordList": ["UNIFORME", "TINTA"]
+    "nextWordList": ["UNIFORME", "TINTA", "PRIMARIO"]
+  },
+  {
+    "word": "PRIMARIO",
+    "nextWordList": ["COLORE", "MEDICO", "SETTORE"]
   },
   {
     "word": "TINTA",
@@ -703,7 +742,7 @@
   },
   {
     "word": "MISURE",
-    "nextWordList": ["PESI", "MEZZE"]
+    "nextWordList": ["PESI", "MEZZE", "CORPO"]
   },
   {
     "word": "MEZZE",
@@ -732,7 +771,7 @@
   },
   {
     "word": "SECONDA",
-    "nextWordList": ["MANO", "VITA", "CASA", "ENTRATA", "MAGLIA"]
+    "nextWordList": ["MANO", "VITA", "CASA", "ENTRATA", "MAGLIA", "LINGUA"]
   },
   {
     "word": "ENTRATA",
@@ -756,7 +795,7 @@
   },
   {
     "word": "COCKTAIL",
-    "nextWordList": ["INVISIBILE", "BAR", "BASE", "SCIROPPO"]
+    "nextWordList": ["INVISIBILE", "BAR", "BASE", "SCIROPPO", "CONSUMAZIONE"]
   },
   {
     "word": "LABBRA",
@@ -866,7 +905,7 @@
   },
   {
     "word": "AMICO",
-    "nextWordList": ["FUOCO", "PENNA", "PELLE", "CUORE", "REGOLA"]
+    "nextWordList": ["FUOCO", "PENNA", "PELLE", "CUORE", "REGOLA", "TESORO"]
   },
   {
     "word": "REGOLA",
@@ -886,7 +925,7 @@
   },
   {
     "word": "ALLARME",
-    "nextWordList": ["SISTEMA", "CASA", "SIRENA"]
+    "nextWordList": ["SISTEMA", "CASA", "SIRENA", "ANTINCENDIO"]
   },
   {
     "word": "SIRENA",
@@ -902,7 +941,7 @@
   },
   {
     "word": "VUOTO",
-    "nextWordList": ["MEMORIA", "BOTTIGLIA", "PAURA"]
+    "nextWordList": ["MEMORIA", "BOTTIGLIA", "PAURA", "CAVO"]
   },
   {
     "word": "PAURA",
@@ -929,7 +968,9 @@
       "GUARDIA",
       "FINTA",
       "CRISTO",
-      "MORTO"
+      "MORTO",
+      "MISURE",
+      "CURA"
     ]
   },
   {
@@ -942,7 +983,7 @@
   },
   {
     "word": "GRUPPO",
-    "nextWordList": ["BALLO", "CHAT", "STUDIO", "CHIUSO"]
+    "nextWordList": ["BALLO", "CHAT", "STUDIO", "CHIUSO", "COMPLESSO"]
   },
   {
     "word": "CHAT",
@@ -950,7 +991,7 @@
   },
   {
     "word": "MESSAGGIO",
-    "nextWordList": ["CHAT", "POSTA", "DIRETTO"]
+    "nextWordList": ["CHAT", "POSTA", "DIRETTO", "MANDARE"]
   },
   {
     "word": "DIRETTO",
@@ -962,7 +1003,7 @@
   },
   {
     "word": "COPPIA",
-    "nextWordList": ["BALLO", "FISSA", "FATTO"]
+    "nextWordList": ["BALLO", "FISSA", "FATTO", "APERTA"]
   },
   {
     "word": "FISSA",
@@ -970,7 +1011,11 @@
   },
   {
     "word": "RATA",
-    "nextWordList": ["FISSA", "INTERESSE"]
+    "nextWordList": ["FISSA", "INTERESSE", "MUTUO"]
+  },
+  {
+    "word": "MUTUO",
+    "nextWordList": ["RATA", "CASA", "DURATA"]
   },
   {
     "word": "INTERESSE",
@@ -982,7 +1027,7 @@
   },
   {
     "word": "CRISTO",
-    "nextWordList": ["PASSIONE", "CROCE", "CORPO", "RE", "POVERO"]
+    "nextWordList": ["PASSIONE", "CROCE", "CORPO", "RE", "POVERO", "AVANTI"]
   },
   {
     "word": "COMUNE",
@@ -995,10 +1040,11 @@
       "AEREO",
       "ROSSA",
       "CONTINUA",
-      "METRO",
+      "METROPOLITANA",
       "TRAGUARDO",
       "RETTA",
-      "CONDOTTA"
+      "CONDOTTA",
+      "TEMPORALE"
     ]
   },
   {
@@ -1007,7 +1053,7 @@
   },
   {
     "word": "TEMPORALE",
-    "nextWordList": ["OSSO", "PIOGGIA", "POTERE", "FINESTRA"]
+    "nextWordList": ["OSSO", "PIOGGIA", "POTERE", "FINESTRA", "LINEA"]
   },
   {
     "word": "POTERE",
@@ -1019,7 +1065,70 @@
   },
   {
     "word": "BUONO",
-    "nextWordList": ["ACQUISTO", "SPESA", "PASTO"]
+    "nextWordList": [
+      "ACQUISTO",
+      "SPESA",
+      "PASTO",
+      "BENZINA",
+      "TESORO",
+      "SCONTO"
+    ]
+  },
+  {
+    "word": "BENZINA",
+    "nextWordList": ["BUONO", "PIENO", "POMPA", "VERDE"]
+  },
+  {
+    "word": "POMPA",
+    "nextWordList": ["BENZINA", "ACQUA", "FUCILE"]
+  },
+  {
+    "word": "FUCILE",
+    "nextWordList": ["POMPA", "CACCIA", "CANNA"]
+  },
+  {
+    "word": "CACCIA",
+    "nextWordList": ["FUCILE", "TESORO", "VOLPE", "BATTUTA"]
+  },
+  {
+    "word": "BATTUTA",
+    "nextWordList": ["CACCIA", "TENNIS", "MUSICA"]
+  },
+  {
+    "word": "TESORO",
+    "nextWordList": ["CACCIA", "AMICO", "ISOLA", "BUONO"]
+  },
+  {
+    "word": "ISOLA",
+    "nextWordList": ["TESORO", "CUCINA", "PASQUA"]
+  },
+  {
+    "word": "PASQUA",
+    "nextWordList": ["ISOLA", "UOVO", "COLOMBA"]
+  },
+  {
+    "word": "COLOMBA",
+    "nextWordList": ["PASQUA", "PACE"]
+  },
+  {
+    "word": "PIENO",
+    "nextWordList": ["BENZINA", "STOMACO", "SOLDI", "CENTRO"]
+  },
+  {
+    "word": "STOMACO",
+    "nextWordList": ["PIENO", "FARFALLE", "BOCCA", "PELO"]
+  },
+  {
+    "word": "PELO",
+    "nextWordList": ["STOMACO", "UOVO", "PALLA"]
+  },
+  {
+    "word": "FARFALLE",
+    "nextWordList": ["STOMACO", "PASTA", "SALMONE"]
+  },
+  {
+    "word": "SALMONE",
+    "nextWordList": ["FARFALLE", "ROSA", "FIUME"]
   },
   {
     "word": "PASTO",
@@ -1039,7 +1148,7 @@
   },
   {
     "word": "DIO",
-    "nextWordList": ["CREDENTE", "FEDE", "GUERRA", "CUPIDO"]
+    "nextWordList": ["CREDENTE", "FEDE", "GUERRA", "CUPIDO", "DONO"]
   },
   {
     "word": "FEDE",
@@ -1147,11 +1256,19 @@
   },
   {
     "word": "LEGNO",
-    "nextWordList": ["ALBERO", "CASSA", "TAVOLO", "SEGA", "SCHEGGIA", "TESTA"]
+    "nextWordList": [
+      "ALBERO",
+      "CASSA",
+      "TAVOLO",
+      "SEGA",
+      "SCHEGGIA",
+      "TESTA",
+      "GAMBA"
+    ]
   },
   {
     "word": "TAVOLO",
-    "nextWordList": ["LEGNO", "CUCINA", "TENNIS", "TOVAGLIA"]
+    "nextWordList": ["LEGNO", "CUCINA", "TENNIS", "TOVAGLIA", "GAMBA"]
   },
   {
     "word": "CASSA",
@@ -1214,7 +1331,8 @@
       "TRACCIA",
       "AMBIENTE",
       "CLASSICA",
-      "ACCORDO"
+      "ACCORDO",
+      "BATTUTA"
     ]
   },
   {
@@ -1223,7 +1341,7 @@
   },
   {
     "word": "FATTURA",
-    "nextWordList": ["ELETTRONICA", "STREGA", "IVA", "ACQUISTO"]
+    "nextWordList": ["ELETTRONICA", "STREGA", "IVA", "ACQUISTO", "SCONTO"]
   },
   {
     "word": "STREGA",
@@ -1255,7 +1373,7 @@
   },
   {
     "word": "TENNIS",
-    "nextWordList": ["RACCHETTA", "TAVOLO", "SCARPE"]
+    "nextWordList": ["RACCHETTA", "TAVOLO", "SCARPE", "BATTUTA"]
   },
   {
     "word": "CARTE",
@@ -1282,7 +1400,7 @@
   },
   {
     "word": "DISCOTECA",
-    "nextWordList": ["MUSICA", "CASSA", "SERATA"]
+    "nextWordList": ["MUSICA", "CASSA", "SERATA", "CONSUMAZIONE"]
   },
   {
     "word": "LETTO",
@@ -1332,7 +1450,14 @@
   },
   {
     "word": "PIANTA",
-    "nextWordList": ["ESTERNO", "STABILE", "BAMBU", "VEGETALE", "FINTA"]
+    "nextWordList": [
+      "ESTERNO",
+      "STABILE",
+      "BAMBU",
+      "VEGETALE",
+      "FINTA",
+      "CACTUS"
+    ]
   },
   {
     "word": "STABILE",
@@ -1354,7 +1479,8 @@
       "VERBO",
       "AMMAZZARE",
       "ATTESA",
-      "DEBITO"
+      "DEBITO",
+      "QUESTIONE"
     ]
   },
   {
@@ -1363,7 +1489,7 @@
   },
   {
     "word": "PESO",
-    "nextWordList": ["PERDERE", "LANCIO", "COSCIENZA"]
+    "nextWordList": ["PERDERE", "LANCIO", "COSCIENZA", "AUMENTO", "NETTO"]
   },
   {
     "word": "TESTA",
@@ -1401,7 +1527,7 @@
   },
   {
     "word": "TRASMISSIONE",
-    "nextWordList": ["DIRETTA", "TV", "MALATTIA"]
+    "nextWordList": ["DIRETTA", "TV", "MALATTIA", "RADIO"]
   },
   {
     "word": "MALATTIA",
@@ -1409,7 +1535,7 @@
   },
   {
     "word": "CURA",
-    "nextWordList": ["MALATTIA", "CASA"]
+    "nextWordList": ["MALATTIA", "CASA", "CORPO"]
   },
   {
     "word": "VIRUS",
@@ -1421,7 +1547,7 @@
   },
   {
     "word": "INTERNET",
-    "nextWordList": ["COMPUTER", "WEB", "CASA", "RETE", "RICERCA"]
+    "nextWordList": ["COMPUTER", "WEB", "CASA", "RETE", "RICERCA", "FIBRA"]
   },
   {
     "word": "CIRCUITO",
@@ -1433,11 +1559,19 @@
   },
   {
     "word": "ELETTRICO",
-    "nextWordList": ["CIRCUITO", "BLU", "MOTORE", "FORNO", "CAMPO"]
+    "nextWordList": [
+      "CIRCUITO",
+      "BLU",
+      "MOTORE",
+      "FORNO",
+      "CAMPO",
+      "CAVO",
+      "QUADRO"
+    ]
   },
   {
     "word": "APERTA",
-    "nextWordList": ["RELAZIONE", "MENTE", "PARENTESI"]
+    "nextWordList": ["RELAZIONE", "MENTE", "PARENTESI", "QUESTIONE", "COPPIA"]
   },
   {
     "word": "PARENTESI",
@@ -1449,7 +1583,31 @@
   },
   {
     "word": "CIFRA",
-    "nextWordList": ["TONDA", "NUMERO"]
+    "nextWordList": ["TONDA", "NUMERO", "SOMMA"]
+  },
+  {
+    "word": "SOMMA",
+    "nextWordList": ["CIFRA", "DENARO", "ADDIZIONE"]
+  },
+  {
+    "word": "ADDIZIONE",
+    "nextWordList": ["SOMMA", "OPERAZIONE", "MATEMATICA", "COLONNA"]
+  },
+  {
+    "word": "COLONNA",
+    "nextWordList": ["ADDIZIONE", "GIORNALE", "TABELLA"]
+  },
+  {
+    "word": "TABELLA",
+    "nextWordList": ["COLONNA", "MARCIA", "RIGA"]
+  },
+  {
+    "word": "RIGA",
+    "nextWordList": ["TABELLA", "CAPELLI", "COMANDO"]
+  },
+  {
+    "word": "COMANDO",
+    "nextWordList": ["RIGA", "PONTE", "POLIZIA"]
   },
   {
     "word": "MENTE",
@@ -1488,19 +1646,19 @@
   },
   {
     "word": "RUSSIA",
-    "nextWordList": ["BLU", "MOSCA", "CAMPAGNA", "INSALATA"]
+    "nextWordList": ["BLU", "MOSCA", "CAMPAGNA"]
   },
   {
     "word": "INSALATA",
-    "nextWordList": ["RUSSIA", "POLLO", "RISO", "RUCOLA"]
+    "nextWordList": ["POLLO", "RISO", "RUCOLA", "CIUFFO"]
   },
   {
     "word": "RISO",
-    "nextWordList": ["INSALATA", "TORTA"]
+    "nextWordList": ["INSALATA", "TORTA", "CAMPO"]
   },
   {
     "word": "CAMPAGNA",
-    "nextWordList": ["RUSSIA", "TOPO"]
+    "nextWordList": ["RUSSIA", "TOPO", "CASA"]
   },
   {
     "word": "TOPO",
@@ -1512,7 +1670,7 @@
   },
   {
     "word": "MOSCA",
-    "nextWordList": ["RUSSIA", "BIANCA", "PESI"]
+    "nextWordList": ["RUSSIA", "BIANCA", "PESI", "CAPITALE"]
   },
   {
     "word": "DIPINTO",
@@ -1526,7 +1684,8 @@
       "MOTORE",
       "GOMITO",
       "SPIA",
-      "FOCACCIA"
+      "FOCACCIA",
+      "OLIVA"
     ]
   },
   {
@@ -1543,11 +1702,55 @@
   },
   {
     "word": "BERLINO",
-    "nextWordList": ["MURO", "GERMANIA"]
+    "nextWordList": ["MURO", "GERMANIA", "CAPITALE"]
+  },
+  {
+    "word": "CAPITALE",
+    "nextWordList": ["BERLINO", "MOSCA", "AUMENTO", "PENA"]
+  },
+  {
+    "word": "PENA",
+    "nextWordList": ["CAPITALE", "MASSIMO", "FARE", "SCONTO"]
+  },
+  {
+    "word": "SCONTO",
+    "nextWordList": ["PENA", "FATTURA", "BUONO", "CODICE"]
+  },
+  {
+    "word": "AUMENTO",
+    "nextWordList": ["CAPITALE", "PESO", "PREZZO", "STIPENDIO"]
+  },
+  {
+    "word": "STIPENDIO",
+    "nextWordList": ["AUMENTO", "MEDIO", "NETTO"]
+  },
+  {
+    "word": "NETTO",
+    "nextWordList": ["STIPENDIO", "PESO", "PATRIMONIO"]
+  },
+  {
+    "word": "PATRIMONIO",
+    "nextWordList": ["NETTO", "FAMIGLIA", "PUBBLICO", "CULTURALE"]
+  },
+  {
+    "word": "CULTURALE",
+    "nextWordList": ["PATRIMONIO", "CENTRO", "LIVELLO"]
+  },
+  {
+    "word": "LIVELLO",
+    "nextWordList": ["CULTURALE", "MARE", "PASSAGGIO", "SCATTO"]
   },
   {
     "word": "GERMANIA",
-    "nextWordList": ["BERLINO", "MONACO"]
+    "nextWordList": ["BERLINO", "MONACO", "TEDESCO"]
+  },
+  {
+    "word": "TEDESCO",
+    "nextWordList": ["GERMANIA", "PASTORE", "LINGUA"]
+  },
+  {
+    "word": "PASTORE",
+    "nextWordList": ["TEDESCO", "CANE", "PRESEPE"]
   },
   {
     "word": "MONACO",
@@ -1604,11 +1807,11 @@
   },
   {
     "word": "QUADRO",
-    "nextWordList": ["DIPINTO", "CONTRATTO", "METRO"]
+    "nextWordList": ["DIPINTO", "CONTRATTO", "METRO", "ELETTRICO"]
   },
   {
     "word": "METRO",
-    "nextWordList": ["QUADRO", "LINEA", "PIZZA", "CUBO", "SARTO"]
+    "nextWordList": ["QUADRO", "PIZZA", "CUBO", "SARTO"]
   },
   {
     "word": "CUBO",
@@ -1667,7 +1870,8 @@
       "ATTO",
       "CLASSIFICA",
       "MINISTRO",
-      "PREMIO"
+      "PREMIO",
+      "NUMERO"
     ]
   },
   {
@@ -1684,7 +1888,7 @@
   },
   {
     "word": "PARTITA",
-    "nextWordList": ["CALCIO", "POKER", "IVA", "SCACCHI", "INCONTRO"]
+    "nextWordList": ["CALCIO", "POKER", "IVA", "SCACCHI", "INCONTRO", "SINTESI"]
   },
   {
     "word": "IVA",
@@ -1854,11 +2058,11 @@
   },
   {
     "word": "PRODOTTO",
-    "nextWordList": ["LANCIO", "MATEMATICA", "FINITO"]
+    "nextWordList": ["LANCIO", "MATEMATICA", "FINITO", "SINTESI"]
   },
   {
     "word": "FINITO",
-    "nextWordList": ["PRODOTTO", "FATTO"]
+    "nextWordList": ["PRODOTTO", "FATTO", "MALE"]
   },
   {
     "word": "FATTO",
@@ -1878,11 +2082,23 @@
   },
   {
     "word": "FRESCA",
-    "nextWordList": ["FRUTTA", "ARIA", "PASTA"]
+    "nextWordList": ["FRUTTA", "ARIA", "PASTA", "NEVE"]
   },
   {
     "word": "MORBIDA",
-    "nextWordList": ["PELLE", "SETA"]
+    "nextWordList": ["PELLE", "SETA", "COPERTA"]
+  },
+  {
+    "word": "COPERTA",
+    "nextWordList": ["MORBIDA", "ANTINCENDIO", "LANA", "TERMICA"]
+  },
+  {
+    "word": "TERMICA",
+    "nextWordList": ["COPERTA", "MAGLIA", "BORSA", "ESCURSIONE"]
+  },
+  {
+    "word": "ESCURSIONE",
+    "nextWordList": ["TERMICA", "MONTAGNA", "VIAGGIO"]
   },
   {
     "word": "SETA",
@@ -1930,7 +2146,11 @@
   },
   {
     "word": "PASSO",
-    "nextWordList": ["OCA", "MONTAGNA", "RAPIDO", "CORTO"]
+    "nextWordList": ["OCA", "MONTAGNA", "RAPIDO", "CORTO", "AVANTI", "GAMBA"]
+  },
+  {
+    "word": "GAMBA",
+    "nextWordList": ["PASSO", "LEGNO", "TAVOLO"]
   },
   {
     "word": "RAPIDO",
@@ -1950,11 +2170,11 @@
   },
   {
     "word": "OPERAZIONE",
-    "nextWordList": ["SOCCORSO", "MATEMATICA", "CUORE", "POLIZIA"]
+    "nextWordList": ["SOCCORSO", "MATEMATICA", "CUORE", "POLIZIA", "ADDIZIONE"]
   },
   {
     "word": "VELOCE",
-    "nextWordList": ["RAPIDO", "SCHEGGIA", "AGILE"]
+    "nextWordList": ["RAPIDO", "SCHEGGIA", "AGILE", "LETTURA"]
   },
   {
     "word": "SCHEGGIA",
@@ -1996,7 +2216,8 @@
       "SPARO",
       "SILICONE",
       "GITTATA",
-      "CARTUCCIA"
+      "CARTUCCIA",
+      "ACQUA"
     ]
   },
   {
@@ -2009,12 +2230,13 @@
       "CRESTA",
       "CIMA",
       "CASA",
-      "GALLERIA"
+      "GALLERIA",
+      "ESCURSIONE"
     ]
   },
   {
     "word": "SOLDI",
-    "nextWordList": ["MONTAGNA", "SPORCHI", "BARCA", "SPRECO", "CORTO"]
+    "nextWordList": ["MONTAGNA", "SPORCHI", "BARCA", "SPRECO", "CORTO", "PIENO"]
   },
   {
     "word": "BARCA",
@@ -2034,7 +2256,7 @@
   },
   {
     "word": "PALLA",
-    "nextWordList": ["NEVE", "CALCIO", "CANNONE", "PIEDE"]
+    "nextWordList": ["NEVE", "CALCIO", "CANNONE", "PIEDE", "PELO"]
   },
   {
     "word": "CALCIO",
@@ -2096,10 +2318,6 @@
     "nextWordList": ["VAPORE", "CAPELLI", "COTTURA", "INDUZIONE"]
   },
   {
-    "word": "PUPAZZO",
-    "nextWordList": ["NEVE"]
-  },
-  {
     "word": "TEMPESTA",
     "nextWordList": ["NEVE", "SABBIA", "QUIETE"]
   },
@@ -2124,12 +2342,22 @@
       "TERRA",
       "NATALE",
       "SCENA",
-      "CALICE"
+      "CALICE",
+      "LIBRETTO"
     ]
   },
   {
     "word": "NATALE",
-    "nextWordList": ["MESSA", "ALBERO", "CENA", "SPIRITO", "CONCERTO", "PRANZO"]
+    "nextWordList": [
+      "MESSA",
+      "ALBERO",
+      "CENA",
+      "SPIRITO",
+      "CONCERTO",
+      "PRANZO",
+      "PRESEPE",
+      "REGALO"
+    ]
   },
   {
     "word": "FORZA",
@@ -2158,7 +2386,43 @@
   },
   {
     "word": "LONTANO",
-    "nextWordList": ["REMOTO", "PASSATO"]
+    "nextWordList": ["REMOTO", "PASSATO", "PARENTE"]
+  },
+  {
+    "word": "PARENTE",
+    "nextWordList": ["LONTANO", "ACQUISITO", "STRETTO", "MADRE"]
+  },
+  {
+    "word": "STRETTO",
+    "nextWordList": ["PARENTE", "PONTE", "DIALETTO", "CONTATTO"]
+  },
+  {
+    "word": "DIALETTO",
+    "nextWordList": ["STRETTO", "LINGUA"]
+  },
+  {
+    "word": "LINGUA",
+    "nextWordList": ["DIALETTO", "GATTO", "SECONDA", "MADRE", "TEDESCO"]
+  },
+  {
+    "word": "MADRE",
+    "nextWordList": ["LINGUA", "PARENTE", "NATURA"]
+  },
+  {
+    "word": "NATURA",
+    "nextWordList": ["MADRE", "DONO"]
+  },
+  {
+    "word": "DONO",
+    "nextWordList": ["NATURA", "REGALO", "DIO", "SINTESI"]
+  },
+  {
+    "word": "SINTESI",
+    "nextWordList": ["DONO", "PARTITA", "PRODOTTO"]
+  },
+  {
+    "word": "ACQUISITO",
+    "nextWordList": ["PARENTE", "DIRITTO"]
   },
   {
     "word": "VERDURE",
@@ -2256,7 +2520,8 @@
       "TEATRO",
       "DEBITO",
       "SETTORE",
-      "PARCO"
+      "PARCO",
+      "PATRIMONIO"
     ]
   },
   {
@@ -2305,7 +2570,7 @@
   },
   {
     "word": "MARCIA",
-    "nextWordList": ["SENSO", "MELA", "MILITARE", "DIREZIONE"]
+    "nextWordList": ["SENSO", "MELA", "MILITARE", "DIREZIONE", "TABELLA"]
   },
   {
     "word": "PATENTE",
@@ -2313,7 +2578,7 @@
   },
   {
     "word": "LIBRETTO",
-    "nextWordList": ["PATENTE", "RISPARMIO"]
+    "nextWordList": ["PATENTE", "RISPARMIO", "MESSA"]
   },
   {
     "word": "RISPARMIO",
@@ -2352,7 +2617,8 @@
       "PAGARE",
       "BARCA",
       "CARAMELLA",
-      "CESTINO"
+      "CESTINO",
+      "PACCO"
     ]
   },
   {
@@ -2414,7 +2680,15 @@
   },
   {
     "word": "CANNA",
-    "nextWordList": ["PESCA", "RETE", "PISTOLA", "BAMBU", "ZUCCHERO", "POVERO"]
+    "nextWordList": [
+      "PESCA",
+      "RETE",
+      "PISTOLA",
+      "BAMBU",
+      "ZUCCHERO",
+      "POVERO",
+      "FUCILE"
+    ]
   },
   {
     "word": "UOMO",
@@ -2499,7 +2773,8 @@
       "TITOLO",
       "SCACCHI",
       "CRISTO",
-      "ROMA"
+      "ROMA",
+      "EDIPO"
     ]
   },
   {
@@ -2543,7 +2818,9 @@
       "BUCO",
       "GOLA",
       "POZZO",
-      "SPRECO"
+      "SPRECO",
+      "POMPA",
+      "PISTOLA"
     ]
   },
   {
@@ -2558,7 +2835,8 @@
       "FORMULA",
       "MEDIA",
       "OPERAZIONE",
-      "PROFESSORE"
+      "PROFESSORE",
+      "ADDIZIONE"
     ]
   },
   {
@@ -2567,7 +2845,15 @@
   },
   {
     "word": "IDEA",
-    "nextWordList": ["OPINIONE", "BRILLANTE"]
+    "nextWordList": ["OPINIONE", "BRILLANTE", "REGALO"]
+  },
+  {
+    "word": "REGALO",
+    "nextWordList": ["IDEA", "NATALE", "PACCO", "DONO"]
+  },
+  {
+    "word": "PACCO",
+    "nextWordList": ["REGALO", "CARTA", "DARE"]
   },
   {
     "word": "BRILLANTE",
@@ -2616,11 +2902,23 @@
   },
   {
     "word": "ARIA",
-    "nextWordList": ["PURA", "FRESCA", "VIZIATA"]
+    "nextWordList": ["PURA", "FRESCA", "TROMBA", "ORA"]
   },
   {
-    "word": "VIZIATA",
-    "nextWordList": ["ARIA"]
+    "word": "TROMBA",
+    "nextWordList": ["ARIA", "STRUMENTO", "SCALE"]
+  },
+  {
+    "word": "SCALE",
+    "nextWordList": ["TROMBA", "ANTINCENDIO"]
+  },
+  {
+    "word": "ANTINCENDIO",
+    "nextWordList": ["SCALE", "CORSO", "ALLARME", "PROVA", "COPERTA"]
+  },
+  {
+    "word": "PROVA",
+    "nextWordList": ["ANTINCENDIO", "PERIODO", "PRIMA", "ESAME"]
   },
   {
     "word": "TORCIA",
@@ -2652,7 +2950,7 @@
   },
   {
     "word": "BIRRA",
-    "nextWordList": ["ROSSA", "SPINA", "MEDIA"]
+    "nextWordList": ["ROSSA", "SPINA", "MEDIA", "BOTTIGLIA"]
   },
   {
     "word": "PIZZA",
@@ -2660,11 +2958,18 @@
   },
   {
     "word": "LUCE",
-    "nextWordList": ["BIANCA", "DEBOLE", "GAS", "SOLE", "SPIA"]
+    "nextWordList": ["BIANCA", "DEBOLE", "GAS", "SOLE", "SPIA", "CONTATORE"]
   },
   {
     "word": "GAS",
-    "nextWordList": ["LUCE", "FORNO", "NOBILE", "BOMBOLA", "OSSIGENO"]
+    "nextWordList": [
+      "LUCE",
+      "FORNO",
+      "NOBILE",
+      "BOMBOLA",
+      "OSSIGENO",
+      "CONTATORE"
+    ]
   },
   {
     "word": "VOCE",
@@ -2694,7 +2999,9 @@
       "PALAZZO",
       "ENTRATA",
       "VICINO",
-      "RIPOSO"
+      "RIPOSO",
+      "CAMPAGNA",
+      "MUTUO"
     ]
   },
   {
@@ -2707,11 +3014,11 @@
   },
   {
     "word": "OASI",
-    "nextWordList": ["DESERTO", "PACE"]
+    "nextWordList": ["DESERTO", "PACE", "VERDE"]
   },
   {
     "word": "PACE",
-    "nextWordList": ["OASI", "BENE", "ARCO", "SEGNO"]
+    "nextWordList": ["OASI", "BENE", "ARCO", "SEGNO", "COLOMBA"]
   },
   {
     "word": "ARCO",
@@ -2727,7 +3034,7 @@
   },
   {
     "word": "DURATA",
-    "nextWordList": ["VOLO", "LUNGA", "INCONTRO"]
+    "nextWordList": ["VOLO", "LUNGA", "INCONTRO", "MUTUO"]
   },
   {
     "word": "INCONTRO",
@@ -2739,11 +3046,15 @@
   },
   {
     "word": "MENO",
-    "nextWordList": ["SEGNO", "FIUME"]
+    "nextWordList": ["SEGNO", "FIUME", "MALE"]
+  },
+  {
+    "word": "MALE",
+    "nextWordList": ["MENO", "BENE", "FINITO"]
   },
   {
     "word": "CACTUS",
-    "nextWordList": ["DESERTO", "SPINA"]
+    "nextWordList": ["DESERTO", "SPINA", "PIANTA"]
   },
   {
     "word": "ROSA",
@@ -2755,7 +3066,8 @@
       "FIOCCO",
       "QUARZO",
       "BOCCA",
-      "NOME"
+      "NOME",
+      "SALMONE"
     ]
   },
   {
@@ -2804,11 +3116,31 @@
   },
   {
     "word": "PROSSIMO",
-    "nextWordList": ["ANNO", "VICINO"]
+    "nextWordList": ["ANNO", "VICINO", "AVANTI"]
   },
   {
     "word": "VICINO",
-    "nextWordList": ["PROSSIMO", "CASA"]
+    "nextWordList": ["PROSSIMO", "CASA", "ERBA"]
+  },
+  {
+    "word": "ERBA",
+    "nextWordList": ["VICINO", "CIUFFO", "SINTETICA"]
+  },
+  {
+    "word": "SINTETICA",
+    "nextWordList": ["ERBA", "FIBRA"]
+  },
+  {
+    "word": "FIBRA",
+    "nextWordList": ["SINTETICA", "INTERNET", "VETRO", "CAVO"]
+  },
+  {
+    "word": "CAVO",
+    "nextWordList": ["FIBRA", "ELETTRICO", "RETE", "VUOTO"]
+  },
+  {
+    "word": "CIUFFO",
+    "nextWordList": ["ERBA", "CAPELLI", "INSALATA"]
   },
   {
     "word": "SPINA",
@@ -2846,7 +3178,7 @@
   },
   {
     "word": "MAGLIA",
-    "nextWordList": ["POLO", "SECONDA", "LANA", "CALCIO"]
+    "nextWordList": ["POLO", "SECONDA", "LANA", "CALCIO", "TERMICA"]
   },
   {
     "word": "CORRENTE",
@@ -2866,7 +3198,7 @@
   },
   {
     "word": "PASSAGGIO",
-    "nextWordList": ["RITO", "AUTO"]
+    "nextWordList": ["RITO", "AUTO", "LIVELLO"]
   },
   {
     "word": "AUTO",
@@ -2948,7 +3280,14 @@
   },
   {
     "word": "CENTRO",
-    "nextWordList": ["STORICO", "FARE", "MONDO", "METEOROLOGICO"]
+    "nextWordList": [
+      "STORICO",
+      "FARE",
+      "MONDO",
+      "METEOROLOGICO",
+      "PIENO",
+      "CULTURALE"
+    ]
   },
   {
     "word": "ALTO",
@@ -2984,7 +3323,7 @@
   },
   {
     "word": "BOTTIGLIA",
-    "nextWordList": ["COLLO", "ACQUA", "PLASTICA", "VUOTO"]
+    "nextWordList": ["COLLO", "ACQUA", "PLASTICA", "VUOTO", "BIRRA"]
   },
   {
     "word": "LUNGO",
@@ -2996,7 +3335,7 @@
   },
   {
     "word": "FIORE",
-    "nextWordList": ["ROSA", "FRUTTO", "OCCHIELLO", "CAMPO"]
+    "nextWordList": ["ROSA", "FRUTTO", "OCCHIELLO", "CAMPO", "NARCISO"]
   },
   {
     "word": "OCCHIELLO",
@@ -3040,7 +3379,7 @@
   },
   {
     "word": "NEGOZIO",
-    "nextWordList": ["SCARPE", "ESERCIZIO", "CASSA"]
+    "nextWordList": ["SCARPE", "ESERCIZIO", "CASSA", "PERSONALE"]
   },
   {
     "word": "TACCO",
@@ -3068,7 +3407,7 @@
   },
   {
     "word": "GIORNALE",
-    "nextWordList": ["OCCHIELLO", "TITOLO", "CRONACA", "RUBRICA"]
+    "nextWordList": ["OCCHIELLO", "TITOLO", "CRONACA", "RUBRICA", "COLONNA"]
   },
   {
     "word": "MARE",
@@ -3081,7 +3420,10 @@
       "PROFONDO",
       "CASA",
       "VECCHIO",
-      "BAGNO"
+      "BAGNO",
+      "ONDA",
+      "SPUGNA",
+      "LIVELLO"
     ]
   },
   {
@@ -3102,7 +3444,7 @@
   },
   {
     "word": "DENARO",
-    "nextWordList": ["LIQUIDO", "PREMIO"]
+    "nextWordList": ["LIQUIDO", "PREMIO", "SOMMA"]
   },
   {
     "word": "PREMIO",
@@ -3231,7 +3573,8 @@
       "ONORE",
       "ROSSO",
       "STRADA",
-      "NOME"
+      "NOME",
+      "SCONTO"
     ]
   },
   {
@@ -3250,7 +3593,8 @@
       "VIAGGIO",
       "PALESTRA",
       "TITOLO",
-      "SPESA"
+      "SPESA",
+      "TERMICA"
     ]
   },
   {
@@ -3269,7 +3613,8 @@
       "AEREO",
       "BAGAGLIO",
       "PARTENZA",
-      "PIACERE"
+      "PIACERE",
+      "ESCURSIONE"
     ]
   },
   {
@@ -3280,7 +3625,8 @@
       "ORARIO",
       "CABINA",
       "DIRETTO",
-      "BIGLIETTO"
+      "BIGLIETTO",
+      "STAZIONE"
     ]
   },
   {
@@ -3306,7 +3652,8 @@
       "LOCALE",
       "SIRENA",
       "LAMPEGGIANTE",
-      "OPERAZIONE"
+      "OPERAZIONE",
+      "COMANDO"
     ]
   },
   {
@@ -3375,7 +3722,8 @@
       "PATENTE",
       "UNIVERSITA",
       "TEST",
-      "COSCIENZA"
+      "COSCIENZA",
+      "PROVA"
     ]
   },
   {
@@ -3424,7 +3772,9 @@
       "CIFRA",
       "FISSO",
       "RAZIONALE",
-      "CIVICO"
+      "CIVICO",
+      "COMPLESSO",
+      "PRIMO"
     ]
   },
   {
@@ -3433,7 +3783,7 @@
   },
   {
     "word": "NERA",
-    "nextWordList": ["MAGIA", "PELLE", "NOTTE", "CRONACA"]
+    "nextWordList": ["MAGIA", "PELLE", "NOTTE", "CRONACA", "PECORA"]
   },
   {
     "word": "CRONACA",
@@ -3445,7 +3795,14 @@
   },
   {
     "word": "DIRITTO",
-    "nextWordList": ["CRONACA", "ROVESCIO", "RETTO", "VITA", "VOTO"]
+    "nextWordList": [
+      "CRONACA",
+      "ROVESCIO",
+      "RETTO",
+      "VITA",
+      "VOTO",
+      "ACQUISITO"
+    ]
   },
   {
     "word": "ROVESCIO",
@@ -3522,7 +3879,14 @@
   },
   {
     "word": "SETTORE",
-    "nextWordList": ["RAMO", "SPETTACOLO", "ESPERTO", "PUBBLICO", "CAMPO"]
+    "nextWordList": [
+      "RAMO",
+      "SPETTACOLO",
+      "ESPERTO",
+      "PUBBLICO",
+      "CAMPO",
+      "PRIMARIO"
+    ]
   },
   {
     "word": "SPETTACOLO",
@@ -3534,7 +3898,7 @@
   },
   {
     "word": "MASSIMO",
-    "nextWordList": ["ESPERTO", "VOTO", "IMPEGNO"]
+    "nextWordList": ["ESPERTO", "VOTO", "IMPEGNO", "PENA"]
   },
   {
     "word": "IMPEGNO",
@@ -3582,7 +3946,7 @@
   },
   {
     "word": "CONTATTO",
-    "nextWordList": ["SPORT", "LENTE", "RUBRICA"]
+    "nextWordList": ["SPORT", "LENTE", "RUBRICA", "STRETTO"]
   },
   {
     "word": "RUBRICA",
@@ -3594,7 +3958,7 @@
   },
   {
     "word": "OCCHIALI",
-    "nextWordList": ["LENTE", "SOLE", "VISTA", "CUSTODIA", "RIPOSO"]
+    "nextWordList": ["LENTE", "SOLE", "VISTA", "CUSTODIA", "RIPOSO", "LETTURA"]
   },
   {
     "word": "CUSTODIA",
@@ -3622,7 +3986,7 @@
   },
   {
     "word": "ORA",
-    "nextWordList": ["ULTIMA", "LEGALE", "CAMBIO", "VEDERE"]
+    "nextWordList": ["ULTIMA", "LEGALE", "CAMBIO", "VEDERE", "ARIA"]
   },
   {
     "word": "LEGALE",
@@ -3630,7 +3994,7 @@
   },
   {
     "word": "RAPPRESENTANTE",
-    "nextWordList": ["LEGALE", "CLASSE"]
+    "nextWordList": ["LEGALE", "CLASSE", "LISTA"]
   },
   {
     "word": "SPIAGGIA",
@@ -3726,7 +4090,7 @@
   },
   {
     "word": "STRUMENTO",
-    "nextWordList": ["LABORATORIO", "LIRA", "CHITARRA", "FIATO"]
+    "nextWordList": ["LABORATORIO", "LIRA", "CHITARRA", "FIATO", "TROMBA"]
   },
   {
     "word": "FIATO",
@@ -3750,7 +4114,7 @@
   },
   {
     "word": "PONTE",
-    "nextWordList": ["SOSPESO", "VECCHIO"]
+    "nextWordList": ["SOSPESO", "VECCHIO", "STRETTO", "COMANDO"]
   },
   {
     "word": "VECCHIO",
@@ -3813,7 +4177,8 @@
       "COLAZIONE",
       "PANINO",
       "CREMA",
-      "CAFFE"
+      "CAFFE",
+      "FORMAGGIO"
     ]
   },
   {
@@ -3845,11 +4210,95 @@
   },
   {
     "word": "PORTO",
-    "nextWordList": ["SICURO", "ANDARE"]
+    "nextWordList": ["SICURO", "ANDARE", "FRANCO"]
+  },
+  {
+    "word": "FRANCO",
+    "nextWordList": ["PORTO", "MONETA", "SINCERO"]
+  },
+  {
+    "word": "SINCERO",
+    "nextWordList": ["FRANCO", "ESSERE"]
+  },
+  {
+    "word": "ESSERE",
+    "nextWordList": ["SINCERO", "VERBO", "VIVENTE"]
+  },
+  {
+    "word": "VIVENTE",
+    "nextWordList": ["ESSERE", "PRESEPE", "LEGGENDA"]
+  },
+  {
+    "word": "LEGGENDA",
+    "nextWordList": ["VIVENTE", "MITO", "METROPOLITANA"]
+  },
+  {
+    "word": "METROPOLITANA",
+    "nextWordList": ["LEGGENDA", "LINEA", "STAZIONE"]
+  },
+  {
+    "word": "STAZIONE",
+    "nextWordList": ["METROPOLITANA", "TRENO", "RADIO"]
+  },
+  {
+    "word": "RADIO",
+    "nextWordList": ["STAZIONE", "OSSO", "TRASMISSIONE", "FREQUENZA"]
+  },
+  {
+    "word": "FREQUENZA",
+    "nextWordList": ["RADIO", "ONDA", "OBBLIGATORIA"]
+  },
+  {
+    "word": "OBBLIGATORIA",
+    "nextWordList": ["FREQUENZA", "LEVA", "CONSUMAZIONE"]
+  },
+  {
+    "word": "CONSUMAZIONE",
+    "nextWordList": ["OBBLIGATORIA", "DISCOTECA", "COCKTAIL"]
+  },
+  {
+    "word": "ONDA",
+    "nextWordList": ["FREQUENZA", "MARE", "ANDARE", "VERDE"]
+  },
+  {
+    "word": "VERDE",
+    "nextWordList": ["ONDA", "BENZINA", "OLIVA", "MILITARE", "OASI"]
+  },
+  {
+    "word": "OLIVA",
+    "nextWordList": ["VERDE", "OLIO", "NOCCIOLO"]
+  },
+  {
+    "word": "NOCCIOLO",
+    "nextWordList": ["OLIVA", "PESCA", "QUESTIONE"]
+  },
+  {
+    "word": "QUESTIONE",
+    "nextWordList": ["NOCCIOLO", "TEMPO", "APERTA"]
+  },
+  {
+    "word": "MITO",
+    "nextWordList": ["LEGGENDA", "NARCISO", "EDIPO"]
+  },
+  {
+    "word": "EDIPO",
+    "nextWordList": ["MITO", "COMPLESSO", "RE"]
+  },
+  {
+    "word": "COMPLESSO",
+    "nextWordList": ["EDIPO", "NUMERO", "GRUPPO"]
+  },
+  {
+    "word": "NARCISO",
+    "nextWordList": ["MITO", "FIORE"]
+  },
+  {
+    "word": "PRESEPE",
+    "nextWordList": ["VIVENTE", "NATALE", "PASTORE"]
   },
   {
     "word": "ANDARE",
-    "nextWordList": ["PORTO", "CAPO", "NASO", "NOZZE"]
+    "nextWordList": ["PORTO", "CAPO", "NASO", "NOZZE", "ONDA"]
   },
   {
     "word": "SANTA",
@@ -3885,7 +4334,7 @@
   },
   {
     "word": "FIUME",
-    "nextWordList": ["PESCI", "DELTA", "CORSO", "MENO"]
+    "nextWordList": ["PESCI", "DELTA", "CORSO", "MENO", "SALMONE"]
   },
   {
     "word": "DELTA",
@@ -3909,7 +4358,7 @@
   },
   {
     "word": "LISTA",
-    "nextWordList": ["SPESA", "PRIMO", "ATTESA"]
+    "nextWordList": ["SPESA", "PRIMO", "ATTESA", "RAPPRESENTANTE"]
   },
   {
     "word": "ATTESA",
@@ -3989,7 +4438,10 @@
       "FREDDA",
       "FRESCA",
       "NORMA",
-      "PATATE"
+      "PATATE",
+      "FARFALLE",
+      "UOVO",
+      "FORMAGGIO"
     ]
   },
   {
@@ -4042,7 +4494,7 @@
   },
   {
     "word": "MONETA",
-    "nextWordList": ["COLLEZIONE", "ORO", "LANCIO"]
+    "nextWordList": ["COLLEZIONE", "ORO", "LANCIO", "FRANCO"]
   },
   {
     "word": "FENOMENO",
@@ -4062,7 +4514,15 @@
   },
   {
     "word": "MONTE",
-    "nextWordList": ["BIANCO", "ROSA"]
+    "nextWordList": ["BIANCO", "ROSA", "MANDARE"]
+  },
+  {
+    "word": "MANDARE",
+    "nextWordList": ["MONTE", "MESSAGGIO", "AVANTI"]
+  },
+  {
+    "word": "AVANTI",
+    "nextWordList": ["MANDARE", "CRISTO", "PASSO", "PROSSIMO"]
   },
   {
     "word": "DOCCIA",
@@ -4073,20 +4533,25 @@
       "CABINA",
       "BOX",
       "SILICONE",
-      "TENDA"
+      "TENDA",
+      "SPUGNA"
     ]
   },
   {
     "word": "RETE",
-    "nextWordList": ["PESCI", "CANNA", "PESCA", "CALZE", "INTERNET"]
+    "nextWordList": ["PESCI", "CANNA", "PESCA", "CALZE", "INTERNET", "CAVO"]
   },
   {
     "word": "CALZE",
-    "nextWordList": ["RETE", "LANA"]
+    "nextWordList": ["RETE", "LANA", "SPUGNA"]
+  },
+  {
+    "word": "SPUGNA",
+    "nextWordList": ["CALZE", "MARE", "CUCINA", "DOCCIA"]
   },
   {
     "word": "LANA",
-    "nextWordList": ["CALZE", "PECORA", "FILO", "MAGLIA"]
+    "nextWordList": ["CALZE", "PECORA", "FILO", "MAGLIA", "COPERTA"]
   },
   {
     "word": "FILO",
@@ -4094,7 +4559,7 @@
   },
   {
     "word": "PECORA",
-    "nextWordList": ["LANA", "LUPO"]
+    "nextWordList": ["LANA", "LUPO", "NERA"]
   },
   {
     "word": "LUPO",
@@ -4114,7 +4579,15 @@
   },
   {
     "word": "PEPE",
-    "nextWordList": ["SALE", "NERO"]
+    "nextWordList": ["SALE", "NERO", "CACIO"]
+  },
+  {
+    "word": "CACIO",
+    "nextWordList": ["PEPE", "FORMAGGIO"]
+  },
+  {
+    "word": "FORMAGGIO",
+    "nextWordList": ["CACIO", "LATTE", "PASTA"]
   },
   {
     "word": "GROSSO",
@@ -4126,7 +4599,7 @@
   },
   {
     "word": "VERBO",
-    "nextWordList": ["MODO", "TEMPO", "PAROLA", "PASSIVO"]
+    "nextWordList": ["MODO", "TEMPO", "PAROLA", "PASSIVO", "ESSERE"]
   },
   {
     "word": "PASSIVO",
@@ -4200,7 +4673,15 @@
   },
   {
     "word": "CHIAVE",
-    "nextWordList": ["PAROLA", "PORTA", "VOLTA", "GIRO"]
+    "nextWordList": ["PAROLA", "PORTA", "VOLTA", "GIRO", "LETTURA"]
+  },
+  {
+    "word": "LETTURA",
+    "nextWordList": ["CHIAVE", "OCCHIALI", "VELOCE", "CONTATORE"]
+  },
+  {
+    "word": "CONTATORE",
+    "nextWordList": ["LETTURA", "GAS", "LUCE"]
   },
   {
     "word": "GIRO",
@@ -4256,11 +4737,11 @@
   },
   {
     "word": "FARE",
-    "nextWordList": ["DIRE", "FUOCO", "AFFARE", "POCO", "CENTRO"]
+    "nextWordList": ["DIRE", "FUOCO", "AFFARE", "POCO", "CENTRO", "PENA"]
   },
   {
     "word": "VETRO",
-    "nextWordList": ["ACQUARIO", "TRASPARENTE", "FINESTRA"]
+    "nextWordList": ["ACQUARIO", "TRASPARENTE", "FINESTRA", "FIBRA"]
   },
   {
     "word": "TRASPARENTE",
@@ -4274,7 +4755,9 @@
       "PIATTO",
       "LOCALE",
       "COLTELLO",
-      "PANNA"
+      "PANNA",
+      "ISOLA",
+      "SPUGNA"
     ]
   },
   {
@@ -4307,7 +4790,7 @@
   },
   {
     "word": "UOVO",
-    "nextWordList": ["GALLINA", "CIOCCOLATO"]
+    "nextWordList": ["GALLINA", "CIOCCOLATO", "PASQUA", "PASTA", "PELO"]
   },
   {
     "word": "VASO",
