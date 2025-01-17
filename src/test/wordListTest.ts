@@ -1,6 +1,6 @@
 import { WORD_LIST, type WordList } from "@/constants/wordList";
 
-function checkUniqueWords(array: WordList): string[] {
+function checkUniqueWords(array: WordList): boolean {
   const wordCount: Record<string, number> = array.reduce((acc, entry) => {
     acc[entry.word] = (acc[entry.word] || 0) + 1;
     return acc;
@@ -17,7 +17,7 @@ function checkUniqueWords(array: WordList): string[] {
     console.log("Tutte le 'word' sono uniche.");
   }
 
-  return nonUniqueWords;
+  return nonUniqueWords.length === 0;
 }
 
 function checkNextWordsExist(array: WordList): boolean {
@@ -65,19 +65,41 @@ function checkBidirectionalLinks(array: WordList): boolean {
   return bidirectional;
 }
 
+function checkForDuplicates(words: WordList): boolean {
+  let noDuplicates = true;
+
+  words.forEach(({ word, nextWordList }) => {
+    const duplicates = nextWordList.filter(
+      (item, index) => nextWordList.indexOf(item) !== index
+    );
+    if (duplicates.length > 0) {
+      noDuplicates = false;
+      console.error(`La word "${word}" ha duplicati nella sua nextWordList:`, [
+        ...new Set(duplicates),
+      ]);
+    } else {
+      console.log(`Non ci sono duplicati in alcuna nextWordList.`);
+    }
+  });
+
+  return noDuplicates;
+}
+
 const runWordListTest = () => {
   const uniqueWordsValid = checkUniqueWords(WORD_LIST);
   const nextWordsExistValid = checkNextWordsExist(WORD_LIST);
   const bidirectionalLinksValid = checkBidirectionalLinks(WORD_LIST);
+  const duplicatesValid = checkForDuplicates(WORD_LIST);
 
   if (
-    uniqueWordsValid.length === 0 &&
+    uniqueWordsValid &&
     nextWordsExistValid &&
-    bidirectionalLinksValid
+    bidirectionalLinksValid &&
+    duplicatesValid
   ) {
     console.log("Tutti i controlli sono stati superati con successo.");
   } else {
-    console.log("Ci sono errori nei dati.");
+    console.error("Ci sono errori nei dati.");
   }
 };
 
