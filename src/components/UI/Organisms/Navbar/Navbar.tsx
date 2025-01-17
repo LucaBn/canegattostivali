@@ -77,10 +77,12 @@ const NavbarComponent: React.FC = () => {
         <Container>
           <Navbar.Brand
             onClick={handleLogoClick}
-            className="py-0 user-select-none cursor-pointer"
+            className="logo__container position-relative py-0 user-select-none cursor-pointer"
             title="Cane Gatto Stivali"
           >
-            🐶🐱👢
+            <span className="cane">🐶</span>
+            <span className="gatto">🐱</span>
+            <span className="stivali">👢</span>
           </Navbar.Brand>
 
           <span
