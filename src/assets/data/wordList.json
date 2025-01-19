@@ -424,7 +424,8 @@
       "CARTE",
       "SCACCHI",
       "POSTA",
-      "SOCIETA"
+      "SOCIETA",
+      "SCHEMA"
     ]
   },
   {
@@ -781,7 +782,15 @@
   },
   {
     "word": "SERVIZIO",
-    "nextWordList": ["BENE", "CIVILE", "LEVA", "BAGNO", "PIATTI"]
+    "nextWordList": [
+      "BENE",
+      "CIVILE",
+      "LEVA",
+      "BAGNO",
+      "PIATTI",
+      "TENNIS",
+      "BATTUTA"
+    ]
   },
   {
     "word": "UNIFORME",
@@ -910,7 +919,11 @@
   },
   {
     "word": "SCHELETRO",
-    "nextWordList": ["OSSO", "ARMADIO"]
+    "nextWordList": ["OSSO", "ARMADIO", "SCHEMA"]
+  },
+  {
+    "word": "SCHEMA",
+    "nextWordList": ["SCHELETRO", "CALCIO", "GIOCO", "LIBERO"]
   },
   {
     "word": "ARMADIO",
@@ -1192,7 +1205,7 @@
   },
   {
     "word": "POMPA",
-    "nextWordList": ["BENZINA", "ACQUA", "FUCILE"]
+    "nextWordList": ["BENZINA", "ACQUA", "FUCILE", "FUNEBRE"]
   },
   {
     "word": "FUCILE",
@@ -1204,7 +1217,7 @@
   },
   {
     "word": "BATTUTA",
-    "nextWordList": ["CACCIA", "TENNIS", "MUSICA"]
+    "nextWordList": ["CACCIA", "TENNIS", "MUSICA", "SERVIZIO"]
   },
   {
     "word": "TESORO",
@@ -1256,7 +1269,7 @@
   },
   {
     "word": "CREDENTE",
-    "nextWordList": ["FEDELE", "DIO"]
+    "nextWordList": ["FEDELE", "DIO", "RELIGIOSA"]
   },
   {
     "word": "DIO",
@@ -1544,7 +1557,7 @@
   },
   {
     "word": "TENNIS",
-    "nextWordList": ["RACCHETTA", "TAVOLO", "SCARPE", "BATTUTA"]
+    "nextWordList": ["RACCHETTA", "TAVOLO", "SCARPE", "BATTUTA", "SERVIZIO"]
   },
   {
     "word": "CARTE",
@@ -1813,7 +1826,9 @@
       "TRACCIA",
       "VINO",
       "RAPA",
-      "ANALISI"
+      "ANALISI",
+      "CIRCOLAZIONE",
+      "FRATELLO"
     ]
   },
   {
@@ -2136,7 +2151,7 @@
   },
   {
     "word": "LIBERO",
-    "nextWordList": ["MERCATO", "SPIRITO", "STILE", "DIFENSORE"]
+    "nextWordList": ["MERCATO", "SPIRITO", "STILE", "DIFENSORE", "SCHEMA"]
   },
   {
     "word": "DIFENSORE",
@@ -2512,7 +2527,8 @@
       "MAGLIA",
       "ARBITRO",
       "SQUADRA",
-      "CAMPIONATO"
+      "CAMPIONATO",
+      "SCHEMA"
     ]
   },
   {
@@ -2823,7 +2839,8 @@
       "MILITARE",
       "DIREZIONE",
       "TABELLA",
-      "INSERIRE"
+      "INSERIRE",
+      "FUNEBRE"
     ]
   },
   {
@@ -2832,7 +2849,7 @@
   },
   {
     "word": "LIBRETTO",
-    "nextWordList": ["PATENTE", "RISPARMIO", "MESSA"]
+    "nextWordList": ["PATENTE", "RISPARMIO", "MESSA", "CIRCOLAZIONE"]
   },
   {
     "word": "RISPARMIO",
@@ -2848,7 +2865,7 @@
   },
   {
     "word": "CERIMONIA",
-    "nextWordList": ["APERTURA", "NOZZE", "ABITO", "MESSA"]
+    "nextWordList": ["APERTURA", "NOZZE", "ABITO", "MESSA", "RELIGIOSA"]
   },
   {
     "word": "SCACCHI",
@@ -2887,7 +2904,8 @@
       "CARAMELLA",
       "CESTINO",
       "PACCO",
-      "FOGLIO"
+      "FOGLIO",
+      "CIRCOLAZIONE"
     ]
   },
   {
@@ -3478,7 +3496,7 @@
   },
   {
     "word": "SINTETICA",
-    "nextWordList": ["ERBA", "FIBRA"]
+    "nextWordList": ["ERBA", "FIBRA", "CARNE"]
   },
   {
     "word": "FIBRA",
@@ -3541,7 +3559,11 @@
   },
   {
     "word": "FUNZIONE",
-    "nextWordList": ["CONTINUA", "MATEMATICA"]
+    "nextWordList": ["CONTINUA", "MATEMATICA", "RELIGIOSA"]
+  },
+  {
+    "word": "RELIGIOSA",
+    "nextWordList": ["FUNZIONE", "CERIMONIA", "CREDENTE"]
   },
   {
     "word": "RITO",
@@ -3564,16 +3586,29 @@
       "EPOCA",
       "COLLEZIONE",
       "ASSICURAZIONE",
-      "LUSSO"
+      "LUSSO",
+      "CIRCOLAZIONE"
     ]
   },
   {
     "word": "FUNEBRE",
-    "nextWordList": ["RITO", "CARRO"]
+    "nextWordList": ["RITO", "CARRO", "MARCIA", "POMPA"]
   },
   {
     "word": "CARRO",
-    "nextWordList": ["FUNEBRE", "RUOTA"]
+    "nextWordList": ["FUNEBRE", "RUOTA", "GRANDE"]
+  },
+  {
+    "word": "GRANDE",
+    "nextWordList": ["CARRO", "FRATELLO", "CIRCOLAZIONE"]
+  },
+  {
+    "word": "CIRCOLAZIONE",
+    "nextWordList": ["GRANDE", "CARTA", "LIBRETTO", "AUTO", "SANGUE"]
+  },
+  {
+    "word": "FRATELLO",
+    "nextWordList": ["GRANDE", "SANGUE", "LATTE"]
   },
   {
     "word": "CHITARRA",
@@ -4023,7 +4058,8 @@
       "BIANCA",
       "BRODO",
       "COLTELLO",
-      "KEBAB"
+      "KEBAB",
+      "SINTETICA"
     ]
   },
   {
@@ -4600,7 +4636,8 @@
       "CAFFE",
       "FORMAGGIO",
       "CENTRALE",
-      "INTERO"
+      "INTERO",
+      "FRATELLO"
     ]
   },
   {
