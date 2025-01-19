@@ -59,6 +59,7 @@ const HomePage: React.FC = () => {
       if (
         key !== "INVIO" &&
         key !== "CANC" &&
+        key !== "1" &&
         filterKeys &&
         !currentWord.substring(1).includes(normalizedKey)
       )
@@ -69,6 +70,9 @@ const HomePage: React.FC = () => {
       }
       setMessage("🤔");
 
+      if (key === "1") {
+        getHelp();
+      }
       if (key === "CANC") {
         setGuessedWord((prev) => (prev.length > 1 ? prev.slice(0, -1) : prev));
       } else if (key === "INVIO") {
@@ -201,12 +205,10 @@ const HomePage: React.FC = () => {
       : "";
   };
 
-  const useHelp = () => {
+  const getHelp = () => {
     if (isGameEnded) {
       return;
     }
-
-    setIsGameRunning(true);
 
     if (filterKeys) {
       return;
@@ -309,7 +311,7 @@ const HomePage: React.FC = () => {
           <span
             title="Chiedi un aiuto!"
             className="fs-2 cursor-pointer"
-            onClick={useHelp}
+            onClick={getHelp}
           >
             💡
           </span>
