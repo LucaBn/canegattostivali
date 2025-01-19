@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React /* useState, useEffect, useRef */ from "react";
 
 // Components
 import { Container, Navbar } from "react-bootstrap";
@@ -24,38 +24,38 @@ const scrollToTop = () => {
 };
 
 const NavbarComponent: React.FC = () => {
-  const [expanded, setExpanded] = useState<boolean>(false);
+  // const [expanded, setExpanded] = useState<boolean>(false);
 
-  const navbarRef = useRef<HTMLDivElement>(null);
+  // const navbarRef = useRef<HTMLDivElement>(null);
 
   const { theme, changeTheme } = useTheme();
 
-  const handleOutsideClick = (event: MouseEvent) => {
-    if (
-      navbarRef.current &&
-      !navbarRef.current.contains(event.target as Node)
-    ) {
-      setExpanded(false);
-    }
-  };
+  // const handleOutsideClick = (event: MouseEvent) => {
+  //   if (
+  //     navbarRef.current &&
+  //     !navbarRef.current.contains(event.target as Node)
+  //   ) {
+  //     setExpanded(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    document.addEventListener("click", handleOutsideClick);
-    return () => {
-      document.removeEventListener("click", handleOutsideClick);
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.addEventListener("click", handleOutsideClick);
+  //   return () => {
+  //     document.removeEventListener("click", handleOutsideClick);
+  //   };
+  // }, []);
 
   // const toggleNavbarDropdownStatus = () => {
   //   setExpanded((prevValue) => !prevValue);
   // };
 
-  const closeNavbarDropdown = () => {
-    setExpanded(false);
-  };
+  // const closeNavbarDropdown = () => {
+  //   setExpanded(false);
+  // };
 
   const handleLogoClick = () => {
-    closeNavbarDropdown();
+    // closeNavbarDropdown();
     scrollToTop();
   };
 
@@ -71,8 +71,8 @@ const NavbarComponent: React.FC = () => {
         expand="lg"
         fixed="top"
         className="navbar navbar-dark bg-dark border-bottom"
-        expanded={expanded}
-        ref={navbarRef as React.RefObject<HTMLDivElement>}
+        // expanded={expanded}
+        // ref={navbarRef as React.RefObject<HTMLDivElement>}
       >
         <Container>
           <Navbar.Brand
@@ -90,7 +90,7 @@ const NavbarComponent: React.FC = () => {
             className="cursor-pointer"
             title="Cambia il tema"
           >
-            {theme === "light" ? (
+            {theme === "dark" ? (
               <IconMoon forceColor="#fff" />
             ) : (
               <IconSun forceColor="#fff" />
