@@ -224,7 +224,7 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-3 mt-md-5">
       <TopSection />
 
       <InfoSection
@@ -318,11 +318,13 @@ const HomePage: React.FC = () => {
         </Col>
       </Row>
 
-      <Keyboard
-        currentWord={currentWord}
-        filterKeys={filterKeys}
-        onKeyPress={handleKeyPress}
-      />
+      <Row className="justify-content-center">
+        <Keyboard
+          currentWord={currentWord}
+          filterKeys={filterKeys}
+          onKeyPress={handleKeyPress}
+        />
+      </Row>
     </Container>
   );
 };
