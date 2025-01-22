@@ -187,7 +187,8 @@
       "GOMME",
       "CANNONE",
       "BOLLETTINO",
-      "FRESCA"
+      "FRESCA",
+      "RACCHETTA"
     ]
   },
   {
@@ -1553,7 +1554,7 @@
   },
   {
     "word": "RACCHETTA",
-    "nextWordList": ["MANICO", "TENNIS"]
+    "nextWordList": ["MANICO", "TENNIS", "SCI", "NEVE"]
   },
   {
     "word": "TENNIS",
@@ -2617,7 +2618,8 @@
       "PRESEPE",
       "REGALO",
       "VILLAGGIO",
-      "CANTO"
+      "CANTO",
+      "FESTA"
     ]
   },
   {
@@ -3567,7 +3569,7 @@
   },
   {
     "word": "RITO",
-    "nextWordList": ["FUNEBRE", "PASSAGGIO"]
+    "nextWordList": ["FUNEBRE", "PASSAGGIO", "CIVILE"]
   },
   {
     "word": "PASSAGGIO",
@@ -3631,7 +3633,7 @@
   },
   {
     "word": "SCI",
-    "nextWordList": ["SALTO", "FONDO", "GARA"]
+    "nextWordList": ["SALTO", "FONDO", "GARA", "RACCHETTA"]
   },
   {
     "word": "FONDO",
@@ -3869,7 +3871,7 @@
   },
   {
     "word": "CARNEVALE",
-    "nextWordList": ["MASCHERA", "COSTUME"]
+    "nextWordList": ["MASCHERA", "COSTUME", "FESTA"]
   },
   {
     "word": "COSTUME",
@@ -3877,7 +3879,14 @@
   },
   {
     "word": "FESTA",
-    "nextWordList": ["COSTUME", "PAESE", "DONNA", "MASCHERA"]
+    "nextWordList": [
+      "COSTUME",
+      "PAESE",
+      "DONNA",
+      "MASCHERA",
+      "CARNEVALE",
+      "NATALE"
+    ]
   },
   {
     "word": "BAGNO",
@@ -3972,7 +3981,8 @@
       "STATO",
       "UNIONE",
       "INGEGNERIA",
-      "SOCIETA"
+      "SOCIETA",
+      "RITO"
     ]
   },
   {
@@ -4805,7 +4815,7 @@
   },
   {
     "word": "DELTA",
-    "nextWordList": ["FIUME", "LETTERA"]
+    "nextWordList": ["FIUME", "LETTERA", "RAGGIO"]
   },
   {
     "word": "LETTERA",
@@ -5175,7 +5185,7 @@
   },
   {
     "word": "RAGGIO",
-    "nextWordList": ["SOLE", "LASER", "AZIONE", "CORTO"]
+    "nextWordList": ["SOLE", "LASER", "AZIONE", "CORTO", "DELTA"]
   },
   {
     "word": "LASER",

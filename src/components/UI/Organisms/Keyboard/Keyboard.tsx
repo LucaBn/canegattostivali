@@ -1,7 +1,8 @@
 import React from "react";
 
 // Components
-import { Button, Container, Row, Col } from "react-bootstrap";
+import { Button, Row, Col } from "react-bootstrap";
+import IconDelete from "@/components/UI/Atoms/IconDelete/IconDelete";
 
 // Types
 import { ButtonVariant } from "react-bootstrap/esm/types";
@@ -56,28 +57,40 @@ const Keyboard: React.FC<KeyboardProps> = ({
       : "";
   };
 
+  const getButtonContent = (key: string) => {
+    if (key === "CANC") {
+      return (
+        <div className="h-100 d-flex align-items-center keyboard__btn--canc">
+          <IconDelete />
+        </div>
+      );
+    } else {
+      return key;
+    }
+  };
+
   return (
-    <Container className="keyboard mt-3">
+    <Col className="keyboard mt-3">
       {keys.map((row, rowIndex) => (
         <Row
           key={rowIndex}
-          className="justify-content-center mb-1 gap-1 gap-md-2"
+          className="justify-content-center mb-2 gap-1 gap-md-2"
         >
           {row.map((key) => (
-            <Col xs="auto" key={key} className="mb-1 p-0">
+            <Col xs="auto" key={key} className="p-0">
               <Button
                 variant={getButtonVariant(key)}
                 onClick={(e) => handleKeyClick(e, key)}
                 className={`keyboard__btn ${isSpecialKey(key)} p-1`}
                 disabled={isKeyDisabled(key)}
               >
-                {key}
+                {getButtonContent(key)}
               </Button>
             </Col>
           ))}
         </Row>
       ))}
-    </Container>
+    </Col>
   );
 };
 
