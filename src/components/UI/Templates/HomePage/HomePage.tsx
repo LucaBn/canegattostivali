@@ -5,6 +5,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import Confetti from "@/components/UI/Atoms/Confetti/Confetti";
 import TopSection from "@/components/UI/Molecules/TopSection/TopSection";
 import InfoSection from "@/components/UI/Molecules/InfoSection/InfoSection";
+import GetHelpSection from "@/components/UI/Molecules/GetHelpSection/GetHelpSection";
 import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
 
 // Utils
@@ -14,6 +15,10 @@ import { normalizeLetter } from "@/utils/string";
 // Constants
 import { WORD_LIST_LENGTH } from "@/constants/wordList";
 
+// Typings
+import { ButtonVariant } from "react-bootstrap/esm/types";
+type Message = "🤔" | "😃" | "😓" | "🥳";
+
 const wordSequence = createWordSequence();
 
 console.log({ wordSequence });
@@ -21,8 +26,8 @@ console.log({ wordSequence });
 const HomePage: React.FC = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState<number>(1);
   const [guessedWord, setGuessedWord] = useState<string>(wordSequence[1][0]);
-  const [buttonVariants, setButtonVariants] = useState<string[]>([]);
-  const [message, setMessage] = useState<string>("🤔");
+  const [buttonVariants, setButtonVariants] = useState<ButtonVariant[]>([]);
+  const [message, setMessage] = useState<Message>("🤔");
   const [slotHeight, setSlotHeight] = useState<number>(56);
   const [isBuzzing, setIsBuzzing] = useState<boolean>(false);
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
@@ -37,6 +42,7 @@ const HomePage: React.FC = () => {
   const isKeyPressEnabled = useRef<boolean>(true);
 
   const currentWord = wordSequence[currentWordIndex];
+  const isLastWord = currentWordIndex === WORD_LIST_LENGTH - 1;
 
   const updateButtonVariants = useCallback(() => {
     setButtonVariants(
@@ -46,9 +52,7 @@ const HomePage: React.FC = () => {
           guessedWord[index] ? "primary" : "outline-secondary"
         )
     );
-  }, [guessedWord, currentWordIndex]);
-
-  const isLastWord = currentWordIndex === WORD_LIST_LENGTH - 1;
+  }, [guessedWord, currentWord]);
 
   const handleKeyPress = useCallback(
     (key: string) => {
@@ -306,25 +310,13 @@ const HomePage: React.FC = () => {
 
       {showConfetti && <Confetti />}
 
-      <Row className="justify-content-center align-items-center mt-5 user-select-none">
-        <Col xs="auto">
-          <span
-            title="Chiedi un aiuto!"
-            className="fs-2 cursor-pointer"
-            onClick={getHelp}
-          >
-            💡
-          </span>
-        </Col>
-      </Row>
+      <GetHelpSection getHelp={getHelp} />
 
-      <Row className="justify-content-center">
-        <Keyboard
-          currentWord={currentWord}
-          filterKeys={filterKeys}
-          onKeyPress={handleKeyPress}
-        />
-      </Row>
+      <Keyboard
+        currentWord={currentWord}
+        filterKeys={filterKeys}
+        onKeyPress={handleKeyPress}
+      />
     </Container>
   );
 };
