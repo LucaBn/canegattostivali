@@ -61,7 +61,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
     if (key === "CANC") {
       return (
         <div className="h-100 d-flex align-items-center keyboard__btn--canc">
-          <IconDelete />
+          <IconDelete forceColor="#fff" />
         </div>
       );
     } else {
