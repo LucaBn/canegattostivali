@@ -1,6 +1,7 @@
 import React /* useState, useEffect, useRef */ from "react";
 
 // Components
+import { Image } from "react-bootstrap";
 import { Container, Navbar } from "react-bootstrap";
 // import { LinkContainer } from "react-router-bootstrap";
 
@@ -70,19 +71,23 @@ const NavbarComponent: React.FC = () => {
       <Navbar
         expand="lg"
         fixed="top"
-        className="navbar navbar-dark bg-dark border-bottom"
+        className="navbar navbar-dark bg-dark border-bottom py-1"
         // expanded={expanded}
         // ref={navbarRef as React.RefObject<HTMLDivElement>}
       >
         <Container>
           <Navbar.Brand
             onClick={handleLogoClick}
-            className="logo__container position-relative py-0 user-select-none cursor-pointer"
+            className="cursor-pointer p-0"
             title="Cane Gatto Stivali"
           >
-            <span className="cane">🐶</span>
-            <span className="gatto">🐱</span>
-            <span className="stivali">👢</span>
+            <Image
+              src="/assets/img/logo.png"
+              height={56}
+              width={56}
+              alt="Cane Gatto Stivali"
+              draggable={false}
+            />
           </Navbar.Brand>
 
           <span
