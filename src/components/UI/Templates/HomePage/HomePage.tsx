@@ -2,10 +2,12 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 
 // Components
 import { Container, Row, Col, Button } from "react-bootstrap";
-import Confetti from "@/components/UI/Atoms/Confetti/Confetti";
 import TopSection from "@/components/UI/Molecules/TopSection/TopSection";
 import InfoSection from "@/components/UI/Molecules/InfoSection/InfoSection";
+import GetHelpSection from "@/components/UI/Molecules/GetHelpSection/GetHelpSection";
 import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
+import Confetti from "@/components/UI/Atoms/Confetti/Confetti";
+import EndGameModal from "@/components/UI/Organisms/EndGameModal/EndGameModal";
 
 // Utils
 import { createWordSequence } from "@/utils/game-logic";
@@ -14,15 +16,20 @@ import { normalizeLetter } from "@/utils/string";
 // Constants
 import { WORD_LIST_LENGTH } from "@/constants/wordList";
 
-const wordSequence = createWordSequence();
+// Typings
+import { ButtonVariant } from "react-bootstrap/esm/types";
+type Message = "🤔" | "😃" | "😓" | "🥳";
 
-console.log({ wordSequence });
+const initialWordSequence = createWordSequence();
+
+console.log({ initialWordSequence });
 
 const HomePage: React.FC = () => {
+  const [wordSequence, setWordSequence] = useState(initialWordSequence);
   const [currentWordIndex, setCurrentWordIndex] = useState<number>(1);
   const [guessedWord, setGuessedWord] = useState<string>(wordSequence[1][0]);
-  const [buttonVariants, setButtonVariants] = useState<string[]>([]);
-  const [message, setMessage] = useState<string>("🤔");
+  const [buttonVariants, setButtonVariants] = useState<ButtonVariant[]>([]);
+  const [message, setMessage] = useState<Message>("🤔");
   const [slotHeight, setSlotHeight] = useState<number>(56);
   const [isBuzzing, setIsBuzzing] = useState<boolean>(false);
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
@@ -33,10 +40,12 @@ const HomePage: React.FC = () => {
   const [time, setTime] = useState<number>(0);
   const [showExtraTimeTooltip, setShowExtraTimeTooltip] =
     useState<boolean>(false);
+  const [showEndGameModal, setShowEndGameModal] = useState<boolean>(false);
 
   const isKeyPressEnabled = useRef<boolean>(true);
 
   const currentWord = wordSequence[currentWordIndex];
+  const isLastWord = currentWordIndex === WORD_LIST_LENGTH - 1;
 
   const updateButtonVariants = useCallback(() => {
     setButtonVariants(
@@ -46,9 +55,7 @@ const HomePage: React.FC = () => {
           guessedWord[index] ? "primary" : "outline-secondary"
         )
     );
-  }, [guessedWord, currentWordIndex]);
-
-  const isLastWord = currentWordIndex === WORD_LIST_LENGTH - 1;
+  }, [guessedWord, currentWord]);
 
   const handleKeyPress = useCallback(
     (key: string) => {
@@ -79,6 +86,9 @@ const HomePage: React.FC = () => {
         if (guessedWord === currentWord) {
           if (isLastWord) {
             setIsGameEnded(true);
+            setTimeout(() => {
+              setShowEndGameModal(true);
+            }, 2000);
             setIsGameRunning(false);
           }
           isKeyPressEnabled.current = false;
@@ -223,6 +233,20 @@ const HomePage: React.FC = () => {
     }, 1500);
   };
 
+  const startGame = () => {
+    const newWordSequence = createWordSequence();
+    console.log({ newWordSequence });
+    setWordSequence(newWordSequence);
+    setCurrentWordIndex(1);
+    setGuessedWord(newWordSequence[1][0]);
+    setMessage("🤔");
+    setIsGameRunning(false);
+    setIsGameEnded(false);
+    setTime(0);
+    setShowConfetti(false);
+    isKeyPressEnabled.current = true;
+  };
+
   return (
     <Container className="mt-3 mt-md-5">
       <TopSection />
@@ -306,25 +330,23 @@ const HomePage: React.FC = () => {
 
       {showConfetti && <Confetti />}
 
-      <Row className="justify-content-center align-items-center mt-5 user-select-none">
-        <Col xs="auto">
-          <span
-            title="Chiedi un aiuto!"
-            className="fs-2 cursor-pointer"
-            onClick={getHelp}
-          >
-            💡
-          </span>
-        </Col>
-      </Row>
-
-      <Row className="justify-content-center">
-        <Keyboard
-          currentWord={currentWord}
-          filterKeys={filterKeys}
-          onKeyPress={handleKeyPress}
+      {showEndGameModal && (
+        <EndGameModal
+          show={showEndGameModal}
+          time={time}
+          wordSequence={wordSequence}
+          setShow={setShowEndGameModal}
+          startGame={startGame}
         />
-      </Row>
+      )}
+
+      <GetHelpSection getHelp={getHelp} />
+
+      <Keyboard
+        currentWord={currentWord}
+        filterKeys={filterKeys}
+        onKeyPress={handleKeyPress}
+      />
     </Container>
   );
 };

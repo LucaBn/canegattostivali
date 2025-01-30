@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 // import IconTwitter from "@/components/UI/Atoms/IconTwitter/IconTwitter";
 
 // Constants
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer nofollow"
                 className="d-contents text-white"
               >
-                <img
+                <Image
                   src="/assets/img/pimp-my-jpg.png"
                   height="50"
                   width="100"
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer nofollow"
                 className="d-contents"
               >
-                <img
+                <Image
                   src="/assets/img/buy-me-a-coffee.png"
                   height={56}
                   width={200}

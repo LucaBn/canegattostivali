@@ -61,7 +61,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
     if (key === "CANC") {
       return (
         <div className="h-100 d-flex align-items-center keyboard__btn--canc">
-          <IconDelete />
+          <IconDelete forceColor="#fff" />
         </div>
       );
     } else {
@@ -70,27 +70,29 @@ const Keyboard: React.FC<KeyboardProps> = ({
   };
 
   return (
-    <Col className="keyboard mt-3">
-      {keys.map((row, rowIndex) => (
-        <Row
-          key={rowIndex}
-          className="justify-content-center mb-2 gap-1 gap-md-2"
-        >
-          {row.map((key) => (
-            <Col xs="auto" key={key} className="p-0">
-              <Button
-                variant={getButtonVariant(key)}
-                onClick={(e) => handleKeyClick(e, key)}
-                className={`keyboard__btn ${isSpecialKey(key)} p-1`}
-                disabled={isKeyDisabled(key)}
-              >
-                {getButtonContent(key)}
-              </Button>
-            </Col>
-          ))}
-        </Row>
-      ))}
-    </Col>
+    <Row className="justify-content-center">
+      <Col className="keyboard mt-3">
+        {keys.map((row, rowIndex) => (
+          <Row
+            key={rowIndex}
+            className="justify-content-center mb-2 gap-1 gap-md-2"
+          >
+            {row.map((key) => (
+              <Col xs="auto" key={key} className="p-0">
+                <Button
+                  variant={getButtonVariant(key)}
+                  onClick={(e) => handleKeyClick(e, key)}
+                  className={`keyboard__btn ${isSpecialKey(key)} p-1`}
+                  disabled={isKeyDisabled(key)}
+                >
+                  {getButtonContent(key)}
+                </Button>
+              </Col>
+            ))}
+          </Row>
+        ))}
+      </Col>
+    </Row>
   );
 };
 
