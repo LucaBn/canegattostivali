@@ -514,7 +514,7 @@
   },
   {
     "word": "PROFESSORE",
-    "nextWordList": ["ORDINARIO", "ARTE", "MATEMATICA", "UNIVERSITA"]
+    "nextWordList": ["ORDINARIO", "ARTE", "MATEMATICA", "UNIVERSITÀ"]
   },
   {
     "word": "FAMIGLIA",
@@ -554,7 +554,7 @@
   },
   {
     "word": "AMARO",
-    "nextWordList": ["GUSTO", "BOCCA", "FINALE", "CAFFE"]
+    "nextWordList": ["GUSTO", "BOCCA", "FINALE", "CAFFÈ"]
   },
   {
     "word": "BOCCA",
@@ -637,7 +637,7 @@
       "VIGORE",
       "OPERA",
       "TEATRO",
-      "UNIVERSITA",
+      "UNIVERSITÀ",
       "ANTINCENDIO"
     ]
   },
@@ -647,17 +647,17 @@
   },
   {
     "word": "FANTASMA",
-    "nextWordList": ["OPERA", "SPIRITO", "CITTA"]
+    "nextWordList": ["OPERA", "SPIRITO", "CITTÀ"]
   },
   {
-    "word": "CITTA",
+    "word": "CITTÀ",
     "nextWordList": ["FANTASMA", "ARTE", "COMUNE", "ROMA", "MOSCA", "BERLINO"]
   },
   {
     "word": "ARTE",
     "nextWordList": [
       "OPERA",
-      "CITTA",
+      "CITTÀ",
       "STORIA",
       "GALLERIA",
       "MODERNA",
@@ -1000,7 +1000,8 @@
       "PAGLIA",
       "DARDO",
       "LENTE",
-      "PALLA"
+      "PALLA",
+      "FALÒ"
     ]
   },
   {
@@ -1180,7 +1181,7 @@
   },
   {
     "word": "COMUNE",
-    "nextWordList": ["INTERESSE", "PAESE", "FUORI", "CITTA", "NOME", "ACCORDO"]
+    "nextWordList": ["INTERESSE", "PAESE", "FUORI", "CITTÀ", "NOME", "ACCORDO"]
   },
   {
     "word": "LINEA",
@@ -1671,7 +1672,7 @@
     "nextWordList": [
       "ESTERNO",
       "STABILE",
-      "BAMBU",
+      "BAMBÙ",
       "VEGETALE",
       "FINTA",
       "CACTUS",
@@ -1904,7 +1905,15 @@
   },
   {
     "word": "RISO",
-    "nextWordList": ["INSALATA", "TORTA", "CAMPO"]
+    "nextWordList": ["INSALATA", "TORTA", "CAMPO", "SUPPLÌ"]
+  },
+  {
+    "word": "SUPPLÌ",
+    "nextWordList": ["RISO", "TELEFONO", "MOZZARELLA"]
+  },
+  {
+    "word": "MOZZARELLA",
+    "nextWordList": ["SUPPLÌ", "PIZZA", "FORMAGGIO"]
   },
   {
     "word": "CAMPAGNA",
@@ -1920,7 +1929,7 @@
   },
   {
     "word": "MOSCA",
-    "nextWordList": ["RUSSIA", "BIANCA", "PESI", "CAPITALE", "CITTA"]
+    "nextWordList": ["RUSSIA", "BIANCA", "PESI", "CAPITALE", "CITTÀ"]
   },
   {
     "word": "DIPINTO",
@@ -1953,7 +1962,7 @@
   },
   {
     "word": "BERLINO",
-    "nextWordList": ["MURO", "GERMANIA", "CAPITALE", "CITTA"]
+    "nextWordList": ["MURO", "GERMANIA", "CAPITALE", "CITTÀ"]
   },
   {
     "word": "CAPITALE",
@@ -2046,10 +2055,10 @@
   },
   {
     "word": "PANDA",
-    "nextWordList": ["ROSSO", "BAMBU", "GIGANTE"]
+    "nextWordList": ["ROSSO", "BAMBÙ", "GIGANTE"]
   },
   {
-    "word": "BAMBU",
+    "word": "BAMBÙ",
     "nextWordList": ["PANDA", "CANNA", "PIANTA"]
   },
   {
@@ -2422,10 +2431,10 @@
   },
   {
     "word": "RETTA",
-    "nextWordList": ["VIA", "LINEA", "UNIVERSITA"]
+    "nextWordList": ["VIA", "LINEA", "UNIVERSITÀ"]
   },
   {
-    "word": "UNIVERSITA",
+    "word": "UNIVERSITÀ",
     "nextWordList": ["RETTA", "CORSO", "ESAME", "INGEGNERIA", "PROFESSORE"]
   },
   {
@@ -3076,7 +3085,7 @@
       "PESCA",
       "RETE",
       "PISTOLA",
-      "BAMBU",
+      "BAMBÙ",
       "ZUCCHERO",
       "POVERO",
       "FUCILE"
@@ -3405,7 +3414,8 @@
       "PRONTO",
       "RUBRICA",
       "CUSTODIA",
-      "BATTERIA"
+      "BATTERIA",
+      "SUPPLÌ"
     ]
   },
   {
@@ -3418,7 +3428,11 @@
   },
   {
     "word": "LUNA",
-    "nextWordList": ["ROSSA", "NOTTE", "LUPO", "SOLE"]
+    "nextWordList": ["ROSSA", "NOTTE", "LUPO", "SOLE", "FALÒ"]
+  },
+  {
+    "word": "FALÒ",
+    "nextWordList": ["LUNA", "FUOCO", "SPIAGGIA"]
   },
   {
     "word": "BIRRA",
@@ -3426,7 +3440,15 @@
   },
   {
     "word": "PIZZA",
-    "nextWordList": ["BIANCA", "METRO", "TAGLIO", "FETTA", "IMPASTO", "KEBAB"]
+    "nextWordList": [
+      "BIANCA",
+      "METRO",
+      "TAGLIO",
+      "FETTA",
+      "IMPASTO",
+      "KEBAB",
+      "MOZZARELLA"
+    ]
   },
   {
     "word": "LUCE",
@@ -3785,19 +3807,19 @@
   },
   {
     "word": "FONDO",
-    "nextWordList": ["SCI", "PENSIONE", "CIMA", "CAFFE", "POZZO", "PROBLEMA"]
+    "nextWordList": ["SCI", "PENSIONE", "CIMA", "CAFFÈ", "POZZO", "PROBLEMA"]
   },
   {
     "word": "POZZO",
     "nextWordList": ["FONDO", "ACQUA", "NERO"]
   },
   {
-    "word": "CAFFE",
+    "word": "CAFFÈ",
     "nextWordList": ["FONDO", "AMARO", "LATTE", "CORRETTO", "SOSPESO", "CORTO"]
   },
   {
     "word": "CORRETTO",
-    "nextWordList": ["CAFFE", "GIUSTO"]
+    "nextWordList": ["CAFFÈ", "GIUSTO"]
   },
   {
     "word": "GIUSTO",
@@ -4306,7 +4328,7 @@
       "VOTO",
       "STATO",
       "PATENTE",
-      "UNIVERSITA",
+      "UNIVERSITÀ",
       "TEST",
       "COSCIENZA",
       "PROVA",
@@ -4619,7 +4641,7 @@
   },
   {
     "word": "SPIAGGIA",
-    "nextWordList": ["ULTIMA", "SABBIA", "CABINA", "LIBERA"]
+    "nextWordList": ["ULTIMA", "SABBIA", "CABINA", "LIBERA", "FALÒ"]
   },
   {
     "word": "NERO",
@@ -4728,14 +4750,14 @@
       "TAGLIO",
       "PASSO",
       "SOLDI",
-      "CAFFE",
+      "CAFFÈ",
       "FILM",
       "RAGGIO"
     ]
   },
   {
     "word": "SOSPESO",
-    "nextWordList": ["FIATO", "PONTE", "SCUOLA", "CAFFE"]
+    "nextWordList": ["FIATO", "PONTE", "SCUOLA", "CAFFÈ"]
   },
   {
     "word": "PONTE",
@@ -4767,11 +4789,11 @@
   },
   {
     "word": "INGEGNERIA",
-    "nextWordList": ["MECCANICA", "CIVILE", "UNIVERSITA"]
+    "nextWordList": ["MECCANICA", "CIVILE", "UNIVERSITÀ"]
   },
   {
     "word": "ROMA",
-    "nextWordList": ["SACCO", "RE", "CITTA", "CAPITALE"]
+    "nextWordList": ["SACCO", "RE", "CITTÀ", "CAPITALE"]
   },
   {
     "word": "DARDO",
@@ -4802,7 +4824,7 @@
       "COLAZIONE",
       "PANINO",
       "CREMA",
-      "CAFFE",
+      "CAFFÈ",
       "FORMAGGIO",
       "CENTRALE",
       "INTERO",
@@ -5224,7 +5246,7 @@
   },
   {
     "word": "FORMAGGIO",
-    "nextWordList": ["CACIO", "LATTE", "PASTA"]
+    "nextWordList": ["CACIO", "LATTE", "PASTA", "MOZZARELLA"]
   },
   {
     "word": "GROSSO",
@@ -5361,15 +5383,15 @@
   },
   {
     "word": "MEZZA",
-    "nextWordList": ["CARTUCCIA", "GIORNATA", "VERITA"]
+    "nextWordList": ["CARTUCCIA", "GIORNATA", "VERITÀ"]
   },
   {
-    "word": "VERITA",
+    "word": "VERITÀ",
     "nextWordList": ["MEZZA", "OBBLIGO", "SCOMODA"]
   },
   {
     "word": "SCOMODA",
-    "nextWordList": ["VERITA", "DOMANDA", "POSIZIONE"]
+    "nextWordList": ["VERITÀ", "DOMANDA", "POSIZIONE"]
   },
   {
     "word": "POSIZIONE",
@@ -5400,7 +5422,7 @@
   },
   {
     "word": "OBBLIGO",
-    "nextWordList": ["VERITA", "FIRMA", "SCUOLA", "SEGNALE"]
+    "nextWordList": ["VERITÀ", "FIRMA", "SCUOLA", "SEGNALE"]
   },
   {
     "word": "FIRMA",
