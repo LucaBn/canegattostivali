@@ -1,31 +1,36 @@
-$button-width: calc((100dvw - 80px) / 10);
-$button-width-desktop: 36px;
 $button-height: 40px;
 $button-height-desktop: 48px;
 
 .keyboard {
   width: 100%;
-  max-width: 440px;
+  max-width: 520px;
 
   &__btn {
-    width: $button-width;
-    max-width: 40px;
     height: $button-height;
+    flex: 1;
+    touch-action: manipulation;
 
     @media screen and (min-width: 768px) {
-      width: $button-width-desktop;
-      max-width: unset;
       height: $button-height-desktop;
     }
 
-    &--no-width-rules {
-      width: auto;
-      max-width: unset;
+    &--enter {
+      flex: 2.2;
     }
 
     &--canc {
-      padding-left: 4px;
-      padding-right: 6px;
+      div {
+        padding-right: 2px;
+      }
+      flex: 2.2;
+    }
+
+    &--disabled {
+      color: var(--bs-btn-disabled-color);
+      background-color: var(--bs-btn-disabled-bg) !important;
+      border-color: var(--bs-btn-disabled-border-color) !important;
+      opacity: var(--bs-btn-disabled-opacity);
+      opacity: 0.2 !important;
     }
   }
 }

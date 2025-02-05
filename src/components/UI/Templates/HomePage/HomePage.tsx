@@ -4,7 +4,6 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import TopSection from "@/components/UI/Molecules/TopSection/TopSection";
 import InfoSection from "@/components/UI/Molecules/InfoSection/InfoSection";
-import GetHelpSection from "@/components/UI/Molecules/GetHelpSection/GetHelpSection";
 import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
 import Confetti from "@/components/UI/Atoms/Confetti/Confetti";
 import EndGameModal from "@/components/UI/Organisms/EndGameModal/EndGameModal";
@@ -79,8 +78,7 @@ const HomePage: React.FC = () => {
 
       if (key === "1") {
         getHelp();
-      }
-      if (key === "CANC") {
+      } else if (key === "CANC") {
         setGuessedWord((prev) => (prev.length > 1 ? prev.slice(0, -1) : prev));
       } else if (key === "INVIO") {
         if (guessedWord === currentWord) {
@@ -125,7 +123,7 @@ const HomePage: React.FC = () => {
           }
         }
       } else if (
-        /^[A-Za-z]$/.test(normalizedKey) &&
+        /^[A-ZÀÈÌÒÙ]$/.test(normalizedKey) &&
         guessedWord.length < currentWord.length
       ) {
         setGuessedWord((prev) => prev + normalizedKey.toUpperCase());
@@ -340,12 +338,11 @@ const HomePage: React.FC = () => {
         />
       )}
 
-      <GetHelpSection getHelp={getHelp} />
-
       <Keyboard
         currentWord={currentWord}
         filterKeys={filterKeys}
         onKeyPress={handleKeyPress}
+        getHelp={getHelp}
       />
     </Container>
   );
