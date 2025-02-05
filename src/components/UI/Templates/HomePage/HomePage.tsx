@@ -129,7 +129,7 @@ const HomePage: React.FC = () => {
         setGuessedWord((prev) => prev + normalizedKey.toUpperCase());
       }
     },
-    [guessedWord, currentWordIndex]
+    [guessedWord, currentWordIndex, filterKeys]
   );
 
   const handleKeydown = useCallback(
