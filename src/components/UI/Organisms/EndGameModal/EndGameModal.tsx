@@ -34,18 +34,21 @@ const EndGameModal: React.FC<IOptionsModal> = ({
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
+        centered
       >
         <Modal.Header>
           <Modal.Title>Hai vinto! 🥳</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p className="fw-light">
-            Tempo impiegato: <span className="fw-bold">{formatTime(time)}</span>
+          <p>
+            Tempo impiegato: <strong>{formatTime(time)}</strong>
           </p>
-          <p className="fw-light mb-1">Catena di parole:</p>
-          <ul className="fw-bold list-unstyled">
+          <p className="mb-1">Catena di parole:</p>
+          <ul className="list-unstyled">
             {wordSequence.map((word) => (
-              <li key={word}>{word}</li>
+              <li key={word}>
+                <strong>{word}</strong>
+              </li>
             ))}
           </ul>
         </Modal.Body>

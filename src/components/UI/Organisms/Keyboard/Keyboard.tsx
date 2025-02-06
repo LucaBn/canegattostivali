@@ -84,7 +84,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
       return (
         <span
           title="Chiedi un aiuto!"
-          className="h-100 d-flex align-items-center fs-2 cursor-pointer"
+          className="h-100 d-flex align-items-center fs-2"
           onClick={getHelp}
         >
           💡
