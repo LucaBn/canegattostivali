@@ -59,7 +59,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
 
   const getSpecificClass = (key: string): string => {
     if (key === "HELP") {
-      return "bg-transparent border-0";
+      return "bg-transparent";
     } else {
       return "";
     }
@@ -108,7 +108,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
                 <div
                   key={key}
                   onClick={(e) => handleKeyClick(e, key)}
-                  className={`keyboard__btn d-flex align-items-center justify-content-center border rounded text-nowrap text-white cursor-pointer px-0 ${getExtraClasses(
+                  className={`keyboard__btn d-flex align-items-center justify-content-center rounded text-nowrap text-white cursor-pointer px-0 ${getExtraClasses(
                     key
                   )}`}
                 >
