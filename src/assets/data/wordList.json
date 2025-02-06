@@ -514,7 +514,7 @@
   },
   {
     "word": "PROFESSORE",
-    "nextWordList": ["ORDINARIO", "ARTE", "MATEMATICA", "UNIVERSITA"]
+    "nextWordList": ["ORDINARIO", "ARTE", "MATEMATICA", "UNIVERSITÀ"]
   },
   {
     "word": "FAMIGLIA",
@@ -554,7 +554,7 @@
   },
   {
     "word": "AMARO",
-    "nextWordList": ["GUSTO", "BOCCA", "FINALE", "CAFFE"]
+    "nextWordList": ["GUSTO", "BOCCA", "FINALE", "CAFFÈ"]
   },
   {
     "word": "BOCCA",
@@ -637,7 +637,7 @@
       "VIGORE",
       "OPERA",
       "TEATRO",
-      "UNIVERSITA",
+      "UNIVERSITÀ",
       "ANTINCENDIO"
     ]
   },
@@ -647,17 +647,17 @@
   },
   {
     "word": "FANTASMA",
-    "nextWordList": ["OPERA", "SPIRITO", "CITTA"]
+    "nextWordList": ["OPERA", "SPIRITO", "CITTÀ"]
   },
   {
-    "word": "CITTA",
+    "word": "CITTÀ",
     "nextWordList": ["FANTASMA", "ARTE", "COMUNE", "ROMA", "MOSCA", "BERLINO"]
   },
   {
     "word": "ARTE",
     "nextWordList": [
       "OPERA",
-      "CITTA",
+      "CITTÀ",
       "STORIA",
       "GALLERIA",
       "MODERNA",
@@ -676,7 +676,46 @@
   },
   {
     "word": "AMORE",
-    "nextWordList": ["STORIA", "POESIA", "FILM", "CUPIDO", "NIDO", "SINCERO"]
+    "nextWordList": [
+      "STORIA",
+      "POESIA",
+      "FILM",
+      "CUPIDO",
+      "NIDO",
+      "SINCERO",
+      "ETÀ"
+    ]
+  },
+  {
+    "word": "ETÀ",
+    "nextWordList": ["AMORE", "PENSIONE", "NUMERO", "LIMITE"]
+  },
+  {
+    "word": "LIMITE",
+    "nextWordList": [
+      "ETÀ",
+      "VELOCITÀ",
+      "PAZIENZA",
+      "TEMPO",
+      "PESO",
+      "MATEMATICA"
+    ]
+  },
+  {
+    "word": "PAZIENZA",
+    "nextWordList": ["LIMITE", "SANTA", "PERDERE"]
+  },
+  {
+    "word": "VELOCITÀ",
+    "nextWordList": ["LIMITE", "LUCE", "ALTA"]
+  },
+  {
+    "word": "ALTA",
+    "nextWordList": ["VELOCITÀ", "PRESSIONE", "MONTAGNA", "DEFINIZIONE"]
+  },
+  {
+    "word": "DEFINIZIONE",
+    "nextWordList": ["ALTA", "MUSCOLARE", "PAROLA"]
   },
   {
     "word": "POESIA",
@@ -708,7 +747,7 @@
   },
   {
     "word": "DANZA",
-    "nextWordList": ["MODERNA", "BALLO", "SCUOLA", "CLASSICA"]
+    "nextWordList": ["MODERNA", "BALLO", "SCUOLA", "CLASSICA", "SALSA"]
   },
   {
     "word": "CLASSICA",
@@ -765,7 +804,8 @@
       "MATEMATICA",
       "CUBO",
       "SQUADRA",
-      "PIRAMIDE"
+      "PIRAMIDE",
+      "CONO"
     ]
   },
   {
@@ -795,7 +835,8 @@
       "CENTRO",
       "NIENTE",
       "INTERO",
-      "ALTRO"
+      "ALTRO",
+      "FINE"
     ]
   },
   {
@@ -929,7 +970,7 @@
   },
   {
     "word": "DUBBIO",
-    "nextWordList": ["ELIMINARE", "SCIOGLIERE"]
+    "nextWordList": ["ELIMINARE", "SCIOGLIERE", "OMBRA"]
   },
   {
     "word": "SCIOGLIERE",
@@ -1000,7 +1041,8 @@
       "PAGLIA",
       "DARDO",
       "LENTE",
-      "PALLA"
+      "PALLA",
+      "FALÒ"
     ]
   },
   {
@@ -1021,7 +1063,7 @@
   },
   {
     "word": "MUSCOLARE",
-    "nextWordList": ["STRAPPO", "MEMORIA", "SISTEMA"]
+    "nextWordList": ["STRAPPO", "MEMORIA", "SISTEMA", "DEFINIZIONE"]
   },
   {
     "word": "SISTEMA",
@@ -1055,7 +1097,7 @@
   },
   {
     "word": "PAURA",
-    "nextWordList": ["VUOTO", "BUIO", "FILM"]
+    "nextWordList": ["VUOTO", "BUIO", "FILM", "OMBRA"]
   },
   {
     "word": "PENNA",
@@ -1180,7 +1222,7 @@
   },
   {
     "word": "COMUNE",
-    "nextWordList": ["INTERESSE", "PAESE", "FUORI", "CITTA", "NOME", "ACCORDO"]
+    "nextWordList": ["INTERESSE", "PAESE", "FUORI", "CITTÀ", "NOME", "ACCORDO"]
   },
   {
     "word": "LINEA",
@@ -1409,7 +1451,8 @@
       "NATALE",
       "FRUTTO",
       "ACERO",
-      "RAMO"
+      "RAMO",
+      "TRONCO"
     ]
   },
   {
@@ -1460,7 +1503,7 @@
   },
   {
     "word": "PENSIONE",
-    "nextWordList": ["ALBERGO", "FONDO", "MINIMA"]
+    "nextWordList": ["ALBERGO", "FONDO", "MINIMA", "ETÀ"]
   },
   {
     "word": "MINIMA",
@@ -1468,7 +1511,7 @@
   },
   {
     "word": "PRESSIONE",
-    "nextWordList": ["MINIMA", "GOMME", "PENTOLE"]
+    "nextWordList": ["MINIMA", "GOMME", "PENTOLE", "ALTA"]
   },
   {
     "word": "GOMME",
@@ -1671,7 +1714,7 @@
     "nextWordList": [
       "ESTERNO",
       "STABILE",
-      "BAMBU",
+      "BAMBÙ",
       "VEGETALE",
       "FINTA",
       "CACTUS",
@@ -1703,16 +1746,32 @@
       "QUESTIONE",
       "UTILE",
       "IMPIEGATO",
-      "STIMA"
+      "STIMA",
+      "LIMITE"
     ]
   },
   {
     "word": "PERDERE",
-    "nextWordList": ["TEMPO", "TESTA", "PESO", "SONNO", "NIENTE", "BUSSOLA"]
+    "nextWordList": [
+      "TEMPO",
+      "TESTA",
+      "PESO",
+      "SONNO",
+      "NIENTE",
+      "BUSSOLA",
+      "PAZIENZA"
+    ]
   },
   {
     "word": "PESO",
-    "nextWordList": ["PERDERE", "LANCIO", "COSCIENZA", "AUMENTO", "NETTO"]
+    "nextWordList": [
+      "PERDERE",
+      "LANCIO",
+      "COSCIENZA",
+      "AUMENTO",
+      "NETTO",
+      "LIMITE"
+    ]
   },
   {
     "word": "TESTA",
@@ -1732,7 +1791,11 @@
   },
   {
     "word": "SERIE",
-    "nextWordList": ["TESTA", "CIRCUITO", "TV"]
+    "nextWordList": ["TESTA", "CIRCUITO", "TV", "FINE"]
+  },
+  {
+    "word": "FINE",
+    "nextWordList": ["SERIE", "MONDO", "FINO"]
   },
   {
     "word": "TV",
@@ -1904,7 +1967,15 @@
   },
   {
     "word": "RISO",
-    "nextWordList": ["INSALATA", "TORTA", "CAMPO"]
+    "nextWordList": ["INSALATA", "TORTA", "CAMPO", "SUPPLÌ"]
+  },
+  {
+    "word": "SUPPLÌ",
+    "nextWordList": ["RISO", "TELEFONO", "MOZZARELLA"]
+  },
+  {
+    "word": "MOZZARELLA",
+    "nextWordList": ["SUPPLÌ", "PIZZA", "FORMAGGIO"]
   },
   {
     "word": "CAMPAGNA",
@@ -1920,7 +1991,7 @@
   },
   {
     "word": "MOSCA",
-    "nextWordList": ["RUSSIA", "BIANCA", "PESI", "CAPITALE", "CITTA"]
+    "nextWordList": ["RUSSIA", "BIANCA", "PESI", "CAPITALE", "CITTÀ"]
   },
   {
     "word": "DIPINTO",
@@ -1953,11 +2024,19 @@
   },
   {
     "word": "BERLINO",
-    "nextWordList": ["MURO", "GERMANIA", "CAPITALE", "CITTA"]
+    "nextWordList": ["MURO", "GERMANIA", "CAPITALE", "CITTÀ"]
   },
   {
     "word": "CAPITALE",
-    "nextWordList": ["BERLINO", "MOSCA", "AUMENTO", "PENA", "ROMA", "RIGA"]
+    "nextWordList": [
+      "BERLINO",
+      "MOSCA",
+      "AUMENTO",
+      "PENA",
+      "ROMA",
+      "RIGA",
+      "RISCHIO"
+    ]
   },
   {
     "word": "PENA",
@@ -2046,10 +2125,10 @@
   },
   {
     "word": "PANDA",
-    "nextWordList": ["ROSSO", "BAMBU", "GIGANTE"]
+    "nextWordList": ["ROSSO", "BAMBÙ", "GIGANTE"]
   },
   {
-    "word": "BAMBU",
+    "word": "BAMBÙ",
     "nextWordList": ["PANDA", "CANNA", "PIANTA"]
   },
   {
@@ -2422,10 +2501,10 @@
   },
   {
     "word": "RETTA",
-    "nextWordList": ["VIA", "LINEA", "UNIVERSITA"]
+    "nextWordList": ["VIA", "LINEA", "UNIVERSITÀ"]
   },
   {
-    "word": "UNIVERSITA",
+    "word": "UNIVERSITÀ",
     "nextWordList": ["RETTA", "CORSO", "ESAME", "INGEGNERIA", "PROFESSORE"]
   },
   {
@@ -2564,7 +2643,8 @@
       "CIMA",
       "CASA",
       "GALLERIA",
-      "ESCURSIONE"
+      "ESCURSIONE",
+      "ALTA"
     ]
   },
   {
@@ -3076,7 +3156,7 @@
       "PESCA",
       "RETE",
       "PISTOLA",
-      "BAMBU",
+      "BAMBÙ",
       "ZUCCHERO",
       "POVERO",
       "FUCILE"
@@ -3131,7 +3211,7 @@
   },
   {
     "word": "FINO",
-    "nextWordList": ["MORTE", "COLLO", "SALE"]
+    "nextWordList": ["MORTE", "COLLO", "SALE", "FINE"]
   },
   {
     "word": "GALLO",
@@ -3243,7 +3323,7 @@
   },
   {
     "word": "CIOCCOLATO",
-    "nextWordList": ["SALAME", "UOVO", "TORTA", "BIANCO", "BANANA"]
+    "nextWordList": ["SALAME", "UOVO", "TORTA", "BIANCO", "BANANA", "GELATO"]
   },
   {
     "word": "FETTA",
@@ -3298,7 +3378,8 @@
       "PROFESSORE",
       "ADDIZIONE",
       "PROBLEMA",
-      "CALCOLO"
+      "CALCOLO",
+      "LIMITE"
     ]
   },
   {
@@ -3405,7 +3486,8 @@
       "PRONTO",
       "RUBRICA",
       "CUSTODIA",
-      "BATTERIA"
+      "BATTERIA",
+      "SUPPLÌ"
     ]
   },
   {
@@ -3418,7 +3500,11 @@
   },
   {
     "word": "LUNA",
-    "nextWordList": ["ROSSA", "NOTTE", "LUPO", "SOLE"]
+    "nextWordList": ["ROSSA", "NOTTE", "LUPO", "SOLE", "FALÒ"]
+  },
+  {
+    "word": "FALÒ",
+    "nextWordList": ["LUNA", "FUOCO", "SPIAGGIA"]
   },
   {
     "word": "BIRRA",
@@ -3426,7 +3512,15 @@
   },
   {
     "word": "PIZZA",
-    "nextWordList": ["BIANCA", "METRO", "TAGLIO", "FETTA", "IMPASTO", "KEBAB"]
+    "nextWordList": [
+      "BIANCA",
+      "METRO",
+      "TAGLIO",
+      "FETTA",
+      "IMPASTO",
+      "KEBAB",
+      "MOZZARELLA"
+    ]
   },
   {
     "word": "LUCE",
@@ -3437,7 +3531,8 @@
       "SOLE",
       "SPIA",
       "CONTATORE",
-      "PUNTO"
+      "PUNTO",
+      "VELOCITÀ"
     ]
   },
   {
@@ -3550,7 +3645,8 @@
       "BOCCA",
       "NOME",
       "SALMONE",
-      "FOGLIO"
+      "FOGLIO",
+      "SALSA"
     ]
   },
   {
@@ -3785,19 +3881,19 @@
   },
   {
     "word": "FONDO",
-    "nextWordList": ["SCI", "PENSIONE", "CIMA", "CAFFE", "POZZO", "PROBLEMA"]
+    "nextWordList": ["SCI", "PENSIONE", "CIMA", "CAFFÈ", "POZZO", "PROBLEMA"]
   },
   {
     "word": "POZZO",
     "nextWordList": ["FONDO", "ACQUA", "NERO"]
   },
   {
-    "word": "CAFFE",
+    "word": "CAFFÈ",
     "nextWordList": ["FONDO", "AMARO", "LATTE", "CORRETTO", "SOSPESO", "CORTO"]
   },
   {
     "word": "CORRETTO",
-    "nextWordList": ["CAFFE", "GIUSTO"]
+    "nextWordList": ["CAFFÈ", "GIUSTO"]
   },
   {
     "word": "GIUSTO",
@@ -3876,7 +3972,7 @@
   },
   {
     "word": "SPAGHETTI",
-    "nextWordList": ["CHITARRA", "PASTA", "POMODORO"]
+    "nextWordList": ["CHITARRA", "PASTA", "POMODORO", "SOIA"]
   },
   {
     "word": "FIORE",
@@ -3935,7 +4031,7 @@
   },
   {
     "word": "TACCO",
-    "nextWordList": ["SCARPE", "PUNTA", "SPILLO"]
+    "nextWordList": ["SCARPE", "PUNTA", "SPILLO", "COLPO"]
   },
   {
     "word": "SPILLO",
@@ -4306,7 +4402,7 @@
       "VOTO",
       "STATO",
       "PATENTE",
-      "UNIVERSITA",
+      "UNIVERSITÀ",
       "TEST",
       "COSCIENZA",
       "PROVA",
@@ -4366,7 +4462,8 @@
       "CIVICO",
       "COMPLESSO",
       "PRIMO",
-      "INTERO"
+      "INTERO",
+      "ETÀ"
     ]
   },
   {
@@ -4421,7 +4518,7 @@
   },
   {
     "word": "VALUTAZIONE",
-    "nextWordList": ["STIMA", "FINALE", "ERRORE", "SISTEMA"]
+    "nextWordList": ["STIMA", "FINALE", "ERRORE", "SISTEMA", "RISCHIO"]
   },
   {
     "word": "ERRORE",
@@ -4619,7 +4716,7 @@
   },
   {
     "word": "SPIAGGIA",
-    "nextWordList": ["ULTIMA", "SABBIA", "CABINA", "LIBERA"]
+    "nextWordList": ["ULTIMA", "SABBIA", "CABINA", "LIBERA", "FALÒ"]
   },
   {
     "word": "NERO",
@@ -4728,14 +4825,14 @@
       "TAGLIO",
       "PASSO",
       "SOLDI",
-      "CAFFE",
+      "CAFFÈ",
       "FILM",
       "RAGGIO"
     ]
   },
   {
     "word": "SOSPESO",
-    "nextWordList": ["FIATO", "PONTE", "SCUOLA", "CAFFE"]
+    "nextWordList": ["FIATO", "PONTE", "SCUOLA", "CAFFÈ"]
   },
   {
     "word": "PONTE",
@@ -4767,11 +4864,11 @@
   },
   {
     "word": "INGEGNERIA",
-    "nextWordList": ["MECCANICA", "CIVILE", "UNIVERSITA"]
+    "nextWordList": ["MECCANICA", "CIVILE", "UNIVERSITÀ"]
   },
   {
     "word": "ROMA",
-    "nextWordList": ["SACCO", "RE", "CITTA", "CAPITALE"]
+    "nextWordList": ["SACCO", "RE", "CITTÀ", "CAPITALE"]
   },
   {
     "word": "DARDO",
@@ -4802,11 +4899,12 @@
       "COLAZIONE",
       "PANINO",
       "CREMA",
-      "CAFFE",
+      "CAFFÈ",
       "FORMAGGIO",
       "CENTRALE",
       "INTERO",
-      "FRATELLO"
+      "FRATELLO",
+      "SOIA"
     ]
   },
   {
@@ -4829,7 +4927,8 @@
       "MANO",
       "TESTA",
       "FORTUNA",
-      "SOLE"
+      "SOLE",
+      "TACCO"
     ]
   },
   {
@@ -4938,7 +5037,14 @@
   },
   {
     "word": "SANTA",
-    "nextWordList": ["ACQUA", "CHIESA", "VERGINE", "ALLEANZA", "MESSA"]
+    "nextWordList": [
+      "ACQUA",
+      "CHIESA",
+      "VERGINE",
+      "ALLEANZA",
+      "MESSA",
+      "PAZIENZA"
+    ]
   },
   {
     "word": "ALLEANZA",
@@ -4978,7 +5084,14 @@
   },
   {
     "word": "LETTERA",
-    "nextWordList": ["DELTA", "POSTA", "BUSTA", "IMPEGNO", "MUTA"]
+    "nextWordList": [
+      "DELTA",
+      "POSTA",
+      "BUSTA",
+      "IMPEGNO",
+      "MUTA",
+      "LICENZIAMENTO"
+    ]
   },
   {
     "word": "BUSTA",
@@ -5082,7 +5195,39 @@
   },
   {
     "word": "POMODORO",
-    "nextWordList": ["PASTA", "SPAGHETTI", "RISERVA"]
+    "nextWordList": ["PASTA", "SPAGHETTI", "RISERVA", "SALSA"]
+  },
+  {
+    "word": "SALSA",
+    "nextWordList": ["POMODORO", "ROSA", "DANZA", "SOIA"]
+  },
+  {
+    "word": "SOIA",
+    "nextWordList": ["SALSA", "SPAGHETTI", "LATTE", "GELATO"]
+  },
+  {
+    "word": "GELATO",
+    "nextWordList": ["SOIA", "CIOCCOLATO", "CONO"]
+  },
+  {
+    "word": "CONO",
+    "nextWordList": ["GELATO", "GEOMETRIA", "OMBRA", "TRONCO"]
+  },
+  {
+    "word": "OMBRA",
+    "nextWordList": ["CONO", "PAURA", "DUBBIO"]
+  },
+  {
+    "word": "TRONCO",
+    "nextWordList": ["CONO", "ALBERO", "LICENZIAMENTO"]
+  },
+  {
+    "word": "LICENZIAMENTO",
+    "nextWordList": ["TRONCO", "RISCHIO", "LETTERA"]
+  },
+  {
+    "word": "RISCHIO",
+    "nextWordList": ["LICENZIAMENTO", "CAPITALE", "VALUTAZIONE"]
   },
   {
     "word": "BIANCO",
@@ -5224,7 +5369,7 @@
   },
   {
     "word": "FORMAGGIO",
-    "nextWordList": ["CACIO", "LATTE", "PASTA"]
+    "nextWordList": ["CACIO", "LATTE", "PASTA", "MOZZARELLA"]
   },
   {
     "word": "GROSSO",
@@ -5305,7 +5450,7 @@
   },
   {
     "word": "PAROLA",
-    "nextWordList": ["VERBO", "CHIAVE", "ONORE", "DATA", "DIO"]
+    "nextWordList": ["VERBO", "CHIAVE", "ONORE", "DATA", "DIO", "DEFINIZIONE"]
   },
   {
     "word": "ONORE",
@@ -5361,15 +5506,15 @@
   },
   {
     "word": "MEZZA",
-    "nextWordList": ["CARTUCCIA", "GIORNATA", "VERITA"]
+    "nextWordList": ["CARTUCCIA", "GIORNATA", "VERITÀ"]
   },
   {
-    "word": "VERITA",
+    "word": "VERITÀ",
     "nextWordList": ["MEZZA", "OBBLIGO", "SCOMODA"]
   },
   {
     "word": "SCOMODA",
-    "nextWordList": ["VERITA", "DOMANDA", "POSIZIONE"]
+    "nextWordList": ["VERITÀ", "DOMANDA", "POSIZIONE"]
   },
   {
     "word": "POSIZIONE",
@@ -5400,7 +5545,7 @@
   },
   {
     "word": "OBBLIGO",
-    "nextWordList": ["VERITA", "FIRMA", "SCUOLA", "SEGNALE"]
+    "nextWordList": ["VERITÀ", "FIRMA", "SCUOLA", "SEGNALE"]
   },
   {
     "word": "FIRMA",
