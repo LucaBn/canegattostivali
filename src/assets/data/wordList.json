@@ -104,7 +104,8 @@
       "ANGELO",
       "SPORCHI",
       "CIUFFO",
-      "RIGA"
+      "RIGA",
+      "LEGARE"
     ]
   },
   {
@@ -393,7 +394,7 @@
   },
   {
     "word": "LEGARE",
-    "nextWordList": ["MATTO", "DITO"]
+    "nextWordList": ["MATTO", "DITO", "CAPELLI"]
   },
   {
     "word": "DITO",
@@ -514,7 +515,13 @@
   },
   {
     "word": "PROFESSORE",
-    "nextWordList": ["ORDINARIO", "ARTE", "MATEMATICA", "UNIVERSITÀ"]
+    "nextWordList": [
+      "ORDINARIO",
+      "ARTE",
+      "MATEMATICA",
+      "UNIVERSITÀ",
+      "FILOSOFIA"
+    ]
   },
   {
     "word": "FAMIGLIA",
@@ -743,7 +750,7 @@
   },
   {
     "word": "MODERNA",
-    "nextWordList": ["STORIA", "ARTE", "DANZA"]
+    "nextWordList": ["STORIA", "ARTE", "DANZA", "FILOSOFIA"]
   },
   {
     "word": "DANZA",
@@ -751,7 +758,7 @@
   },
   {
     "word": "CLASSICA",
-    "nextWordList": ["DANZA", "MUSICA", "CHITARRA"]
+    "nextWordList": ["DANZA", "MUSICA", "CHITARRA", "FILOSOFIA"]
   },
   {
     "word": "STUDIO",
@@ -762,7 +769,8 @@
       "CASO",
       "BORSA",
       "GRUPPO",
-      "CAMPO"
+      "CAMPO",
+      "MATERIA"
     ]
   },
   {
@@ -1314,7 +1322,7 @@
   },
   {
     "word": "STOMACO",
-    "nextWordList": ["PIENO", "FARFALLE", "BOCCA", "PELO"]
+    "nextWordList": ["PIENO", "FARFALLE", "BOCCA", "PELO", "PUGNO"]
   },
   {
     "word": "PELO",
@@ -1390,7 +1398,7 @@
   },
   {
     "word": "ACERO",
-    "nextWordList": ["SCIROPPO", "ALBERO", "PIANTA"]
+    "nextWordList": ["SCIROPPO", "ALBERO", "PIANTA", "FOGLIA"]
   },
   {
     "word": "TERRA",
@@ -1963,7 +1971,7 @@
   },
   {
     "word": "INSALATA",
-    "nextWordList": ["POLLO", "RISO", "RUCOLA", "CIUFFO"]
+    "nextWordList": ["POLLO", "RISO", "RUCOLA", "CIUFFO", "FOGLIA"]
   },
   {
     "word": "RISO",
@@ -2270,7 +2278,31 @@
   },
   {
     "word": "DESTRO",
-    "nextWordList": ["BRACCIO", "TASTO"]
+    "nextWordList": ["BRACCIO", "TASTO", "PUGNO"]
+  },
+  {
+    "word": "PUGNO",
+    "nextWordList": ["DESTRO", "GANCIO", "FERRO", "VITTORIA", "STOMACO"]
+  },
+  {
+    "word": "VITTORIA",
+    "nextWordList": ["PUGNO", "PUNTO", "MORALE"]
+  },
+  {
+    "word": "MORALE",
+    "nextWordList": ["VITTORIA", "FILOSOFIA", "ALTO"]
+  },
+  {
+    "word": "FILOSOFIA",
+    "nextWordList": ["MORALE", "MATERIA", "PROFESSORE", "MODERNA", "CLASSICA"]
+  },
+  {
+    "word": "MATERIA",
+    "nextWordList": ["FILOSOFIA", "STUDIO", "STATO"]
+  },
+  {
+    "word": "GANCIO",
+    "nextWordList": ["PUGNO", "AUTO", "TENDA"]
   },
   {
     "word": "TASTO",
@@ -2302,7 +2334,7 @@
   },
   {
     "word": "DIAVOLO",
-    "nextWordList": ["AVVOCATO", "INFERNO", "PATTO"]
+    "nextWordList": ["AVVOCATO", "INFERNO", "PATTO", "PENTOLE"]
   },
   {
     "word": "PATTO",
@@ -2545,7 +2577,7 @@
   },
   {
     "word": "GAMBA",
-    "nextWordList": ["PASSO", "LEGNO", "TAVOLO"]
+    "nextWordList": ["PASSO", "LEGNO", "TAVOLO", "LARGA"]
   },
   {
     "word": "RAPIDO",
@@ -2714,7 +2746,7 @@
   },
   {
     "word": "RETTO",
-    "nextWordList": ["ANGOLO", "DIRITTO"]
+    "nextWordList": ["ANGOLO", "DIRITTO", "GIUSTO"]
   },
   {
     "word": "COTTURA",
@@ -2813,7 +2845,8 @@
       "ABUSO",
       "ATTO",
       "ANIMO",
-      "MOTRICE"
+      "MOTRICE",
+      "MAGNETICA"
     ]
   },
   {
@@ -2911,7 +2944,7 @@
   },
   {
     "word": "CONSUMO",
-    "nextWordList": ["CHIAMATA", "CODICE", "SUOLO"]
+    "nextWordList": ["CHIAMATA", "CODICE", "SUOLO", "ENERGETICO"]
   },
   {
     "word": "SUOLO",
@@ -2986,7 +3019,7 @@
   },
   {
     "word": "RACCOLTA",
-    "nextWordList": ["CHIAMATA", "PUNTI"]
+    "nextWordList": ["CHIAMATA", "PUNTI", "PUNTO", "COLLEZIONE"]
   },
   {
     "word": "PUNTI",
@@ -3038,7 +3071,11 @@
   },
   {
     "word": "RISPARMIO",
-    "nextWordList": ["LIBRETTO", "CASSA"]
+    "nextWordList": ["LIBRETTO", "CASSA", "ENERGETICO"]
+  },
+  {
+    "word": "ENERGETICO",
+    "nextWordList": ["RISPARMIO", "CONSUMO", "BILANCIO"]
   },
   {
     "word": "ORARIO",
@@ -3239,7 +3276,23 @@
   },
   {
     "word": "BUSSOLA",
-    "nextWordList": ["AGO", "PERDERE"]
+    "nextWordList": ["AGO", "PERDERE", "MAGNETICA"]
+  },
+  {
+    "word": "MAGNETICA",
+    "nextWordList": ["BUSSOLA", "BANDA", "FORZA"]
+  },
+  {
+    "word": "BANDA",
+    "nextWordList": ["MAGNETICA", "LARGA", "BUCO"]
+  },
+  {
+    "word": "LARGA",
+    "nextWordList": ["BANDA", "FOGLIA", "GAMBA"]
+  },
+  {
+    "word": "FOGLIA",
+    "nextWordList": ["LARGA", "ACERO", "INSALATA", "ORO"]
   },
   {
     "word": "APE",
@@ -3379,7 +3432,8 @@
       "ADDIZIONE",
       "PROBLEMA",
       "CALCOLO",
-      "LIMITE"
+      "LIMITE",
+      "COMPITO"
     ]
   },
   {
@@ -3781,7 +3835,7 @@
   },
   {
     "word": "PENTOLE",
-    "nextWordList": ["BATTERIA", "PRESSIONE", "INDUZIONE"]
+    "nextWordList": ["BATTERIA", "PRESSIONE", "INDUZIONE", "DIAVOLO"]
   },
   {
     "word": "INDUZIONE",
@@ -3833,7 +3887,8 @@
       "COLLEZIONE",
       "ASSICURAZIONE",
       "LUSSO",
-      "CIRCOLAZIONE"
+      "CIRCOLAZIONE",
+      "GANCIO"
     ]
   },
   {
@@ -3893,11 +3948,15 @@
   },
   {
     "word": "CORRETTO",
-    "nextWordList": ["CAFFÈ", "GIUSTO"]
+    "nextWordList": ["CAFFÈ", "GIUSTO", "COMPITO"]
+  },
+  {
+    "word": "COMPITO",
+    "nextWordList": ["CORRETTO", "MATEMATICA", "CLASSE"]
   },
   {
     "word": "GIUSTO",
-    "nextWordList": ["CORRETTO", "PREZZO", "PUNTO", "MOMENTO", "VERSO"]
+    "nextWordList": ["CORRETTO", "PREZZO", "PUNTO", "MOMENTO", "VERSO", "RETTO"]
   },
   {
     "word": "MOMENTO",
@@ -3924,7 +3983,7 @@
   },
   {
     "word": "ALTO",
-    "nextWordList": ["SALTO", "MARE", "COLLO", "CIELO"]
+    "nextWordList": ["SALTO", "MARE", "COLLO", "CIELO", "MORALE"]
   },
   {
     "word": "COLLO",
@@ -3960,7 +4019,7 @@
   },
   {
     "word": "TENDA",
-    "nextWordList": ["LINO", "SOLE", "DOCCIA"]
+    "nextWordList": ["LINO", "SOLE", "DOCCIA", "GANCIO"]
   },
   {
     "word": "BOTTIGLIA",
@@ -3988,7 +4047,7 @@
   },
   {
     "word": "BUCO",
-    "nextWordList": ["FORO", "NERO", "BILANCIO", "ACQUA", "ORECCHIO"]
+    "nextWordList": ["FORO", "NERO", "BILANCIO", "ACQUA", "ORECCHIO", "BANDA"]
   },
   {
     "word": "ORECCHIO",
@@ -4002,7 +4061,8 @@
       "ESERCIZIO",
       "LEGGE",
       "PASSIVO",
-      "AZIENDA"
+      "AZIENDA",
+      "ENERGETICO"
     ]
   },
   {
@@ -4155,7 +4215,8 @@
       "SICURO",
       "NOZZE",
       "MONETA",
-      "SILENZIO"
+      "SILENZIO",
+      "FOGLIA"
     ]
   },
   {
@@ -4177,7 +4238,8 @@
       "AULA",
       "APPELLO",
       "FOTO",
-      "LOTTA"
+      "LOTTA",
+      "COMPITO"
     ]
   },
   {
@@ -4352,7 +4414,8 @@
       "ESAME",
       "SOLIDO",
       "FAMIGLIA",
-      "LIQUIDO"
+      "LIQUIDO",
+      "MATERIA"
     ]
   },
   {
@@ -5272,7 +5335,7 @@
   },
   {
     "word": "COLLEZIONE",
-    "nextWordList": ["FRANCOBOLLO", "AUTO", "MONETA"]
+    "nextWordList": ["FRANCOBOLLO", "AUTO", "MONETA", "RACCOLTA"]
   },
   {
     "word": "MONETA",
@@ -5401,7 +5464,9 @@
       "MEDIO",
       "GIUSTO",
       "INCONTRO",
-      "LUCE"
+      "LUCE",
+      "VITTORIA",
+      "RACCOLTA"
     ]
   },
   {
@@ -5734,7 +5799,14 @@
   },
   {
     "word": "FERRO",
-    "nextWordList": ["MINERALE", "MASCHERA", "CAVALLO", "BRACCIO", "BOTTE"]
+    "nextWordList": [
+      "MINERALE",
+      "MASCHERA",
+      "CAVALLO",
+      "BRACCIO",
+      "BOTTE",
+      "PUGNO"
+    ]
   },
   {
     "word": "BOTTE",
