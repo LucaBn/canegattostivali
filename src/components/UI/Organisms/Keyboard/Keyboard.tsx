@@ -8,9 +8,10 @@ import IconDelete from "@/components/UI/Atoms/IconDelete/IconDelete";
 import { generateClassNameValue } from "@/utils/html-classes";
 
 const keys: string[][] = [
-  ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "È", "Ì"],
-  ["A", "S", "D", "F", "G", "H", "J", "K", "L", "Ò", "À", "Ù"],
-  ["INVIO", "Z", "X", "C", "V", "B", "N", "M", "CANC", "HELP"],
+  ["SPACER", "À", "È", "Ì", "Ò", "Ù", "HELP", "SPACER"],
+  ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
+  ["SPACER", "A", "S", "D", "F", "G", "H", "J", "K", "L", "SPACER"],
+  ["INVIO", "Z", "X", "C", "V", "B", "N", "M", "CANC"],
 ];
 
 interface KeyboardProps {
@@ -36,11 +37,15 @@ const Keyboard: React.FC<KeyboardProps> = ({
 
   const getBgClass = (key: string): string => {
     if (key === "INVIO") {
-      return "bg-success keyboard__btn--enter";
+      return "bg-success cursor-pointer";
     } else if (key === "CANC") {
-      return "bg-danger keyboard__btn--canc";
+      return "bg-danger cursor-pointer";
+    } else if (key === "HELP") {
+      return "bg-warning cursor-pointer";
+    } else if (key === "SPACER") {
+      return "invisible";
     } else {
-      return "bg-secondary";
+      return "bg-secondary cursor-pointer";
     }
   };
 
@@ -58,10 +63,16 @@ const Keyboard: React.FC<KeyboardProps> = ({
   };
 
   const getSpecificClass = (key: string): string => {
-    if (key === "HELP") {
-      return "bg-transparent";
+    if (key === "INVIO") {
+      return "keyboard__btn--enter";
+    } else if (key === "CANC") {
+      return "keyboard__btn--canc";
+    } else if (key === "HELP") {
+      return "keyboard__btn--help";
+    } else if (key === "SPACER") {
+      return "keyboard__btn--spacer";
     } else {
-      return "";
+      return "cursor-pointer";
     }
   };
 
@@ -83,13 +94,14 @@ const Keyboard: React.FC<KeyboardProps> = ({
     } else if (key === "HELP") {
       return (
         <span
-          title="Chiedi un aiuto!"
-          className="h-100 d-flex align-items-center fs-2"
+          className="h-100 d-flex align-items-center px-1 px-md-3"
           onClick={getHelp}
         >
-          💡
+          <span className="fs-4 me-1">💡</span>Aiutino!
         </span>
       );
+    } else if (key === "SPACER") {
+      return "";
     } else {
       return key;
     }
@@ -108,7 +120,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
                 <div
                   key={key}
                   onClick={(e) => handleKeyClick(e, key)}
-                  className={`keyboard__btn d-flex align-items-center justify-content-center rounded text-nowrap text-white cursor-pointer px-0 ${getExtraClasses(
+                  className={`keyboard__btn d-flex align-items-center justify-content-center rounded text-nowrap text-white px-0 ${getExtraClasses(
                     key
                   )}`}
                 >
