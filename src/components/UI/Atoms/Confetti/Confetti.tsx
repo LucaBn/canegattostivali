@@ -84,17 +84,7 @@ const Confetti: React.FC = () => {
     handleExplode();
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      style={{
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translateY(-50%) translateX(-50%)",
-      }}
-    />
-  );
+  return <canvas ref={canvasRef} className="confetti__canvas" />;
 };
 
 export default Confetti;
