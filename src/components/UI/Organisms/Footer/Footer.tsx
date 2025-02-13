@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
         <Row>
           <Col xs={12} className="my-4">
             <p className="text-center mb-1">© 2&zwj;024-2381 {siteUrl}</p>
-            <p className="text-center">
+            <p className="text-center mb-1">
               Made with ♥ by{" "}
               <a
                 title="Visita la Pagina GitHub di LucaBn"
@@ -29,6 +29,7 @@ const Footer: React.FC = () => {
                 {authorName}
               </a>
             </p>
+            <p className="text-center">Logo realizzato da Manuela</p>
           </Col>
         </Row>
         <Row>
