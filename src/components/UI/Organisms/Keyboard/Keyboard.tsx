@@ -116,9 +116,9 @@ const Keyboard: React.FC<KeyboardProps> = ({
               key={rowIndex}
               className="d-flex flex-nowrap justify-content-center flex-wrap gap-1 gap-md-2 mb-2 px-1 px-md-0"
             >
-              {row.map((key) => (
+              {row.map((key, rowIndex) => (
                 <div
-                  key={key}
+                  key={rowIndex}
                   onClick={(e) => handleKeyClick(e, key)}
                   className={`keyboard__btn d-flex align-items-center justify-content-center rounded text-nowrap text-white px-0 ${getExtraClasses(
                     key
