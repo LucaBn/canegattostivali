@@ -670,7 +670,8 @@
       "MODERNA",
       "MUSEO",
       "PROFESSORE",
-      "REGOLA"
+      "REGOLA",
+      "FORMA"
     ]
   },
   {
@@ -679,7 +680,7 @@
   },
   {
     "word": "STORIA",
-    "nextWordList": ["ARTE", "MODERNA", "AMORE"]
+    "nextWordList": ["ARTE", "MODERNA", "AMORE", "NATURALE"]
   },
   {
     "word": "AMORE",
@@ -775,7 +776,7 @@
   },
   {
     "word": "CASO",
-    "nextWordList": ["STUDIO", "UNICO", "PERICOLO", "ERRORE"]
+    "nextWordList": ["STUDIO", "UNICO", "PERICOLO", "ERRORE", "PARITÀ"]
   },
   {
     "word": "MEDICO",
@@ -1130,12 +1131,13 @@
       "CRISTO",
       "MORTO",
       "MISURE",
-      "CURA"
+      "CURA",
+      "UMANO"
     ]
   },
   {
     "word": "MORTO",
-    "nextWordList": ["CORPO", "CASSA"]
+    "nextWordList": ["CORPO", "CASSA", "PESO"]
   },
   {
     "word": "BALLO",
@@ -1151,7 +1153,7 @@
   },
   {
     "word": "PRIVATA",
-    "nextWordList": ["CHAT", "VITA", "AZIENDA"]
+    "nextWordList": ["CHAT", "VITA", "AZIENDA", "VIOLENZA"]
   },
   {
     "word": "AZIENDA",
@@ -1669,7 +1671,14 @@
   },
   {
     "word": "DISCOTECA",
-    "nextWordList": ["MUSICA", "CASSA", "SERATA", "CONSUMAZIONE", "PALLA"]
+    "nextWordList": [
+      "MUSICA",
+      "CASSA",
+      "SERATA",
+      "CONSUMAZIONE",
+      "PALLA",
+      "LASER"
+    ]
   },
   {
     "word": "LETTO",
@@ -1778,7 +1787,9 @@
       "COSCIENZA",
       "AUMENTO",
       "NETTO",
-      "LIMITE"
+      "LIMITE",
+      "FORMA",
+      "MORTO"
     ]
   },
   {
@@ -2254,7 +2265,15 @@
   },
   {
     "word": "PARTITA",
-    "nextWordList": ["CALCIO", "POKER", "IVA", "SCACCHI", "INCONTRO", "SINTESI"]
+    "nextWordList": [
+      "CALCIO",
+      "POKER",
+      "IVA",
+      "SCACCHI",
+      "INCONTRO",
+      "SINTESI",
+      "RISULTATO"
+    ]
   },
   {
     "word": "IVA",
@@ -2354,7 +2373,14 @@
   },
   {
     "word": "SPIRITO",
-    "nextWordList": ["LIBERO", "NATALE", "POVERO", "SOTTO", "FANTASMA"]
+    "nextWordList": [
+      "LIBERO",
+      "NATALE",
+      "POVERO",
+      "SOTTO",
+      "FANTASMA",
+      "SACRIFICIO"
+    ]
   },
   {
     "word": "POVERO",
@@ -2369,7 +2395,8 @@
       "COMUNE",
       "FESTA",
       "LEADER",
-      "VILLAGGIO"
+      "VILLAGGIO",
+      "PATRIA"
     ]
   },
   {
@@ -2597,7 +2624,14 @@
   },
   {
     "word": "OPERAZIONE",
-    "nextWordList": ["SOCCORSO", "MATEMATICA", "CUORE", "POLIZIA", "ADDIZIONE"]
+    "nextWordList": [
+      "SOCCORSO",
+      "MATEMATICA",
+      "CUORE",
+      "POLIZIA",
+      "ADDIZIONE",
+      "RISULTATO"
+    ]
   },
   {
     "word": "VELOCE",
@@ -3011,7 +3045,43 @@
   },
   {
     "word": "NEMICO",
-    "nextWordList": ["PUBBLICO", "SPIA"]
+    "nextWordList": ["PUBBLICO", "SPIA", "PATRIA"]
+  },
+  {
+    "word": "PATRIA",
+    "nextWordList": ["NEMICO", "ALTARE", "PAESE"]
+  },
+  {
+    "word": "ALTARE",
+    "nextWordList": ["PATRIA", "CHIESA", "SACRIFICIO"]
+  },
+  {
+    "word": "SACRIFICIO",
+    "nextWordList": ["ALTARE", "SPIRITO", "OFFERTA", "UMANO"]
+  },
+  {
+    "word": "UMANO",
+    "nextWordList": ["SACRIFICIO", "ESSERE", "CORPO", "GENERE"]
+  },
+  {
+    "word": "GENERE",
+    "nextWordList": ["UMANO", "UNICO", "PARITÀ", "VIOLENZA"]
+  },
+  {
+    "word": "VIOLENZA",
+    "nextWordList": ["GENERE", "PRIVATA", "FORMA"]
+  },
+  {
+    "word": "FORMA",
+    "nextWordList": ["VIOLENZA", "ARTE", "PESO"]
+  },
+  {
+    "word": "PARITÀ",
+    "nextWordList": ["GENERE", "RISULTATO", "CASO"]
+  },
+  {
+    "word": "RISULTATO",
+    "nextWordList": ["PARITÀ", "PARTITA", "OPERAZIONE", "PREMIO"]
   },
   {
     "word": "SPIA",
@@ -3413,7 +3483,8 @@
       "POZZO",
       "SPRECO",
       "POMPA",
-      "PISTOLA"
+      "PISTOLA",
+      "NATURALE"
     ]
   },
   {
@@ -3586,7 +3657,8 @@
       "SPIA",
       "CONTATORE",
       "PUNTO",
-      "VELOCITÀ"
+      "VELOCITÀ",
+      "NATURALE"
     ]
   },
   {
@@ -4163,7 +4235,7 @@
   },
   {
     "word": "PREMIO",
-    "nextWordList": ["DENARO", "STREGA", "PRIMO", "ASSICURAZIONE"]
+    "nextWordList": ["DENARO", "STREGA", "PRIMO", "ASSICURAZIONE", "RISULTATO"]
   },
   {
     "word": "ASSICURAZIONE",
@@ -4526,7 +4598,8 @@
       "COMPLESSO",
       "PRIMO",
       "INTERO",
-      "ETÀ"
+      "ETÀ",
+      "NATURALE"
     ]
   },
   {
@@ -5012,7 +5085,7 @@
   },
   {
     "word": "ESSERE",
-    "nextWordList": ["SINCERO", "VERBO", "VIVENTE"]
+    "nextWordList": ["SINCERO", "VERBO", "VIVENTE", "UMANO"]
   },
   {
     "word": "VIVENTE",
@@ -5323,7 +5396,7 @@
   },
   {
     "word": "UNICO",
-    "nextWordList": ["ASSEGNO", "CASO", "RARO", "SENSO"]
+    "nextWordList": ["ASSEGNO", "CASO", "RARO", "SENSO", "GENERE"]
   },
   {
     "word": "RARO",
@@ -5343,7 +5416,11 @@
   },
   {
     "word": "FENOMENO",
-    "nextWordList": ["RARO", "METEOROLOGICO"]
+    "nextWordList": ["RARO", "METEOROLOGICO", "NATURALE"]
+  },
+  {
+    "word": "NATURALE",
+    "nextWordList": ["FENOMENO", "ACQUA", "STORIA", "NUMERO", "LUCE"]
   },
   {
     "word": "METEOROLOGICO",
@@ -5559,7 +5636,7 @@
   },
   {
     "word": "LASER",
-    "nextWordList": ["RAGGIO", "STAMPANTE"]
+    "nextWordList": ["RAGGIO", "STAMPANTE", "DISCOTECA"]
   },
   {
     "word": "STAMPANTE",
@@ -5598,7 +5675,7 @@
   },
   {
     "word": "OFFERTA",
-    "nextWordList": ["DOMANDA", "LAVORO", "SPECIALE"]
+    "nextWordList": ["DOMANDA", "LAVORO", "SPECIALE", "SACRIFICIO"]
   },
   {
     "word": "SPECIALE",
@@ -5760,7 +5837,7 @@
   },
   {
     "word": "CHIESA",
-    "nextWordList": ["SANTA", "CAMPANILE", "MESSA", "MONACO", "CASA"]
+    "nextWordList": ["SANTA", "CAMPANILE", "MESSA", "MONACO", "CASA", "ALTARE"]
   },
   {
     "word": "CAMPANILE",
