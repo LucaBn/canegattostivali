@@ -104,7 +104,8 @@
       "ANGELO",
       "SPORCHI",
       "CIUFFO",
-      "RIGA"
+      "RIGA",
+      "LEGARE"
     ]
   },
   {
@@ -393,7 +394,7 @@
   },
   {
     "word": "LEGARE",
-    "nextWordList": ["MATTO", "DITO"]
+    "nextWordList": ["MATTO", "DITO", "CAPELLI"]
   },
   {
     "word": "DITO",
@@ -1397,7 +1398,7 @@
   },
   {
     "word": "ACERO",
-    "nextWordList": ["SCIROPPO", "ALBERO", "PIANTA"]
+    "nextWordList": ["SCIROPPO", "ALBERO", "PIANTA", "FOGLIA"]
   },
   {
     "word": "TERRA",
@@ -1970,7 +1971,7 @@
   },
   {
     "word": "INSALATA",
-    "nextWordList": ["POLLO", "RISO", "RUCOLA", "CIUFFO"]
+    "nextWordList": ["POLLO", "RISO", "RUCOLA", "CIUFFO", "FOGLIA"]
   },
   {
     "word": "RISO",
@@ -2576,7 +2577,7 @@
   },
   {
     "word": "GAMBA",
-    "nextWordList": ["PASSO", "LEGNO", "TAVOLO"]
+    "nextWordList": ["PASSO", "LEGNO", "TAVOLO", "LARGA"]
   },
   {
     "word": "RAPIDO",
@@ -2745,7 +2746,7 @@
   },
   {
     "word": "RETTO",
-    "nextWordList": ["ANGOLO", "DIRITTO"]
+    "nextWordList": ["ANGOLO", "DIRITTO", "GIUSTO"]
   },
   {
     "word": "COTTURA",
@@ -2844,7 +2845,8 @@
       "ABUSO",
       "ATTO",
       "ANIMO",
-      "MOTRICE"
+      "MOTRICE",
+      "MAGNETICA"
     ]
   },
   {
@@ -2942,7 +2944,7 @@
   },
   {
     "word": "CONSUMO",
-    "nextWordList": ["CHIAMATA", "CODICE", "SUOLO"]
+    "nextWordList": ["CHIAMATA", "CODICE", "SUOLO", "ENERGETICO"]
   },
   {
     "word": "SUOLO",
@@ -3017,7 +3019,7 @@
   },
   {
     "word": "RACCOLTA",
-    "nextWordList": ["CHIAMATA", "PUNTI"]
+    "nextWordList": ["CHIAMATA", "PUNTI", "PUNTO", "COLLEZIONE"]
   },
   {
     "word": "PUNTI",
@@ -3069,7 +3071,11 @@
   },
   {
     "word": "RISPARMIO",
-    "nextWordList": ["LIBRETTO", "CASSA"]
+    "nextWordList": ["LIBRETTO", "CASSA", "ENERGETICO"]
+  },
+  {
+    "word": "ENERGETICO",
+    "nextWordList": ["RISPARMIO", "CONSUMO", "BILANCIO"]
   },
   {
     "word": "ORARIO",
@@ -3270,7 +3276,23 @@
   },
   {
     "word": "BUSSOLA",
-    "nextWordList": ["AGO", "PERDERE"]
+    "nextWordList": ["AGO", "PERDERE", "MAGNETICA"]
+  },
+  {
+    "word": "MAGNETICA",
+    "nextWordList": ["BUSSOLA", "BANDA", "FORZA"]
+  },
+  {
+    "word": "BANDA",
+    "nextWordList": ["MAGNETICA", "LARGA", "BUCO"]
+  },
+  {
+    "word": "LARGA",
+    "nextWordList": ["BANDA", "FOGLIA", "GAMBA"]
+  },
+  {
+    "word": "FOGLIA",
+    "nextWordList": ["LARGA", "ACERO", "INSALATA", "ORO"]
   },
   {
     "word": "APE",
@@ -3410,7 +3432,8 @@
       "ADDIZIONE",
       "PROBLEMA",
       "CALCOLO",
-      "LIMITE"
+      "LIMITE",
+      "COMPITO"
     ]
   },
   {
@@ -3925,11 +3948,15 @@
   },
   {
     "word": "CORRETTO",
-    "nextWordList": ["CAFFÈ", "GIUSTO"]
+    "nextWordList": ["CAFFÈ", "GIUSTO", "COMPITO"]
+  },
+  {
+    "word": "COMPITO",
+    "nextWordList": ["CORRETTO", "MATEMATICA", "CLASSE"]
   },
   {
     "word": "GIUSTO",
-    "nextWordList": ["CORRETTO", "PREZZO", "PUNTO", "MOMENTO", "VERSO"]
+    "nextWordList": ["CORRETTO", "PREZZO", "PUNTO", "MOMENTO", "VERSO", "RETTO"]
   },
   {
     "word": "MOMENTO",
@@ -4020,7 +4047,7 @@
   },
   {
     "word": "BUCO",
-    "nextWordList": ["FORO", "NERO", "BILANCIO", "ACQUA", "ORECCHIO"]
+    "nextWordList": ["FORO", "NERO", "BILANCIO", "ACQUA", "ORECCHIO", "BANDA"]
   },
   {
     "word": "ORECCHIO",
@@ -4034,7 +4061,8 @@
       "ESERCIZIO",
       "LEGGE",
       "PASSIVO",
-      "AZIENDA"
+      "AZIENDA",
+      "ENERGETICO"
     ]
   },
   {
@@ -4187,7 +4215,8 @@
       "SICURO",
       "NOZZE",
       "MONETA",
-      "SILENZIO"
+      "SILENZIO",
+      "FOGLIA"
     ]
   },
   {
@@ -4209,7 +4238,8 @@
       "AULA",
       "APPELLO",
       "FOTO",
-      "LOTTA"
+      "LOTTA",
+      "COMPITO"
     ]
   },
   {
@@ -5305,7 +5335,7 @@
   },
   {
     "word": "COLLEZIONE",
-    "nextWordList": ["FRANCOBOLLO", "AUTO", "MONETA"]
+    "nextWordList": ["FRANCOBOLLO", "AUTO", "MONETA", "RACCOLTA"]
   },
   {
     "word": "MONETA",
@@ -5435,7 +5465,8 @@
       "GIUSTO",
       "INCONTRO",
       "LUCE",
-      "VITTORIA"
+      "VITTORIA",
+      "RACCOLTA"
     ]
   },
   {
