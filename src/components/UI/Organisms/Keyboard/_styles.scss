@@ -26,6 +26,14 @@ $button-height-desktop: 48px;
       flex: 2.2;
     }
 
+    &--help {
+      flex: 4;
+    }
+
+    &--spacer {
+      flex: 0.5;
+    }
+
     &--disabled {
       color: var(--bs-btn-disabled-color);
       background-color: var(--bs-btn-disabled-bg);
