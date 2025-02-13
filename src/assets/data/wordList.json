@@ -514,7 +514,13 @@
   },
   {
     "word": "PROFESSORE",
-    "nextWordList": ["ORDINARIO", "ARTE", "MATEMATICA", "UNIVERSITÀ"]
+    "nextWordList": [
+      "ORDINARIO",
+      "ARTE",
+      "MATEMATICA",
+      "UNIVERSITÀ",
+      "FILOSOFIA"
+    ]
   },
   {
     "word": "FAMIGLIA",
@@ -743,7 +749,7 @@
   },
   {
     "word": "MODERNA",
-    "nextWordList": ["STORIA", "ARTE", "DANZA"]
+    "nextWordList": ["STORIA", "ARTE", "DANZA", "FILOSOFIA"]
   },
   {
     "word": "DANZA",
@@ -751,7 +757,7 @@
   },
   {
     "word": "CLASSICA",
-    "nextWordList": ["DANZA", "MUSICA", "CHITARRA"]
+    "nextWordList": ["DANZA", "MUSICA", "CHITARRA", "FILOSOFIA"]
   },
   {
     "word": "STUDIO",
@@ -762,7 +768,8 @@
       "CASO",
       "BORSA",
       "GRUPPO",
-      "CAMPO"
+      "CAMPO",
+      "MATERIA"
     ]
   },
   {
@@ -1314,7 +1321,7 @@
   },
   {
     "word": "STOMACO",
-    "nextWordList": ["PIENO", "FARFALLE", "BOCCA", "PELO"]
+    "nextWordList": ["PIENO", "FARFALLE", "BOCCA", "PELO", "PUGNO"]
   },
   {
     "word": "PELO",
@@ -2270,7 +2277,31 @@
   },
   {
     "word": "DESTRO",
-    "nextWordList": ["BRACCIO", "TASTO"]
+    "nextWordList": ["BRACCIO", "TASTO", "PUGNO"]
+  },
+  {
+    "word": "PUGNO",
+    "nextWordList": ["DESTRO", "GANCIO", "FERRO", "VITTORIA", "STOMACO"]
+  },
+  {
+    "word": "VITTORIA",
+    "nextWordList": ["PUGNO", "PUNTO", "MORALE"]
+  },
+  {
+    "word": "MORALE",
+    "nextWordList": ["VITTORIA", "FILOSOFIA", "ALTO"]
+  },
+  {
+    "word": "FILOSOFIA",
+    "nextWordList": ["MORALE", "MATERIA", "PROFESSORE", "MODERNA", "CLASSICA"]
+  },
+  {
+    "word": "MATERIA",
+    "nextWordList": ["FILOSOFIA", "STUDIO", "STATO"]
+  },
+  {
+    "word": "GANCIO",
+    "nextWordList": ["PUGNO", "AUTO", "TENDA"]
   },
   {
     "word": "TASTO",
@@ -2302,7 +2333,7 @@
   },
   {
     "word": "DIAVOLO",
-    "nextWordList": ["AVVOCATO", "INFERNO", "PATTO"]
+    "nextWordList": ["AVVOCATO", "INFERNO", "PATTO", "PENTOLE"]
   },
   {
     "word": "PATTO",
@@ -3781,7 +3812,7 @@
   },
   {
     "word": "PENTOLE",
-    "nextWordList": ["BATTERIA", "PRESSIONE", "INDUZIONE"]
+    "nextWordList": ["BATTERIA", "PRESSIONE", "INDUZIONE", "DIAVOLO"]
   },
   {
     "word": "INDUZIONE",
@@ -3833,7 +3864,8 @@
       "COLLEZIONE",
       "ASSICURAZIONE",
       "LUSSO",
-      "CIRCOLAZIONE"
+      "CIRCOLAZIONE",
+      "GANCIO"
     ]
   },
   {
@@ -3924,7 +3956,7 @@
   },
   {
     "word": "ALTO",
-    "nextWordList": ["SALTO", "MARE", "COLLO", "CIELO"]
+    "nextWordList": ["SALTO", "MARE", "COLLO", "CIELO", "MORALE"]
   },
   {
     "word": "COLLO",
@@ -3960,7 +3992,7 @@
   },
   {
     "word": "TENDA",
-    "nextWordList": ["LINO", "SOLE", "DOCCIA"]
+    "nextWordList": ["LINO", "SOLE", "DOCCIA", "GANCIO"]
   },
   {
     "word": "BOTTIGLIA",
@@ -4352,7 +4384,8 @@
       "ESAME",
       "SOLIDO",
       "FAMIGLIA",
-      "LIQUIDO"
+      "LIQUIDO",
+      "MATERIA"
     ]
   },
   {
@@ -5401,7 +5434,8 @@
       "MEDIO",
       "GIUSTO",
       "INCONTRO",
-      "LUCE"
+      "LUCE",
+      "VITTORIA"
     ]
   },
   {
@@ -5734,7 +5768,14 @@
   },
   {
     "word": "FERRO",
-    "nextWordList": ["MINERALE", "MASCHERA", "CAVALLO", "BRACCIO", "BOTTE"]
+    "nextWordList": [
+      "MINERALE",
+      "MASCHERA",
+      "CAVALLO",
+      "BRACCIO",
+      "BOTTE",
+      "PUGNO"
+    ]
   },
   {
     "word": "BOTTE",
