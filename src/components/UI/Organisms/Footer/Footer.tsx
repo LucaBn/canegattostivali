@@ -2,7 +2,6 @@ import React from "react";
 
 // Components
 import { Container, Row, Col, Image } from "react-bootstrap";
-// import IconTwitter from "@/components/UI/Atoms/IconTwitter/IconTwitter";
 
 // Constants
 import { AUTHOR_NAME, WEBSITE_URL } from "@/constants/app";
@@ -56,23 +55,6 @@ const Footer: React.FC = () => {
             </p>
           </Col>
         </Row>
-        {/* <Row>
-          <Col xs={12} className="mb-4">
-            <p className="mb-1 text-center">Rimani aggiornato</p>
-            <ul className="footer__social-list list-unstyled d-flex justify-content-center gap-2">
-              <li>
-                <a
-                  href="https://twitter.com/CaneGattoStivali"
-                  title="Vai a X (ex Twitter)"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  <IconTwitter forceColor="#fff" />
-                </a>
-              </li>
-            </ul>
-          </Col>
-        </Row> */}
         <Row>
           <Col xs={12} className="mb-4">
             <p>
