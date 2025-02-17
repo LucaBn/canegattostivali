@@ -1,23 +1,32 @@
 /**
- * Returns a random integer between the specified minimum and maximum values, inclusive.
- * This function first ensures that the minimum value is rounded up and the maximum value is
- * rounded down to the nearest integers, and then generates a random integer between them.
+ * Returns a random integer between the specified minimum and maximum values.
+ * This function first ensures that the minimum and maximum values are rounded accordingly,
+ * and then generates a random integer between them.
  *
- * @param {number} min - The minimum value (inclusive). This value will be rounded up if it's not an integer.
- * @param {number} max - The maximum value (inclusive). This value will be rounded down if it's not an integer.
- * @returns {number} - A random integer between the `min` and `max`, inclusive.
+ * @param {number} min - The minimum value. This value will be adjusted based on `inclusiveMin`.
+ * @param {number} max - The maximum value. This value will be adjusted based on `inclusiveMax`.
+ * @param {boolean} [inclusiveMin=true] - Whether the range should be inclusive of `min`.
+ * @param {boolean} [inclusiveMax=true] - Whether the range should be inclusive of `max`.
+ * @returns {number} - A random integer between the `min` and `max`, inclusive or exclusive based on the flags.
  *
  * @example
- * const randomInt = getRandomIntInclusive(1, 10);
+ * const randomInt = getRandomInt(1, 10); // Default is inclusive min and max
  * console.log(randomInt); // Example output: 4
  *
- * const anotherRandomInt = getRandomIntInclusive(5.2, 9.8);
- * console.log(anotherRandomInt); // Example output: 7
+ * const exclusiveRandomInt = getRandomInt(1, 10, false, false); // Exclusive min and max
+ * console.log(exclusiveRandomInt); // Example output: 3
  */
-const getRandomIntInclusive = (min: number, max: number): number => {
-  const minCeiled = Math.ceil(min);
-  const maxFloored = Math.floor(max);
-  return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
+const getRandomInt = (
+  min: number,
+  max: number,
+  inclusiveMin: boolean = true,
+  inclusiveMax: boolean = true
+): number => {
+  const minAdjusted = inclusiveMin ? Math.ceil(min) : Math.ceil(min) + 1;
+  const maxAdjusted = inclusiveMax ? Math.floor(max) : Math.floor(max) - 1;
+  return Math.floor(
+    Math.random() * (maxAdjusted - minAdjusted + 1) + minAdjusted
+  );
 };
 
-export { getRandomIntInclusive };
+export { getRandomInt };
