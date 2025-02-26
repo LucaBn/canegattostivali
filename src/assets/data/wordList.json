@@ -525,7 +525,7 @@
   },
   {
     "word": "FAMIGLIA",
-    "nextWordList": ["TOMBA", "MEDICO", "STATO", "PATRIMONIO"]
+    "nextWordList": ["TOMBA", "MEDICO", "STATO", "PATRIMONIO", "NOBILE", "CASA"]
   },
   {
     "word": "CRESCITA",
@@ -598,11 +598,15 @@
   },
   {
     "word": "SELLA",
-    "nextWordList": ["CAVALLO", "PUNTO"]
+    "nextWordList": ["CAVALLO", "PUNTO", "BICICLETTA"]
   },
   {
     "word": "BICICLETTA",
-    "nextWordList": ["MANUBRIO", "RUOTA", "CATENA"]
+    "nextWordList": ["MANUBRIO", "RUOTA", "CATENA", "SELLA", "CORSA"]
+  },
+  {
+    "word": "CORSA",
+    "nextWordList": ["BICICLETTA", "SCARPE", "GIRO", "MOTO", "AUTO"]
   },
   {
     "word": "RUOTA",
@@ -631,8 +635,21 @@
       "BORSA",
       "DOCCIA",
       "GINNASTICA",
-      "ATTREZZO"
+      "ATTREZZO",
+      "ABBONAMENTO"
     ]
+  },
+  {
+    "word": "ABBONAMENTO",
+    "nextWordList": ["PALESTRA", "TEATRO", "PIANO", "AUTOBUS"]
+  },
+  {
+    "word": "AUTOBUS",
+    "nextWordList": ["ABBONAMENTO", "BIGLIETTO", "FERMATA"]
+  },
+  {
+    "word": "FERMATA",
+    "nextWordList": ["AUTOBUS", "DIVIETO", "TRENO", "METROPOLITANA"]
   },
   {
     "word": "CORSO",
@@ -2421,7 +2438,7 @@
   },
   {
     "word": "PIANO",
-    "nextWordList": ["EMERGENZA", "COTTURA", "LAVORO", "PRIMO"]
+    "nextWordList": ["EMERGENZA", "COTTURA", "LAVORO", "PRIMO", "ABBONAMENTO"]
   },
   {
     "word": "PULSANTE",
@@ -3005,7 +3022,8 @@
       "BIGLIETTO",
       "PUBBLICO",
       "ATTO",
-      "MASCHERA"
+      "MASCHERA",
+      "ABBONAMENTO"
     ]
   },
   {
@@ -3017,7 +3035,8 @@
       "VISITA",
       "AEREO",
       "INGRESSO",
-      "TIMBRARE"
+      "TIMBRARE",
+      "AUTOBUS"
     ]
   },
   {
@@ -3277,7 +3296,8 @@
       "TERRA",
       "CAMICIA",
       "INVISIBILE",
-      "ACCIAIO"
+      "ACCIAIO",
+      "ONORE"
     ]
   },
   {
@@ -3704,7 +3724,8 @@
       "CAMPAGNA",
       "MUTUO",
       "ASTA",
-      "CANCELLO"
+      "CANCELLO",
+      "FAMIGLIA"
     ]
   },
   {
@@ -3960,7 +3981,8 @@
       "ASSICURAZIONE",
       "LUSSO",
       "CIRCOLAZIONE",
-      "GANCIO"
+      "GANCIO",
+      "CORSA"
     ]
   },
   {
@@ -4154,7 +4176,8 @@
       "NEGOZIO",
       "CHIODO",
       "STRAPPO",
-      "CUOIO"
+      "CUOIO",
+      "CORSA"
     ]
   },
   {
@@ -4434,7 +4457,8 @@
       "CABINA",
       "DIRETTO",
       "BIGLIETTO",
-      "STAZIONE"
+      "STAZIONE",
+      "FERMATA"
     ]
   },
   {
@@ -4496,7 +4520,7 @@
   },
   {
     "word": "NOBILE",
-    "nextWordList": ["ANIMO", "GAS", "GESTO"]
+    "nextWordList": ["ANIMO", "GAS", "GESTO", "FAMIGLIA"]
   },
   {
     "word": "GESTO",
@@ -5097,7 +5121,7 @@
   },
   {
     "word": "METROPOLITANA",
-    "nextWordList": ["LEGGENDA", "LINEA", "STAZIONE"]
+    "nextWordList": ["LEGGENDA", "LINEA", "STAZIONE", "FERMATA"]
   },
   {
     "word": "STAZIONE",
@@ -5392,7 +5416,7 @@
   },
   {
     "word": "MOTO",
-    "nextWordList": ["CIRCOLARE", "ACQUA", "LUOGO", "EPOCA"]
+    "nextWordList": ["CIRCOLARE", "ACQUA", "LUOGO", "EPOCA", "CORSA"]
   },
   {
     "word": "UNICO",
@@ -5588,7 +5612,7 @@
   },
   {
     "word": "DIVIETO",
-    "nextWordList": ["FUMO", "SOSTA", "SEGNALE"]
+    "nextWordList": ["FUMO", "SOSTA", "SEGNALE", "FERMATA"]
   },
   {
     "word": "PAROLA",
@@ -5596,7 +5620,7 @@
   },
   {
     "word": "ONORE",
-    "nextWordList": ["PAROLA", "MERITO", "CODICE"]
+    "nextWordList": ["PAROLA", "MERITO", "CODICE", "UOMO"]
   },
   {
     "word": "CHIAVE",
@@ -5612,7 +5636,7 @@
   },
   {
     "word": "GIRO",
-    "nextWordList": ["CHIAVE", "VITE", "BOA", "ANGOLO", "PRESO"]
+    "nextWordList": ["CHIAVE", "VITE", "BOA", "ANGOLO", "PRESO", "CORSA"]
   },
   {
     "word": "VITE",
