@@ -11,13 +11,26 @@ import EndGameModal from "@/components/UI/Organisms/EndGameModal/EndGameModal";
 // Utils
 import { createWordSequence } from "@/utils/game-logic";
 import { normalizeLetter } from "@/utils/string";
+import {
+  readFromLocalStorage,
+  writeToLocalStorage,
+} from "@/utils/local-storage";
 
 // Constants
 import { WORD_LIST_LENGTH } from "@/constants/wordList";
+import { APP_NAME_SHORT } from "@/constants/app";
 
 // Typings
 import { ButtonVariant } from "react-bootstrap/esm/types";
+import { UserData } from "@/typings/user";
 type Message = "🤔" | "😃" | "😓" | "🥳";
+
+const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
+const LS_USER_DATA_VARIABLE = `${lowercaseAppName}UserData`;
+
+const storedUserData: UserData | null = readFromLocalStorage(
+  LS_USER_DATA_VARIABLE
+);
 
 const initialWordSequence = createWordSequence();
 
@@ -56,6 +69,22 @@ const HomePage: React.FC = () => {
     );
   };
 
+  const updateStoredUserData = () => {
+    const userMatchesWon: number =
+      (storedUserData && storedUserData?.matchesWon + 1) || 1;
+    const userBestTime: number =
+      storedUserData &&
+      storedUserData?.bestTime > 0 &&
+      storedUserData?.bestTime < time
+        ? storedUserData?.bestTime
+        : time;
+    writeToLocalStorage(LS_USER_DATA_VARIABLE, {
+      ...storedUserData,
+      matchesWon: userMatchesWon,
+      bestTime: userBestTime,
+    });
+  };
+
   const handleKeyPress = (key: string) => {
     if (!isKeyPressEnabled.current) return;
 
@@ -82,6 +111,7 @@ const HomePage: React.FC = () => {
     } else if (key === "INVIO") {
       if (guessedWord === currentWord) {
         if (isLastWord) {
+          updateStoredUserData();
           setIsGameEnded(true);
           setTimeout(() => {
             setShowEndGameModal(true);

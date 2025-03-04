@@ -4,16 +4,16 @@ import React /* useState, useEffect, useRef */ from "react";
 import { Image } from "react-bootstrap";
 import { Container, Navbar } from "react-bootstrap";
 // import { LinkContainer } from "react-router-bootstrap";
+import IconNewspaper from "@/components/UI/Atoms/IconNewspaper/IconNewspaper";
+import IconSun from "@/components/UI/Atoms/IconSun/IconSun";
+import IconMoon from "@/components/UI/Atoms/IconMoon/IconMoon";
+import UserButton from "@/components/UI/Organisms/UserButton/UserButton";
 
 // Hook
 import { useTheme } from "@/components/providers/ThemeProvider";
 
 // Typings
 import { ThemeList } from "@/constants/themes";
-
-// Constants
-import IconSun from "../../Atoms/IconSun/IconSun";
-import IconMoon from "../../Atoms/IconMoon/IconMoon";
 
 // TODO: move this to an utils file
 const scrollToTop = () => {
@@ -66,6 +66,13 @@ const NavbarComponent: React.FC = () => {
       : changeTheme("light" as ThemeList);
   };
 
+  const toggleThemeIcon: JSX.Element =
+    theme === "dark" ? (
+      <IconMoon forceColor="#fff" />
+    ) : (
+      <IconSun forceColor="#fff" />
+    );
+
   return (
     <>
       <Navbar
@@ -92,15 +99,18 @@ const NavbarComponent: React.FC = () => {
 
           <span
             onClick={toggleTheme}
-            className="cursor-pointer"
+            className="ms-auto cursor-pointer"
             title="Cambia il tema"
           >
-            {theme === "dark" ? (
-              <IconMoon forceColor="#fff" />
-            ) : (
-              <IconSun forceColor="#fff" />
-            )}
+            {toggleThemeIcon}
           </span>
+          <span className="ms-3 ms-md-4 me-0 cursor-pointer" title="News">
+            <IconNewspaper forceColor="#fff" />
+          </span>
+          <span className="ms-3 ms-md-4 me-0 cursor-pointer" title="Profilo">
+            <UserButton />
+          </span>
+
           {/* <LinkContainer to={`/one`}>
 
           {/* <Navbar.Toggle

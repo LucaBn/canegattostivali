@@ -5,6 +5,13 @@ import { Button, Modal } from "react-bootstrap";
 
 // Utils
 import { formatTime } from "@/utils/time";
+import { readFromLocalStorage } from "@/utils/local-storage";
+
+// Constants
+import { APP_NAME_SHORT } from "@/constants/app";
+
+// Typings
+import { UserData } from "@/typings/user";
 
 interface IOptionsModal {
   show: boolean;
@@ -13,6 +20,13 @@ interface IOptionsModal {
   setShow: Dispatch<SetStateAction<boolean>>;
   startGame: () => void;
 }
+
+const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
+const LS_USER_DATA_VARIABLE = `${lowercaseAppName}UserData`;
+
+const storedUserData: UserData | null = readFromLocalStorage(
+  LS_USER_DATA_VARIABLE
+);
 
 const EndGameModal: React.FC<IOptionsModal> = ({
   show,
@@ -27,6 +41,10 @@ const EndGameModal: React.FC<IOptionsModal> = ({
     handleClose();
   };
 
+  const modalTitle = storedUserData?.username
+    ? `Hai vinto, ${storedUserData.username}! 🥳`
+    : `Hai vinto! 🥳`;
+
   return (
     <>
       <Modal
@@ -37,7 +55,7 @@ const EndGameModal: React.FC<IOptionsModal> = ({
         centered
       >
         <Modal.Header>
-          <Modal.Title>Hai vinto! 🥳</Modal.Title>
+          <Modal.Title>{modalTitle}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <p>
