@@ -21,7 +21,7 @@ const NewsButton: React.FC = () => {
       {showModal && (
         <Modal show={showModal} onHide={handleClose} backdrop="static" centered>
           <Modal.Header closeButton>
-            <Modal.Title>News 📰</Modal.Title>
+            <Modal.Title>News</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             {newsData.map((news, index) => (
