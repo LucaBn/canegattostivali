@@ -4,9 +4,9 @@ import React /* useState, useEffect, useRef */ from "react";
 import { Image } from "react-bootstrap";
 import { Container, Navbar } from "react-bootstrap";
 // import { LinkContainer } from "react-router-bootstrap";
-import IconNewspaper from "@/components/UI/Atoms/IconNewspaper/IconNewspaper";
 import IconSun from "@/components/UI/Atoms/IconSun/IconSun";
 import IconMoon from "@/components/UI/Atoms/IconMoon/IconMoon";
+import NewsButton from "../NewsButton/NewsButton";
 import UserButton from "@/components/UI/Organisms/UserButton/UserButton";
 
 // Hook
@@ -105,7 +105,7 @@ const NavbarComponent: React.FC = () => {
             {toggleThemeIcon}
           </span>
           <span className="ms-3 ms-md-4 me-0 cursor-pointer" title="News">
-            <IconNewspaper forceColor="#fff" />
+            <NewsButton />
           </span>
           <span className="ms-3 ms-md-4 me-0 cursor-pointer" title="Profilo">
             <UserButton />

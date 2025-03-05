@@ -21,7 +21,7 @@ const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
 const LS_USER_DATA_VARIABLE = `${lowercaseAppName}UserData`;
 
 const UserButton: React.FC = () => {
-  // Leave it here so it is run every time the component is mounted
+  // Leave it here so it runs every time the component is updated
   const storedUserData: UserData | null = readFromLocalStorage(
     LS_USER_DATA_VARIABLE
   );
@@ -50,22 +50,16 @@ const UserButton: React.FC = () => {
         <IconUser forceColor="#fff" />
       </span>
       {showModal && (
-        <Modal
-          show={showModal}
-          onHide={handleClose}
-          backdrop="static"
-          keyboard={false}
-          centered
-        >
-          <Modal.Header>
+        <Modal show={showModal} onHide={handleClose} backdrop="static" centered>
+          <Modal.Header closeButton>
             <Modal.Title>Profilo</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div className="d-flex flex-column justify-content-center">
               <InputGroup className="mb-2">
                 <Form.Control
-                  placeholder="Il tuo nome"
-                  aria-label="Il tuo nome"
+                  placeholder="Scegli un nome"
+                  aria-label="Scegli un nome"
                   onChange={(e) => setUsername(e.target.value)}
                   value={username}
                   maxLength={20}
@@ -74,8 +68,14 @@ const UserButton: React.FC = () => {
 
               <hr />
 
-              <p className="mb-1">🏆 Partite vinte: {matchesWon}</p>
-              <p>⏳ Miglior tempo: {formatTime(bestTime)}</p>
+              <p className="mb-1">
+                <span className="d-inline-block stats__icon">🏆</span> Partite
+                vinte: {matchesWon}
+              </p>
+              <p>
+                <span className="d-inline-block stats__icon">⏳</span> Miglior
+                tempo: {formatTime(bestTime)}
+              </p>
             </div>
           </Modal.Body>
           <Modal.Footer className="justify-content-center">

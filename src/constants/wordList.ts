@@ -3,7 +3,7 @@ import {
   runWordListTest,
   sortWordsByNextWordListLength,
 } from "@/test/wordListTest";
-import wordList from "../assets/data/wordList.json";
+import wordList from "@/assets/data/wordList.json";
 
 type Word = {
   word: string;

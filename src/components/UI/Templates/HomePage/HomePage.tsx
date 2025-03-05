@@ -28,15 +28,16 @@ type Message = "🤔" | "😃" | "😓" | "🥳";
 const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
 const LS_USER_DATA_VARIABLE = `${lowercaseAppName}UserData`;
 
-const storedUserData: UserData | null = readFromLocalStorage(
-  LS_USER_DATA_VARIABLE
-);
-
 const initialWordSequence = createWordSequence();
 
 console.log({ initialWordSequence });
 
 const HomePage: React.FC = () => {
+  // Leave it here so it runs every time the component is updated
+  const storedUserData: UserData | null = readFromLocalStorage(
+    LS_USER_DATA_VARIABLE
+  );
+
   const [wordSequence, setWordSequence] = useState(initialWordSequence);
   const [currentWordIndex, setCurrentWordIndex] = useState<number>(1);
   const [guessedWord, setGuessedWord] = useState<string>(wordSequence[1][0]);
@@ -52,6 +53,7 @@ const HomePage: React.FC = () => {
   const [showExtraTimeTooltip, setShowExtraTimeTooltip] =
     useState<boolean>(false);
   const [showEndGameModal, setShowEndGameModal] = useState<boolean>(false);
+  const [isUserBestTime, setIsUserBestTime] = useState<boolean>(false);
 
   const isKeyPressEnabled = useRef<boolean>(true);
   const filterKeys = useRef<boolean>(false); // 😭😭😭
@@ -67,6 +69,17 @@ const HomePage: React.FC = () => {
           guessedWord[index] ? "primary" : "outline-secondary"
         )
     );
+  };
+
+  const checkIfUserBestTime = () => {
+    if (
+      (storedUserData &&
+        storedUserData.bestTime > 0 &&
+        time < storedUserData.bestTime) ||
+      (storedUserData && storedUserData.bestTime === 0)
+    ) {
+      setIsUserBestTime(true);
+    }
   };
 
   const updateStoredUserData = () => {
@@ -111,9 +124,10 @@ const HomePage: React.FC = () => {
     } else if (key === "INVIO") {
       if (guessedWord === currentWord) {
         if (isLastWord) {
-          updateStoredUserData();
+          checkIfUserBestTime();
           setIsGameEnded(true);
           setTimeout(() => {
+            updateStoredUserData(); // Update UserData here to be sure that time is stopped
             setShowEndGameModal(true);
           }, 2000);
           setIsGameRunning(false);
@@ -262,6 +276,7 @@ const HomePage: React.FC = () => {
     setIsGameEnded(false);
     setTime(0);
     setShowConfetti(false);
+    setIsUserBestTime(false);
     isKeyPressEnabled.current = true;
   };
 
@@ -352,6 +367,7 @@ const HomePage: React.FC = () => {
         <EndGameModal
           show={showEndGameModal}
           time={time}
+          isUserBestTime={isUserBestTime}
           wordSequence={wordSequence}
           setShow={setShowEndGameModal}
           startGame={startGame}
