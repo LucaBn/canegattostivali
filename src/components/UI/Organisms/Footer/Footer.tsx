@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
             <p className="text-center">
               O, se mi vuoi davvero bene,
               <br />
-              ETH 0x7470cf0460d96a857094f748a18669585ea5c185
+              <small>ETH 0x7470cf0460d96a857094f748a18669585ea5c185</small>
             </p>
           </Col>
         </Row>
