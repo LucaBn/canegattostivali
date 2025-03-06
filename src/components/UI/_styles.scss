@@ -2,7 +2,9 @@
 @import "./Atoms/Confetti/styles";
 @import "./Atoms/IconDelete/styles";
 @import "./Atoms/IconMoon/styles";
+@import "./Atoms/IconNewspaper/styles";
 @import "./Atoms/IconSun/styles";
+@import "./Atoms/IconUser/styles";
 
 // Molecules
 @import "./Molecules/InfoSection/styles";
@@ -13,6 +15,7 @@
 @import "./Organisms/Footer/styles";
 @import "./Organisms/Keyboard/styles";
 @import "./Organisms/Navbar/styles";
+@import "./Organisms/UserButton/styles";
 
 // Templates
 @import "./Templates/Error404/styles";

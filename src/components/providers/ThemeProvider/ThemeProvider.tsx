@@ -11,7 +11,7 @@ import { IGenericComponent } from "@/typings/components";
 
 // Constants
 import { APP_NAME_SHORT } from "@/constants/app";
-import { ThemeList } from "@/constants/themes";
+import { ThemeList } from "@/typings/themes";
 
 // Define the context
 export interface IThemeContext {

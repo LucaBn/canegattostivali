@@ -1,11 +1,14 @@
 // Providers
-import { ReactRouterProvider } from "@/components/providers/ReactRouterProvider/ReactRouterProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider/ThemeProvider";
+import { KeyboardStatusProvider } from "./KeyboardStatusProvider/KeyboardStatusProvider";
+import { ReactRouterProvider } from "@/components/providers/ReactRouterProvider/ReactRouterProvider";
 
 export const Providers = () => {
   return (
     <ThemeProvider>
-      <ReactRouterProvider />
+      <KeyboardStatusProvider>
+        <ReactRouterProvider />
+      </KeyboardStatusProvider>
     </ThemeProvider>
   );
 };
