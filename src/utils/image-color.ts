@@ -1,5 +1,5 @@
 // Constants
-import { ThemeList } from "@/constants/themes";
+import { ThemeList } from "@/typings/themes";
 
 /**
  * Calculate the image color based on the provided theme and forceColor.

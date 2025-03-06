@@ -8,6 +8,9 @@ import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
 import Confetti from "@/components/UI/Atoms/Confetti/Confetti";
 import EndGameModal from "@/components/UI/Organisms/EndGameModal/EndGameModal";
 
+// Providers
+import { useKeyboardStatus } from "@/components/providers/KeyboardStatusProvider/useKeyboardStatus";
+
 // Utils
 import { createWordSequence } from "@/utils/game-logic";
 import { normalizeLetter } from "@/utils/string";
@@ -23,6 +26,7 @@ import { APP_NAME_SHORT } from "@/constants/app";
 // Typings
 import { ButtonVariant } from "react-bootstrap/esm/types";
 import { UserData } from "@/typings/user";
+import { KeyboardStatusList } from "@/typings/keyboardStatus";
 type Message = "🤔" | "😃" | "😓" | "🥳";
 
 const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
@@ -61,6 +65,8 @@ const HomePage: React.FC = () => {
   const currentWord = wordSequence[currentWordIndex];
   const isLastWord = currentWordIndex === WORD_LIST_LENGTH - 1;
 
+  const { keyboardStatus } = useKeyboardStatus();
+
   const updateButtonVariants = () => {
     setButtonVariants(
       currentWord
@@ -98,6 +104,14 @@ const HomePage: React.FC = () => {
     });
   };
 
+  useEffect(() => {
+    if (keyboardStatus === KeyboardStatusList.Inactive) {
+      isKeyPressEnabled.current = false;
+    } else {
+      isKeyPressEnabled.current = true;
+    }
+  }, [keyboardStatus]);
+
   const handleKeyPress = (key: string) => {
     if (!isKeyPressEnabled.current) return;
 
@@ -106,6 +120,7 @@ const HomePage: React.FC = () => {
     if (
       key !== "INVIO" &&
       key !== "CANC" &&
+      key !== "HELP" &&
       key !== "1" &&
       filterKeys.current &&
       !currentWord.substring(1).includes(normalizedKey)
@@ -115,6 +130,7 @@ const HomePage: React.FC = () => {
     if (!isGameEnded) {
       setIsGameRunning(true);
     }
+
     setMessage("🤔");
 
     if (key === "1") {

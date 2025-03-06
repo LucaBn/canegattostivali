@@ -5,6 +5,7 @@ import {
 } from "@/test/wordListTest";
 import wordList from "@/assets/data/wordList.json";
 
+// TODO: move types into a different file in typings folder
 type Word = {
   word: string;
   nextWordList: string[];

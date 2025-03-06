@@ -4,6 +4,9 @@ import React, { useState, useEffect } from "react";
 import { Button, Form, InputGroup, Modal } from "react-bootstrap";
 import IconUser from "@/components/UI/Atoms/IconUser/IconUser";
 
+// Providers
+import { useKeyboardStatus } from "@/components/providers/KeyboardStatusProvider/useKeyboardStatus";
+
 // Utils
 import {
   readFromLocalStorage,
@@ -16,6 +19,7 @@ import { APP_NAME_SHORT } from "@/constants/app";
 
 // Typings
 import { UserData } from "@/typings/user";
+import { KeyboardStatusList } from "@/typings/keyboardStatus";
 
 const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
 const LS_USER_DATA_VARIABLE = `${lowercaseAppName}UserData`;
@@ -25,6 +29,8 @@ const UserButton: React.FC = () => {
   const storedUserData: UserData | null = readFromLocalStorage(
     LS_USER_DATA_VARIABLE
   );
+
+  const { changeKeyboardStatus } = useKeyboardStatus();
 
   const [showModal, setShowModal] = useState<boolean>(false);
   const [username, setUsername] = useState<string>(
@@ -39,10 +45,16 @@ const UserButton: React.FC = () => {
       matchesWon,
       bestTime,
     });
-  }, [username, matchesWon, bestTime]);
+  }, [username]);
 
-  const handleOpen = () => setShowModal(true);
-  const handleClose = () => setShowModal(false);
+  const handleOpen = () => {
+    setShowModal(true);
+    changeKeyboardStatus(KeyboardStatusList.Inactive);
+  };
+  const handleClose = () => {
+    setShowModal(false);
+    changeKeyboardStatus(KeyboardStatusList.Active);
+  };
 
   return (
     <>
@@ -74,7 +86,7 @@ const UserButton: React.FC = () => {
               </p>
               <p>
                 <span className="d-inline-block stats__icon">⏳</span> Miglior
-                tempo: {formatTime(bestTime)}
+                tempo: {bestTime === 0 ? "-" : formatTime(bestTime)}
               </p>
             </div>
           </Modal.Body>

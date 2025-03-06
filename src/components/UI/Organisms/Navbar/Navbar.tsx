@@ -13,7 +13,7 @@ import UserButton from "@/components/UI/Organisms/UserButton/UserButton";
 import { useTheme } from "@/components/providers/ThemeProvider";
 
 // Typings
-import { ThemeList } from "@/constants/themes";
+import { ThemeList } from "@/typings/themes";
 
 // TODO: move this to an utils file
 const scrollToTop = () => {

@@ -4,14 +4,28 @@ import React, { useState } from "react";
 import { Modal, Button, Toast } from "react-bootstrap";
 import IconNewspaper from "../../Atoms/IconNewspaper/IconNewspaper";
 
+// Providers
+import { useKeyboardStatus } from "@/components/providers/KeyboardStatusProvider/useKeyboardStatus";
+
 // Data
 import newsData from "@/assets/data/newsData.json";
+
+// Typings
+import { KeyboardStatusList } from "@/typings/keyboardStatus";
 
 const NewsButton: React.FC = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
 
-  const handleOpen = () => setShowModal(true);
-  const handleClose = () => setShowModal(false);
+  const { changeKeyboardStatus } = useKeyboardStatus();
+
+  const handleOpen = () => {
+    setShowModal(true);
+    changeKeyboardStatus(KeyboardStatusList.Inactive);
+  };
+  const handleClose = () => {
+    setShowModal(false);
+    changeKeyboardStatus(KeyboardStatusList.Active);
+  };
 
   return (
     <>

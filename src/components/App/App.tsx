@@ -9,7 +9,7 @@ import Footer from "@/components/UI/Organisms/Footer/Footer";
 import { useTheme } from "@/components/providers/ThemeProvider";
 
 // Constants
-import { ThemeList } from "@/constants/themes";
+import { ThemeList } from "@/typings/themes";
 
 const App: React.FC = () => {
   const { theme } = useTheme();
