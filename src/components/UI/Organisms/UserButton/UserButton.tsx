@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // Components
-import { Button, Form, InputGroup, Modal } from "react-bootstrap";
+import { Button, Modal, Form, FloatingLabel } from "react-bootstrap";
 import IconUser from "@/components/UI/Atoms/IconUser/IconUser";
 
 // Providers
@@ -68,24 +68,25 @@ const UserButton: React.FC = () => {
           </Modal.Header>
           <Modal.Body>
             <div className="d-flex flex-column justify-content-center">
-              <InputGroup className="mb-2">
+              <FloatingLabel label="Scegli un nome" aria-label="Scegli un nome">
                 <Form.Control
+                  type="text"
                   placeholder="Scegli un nome"
                   aria-label="Scegli un nome"
                   onChange={(e) => setUsername(e.target.value)}
                   value={username}
                   maxLength={20}
                 />
-              </InputGroup>
+              </FloatingLabel>
 
               <hr />
 
               <p className="mb-1">
-                <span className="d-inline-block stats__icon">🏆</span> Partite
+                <span className="d-inline-block stats__icon">🏆</span>Partite
                 vinte: {matchesWon}
               </p>
               <p>
-                <span className="d-inline-block stats__icon">⏳</span> Miglior
+                <span className="d-inline-block stats__icon">⏳</span>Miglior
                 tempo: {bestTime === 0 ? "-" : formatTime(bestTime)}
               </p>
             </div>
