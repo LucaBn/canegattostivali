@@ -57,3 +57,22 @@ body {
     }
   }
 }
+
+.pulse {
+  animation: pulse 3s ease 0s infinite;
+
+  @keyframes pulse {
+    0% {
+      opacity: 0.5;
+    }
+    40% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+}
