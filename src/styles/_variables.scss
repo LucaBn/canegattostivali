@@ -7,3 +7,17 @@ $margin: 16px;
 
 $word-container-max-height-mobile: $slot-height-mobile * 3 + $margin * 2;
 $word-container-max-height-desktop: $slot-height-desktop * 3 + $margin * 2;
+
+$icon-width: 24px;
+$icon-height: 24px;
+
+%icon-styles {
+  width: $icon-width;
+  height: $icon-height;
+  opacity: 0.65;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
