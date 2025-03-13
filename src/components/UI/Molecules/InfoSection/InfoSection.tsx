@@ -7,13 +7,13 @@ import { formatTime } from "@/utils/time";
 // Constants
 import { WORD_LIST_LENGTH } from "@/constants/wordList";
 
-type Props = {
+interface Props {
   isGameEnded: boolean;
   currentWordIndex: number;
   message: string;
   showExtraTimeTooltip: boolean;
   time: number;
-};
+}
 
 const InfoSection: React.FC<Props> = ({
   isGameEnded,
