@@ -11,7 +11,7 @@ interface Props {
   isGameEnded: boolean;
   currentWordIndex: number;
   message: string;
-  showExtraTimeTooltip: boolean;
+  showExtraTimeTooltip: number;
   time: number;
 }
 
@@ -49,10 +49,10 @@ const InfoSection: React.FC<Props> = ({
         >
           <span
             className={`extra-time-tooltip ${
-              showExtraTimeTooltip ? "extra-time-tooltip--visible" : ""
+              showExtraTimeTooltip === 0 ? "" : "extra-time-tooltip--visible"
             } text-secondary`}
           >
-            +10s
+            +{showExtraTimeTooltip}s
           </span>
           {formatTime(time)}
         </Badge>

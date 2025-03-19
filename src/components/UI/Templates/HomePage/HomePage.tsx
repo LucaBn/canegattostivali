@@ -54,13 +54,14 @@ const HomePage: React.FC = () => {
   const [isGameRunning, setIsGameRunning] = useState<boolean>(false);
   const [isGameEnded, setIsGameEnded] = useState<boolean>(false);
   const [time, setTime] = useState<number>(0);
-  const [showExtraTimeTooltip, setShowExtraTimeTooltip] =
-    useState<boolean>(false);
+  const [showExtraTimeTooltip, setShowExtraTimeTooltip] = useState<number>(0);
   const [showEndGameModal, setShowEndGameModal] = useState<boolean>(false);
   const [isUserBestTime, setIsUserBestTime] = useState<boolean>(false);
 
   const isKeyPressEnabled = useRef<boolean>(true);
   const filterKeys = useRef<boolean>(false); // 😭😭😭
+  const disableHelpBonusLetterButton = useRef<boolean>(false);
+  const bonusLetters = useRef<number>(0);
 
   const currentWord = wordSequence[currentWordIndex];
   const isLastWord = currentWordIndex === WORD_LIST_LENGTH - 1;
@@ -112,6 +113,46 @@ const HomePage: React.FC = () => {
     }
   }, [keyboardStatus]);
 
+  const handleWordGuess = () => {
+    if (isLastWord) {
+      checkIfUserBestTime();
+      setIsGameEnded(true);
+      setTimeout(() => {
+        updateStoredUserData(); // Update UserData here to be sure that time is stopped
+        setShowEndGameModal(true);
+      }, 2000);
+      setIsGameRunning(false);
+    }
+    isKeyPressEnabled.current = false;
+    setMessage("😃");
+    setIsCorrect(true);
+    setTimeout(() => {
+      setIsCorrect(false);
+    }, 450);
+
+    setTimeout(() => {
+      filterKeys.current = false;
+
+      if (isLastWord) {
+        setMessage("🥳");
+        setShowConfetti(true);
+        setTimeout(() => {
+          setShowConfetti(false);
+        }, 3000);
+      } else {
+        setMessage("🤔");
+        setGuessedWord(wordSequence[currentWordIndex + 1][0]);
+        setCurrentWordIndex((prev) => prev + 1);
+        isKeyPressEnabled.current = true;
+      }
+    }, 1000);
+
+    setTimeout(() => {
+      bonusLetters.current = 0;
+      disableHelpBonusLetterButton.current = false;
+    }, 1500);
+  };
+
   const handleKeyPress = (key: string) => {
     if (!isKeyPressEnabled.current) return;
 
@@ -120,8 +161,8 @@ const HomePage: React.FC = () => {
     if (
       key !== "INVIO" &&
       key !== "CANC" &&
-      key !== "HELP" &&
       key !== "1" &&
+      key !== "2" &&
       filterKeys.current &&
       !currentWord.substring(1).includes(normalizedKey)
     )
@@ -134,43 +175,16 @@ const HomePage: React.FC = () => {
     setMessage("🤔");
 
     if (key === "1") {
-      getHelp();
+      getHelpKeyboardFilter();
+    } else if (key === "2" && !disableHelpBonusLetterButton.current) {
+      getHelpBonusLetter();
     } else if (key === "CANC") {
-      setGuessedWord((prev) => (prev.length > 1 ? prev.slice(0, -1) : prev));
+      setGuessedWord((prev) =>
+        prev.length > bonusLetters.current + 1 ? prev.slice(0, -1) : prev
+      );
     } else if (key === "INVIO") {
       if (guessedWord === currentWord) {
-        if (isLastWord) {
-          checkIfUserBestTime();
-          setIsGameEnded(true);
-          setTimeout(() => {
-            updateStoredUserData(); // Update UserData here to be sure that time is stopped
-            setShowEndGameModal(true);
-          }, 2000);
-          setIsGameRunning(false);
-        }
-        isKeyPressEnabled.current = false;
-        setMessage("😃");
-        setIsCorrect(true);
-        setTimeout(() => {
-          setIsCorrect(false);
-        }, 450);
-
-        setTimeout(() => {
-          filterKeys.current = false;
-
-          if (isLastWord) {
-            setMessage("🥳");
-            setShowConfetti(true);
-            setTimeout(() => {
-              setShowConfetti(false);
-            }, 3000);
-          } else {
-            setMessage("🤔");
-            setGuessedWord(wordSequence[currentWordIndex + 1][0]);
-            setCurrentWordIndex((prev) => prev + 1);
-            isKeyPressEnabled.current = true;
-          }
-        }, 1000);
+        handleWordGuess();
       } else {
         setMessage("😓");
         setIsBuzzing(true);
@@ -267,17 +281,51 @@ const HomePage: React.FC = () => {
       : "";
   };
 
-  const getHelp = () => {
+  const getHelpKeyboardFilter = () => {
     if (filterKeys.current || isGameEnded) {
       return;
     }
 
     filterKeys.current = true;
     setTime((prevTime) => prevTime + 10);
-    setGuessedWord(wordSequence[currentWordIndex][0]);
-    setShowExtraTimeTooltip(true);
+    const partialSolution = wordSequence[currentWordIndex].slice(
+      0,
+      bonusLetters.current + 1
+    );
+    setGuessedWord(partialSolution);
+    setShowExtraTimeTooltip(10);
     setTimeout(() => {
-      setShowExtraTimeTooltip(false);
+      setShowExtraTimeTooltip(0);
+    }, 1500);
+  };
+
+  const getHelpBonusLetter = () => {
+    if (
+      isGameEnded ||
+      bonusLetters.current === currentWord.length - 1 ||
+      disableHelpBonusLetterButton.current
+    ) {
+      return;
+    }
+
+    const partialSolution = wordSequence[currentWordIndex].slice(
+      0,
+      bonusLetters.current + 2
+    );
+
+    setGuessedWord(partialSolution);
+    setTime((prevTime) => prevTime + 5);
+    bonusLetters.current = bonusLetters.current + 1;
+    setShowExtraTimeTooltip(5);
+    disableHelpBonusLetterButton.current = true;
+    if (bonusLetters.current === currentWord.length - 1) {
+      handleWordGuess();
+    }
+    setTimeout(() => {
+      setShowExtraTimeTooltip(0);
+      if (bonusLetters.current < currentWord.length - 1) {
+        disableHelpBonusLetterButton.current = false;
+      }
     }, 1500);
   };
 
@@ -394,7 +442,10 @@ const HomePage: React.FC = () => {
         currentWord={currentWord}
         filterKeys={filterKeys.current}
         onKeyPress={handleKeyPress}
-        getHelp={getHelp}
+        getHelpKeyboardFilter={getHelpKeyboardFilter}
+        getHelpBonusLetter={getHelpBonusLetter}
+        disableHelpBonusLetterButton={disableHelpBonusLetterButton.current}
+        bonusLetters={bonusLetters.current}
       />
     </Container>
   );
