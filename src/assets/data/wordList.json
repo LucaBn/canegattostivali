@@ -64,7 +64,7 @@
   },
   {
     "word": "FELINO",
-    "nextWordList": ["GATTO", "TIGRE", "LEONE", "SALAME", "SCATTO"]
+    "nextWordList": ["GATTO", "TIGRE", "LEONE", "SALAME", "SCATTO", "BRIVIDO"]
   },
   {
     "word": "RAZZA",
@@ -220,7 +220,9 @@
       "DOMANDA",
       "OFFERTA",
       "MESTIERE",
-      "OCCUPAZIONE"
+      "OCCUPAZIONE",
+      "PRESTAZIONE",
+      "OCCASIONALE"
     ]
   },
   {
@@ -232,7 +234,8 @@
       "RETE",
       "BARCA",
       "LICENZA",
-      "NOCCIOLO"
+      "NOCCIOLO",
+      "SPORTIVA"
     ]
   },
   {
@@ -808,7 +811,14 @@
   },
   {
     "word": "CASO",
-    "nextWordList": ["STUDIO", "UNICO", "PERICOLO", "ERRORE", "PARITÀ"]
+    "nextWordList": [
+      "STUDIO",
+      "UNICO",
+      "PERICOLO",
+      "ERRORE",
+      "PARITÀ",
+      "INCENDIO"
+    ]
   },
   {
     "word": "MEDICO",
@@ -1141,7 +1151,7 @@
   },
   {
     "word": "PAURA",
-    "nextWordList": ["VUOTO", "BUIO", "FILM", "OMBRA"]
+    "nextWordList": ["VUOTO", "BUIO", "FILM", "OMBRA", "BRIVIDO"]
   },
   {
     "word": "PENNA",
@@ -1196,15 +1206,15 @@
   },
   {
     "word": "SOCIETÀ",
-    "nextWordList": ["AZIENDA", "CIVILE", "GIOCO", "MARGINI"]
+    "nextWordList": ["AZIENDA", "CIVILE", "GIOCO", "SPORTIVA"]
   },
   {
-    "word": "MARGINI",
-    "nextWordList": ["SOCIETÀ", "FOGLIO", "GUADAGNO"]
+    "word": "MARGINE",
+    "nextWordList": ["TEMPO", "FOGLIO", "GUADAGNO", "ERRORE"]
   },
   {
     "word": "GUADAGNO",
-    "nextWordList": ["MARGINI", "FONTE", "UTILE"]
+    "nextWordList": ["MARGINE", "FONTE", "UTILE"]
   },
   {
     "word": "UTILE",
@@ -1212,7 +1222,7 @@
   },
   {
     "word": "FOGLIO",
-    "nextWordList": ["MARGINI", "VIA", "CARTA", "ROSA", "CALCOLO"]
+    "nextWordList": ["MARGINE", "VIA", "CARTA", "ROSA", "CALCOLO"]
   },
   {
     "word": "CALCOLO",
@@ -1804,7 +1814,8 @@
       "UTILE",
       "IMPIEGATO",
       "STIMA",
-      "LIMITE"
+      "LIMITE",
+      "MARGINE"
     ]
   },
   {
@@ -1994,7 +2005,8 @@
       "RAPA",
       "ANALISI",
       "CIRCOLAZIONE",
-      "FRATELLO"
+      "FRATELLO",
+      "FREDDO"
     ]
   },
   {
@@ -2814,7 +2826,8 @@
       "ARBITRO",
       "SQUADRA",
       "CAMPIONATO",
-      "SCHEMA"
+      "SCHEMA",
+      "TIFOSO"
     ]
   },
   {
@@ -3127,7 +3140,7 @@
   },
   {
     "word": "GENERE",
-    "nextWordList": ["UMANO", "UNICO", "PARITÀ", "VIOLENZA"]
+    "nextWordList": ["UMANO", "UNICO", "PARITÀ", "VIOLENZA", "IDENTITÀ"]
   },
   {
     "word": "VIOLENZA",
@@ -3259,7 +3272,8 @@
       "CESTINO",
       "PACCO",
       "FOGLIO",
-      "CIRCOLAZIONE"
+      "CIRCOLAZIONE",
+      "IDENTITÀ"
     ]
   },
   {
@@ -3292,7 +3306,7 @@
   },
   {
     "word": "FINESTRA",
-    "nextWordList": ["IMPOSTA", "TEMPORALE", "VETRO", "PORTA"]
+    "nextWordList": ["IMPOSTA", "TEMPORALE", "VETRO", "PORTA", "MOSAICO"]
   },
   {
     "word": "ZUCCHERO",
@@ -3426,7 +3440,7 @@
   },
   {
     "word": "MAGNETICA",
-    "nextWordList": ["BUSSOLA", "BANDA", "FORZA"]
+    "nextWordList": ["BUSSOLA", "BANDA", "FORZA", "TESSERA"]
   },
   {
     "word": "BANDA",
@@ -3489,11 +3503,43 @@
   },
   {
     "word": "PARTITO",
-    "nextWordList": ["POLITICO", "LEADER", "PRESO"]
+    "nextWordList": ["POLITICO", "LEADER", "TESSERA"]
   },
   {
-    "word": "PRESO",
-    "nextWordList": ["PARTITO", "ESAME", "GIRO"]
+    "word": "TESSERA",
+    "nextWordList": ["PARTITO", "MOSAICO", "MAGNETICA", "TIFOSO"]
+  },
+  {
+    "word": "TIFOSO",
+    "nextWordList": ["TESSERA", "CALCIO", "OCCASIONALE"]
+  },
+  {
+    "word": "OCCASIONALE",
+    "nextWordList": ["TIFOSO", "LAVORO", "PRESTAZIONE"]
+  },
+  {
+    "word": "PRESTAZIONE",
+    "nextWordList": ["OCCASIONALE", "LAVORO", "SPORTIVA"]
+  },
+  {
+    "word": "SPORTIVA",
+    "nextWordList": ["PRESTAZIONE", "CRONACA", "SOCIETÀ", "PESCA", "AUTO"]
+  },
+  {
+    "word": "MOSAICO",
+    "nextWordList": ["TESSERA", "VETRO", "FINESTRA"]
+  },
+  {
+    "word": "PRENDERE",
+    "nextWordList": ["FREDDO", "ESAME", "GIRO"]
+  },
+  {
+    "word": "FREDDO",
+    "nextWordList": ["PRENDERE", "SANGUE", "CAFFÈ", "BRIVIDO", "COLPO"]
+  },
+  {
+    "word": "BRIVIDO",
+    "nextWordList": ["FREDDO", "FELINO", "PAURA"]
   },
   {
     "word": "LEADER",
@@ -3801,7 +3847,8 @@
       "ASTA",
       "CANCELLO",
       "FAMIGLIA",
-      "VACANZA"
+      "VACANZA",
+      "FURTO"
     ]
   },
   {
@@ -3869,7 +3916,8 @@
       "NOME",
       "SALMONE",
       "FOGLIO",
-      "SALSA"
+      "SALSA",
+      "CRONACA"
     ]
   },
   {
@@ -4058,7 +4106,8 @@
       "LUSSO",
       "CIRCOLAZIONE",
       "GANCIO",
-      "CORSA"
+      "CORSA",
+      "SPORTIVA"
     ]
   },
   {
@@ -4114,7 +4163,15 @@
   },
   {
     "word": "CAFFÈ",
-    "nextWordList": ["FONDO", "AMARO", "LATTE", "CORRETTO", "SOSPESO", "CORTO"]
+    "nextWordList": [
+      "FONDO",
+      "AMARO",
+      "LATTE",
+      "CORRETTO",
+      "SOSPESO",
+      "CORTO",
+      "FREDDO"
+    ]
   },
   {
     "word": "CORRETTO",
@@ -4657,7 +4714,7 @@
       "TEST",
       "COSCIENZA",
       "PROVA",
-      "PRESO"
+      "PRENDERE"
     ]
   },
   {
@@ -4734,7 +4791,9 @@
       "FATTO",
       "GIORNALE",
       "LOCALE",
-      "NOTIZIA"
+      "NOTIZIA",
+      "SPORTIVA",
+      "ROSA"
     ]
   },
   {
@@ -4780,7 +4839,8 @@
       "PROVA",
       "MESSAGGIO",
       "CODICE",
-      "CALCOLO"
+      "CALCOLO",
+      "MARGINE"
     ]
   },
   {
@@ -5195,7 +5255,8 @@
       "TESTA",
       "FORTUNA",
       "SOLE",
-      "TACCO"
+      "TACCO",
+      "FREDDO"
     ]
   },
   {
@@ -5498,8 +5559,21 @@
       "LICENZIAMENTO",
       "CAPITALE",
       "VALUTAZIONE",
-      "ASSICURAZIONE"
+      "ASSICURAZIONE",
+      "INCENDIO"
     ]
+  },
+  {
+    "word": "INCENDIO",
+    "nextWordList": ["RISCHIO", "FURTO", "CASO"]
+  },
+  {
+    "word": "FURTO",
+    "nextWordList": ["INCENDIO", "CASA", "IDENTITÀ"]
+  },
+  {
+    "word": "IDENTITÀ",
+    "nextWordList": ["FURTO", "CARTA", "GENERE", "DIGITALE"]
   },
   {
     "word": "BIANCO",
@@ -5749,7 +5823,7 @@
   },
   {
     "word": "GIRO",
-    "nextWordList": ["CHIAVE", "VITE", "BOA", "ANGOLO", "PRESO", "CORSA"]
+    "nextWordList": ["CHIAVE", "VITE", "BOA", "ANGOLO", "PRENDERE", "CORSA"]
   },
   {
     "word": "VITE",
@@ -5832,7 +5906,7 @@
   },
   {
     "word": "DIGITALE",
-    "nextWordList": ["FIRMA", "IMPRONTA", "CORNICE", "STAMPA"]
+    "nextWordList": ["FIRMA", "IMPRONTA", "CORNICE", "STAMPA", "IDENTITÀ"]
   },
   {
     "word": "CORNICE",
@@ -5879,7 +5953,14 @@
   },
   {
     "word": "VETRO",
-    "nextWordList": ["ACQUARIO", "TRASPARENTE", "FINESTRA", "FIBRA", "SCHEGGIA"]
+    "nextWordList": [
+      "ACQUARIO",
+      "TRASPARENTE",
+      "FINESTRA",
+      "FIBRA",
+      "SCHEGGIA",
+      "MOSAICO"
+    ]
   },
   {
     "word": "TRASPARENTE",
