@@ -49,7 +49,7 @@ const InfoSection: React.FC<Props> = ({
         >
           <span
             className={`extra-time-tooltip ${
-              showExtraTimeTooltip === 0 ? "" : "extra-time-tooltip--visible"
+              showExtraTimeTooltip === 0 ? "" : "fade-in-out"
             } text-secondary`}
           >
             +{showExtraTimeTooltip}s

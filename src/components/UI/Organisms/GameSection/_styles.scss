@@ -1,0 +1,57 @@
+@use "sass:math";
+
+.guessed-word {
+  margin-bottom: $margin;
+  transition: transform 0.3s;
+
+  &__container {
+    max-height: $word-container-max-height-mobile;
+
+    @media screen and (min-width: 768px) {
+      max-height: $word-container-max-height-desktop;
+    }
+  }
+
+  &__slot {
+    height: $slot-height-mobile;
+    width: $slot-width-mobile;
+    transition: all 0.3s;
+
+    @media screen and (min-width: 768px) {
+      height: $slot-height-desktop;
+      width: $slot-width-desktop;
+    }
+
+    button {
+      height: $slot-height-mobile;
+      width: $slot-width-mobile;
+      margin-left: 2px;
+      margin-right: 2px;
+      transition: all 0.25s;
+
+      @media screen and (min-width: 768px) {
+        height: $slot-height-desktop;
+        width: $slot-width-desktop;
+      }
+    }
+
+    &--previous {
+      width: math.div($slot-width-desktop, 2);
+      transform: translateY(20%);
+      transform-origin: bottom;
+
+      button {
+        width: math.div($slot-width-desktop, 2);
+      }
+    }
+  }
+}
+
+.extra-time-tooltip {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+}

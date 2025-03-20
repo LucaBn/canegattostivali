@@ -4,7 +4,7 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import IconDelete from "@/components/UI/Atoms/IconDelete/IconDelete";
 import IconLightbulb from "@/components/UI/Atoms/IconLightbulb/IconLightbulb";
-import IconKeyboard from "@/components/UI/Atoms/IconKeyboard/IconKeyboard";
+import IconKeyboard from "@/components/UI/Atoms/IconEyeSlash/IconEyeSlash";
 
 // Utils
 import { generateClassNameValue } from "@/utils/html-classes";

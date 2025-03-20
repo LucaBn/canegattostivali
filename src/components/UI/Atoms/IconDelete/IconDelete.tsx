@@ -25,6 +25,7 @@ const IconDelete: React.FC<IIconDelete> = ({ forceColor }) => {
       height="24"
       strokeWidth="1.5"
       stroke={iconColor}
+      className="icon-delete"
     >
       <path
         strokeLinecap="round"

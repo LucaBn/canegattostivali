@@ -730,7 +730,7 @@
   },
   {
     "word": "ETÀ",
-    "nextWordList": ["AMORE", "PENSIONE", "NUMERO", "LIMITE"]
+    "nextWordList": ["AMORE", "PENSIONE", "NUMERO", "LIMITE", "SVILUPPO"]
   },
   {
     "word": "LIMITE",
@@ -1089,7 +1089,6 @@
       "SACRO",
       "AMICO",
       "FARE",
-      "GIOCARE",
       "ROSSO",
       "BOCCA",
       "PAGLIA",
@@ -1695,19 +1694,7 @@
   },
   {
     "word": "CARTE",
-    "nextWordList": [
-      "SCOPA",
-      "CASTELLO",
-      "POKER",
-      "BRISCOLA",
-      "GIOCARE",
-      "MAZZO",
-      "GIOCO"
-    ]
-  },
-  {
-    "word": "GIOCARE",
-    "nextWordList": ["CARTE", "FUOCO", "SCACCHI"]
+    "nextWordList": ["SCOPA", "CASTELLO", "POKER", "BRISCOLA", "MAZZO", "GIOCO"]
   },
   {
     "word": "POSTA",
@@ -2384,11 +2371,15 @@
   },
   {
     "word": "RICERCA",
-    "nextWordList": ["TASTO", "INTERNET", "MERCATO"]
+    "nextWordList": ["TASTO", "INTERNET", "MERCATO", "SVILUPPO"]
+  },
+  {
+    "word": "SVILUPPO",
+    "nextWordList": ["RICERCA", "VIA", "FOTO", "ETÀ"]
   },
   {
     "word": "MERCATO",
-    "nextWordList": ["RICERCA", "LIBERO", "LAVORO"]
+    "nextWordList": ["RICERCA", "LIBERO", "LAVORO", "ECONOMIA"]
   },
   {
     "word": "LIBERO",
@@ -2502,7 +2493,8 @@
       "CRIMINE",
       "DIO",
       "BATTAGLIA",
-      "POSIZIONE"
+      "POSIZIONE",
+      "ECONOMIA"
     ]
   },
   {
@@ -2614,7 +2606,8 @@
       "SPARO",
       "RETTA",
       "FOGLIO",
-      "LIBERA"
+      "LIBERA",
+      "SVILUPPO"
     ]
   },
   {
@@ -2623,7 +2616,14 @@
   },
   {
     "word": "UNIVERSITÀ",
-    "nextWordList": ["RETTA", "CORSO", "ESAME", "INGEGNERIA", "PROFESSORE"]
+    "nextWordList": [
+      "RETTA",
+      "CORSO",
+      "ESAME",
+      "INGEGNERIA",
+      "PROFESSORE",
+      "ECONOMIA"
+    ]
   },
   {
     "word": "STRADA",
@@ -3241,7 +3241,6 @@
       "PARTITA",
       "CAMICIA",
       "TOVAGLIA",
-      "GIOCARE",
       "GIOCO",
       "BANDIERA",
       "TORRE"
@@ -3290,7 +3289,7 @@
   },
   {
     "word": "SCALA",
-    "nextWordList": ["MUSICALE", "MOBILE", "POKER"]
+    "nextWordList": ["MUSICALE", "MOBILE", "POKER", "ECONOMIA"]
   },
   {
     "word": "MOBILE",
@@ -4485,7 +4484,8 @@
       "PATENTE",
       "SCATTO",
       "GALLERIA",
-      "CORNICE"
+      "CORNICE",
+      "SVILUPPO"
     ]
   },
   {
@@ -5594,7 +5594,11 @@
   },
   {
     "word": "CIRCOLARE",
-    "nextWordList": ["ASSEGNO", "MOTO", "SEGA"]
+    "nextWordList": ["ASSEGNO", "MOTO", "SEGA", "ECONOMIA"]
+  },
+  {
+    "word": "ECONOMIA",
+    "nextWordList": ["CIRCOLARE", "UNIVERSITÀ", "SCALA", "GUERRA", "MERCATO"]
   },
   {
     "word": "SEGA",
