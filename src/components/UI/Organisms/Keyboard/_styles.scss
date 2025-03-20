@@ -24,15 +24,40 @@ $button-height-desktop: 48px;
       div {
         padding-right: 2px;
       }
+
       flex: 2.2;
+
+      @media screen and (min-width: 768px) {
+        svg {
+          width: 30px;
+          height: 30px;
+          opacity: 1;
+        }
+      }
     }
 
     &--help-bonus-letter {
       flex: 2.05;
+
+      @media screen and (min-width: 768px) {
+        svg {
+          width: 30px;
+          height: 30px;
+          opacity: 1;
+        }
+      }
     }
 
     &--help-keyboard-filter {
       flex: 2.05;
+
+      @media screen and (min-width: 768px) {
+        svg {
+          width: 30px;
+          height: 30px;
+          opacity: 1;
+        }
+      }
     }
 
     &--spacer {
