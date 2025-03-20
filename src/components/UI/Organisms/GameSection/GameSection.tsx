@@ -20,7 +20,7 @@ import {
 
 // Constants
 import { WORD_LIST_LENGTH } from "@/constants/wordList";
-import { APP_NAME_SHORT } from "@/constants/app";
+import { APP_NAME_SHORT, RUN_TEST } from "@/constants/app";
 
 // Typings
 import { ButtonVariant } from "react-bootstrap/esm/types";
@@ -58,7 +58,7 @@ const GameSection: React.FC<Props> = ({ initialWordSequence }: Props) => {
   const [isUserBestTime, setIsUserBestTime] = useState<boolean>(false);
 
   const isKeyPressEnabled = useRef<boolean>(true);
-  const filterKeys = useRef<boolean>(false); // 😭😭😭
+  const filterKeys = useRef<boolean>(false);
   const disableHelpBonusLetterButton = useRef<boolean>(false);
   const bonusLetters = useRef<number>(0);
 
@@ -66,6 +66,43 @@ const GameSection: React.FC<Props> = ({ initialWordSequence }: Props) => {
   const isLastWord = currentWordIndex === WORD_LIST_LENGTH - 1;
 
   const { keyboardStatus } = useKeyboardStatus();
+
+  useEffect(() => {
+    if (keyboardStatus === KeyboardStatusList.Inactive) {
+      isKeyPressEnabled.current = false;
+    } else {
+      isKeyPressEnabled.current = true;
+    }
+  }, [keyboardStatus]);
+
+  useEffect(() => {
+    updateButtonVariants();
+    window.addEventListener("keydown", handleKeydown);
+    return () => window.removeEventListener("keydown", handleKeydown);
+  }, [guessedWord]);
+
+  useEffect(() => {
+    if (isGameRunning) {
+      const interval = setInterval(() => {
+        setTime((prevTime) => prevTime + 1);
+      }, 1000);
+
+      return () => clearInterval(interval);
+    }
+  }, [isGameRunning]);
+
+  useEffect(() => {
+    const updateSlotHeight = () => {
+      setSlotHeight(window.innerWidth >= 768 ? 64 : 56);
+    };
+
+    updateSlotHeight();
+    window.addEventListener("resize", updateSlotHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateSlotHeight);
+    };
+  }, []);
 
   const updateButtonVariants = () => {
     setButtonVariants(
@@ -103,14 +140,6 @@ const GameSection: React.FC<Props> = ({ initialWordSequence }: Props) => {
       bestTime: userBestTime,
     });
   };
-
-  useEffect(() => {
-    if (keyboardStatus === KeyboardStatusList.Inactive) {
-      isKeyPressEnabled.current = false;
-    } else {
-      isKeyPressEnabled.current = true;
-    }
-  }, [keyboardStatus]);
 
   const handleWordGuess = () => {
     if (isLastWord) {
@@ -154,6 +183,8 @@ const GameSection: React.FC<Props> = ({ initialWordSequence }: Props) => {
 
   const handleKeyPress = (key: string) => {
     if (!isKeyPressEnabled.current) return;
+
+    if (isCorrect) return;
 
     const normalizedKey = normalizeLetter(key);
 
@@ -207,35 +238,6 @@ const GameSection: React.FC<Props> = ({ initialWordSequence }: Props) => {
       { Backspace: "CANC", Enter: "INVIO" }[key] || key.toUpperCase();
     handleKeyPress(mappedKey);
   };
-
-  useEffect(() => {
-    updateButtonVariants();
-    window.addEventListener("keydown", handleKeydown);
-    return () => window.removeEventListener("keydown", handleKeydown);
-  }, [guessedWord]);
-
-  useEffect(() => {
-    if (isGameRunning) {
-      const interval = setInterval(() => {
-        setTime((prevTime) => prevTime + 1);
-      }, 1000);
-
-      return () => clearInterval(interval);
-    }
-  }, [isGameRunning]);
-
-  useEffect(() => {
-    const updateSlotHeight = () => {
-      setSlotHeight(window.innerWidth >= 768 ? 64 : 56);
-    };
-
-    updateSlotHeight();
-    window.addEventListener("resize", updateSlotHeight);
-
-    return () => {
-      window.removeEventListener("resize", updateSlotHeight);
-    };
-  }, []);
 
   const getButtonVariant = (
     index: number,
@@ -330,7 +332,9 @@ const GameSection: React.FC<Props> = ({ initialWordSequence }: Props) => {
 
   const startGame = () => {
     const newWordSequence = createWordSequence();
-    // console.log({ newWordSequence });
+    if (RUN_TEST === "true") {
+      console.log({ newWordSequence });
+    }
     setWordSequence(newWordSequence);
     setCurrentWordIndex(1);
     setGuessedWord(newWordSequence[1][0]);

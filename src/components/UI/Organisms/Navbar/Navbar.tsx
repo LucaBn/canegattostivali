@@ -6,7 +6,7 @@ import { Container, Navbar } from "react-bootstrap";
 // import { LinkContainer } from "react-router-bootstrap";
 import IconSun from "@/components/UI/Atoms/IconSun/IconSun";
 import IconMoon from "@/components/UI/Atoms/IconMoon/IconMoon";
-import NewsButton from "../NewsButton/NewsButton";
+import NewsButton from "@/components/UI/Organisms/NewsButton/NewsButton";
 import UserButton from "@/components/UI/Organisms/UserButton/UserButton";
 
 // Hook

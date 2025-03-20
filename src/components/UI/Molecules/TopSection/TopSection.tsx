@@ -1,6 +1,6 @@
 import { Col, Row } from "react-bootstrap";
-import IconKeyboard from "../../Atoms/IconKeyboard/IconKeyboard";
-import IconLightbulb from "../../Atoms/IconLightbulb/IconLightbulb";
+import IconKeyboard from "@/components/UI/Atoms/IconKeyboard/IconKeyboard";
+import IconLightbulb from "@/components/UI/Atoms/IconLightbulb/IconLightbulb";
 
 const TopSection: React.FC = () => {
   return (

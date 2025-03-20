@@ -1,4 +1,4 @@
-import { RUN_TEST } from "./app";
+import { RUN_TEST } from "@/constants/app";
 import {
   runWordListTest,
   sortWordsByNextWordListLength,
