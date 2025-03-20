@@ -34,7 +34,7 @@ const LS_USER_DATA_VARIABLE = `${lowercaseAppName}UserData`;
 
 const initialWordSequence = createWordSequence();
 
-console.log({ initialWordSequence });
+// console.log({ initialWordSequence });
 
 const HomePage: React.FC = () => {
   // Leave it here so it runs every time the component is updated
@@ -331,7 +331,7 @@ const HomePage: React.FC = () => {
 
   const startGame = () => {
     const newWordSequence = createWordSequence();
-    console.log({ newWordSequence });
+    // console.log({ newWordSequence });
     setWordSequence(newWordSequence);
     setCurrentWordIndex(1);
     setGuessedWord(newWordSequence[1][0]);
