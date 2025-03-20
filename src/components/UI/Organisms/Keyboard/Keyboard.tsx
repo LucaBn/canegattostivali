@@ -3,12 +3,24 @@ import React from "react";
 // Components
 import { Row, Col } from "react-bootstrap";
 import IconDelete from "@/components/UI/Atoms/IconDelete/IconDelete";
+import IconLightbulb from "@/components/UI/Atoms/IconLightbulb/IconLightbulb";
+import IconKeyboard from "@/components/UI/Atoms/IconKeyboard/IconKeyboard";
 
 // Utils
 import { generateClassNameValue } from "@/utils/html-classes";
 
 const keys: string[][] = [
-  ["SPACER", "À", "È", "Ì", "Ò", "Ù", "HELP", "SPACER"],
+  [
+    "SPACER",
+    "À",
+    "È",
+    "Ì",
+    "Ò",
+    "Ù",
+    "HELP_KEYBOARD_FILTER",
+    "HELP_BONUS_LETTER",
+    "SPACER",
+  ],
   ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
   ["SPACER", "A", "S", "D", "F", "G", "H", "J", "K", "L", "SPACER"],
   ["INVIO", "Z", "X", "C", "V", "B", "N", "M", "CANC"],
@@ -18,14 +30,20 @@ interface KeyboardProps {
   currentWord: string;
   filterKeys: boolean;
   onKeyPress: (key: string) => void;
-  getHelp: () => void;
+  getHelpKeyboardFilter: () => void;
+  getHelpBonusLetter: () => void;
+  disableHelpBonusLetterButton: boolean;
+  bonusLetters: number;
 }
 
 const Keyboard: React.FC<KeyboardProps> = ({
   currentWord,
   filterKeys,
   onKeyPress,
-  getHelp,
+  getHelpKeyboardFilter,
+  getHelpBonusLetter,
+  disableHelpBonusLetterButton,
+  bonusLetters,
 }) => {
   const handleKeyClick = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
@@ -40,7 +58,9 @@ const Keyboard: React.FC<KeyboardProps> = ({
       return "bg-success cursor-pointer";
     } else if (key === "CANC") {
       return "bg-danger cursor-pointer";
-    } else if (key === "HELP") {
+    } else if (key === "HELP_KEYBOARD_FILTER") {
+      return "bg-warning cursor-pointer";
+    } else if (key === "HELP_BONUS_LETTER") {
       return "bg-warning cursor-pointer";
     } else if (key === "SPACER") {
       return "invisible";
@@ -53,10 +73,13 @@ const Keyboard: React.FC<KeyboardProps> = ({
     if (
       key !== "INVIO" &&
       key !== "CANC" &&
+      key !== "HELP_BONUS_LETTER" &&
       filterKeys &&
-      !currentWord.substring(1).includes(key)
+      !currentWord.substring(bonusLetters + 1).includes(key)
     ) {
       return "keyboard__btn--disabled";
+    } else if (key === "HELP_BONUS_LETTER" && disableHelpBonusLetterButton) {
+      return "keyboard__btn--disabled keyboard__btn--loading";
     } else {
       return "";
     }
@@ -67,8 +90,10 @@ const Keyboard: React.FC<KeyboardProps> = ({
       return "keyboard__btn--enter";
     } else if (key === "CANC") {
       return "keyboard__btn--canc";
-    } else if (key === "HELP") {
-      return "keyboard__btn--help";
+    } else if (key === "HELP_KEYBOARD_FILTER") {
+      return "keyboard__btn--help-keyboard-filter";
+    } else if (key === "HELP_BONUS_LETTER") {
+      return "keyboard__btn--help-bonus-letter";
     } else if (key === "SPACER") {
       return "keyboard__btn--spacer";
     } else {
@@ -91,13 +116,24 @@ const Keyboard: React.FC<KeyboardProps> = ({
           <IconDelete forceColor="#fff" />
         </div>
       );
-    } else if (key === "HELP") {
+    } else if (key === "HELP_KEYBOARD_FILTER") {
       return (
         <span
-          className="h-100 d-flex align-items-center px-1 px-md-3"
-          onClick={getHelp}
+          className="h-100 w-100 d-flex align-items-center justify-content-center"
+          onClick={getHelpKeyboardFilter}
+          title="Rimuovi dalla tastiera le lettere che non servono"
         >
-          <span className="fs-4 me-1">💡</span>Aiutino!
+          <IconKeyboard forceColor="#000" />
+        </span>
+      );
+    } else if (key === "HELP_BONUS_LETTER") {
+      return (
+        <span
+          className="h-100 w-100 d-flex align-items-center justify-content-center"
+          onClick={getHelpBonusLetter}
+          title="Aggiungi una lettera alla parola"
+        >
+          <IconLightbulb forceColor="#000" />
         </span>
       );
     } else if (key === "SPACER") {

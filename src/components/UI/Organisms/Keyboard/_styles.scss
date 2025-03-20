@@ -10,6 +10,7 @@ $button-height-desktop: 48px;
     flex: 1;
     touch-action: manipulation;
     user-select: none;
+    overflow: hidden;
 
     @media screen and (min-width: 768px) {
       height: $button-height-desktop;
@@ -26,8 +27,12 @@ $button-height-desktop: 48px;
       flex: 2.2;
     }
 
-    &--help {
-      flex: 4;
+    &--help-bonus-letter {
+      flex: 2.05;
+    }
+
+    &--help-keyboard-filter {
+      flex: 2.05;
     }
 
     &--spacer {
@@ -40,6 +45,28 @@ $button-height-desktop: 48px;
       border-color: var(--bs-btn-disabled-border-color);
       opacity: 0.2 !important;
       cursor: not-allowed;
+    }
+
+    &--loading {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: var(--bs-orange);
+        z-index: -1;
+        animation: loading-line 1.5s linear forwards;
+      }
+    }
+
+    @keyframes loading-line {
+      to {
+        width: 100%;
+      }
     }
   }
 }

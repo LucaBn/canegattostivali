@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 // Components
 import { Modal, Button, Toast } from "react-bootstrap";
-import IconNewspaper from "../../Atoms/IconNewspaper/IconNewspaper";
+import IconNewspaper from "@/components/UI/Atoms/IconNewspaper/IconNewspaper";
+import NotificationCircle from "@/components/UI/Atoms/NotificationCircle/NotificationCircle";
 
 // Providers
 import { useKeyboardStatus } from "@/components/providers/KeyboardStatusProvider/useKeyboardStatus";
@@ -54,7 +55,7 @@ const NewsButton: React.FC = () => {
       <span className="position-relative" onClick={handleOpen}>
         <IconNewspaper forceColor="#fff" />
         {(!storedReadNews || storedReadNews < newsData.length) && (
-          <span className="news__alert-circle pulse"></span>
+          <NotificationCircle bgColor="warning" pulse />
         )}
       </span>
       {showModal && (
