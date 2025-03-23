@@ -45,8 +45,8 @@ const EndGameModal: React.FC<IOptionsModal> = ({
   };
 
   const modalTitle = storedUserData?.username
-    ? `Hai vinto, ${storedUserData.username}! 🥳`
-    : `Hai vinto! 🥳`;
+    ? `Ben fatto, ${storedUserData.username}! 🥳`
+    : `Ben fatto! 🥳`;
 
   return (
     <>
