@@ -4,7 +4,7 @@ import React from "react";
 import { useTheme } from "@/components/providers/ThemeProvider";
 
 // Typings
-import { IImage } from "@/typings/icons";
+import { IImage } from "@/typings/images";
 
 // Utils
 import { getImageColor } from "@/utils/image-color";
