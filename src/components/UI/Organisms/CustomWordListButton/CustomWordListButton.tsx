@@ -156,6 +156,14 @@ const CustomWordListButton: React.FC = () => {
                 target.setSelectionRange(0, 99999); // For mobile devices
               }}
               readOnly
+              disabled={
+                wordList.length < 5 || wordList.some((word) => word.length < 2)
+              }
+              className={
+                wordList.length < 5 || wordList.some((word) => word.length < 2)
+                  ? "pointer-events-none text-muted"
+                  : ""
+              }
             />
 
             <Button
