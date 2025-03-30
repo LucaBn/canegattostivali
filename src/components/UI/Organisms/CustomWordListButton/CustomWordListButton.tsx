@@ -103,7 +103,10 @@ const CustomWordListButton: React.FC = () => {
   };
 
   const isWordListValid =
-    wordList.length >= 5 && wordList.every((word) => word.length >= 2);
+    wordList.length >= 5 &&
+    wordList.every(
+      (word, index, arr) => word.length >= 2 && arr.indexOf(word) === index
+    );
 
   return (
     <>
@@ -117,10 +120,13 @@ const CustomWordListButton: React.FC = () => {
           </Modal.Header>
           <Modal.Body>
             <p>
-              Inserisci da 5 a 11 parole per creare la tua sequenza.
+              Inserisci da un minimo di 5 a un massimo di 11 parole per creare
+              la tua sequenza.
               <br />
-              Le parole possono contenere solo lettere e devono essere composte
-              da almeno 2 caratteri.
+              Le parole devono contenere solo lettere ed essere composte da
+              almeno 2 caratteri.
+              <br />
+              Ah, e ovviamente devono essere tutte diverse tra loro!
             </p>
             <Form>
               {wordList.map((word, index) => (
@@ -137,7 +143,12 @@ const CustomWordListButton: React.FC = () => {
                       )
                     }
                     maxLength={20}
-                    className={word.length < 2 ? "is-invalid" : "is-valid"}
+                    className={
+                      word.length > 2 &&
+                      wordList.indexOf(word) === wordList.lastIndexOf(word)
+                        ? "is-valid"
+                        : "is-invalid"
+                    }
                   />
                   <Button
                     variant="danger"
