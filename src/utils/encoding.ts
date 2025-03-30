@@ -45,7 +45,9 @@ const encryptStringArray = (words: string[]): string => {
  * @param {string} encrypted - The encrypted string to decrypt.
  * @returns {string} - The decrypted string.
  */
-const decryptString = (encrypted: string): string => {
+const decryptString = (encrypted: string | null): string => {
+  if (!encrypted) return "";
+
   let decrypted = "";
   let i = 0;
   while (i < encrypted.length) {

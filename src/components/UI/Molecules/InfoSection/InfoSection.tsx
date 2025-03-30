@@ -4,11 +4,9 @@ import { Col, Row, Badge } from "react-bootstrap";
 // Utils
 import { formatTime } from "@/utils/time";
 
-// Constants
-import { WORD_LIST_LENGTH } from "@/constants/wordList";
-
 interface Props {
   isGameEnded: boolean;
+  wordListLength: number;
   currentWordIndex: number;
   message: string;
   showExtraTimeTooltip: number;
@@ -17,6 +15,7 @@ interface Props {
 
 const InfoSection: React.FC<Props> = ({
   isGameEnded,
+  wordListLength,
   currentWordIndex,
   message,
   showExtraTimeTooltip,
@@ -25,14 +24,14 @@ const InfoSection: React.FC<Props> = ({
   const progressBadgeText = isGameEnded
     ? `Hai indovinato tutte le parole!`
     : `Devi indovinare la parola numero ${currentWordIndex} su ${
-        WORD_LIST_LENGTH - 1
+        wordListLength - 1
       }`;
 
   return (
     <Row className="justify-content-center align-items-center mb-1 mb-lg-2 user-select-none">
       <Col xs="auto">
         <Badge bg="dark" pill title={progressBadgeText} className="fs-6">
-          {currentWordIndex} / {WORD_LIST_LENGTH - 1}
+          {currentWordIndex} / {wordListLength - 1}
         </Badge>
       </Col>
 
