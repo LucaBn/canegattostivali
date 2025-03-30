@@ -89,6 +89,13 @@ const UserButton: React.FC = () => {
                 <span className="d-inline-block stats__icon">⏳</span>Miglior
                 tempo: {bestTime === 0 ? "-" : formatTime(bestTime)}
               </p>
+              <small>
+                <em>
+                  * Le statistiche tengono conto solo delle partite con sequenze
+                  di parole generate casualmente, mentre non vengono conteggiate
+                  le partite custom create dagli utenti!
+                </em>
+              </small>
             </div>
           </Modal.Body>
           <Modal.Footer>
