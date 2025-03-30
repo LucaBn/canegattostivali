@@ -91,7 +91,7 @@ const UserButton: React.FC = () => {
               </p>
             </div>
           </Modal.Body>
-          <Modal.Footer className="justify-content-center">
+          <Modal.Footer>
             <Button variant="primary" onClick={handleClose}>
               Chiudi
             </Button>

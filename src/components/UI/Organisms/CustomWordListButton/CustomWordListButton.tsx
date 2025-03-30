@@ -53,6 +53,11 @@ const CustomWordListButton: React.FC = () => {
     setWordList(wordList.filter((_, i) => i !== index));
   };
 
+  const resetWordList = () => {
+    setWordList([]);
+    setCurrentWord("");
+  };
+
   const copyToClipboard = () => {
     navigator.clipboard.writeText(
       `https://www.canegattostivali.com?customList=${encryptStringArray(
@@ -113,34 +118,36 @@ const CustomWordListButton: React.FC = () => {
                   </Button>
                 </InputGroup>
               ))}
-              <InputGroup className="mt-4 mb-3">
-                <Form.Control
-                  type="text"
-                  placeholder="Inserisci una parola"
-                  value={currentWord}
-                  onChange={(e) => {
-                    const value = e.target.value
-                      .replace(/[^a-zàáèéìíòóúùÀÁÈÉÌÒÙ]/gi, "")
-                      .replace("á", "à")
-                      .replace("é", "è")
-                      .replace("í", "ì")
-                      .replace("ó", "ò")
-                      .replace("ú", "ù")
-                      .toUpperCase();
-                    setCurrentWord(value);
-                  }}
-                  maxLength={20}
-                  aria-label="Inserisci una parola"
-                />
-                <Button
-                  variant="primary"
-                  onClick={addWord}
-                  disabled={currentWord.length < 2 || wordList.length >= 11}
-                  title="Aggiungi parola"
-                >
-                  +
-                </Button>
-              </InputGroup>
+              {wordList.length < 11 && (
+                <InputGroup className="mt-4 mb-3">
+                  <Form.Control
+                    type="text"
+                    placeholder="Inserisci una parola"
+                    value={currentWord}
+                    onChange={(e) => {
+                      const value = e.target.value
+                        .replace(/[^a-zàáèéìíòóúùÀÁÈÉÌÒÙ]/gi, "")
+                        .replace("á", "à")
+                        .replace("é", "è")
+                        .replace("í", "ì")
+                        .replace("ó", "ò")
+                        .replace("ú", "ù")
+                        .toUpperCase();
+                      setCurrentWord(value);
+                    }}
+                    maxLength={20}
+                    aria-label="Inserisci una parola"
+                  />
+                  <Button
+                    variant="primary"
+                    onClick={addWord}
+                    disabled={currentWord.length < 2 || wordList.length >= 11}
+                    title="Aggiungi parola"
+                  >
+                    +
+                  </Button>
+                </InputGroup>
+              )}
             </Form>
 
             <hr />
@@ -164,18 +171,32 @@ const CustomWordListButton: React.FC = () => {
                   ? "pointer-events-none text-muted"
                   : ""
               }
+              rows={2}
             />
 
-            <Button
-              variant="success"
-              onClick={copyToClipboard}
-              disabled={
-                wordList.length < 5 || wordList.some((word) => word.length < 2)
-              }
-              className="mt-2"
-            >
-              <IconClipboard forceOpacity={100} /> {copyToClipboardButtonText}
-            </Button>
+            <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mt-2">
+              <Button
+                variant="success"
+                onClick={copyToClipboard}
+                disabled={
+                  wordList.length < 5 ||
+                  wordList.some((word) => word.length < 2)
+                }
+                className="copy-to-clipboard__button d-flex gap-2 text-nowrap"
+              >
+                <IconClipboard forceColor="#fff" forceOpacity={100} />{" "}
+                {copyToClipboardButtonText}
+              </Button>
+              <Button
+                variant="danger"
+                onClick={resetWordList}
+                disabled={wordList.length === 0}
+                className="text-nowrap"
+                title="Resetta la lista di parole"
+              >
+                Reset
+              </Button>
+            </div>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="primary" onClick={handleClose}>
