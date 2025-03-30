@@ -14,6 +14,9 @@ import { encryptStringArray } from "@/utils/encoding";
 // Typings
 import { KeyboardStatusList } from "@/typings/keyboardStatus";
 
+// Constants
+import { WEBSITE_URL } from "@/constants/app";
+
 const COPY_TO_CLIPBOARD_BUTTON_TEXT_DEFAULT = "Copia la URL generata";
 const COPY_TO_CLIPBOARD_BUTTON_TEXT_COPIED = "URL copiata negli appunti!";
 
@@ -59,16 +62,48 @@ const CustomWordListButton: React.FC = () => {
   };
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(
-      `https://www.canegattostivali.com?customList=${encryptStringArray(
-        wordList
-      )}`
-    );
+    const customListUrl = getCustomListUrl();
+    navigator.clipboard.writeText(customListUrl);
     setCopyToClipboardButtonText(COPY_TO_CLIPBOARD_BUTTON_TEXT_COPIED);
     setTimeout(() => {
       setCopyToClipboardButtonText(COPY_TO_CLIPBOARD_BUTTON_TEXT_DEFAULT);
     }, 2000);
   };
+
+  const getFormattedWord = (word: string) => {
+    return word
+      .replace(/[^a-zàáèéìíòóúùÀÁÈÉÌÒÙ]/gi, "")
+      .replace("á", "à")
+      .replace("é", "è")
+      .replace("í", "ì")
+      .replace("ó", "ò")
+      .replace("ú", "ù")
+      .toUpperCase();
+  };
+
+  const handleWordChange = (
+    index: number,
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const value = getFormattedWord(e.target.value);
+    updateWord(index, value);
+  };
+
+  const handleCurrentWordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = getFormattedWord(e.target.value);
+    setCurrentWord(value);
+  };
+
+  const getCustomListUrl = () => {
+    const baseUrl = `https://www.${WEBSITE_URL}?customList=`;
+    const encryptedList = wordList.length
+      ? encryptStringArray(wordList)
+      : "...";
+    return `${baseUrl}${encryptedList}`;
+  };
+
+  const isWordListValid =
+    wordList.length >= 5 && wordList.every((word) => word.length >= 2);
 
   return (
     <>
@@ -95,17 +130,12 @@ const CustomWordListButton: React.FC = () => {
                     type="text"
                     placeholder="Inserisci una parola"
                     value={word}
-                    onChange={(e) => {
-                      const value = e.target.value
-                        .replace(/[^a-zàáèéìíòóúùÀÁÈÉÌÒÙ]/gi, "")
-                        .replace("á", "à")
-                        .replace("é", "è")
-                        .replace("í", "ì")
-                        .replace("ó", "ò")
-                        .replace("ú", "ù")
-                        .toUpperCase();
-                      updateWord(index, value);
-                    }}
+                    onChange={(e) =>
+                      handleWordChange(
+                        index,
+                        e as React.ChangeEvent<HTMLInputElement>
+                      )
+                    }
                     maxLength={20}
                     className={word.length < 2 ? "is-invalid" : "is-valid"}
                   />
@@ -124,17 +154,7 @@ const CustomWordListButton: React.FC = () => {
                     type="text"
                     placeholder="Inserisci una parola"
                     value={currentWord}
-                    onChange={(e) => {
-                      const value = e.target.value
-                        .replace(/[^a-zàáèéìíòóúùÀÁÈÉÌÒÙ]/gi, "")
-                        .replace("á", "à")
-                        .replace("é", "è")
-                        .replace("í", "ì")
-                        .replace("ó", "ò")
-                        .replace("ú", "ù")
-                        .toUpperCase();
-                      setCurrentWord(value);
-                    }}
+                    onChange={handleCurrentWordChange}
                     maxLength={20}
                     aria-label="Inserisci una parola"
                   />
@@ -154,22 +174,16 @@ const CustomWordListButton: React.FC = () => {
 
             <Form.Control
               as="textarea"
-              value={`https://www.canegattostivali.com?customList=${
-                wordList.length ? encryptStringArray(wordList) : "..."
-              }`}
+              value={getCustomListUrl()}
               onClick={(e) => {
                 const target = e.target as HTMLTextAreaElement;
                 target.select();
                 target.setSelectionRange(0, 99999); // For mobile devices
               }}
               readOnly
-              disabled={
-                wordList.length < 5 || wordList.some((word) => word.length < 2)
-              }
+              disabled={!isWordListValid}
               className={
-                wordList.length < 5 || wordList.some((word) => word.length < 2)
-                  ? "pointer-events-none text-muted"
-                  : ""
+                !isWordListValid ? "pointer-events-none text-muted" : ""
               }
               rows={2}
             />
@@ -178,10 +192,7 @@ const CustomWordListButton: React.FC = () => {
               <Button
                 variant="success"
                 onClick={copyToClipboard}
-                disabled={
-                  wordList.length < 5 ||
-                  wordList.some((word) => word.length < 2)
-                }
+                disabled={!isWordListValid}
                 className="copy-to-clipboard__button d-flex gap-2 text-nowrap"
               >
                 <IconClipboard forceColor="#fff" forceOpacity={100} />{" "}
