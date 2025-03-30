@@ -20,6 +20,7 @@ import {
 
 // Constants
 import { APP_NAME_SHORT, RUN_TEST } from "@/constants/app";
+import { WORD_LIST_LENGTH } from "@/constants/wordList";
 
 // Typings
 import { ButtonVariant } from "react-bootstrap/esm/types";
@@ -36,7 +37,7 @@ interface Props {
 }
 
 const GameSection: React.FC<Props> = ({
-  isCustomGame,
+  isCustomGame: isCustomGameProp,
   initialWordSequence,
 }: Props) => {
   // Leave it here so it runs every time the component is updated
@@ -59,6 +60,7 @@ const GameSection: React.FC<Props> = ({
   const [showExtraTimeTooltip, setShowExtraTimeTooltip] = useState<number>(0);
   const [showEndGameModal, setShowEndGameModal] = useState<boolean>(false);
   const [isUserBestTime, setIsUserBestTime] = useState<boolean>(false);
+  const [isCustomGame, setIsCustomGame] = useState<boolean>(isCustomGameProp);
 
   const isKeyPressEnabled = useRef<boolean>(true);
   const filterKeys = useRef<boolean>(false);
@@ -66,7 +68,7 @@ const GameSection: React.FC<Props> = ({
   const bonusLetters = useRef<number>(0);
 
   const currentWord = wordSequence[currentWordIndex];
-  const isLastWord = currentWordIndex === initialWordSequence.length - 1;
+  const isLastWord = currentWordIndex === wordSequence.length - 1;
 
   const { keyboardStatus } = useKeyboardStatus();
 
@@ -336,8 +338,14 @@ const GameSection: React.FC<Props> = ({
   };
 
   const startGame = () => {
+    const url = new URL(window.location.href);
+    url.search = "";
+    window.history.replaceState({}, document.title, url.toString());
+
+    setIsCustomGame(false);
+
     const newWordSequence = createWordSequence({
-      wordListLength: initialWordSequence.length,
+      wordListLength: WORD_LIST_LENGTH,
     });
     if (RUN_TEST === "true") {
       console.log({ newWordSequence });
@@ -358,7 +366,7 @@ const GameSection: React.FC<Props> = ({
     <>
       <InfoSection
         isGameEnded={isGameEnded}
-        wordListLength={initialWordSequence.length}
+        wordListLength={wordSequence.length}
         currentWordIndex={currentWordIndex}
         message={message}
         showExtraTimeTooltip={showExtraTimeTooltip}
