@@ -13,10 +13,11 @@ const TopSection: React.FC = () => {
         <p className="mb-0">
           I tasti gialli forniscono un aiuto ☝🤓
           <br />
-          L'occhio <IconEyeSlash /> filtra le lettere a tua disposizione.
+          L'occhio <IconEyeSlash forceOpacity={100} /> filtra le lettere a tua
+          disposizione.
           <br />
-          La lampadina <IconLightbulb /> rivela una lettera in più della parola
-          da indovinare.
+          La lampadina <IconLightbulb forceOpacity={100} /> rivela una lettera
+          in più della parola da indovinare.
         </p>
         <p className="d-none d-lg-block mt-2 mb-0">
           Da desktop puoi usare i tasti <em>1</em> e <em>2</em> per usare gli

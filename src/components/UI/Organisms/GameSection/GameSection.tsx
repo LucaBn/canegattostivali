@@ -19,7 +19,6 @@ import {
 } from "@/utils/local-storage";
 
 // Constants
-import { WORD_LIST_LENGTH } from "@/constants/wordList";
 import { APP_NAME_SHORT, RUN_TEST } from "@/constants/app";
 
 // Typings
@@ -32,10 +31,14 @@ const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
 const LS_USER_DATA_VARIABLE = `${lowercaseAppName}UserData`;
 
 interface Props {
+  isCustomGame: boolean;
   initialWordSequence: string[];
 }
 
-const GameSection: React.FC<Props> = ({ initialWordSequence }: Props) => {
+const GameSection: React.FC<Props> = ({
+  isCustomGame,
+  initialWordSequence,
+}: Props) => {
   // Leave it here so it runs every time the component is updated
   const storedUserData: UserData | null = readFromLocalStorage(
     LS_USER_DATA_VARIABLE
@@ -63,7 +66,7 @@ const GameSection: React.FC<Props> = ({ initialWordSequence }: Props) => {
   const bonusLetters = useRef<number>(0);
 
   const currentWord = wordSequence[currentWordIndex];
-  const isLastWord = currentWordIndex === WORD_LIST_LENGTH - 1;
+  const isLastWord = currentWordIndex === initialWordSequence.length - 1;
 
   const { keyboardStatus } = useKeyboardStatus();
 
@@ -134,11 +137,13 @@ const GameSection: React.FC<Props> = ({ initialWordSequence }: Props) => {
       storedUserData?.bestTime < time
         ? storedUserData?.bestTime
         : time;
-    writeToLocalStorage(LS_USER_DATA_VARIABLE, {
-      ...storedUserData,
-      matchesWon: userMatchesWon,
-      bestTime: userBestTime,
-    });
+    if (!isCustomGame) {
+      writeToLocalStorage(LS_USER_DATA_VARIABLE, {
+        ...storedUserData,
+        matchesWon: userMatchesWon,
+        bestTime: userBestTime,
+      });
+    }
   };
 
   const handleWordGuess = () => {
@@ -331,7 +336,9 @@ const GameSection: React.FC<Props> = ({ initialWordSequence }: Props) => {
   };
 
   const startGame = () => {
-    const newWordSequence = createWordSequence();
+    const newWordSequence = createWordSequence({
+      wordListLength: initialWordSequence.length,
+    });
     if (RUN_TEST === "true") {
       console.log({ newWordSequence });
     }
@@ -351,6 +358,7 @@ const GameSection: React.FC<Props> = ({ initialWordSequence }: Props) => {
     <>
       <InfoSection
         isGameEnded={isGameEnded}
+        wordListLength={initialWordSequence.length}
         currentWordIndex={currentWordIndex}
         message={message}
         showExtraTimeTooltip={showExtraTimeTooltip}

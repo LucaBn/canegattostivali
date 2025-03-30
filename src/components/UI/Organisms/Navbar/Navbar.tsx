@@ -6,6 +6,7 @@ import { Container, Navbar } from "react-bootstrap";
 // import { LinkContainer } from "react-router-bootstrap";
 import IconSun from "@/components/UI/Atoms/IconSun/IconSun";
 import IconMoon from "@/components/UI/Atoms/IconMoon/IconMoon";
+import CustomWordListButton from "@/components/UI/Organisms/CustomWordListButton/CustomWordListButton";
 import NewsButton from "@/components/UI/Organisms/NewsButton/NewsButton";
 import UserButton from "@/components/UI/Organisms/UserButton/UserButton";
 
@@ -106,6 +107,12 @@ const NavbarComponent: React.FC = () => {
           </span>
           <span className="ms-3 ms-md-4 me-0 cursor-pointer" title="News">
             <NewsButton />
+          </span>
+          <span
+            className="ms-3 ms-md-4 me-0 cursor-pointer"
+            title="Crea la tua sequenza di parole"
+          >
+            <CustomWordListButton />
           </span>
           <span className="ms-3 ms-md-4 me-0 cursor-pointer" title="Profilo">
             <UserButton />

@@ -316,7 +316,8 @@
       "VOLTA",
       "TEATRO",
       "PROVA",
-      "FASE"
+      "FASE",
+      "MATERIA"
     ]
   },
   {
@@ -397,7 +398,8 @@
       "PACCO",
       "ESEMPIO",
       "RISPOSTA",
-      "MANO"
+      "MANO",
+      "ACQUISITO"
     ]
   },
   {
@@ -574,7 +576,7 @@
   },
   {
     "word": "GUSTO",
-    "nextWordList": ["RIDERE", "CATTIVO", "AMARO", "DOLCE"]
+    "nextWordList": ["RIDERE", "CATTIVO", "AMARO", "DOLCE", "GELATO"]
   },
   {
     "word": "AMARO",
@@ -753,7 +755,13 @@
   },
   {
     "word": "ALTA",
-    "nextWordList": ["VELOCITÀ", "PRESSIONE", "MONTAGNA", "DEFINIZIONE"]
+    "nextWordList": [
+      "VELOCITÀ",
+      "PRESSIONE",
+      "MONTAGNA",
+      "DEFINIZIONE",
+      "STAGIONE"
+    ]
   },
   {
     "word": "DEFINIZIONE",
@@ -828,7 +836,8 @@
       "LEGALE",
       "SOCCORSO",
       "FAMIGLIA",
-      "PRIMARIO"
+      "PRIMARIO",
+      "BOLLETTINO"
     ]
   },
   {
@@ -1162,7 +1171,7 @@
   },
   {
     "word": "CELESTE",
-    "nextWordList": ["SFERA", "CORPO"]
+    "nextWordList": ["SFERA", "CORPO", "VOLTA"]
   },
   {
     "word": "CORPO",
@@ -1496,7 +1505,14 @@
   },
   {
     "word": "FRUTTA",
-    "nextWordList": ["SECCA", "FRESCA", "ALBERO", "CASSETTA", "CESTINO"]
+    "nextWordList": [
+      "SECCA",
+      "FRESCA",
+      "ALBERO",
+      "CASSETTA",
+      "CESTINO",
+      "STAGIONE"
+    ]
   },
   {
     "word": "ALBERO",
@@ -2359,7 +2375,7 @@
   },
   {
     "word": "MATERIA",
-    "nextWordList": ["FILOSOFIA", "STUDIO", "STATO"]
+    "nextWordList": ["FILOSOFIA", "STUDIO", "STATO", "ESPERTO", "PRIMA"]
   },
   {
     "word": "GANCIO",
@@ -2511,7 +2527,15 @@
   },
   {
     "word": "NAVE",
-    "nextWordList": ["GUERRA", "CARICO", "VAPORE", "POPPA", "ROTTA", "CROCIERA"]
+    "nextWordList": [
+      "GUERRA",
+      "CARICO",
+      "VAPORE",
+      "POPPA",
+      "ROTTA",
+      "CROCIERA",
+      "PONTE"
+    ]
   },
   {
     "word": "CARICO",
@@ -3005,7 +3029,7 @@
   },
   {
     "word": "ACQUISITO",
-    "nextWordList": ["PARENTE", "DIRITTO"]
+    "nextWordList": ["PARENTE", "DIRITTO", "DARE"]
   },
   {
     "word": "VERDURE",
@@ -3013,7 +3037,7 @@
   },
   {
     "word": "STAGIONE",
-    "nextWordList": ["VERDURE", "CAMBIO"]
+    "nextWordList": ["VERDURE", "CAMBIO", "FRUTTA", "ALTA"]
   },
   {
     "word": "CAMBIO",
@@ -3038,7 +3062,14 @@
   },
   {
     "word": "UFFICIO",
-    "nextWordList": ["LAVORO", "STUDIO", "AVVOCATO", "ABUSO", "IMPIEGATO"]
+    "nextWordList": [
+      "LAVORO",
+      "STUDIO",
+      "AVVOCATO",
+      "ABUSO",
+      "IMPIEGATO",
+      "POSTALE"
+    ]
   },
   {
     "word": "CONTRATTO",
@@ -3212,7 +3243,7 @@
   },
   {
     "word": "LIBRETTO",
-    "nextWordList": ["PATENTE", "RISPARMIO", "MESSA", "CIRCOLAZIONE"]
+    "nextWordList": ["PATENTE", "RISPARMIO", "MESSA", "CIRCOLAZIONE", "POSTALE"]
   },
   {
     "word": "RISPARMIO",
@@ -3888,7 +3919,7 @@
   },
   {
     "word": "SEGNO",
-    "nextWordList": ["TIRO", "PACE", "MENO", "FILO"]
+    "nextWordList": ["TIRO", "PACE", "MENO", "FILO", "INDELEBILE"]
   },
   {
     "word": "MENO",
@@ -4494,7 +4525,7 @@
   },
   {
     "word": "INDELEBILE",
-    "nextWordList": ["RICORDO", "INCHIOSTRO"]
+    "nextWordList": ["RICORDO", "INCHIOSTRO", "SEGNO"]
   },
   {
     "word": "INCHIOSTRO",
@@ -4634,7 +4665,8 @@
       "SIRENA",
       "LAMPEGGIANTE",
       "OPERAZIONE",
-      "COMANDO"
+      "COMANDO",
+      "POSTALE"
     ]
   },
   {
@@ -4917,7 +4949,7 @@
   },
   {
     "word": "ESPERTO",
-    "nextWordList": ["SETTORE", "MASSIMO"]
+    "nextWordList": ["SETTORE", "MASSIMO", "MATERIA"]
   },
   {
     "word": "MASSIMO",
@@ -5016,7 +5048,7 @@
   },
   {
     "word": "VOLTA",
-    "nextWordList": ["PRIMA", "ULTIMA", "CHIAVE", "BOTTE"]
+    "nextWordList": ["PRIMA", "ULTIMA", "CHIAVE", "BOTTE", "CELESTE"]
   },
   {
     "word": "CENA",
@@ -5163,7 +5195,7 @@
   },
   {
     "word": "PONTE",
-    "nextWordList": ["SOSPESO", "VECCHIO", "STRETTO", "COMANDO"]
+    "nextWordList": ["SOSPESO", "VECCHIO", "STRETTO", "COMANDO", "NAVE"]
   },
   {
     "word": "VECCHIO",
@@ -5535,7 +5567,7 @@
   },
   {
     "word": "GELATO",
-    "nextWordList": ["SOIA", "CIOCCOLATO", "CONO"]
+    "nextWordList": ["SOIA", "CIOCCOLATO", "CONO", "GUSTO"]
   },
   {
     "word": "CONO",
@@ -5590,7 +5622,7 @@
   },
   {
     "word": "ASSEGNO",
-    "nextWordList": ["BIANCO", "UNICO", "CIRCOLARE", "CAUSALE", "ORDINARIO"]
+    "nextWordList": ["BIANCO", "UNICO", "CIRCOLARE", "ORDINARIO"]
   },
   {
     "word": "CIRCOLARE",
@@ -5642,11 +5674,11 @@
   },
   {
     "word": "BOLLETTINO",
-    "nextWordList": ["METEOROLOGICO", "NEVE", "CAUSALE"]
+    "nextWordList": ["METEOROLOGICO", "NEVE", "POSTALE", "MEDICO"]
   },
   {
-    "word": "CAUSALE",
-    "nextWordList": ["BOLLETTINO", "ASSEGNO"]
+    "word": "POSTALE",
+    "nextWordList": ["BOLLETTINO", "LIBRETTO", "POLIZIA", "UFFICIO"]
   },
   {
     "word": "MONTE",

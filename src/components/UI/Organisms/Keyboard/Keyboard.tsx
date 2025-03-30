@@ -113,7 +113,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
     if (key === "CANC") {
       return (
         <div className="h-100 d-flex align-items-center justify-content-center">
-          <IconDelete forceColor="#fff" />
+          <IconDelete forceColor="#fff" forceOpacity={100} />
         </div>
       );
     } else if (key === "HELP_KEYBOARD_FILTER") {
@@ -123,7 +123,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
           onClick={getHelpKeyboardFilter}
           title="Rimuovi dalla tastiera le lettere che non servono"
         >
-          <IconKeyboard forceColor="#000" />
+          <IconKeyboard forceColor="#000" forceOpacity={100} />
         </span>
       );
     } else if (key === "HELP_BONUS_LETTER") {
@@ -133,7 +133,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
           onClick={getHelpBonusLetter}
           title="Aggiungi una lettera alla parola"
         >
-          <IconLightbulb forceColor="#000" />
+          <IconLightbulb forceColor="#000" forceOpacity={100} />
         </span>
       );
     } else if (key === "SPACER") {

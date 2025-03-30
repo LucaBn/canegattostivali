@@ -1,7 +1,13 @@
 // Constants
 import { type Word, WORD_LIST_LENGTH, WORD_LIST } from "@/constants/wordList";
 
-const createWordSequence = (): string[] => {
+interface Props {
+  wordListLength?: number;
+}
+
+const createWordSequence = ({
+  wordListLength = WORD_LIST_LENGTH,
+}: Props): string[] => {
   const usedWords = new Set<string>();
   const sequence: string[] = [];
 
@@ -25,7 +31,7 @@ const createWordSequence = (): string[] => {
 
   let currentWord = getRandomUnusedWord();
 
-  while (sequence.length < WORD_LIST_LENGTH) {
+  while (sequence.length < wordListLength) {
     if (currentWord) {
       sequence.push(currentWord.word);
       usedWords.add(currentWord.word);

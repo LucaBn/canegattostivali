@@ -39,14 +39,15 @@ const EndGameModal: React.FC<IOptionsModal> = ({
   );
 
   const handleClose = () => setShow(false);
+
   const handlePlayAgain = () => {
     startGame();
     handleClose();
   };
 
   const modalTitle = storedUserData?.username
-    ? `Hai vinto, ${storedUserData.username}! 🥳`
-    : `Hai vinto! 🥳`;
+    ? `Ben fatto, ${storedUserData.username}! 🥳`
+    : `Ben fatto! 🥳`;
 
   return (
     <>

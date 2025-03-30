@@ -74,7 +74,7 @@ const NewsButton: React.FC = () => {
               </Toast>
             ))}
           </Modal.Body>
-          <Modal.Footer className="justify-content-center">
+          <Modal.Footer>
             <Button variant="primary" onClick={handleClose}>
               Chiudi
             </Button>
