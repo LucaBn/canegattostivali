@@ -440,6 +440,7 @@ const GameSection: React.FC<Props> = ({
         <EndGameModal
           show={showEndGameModal}
           time={time}
+          isCustomGame={isCustomGame}
           isUserBestTime={isUserBestTime}
           wordSequence={wordSequence}
           setShow={setShowEndGameModal}

@@ -16,6 +16,7 @@ import { UserData } from "@/typings/user";
 interface IOptionsModal {
   show: boolean;
   time: number;
+  isCustomGame: boolean;
   isUserBestTime: boolean;
   wordSequence: string[];
   setShow: Dispatch<SetStateAction<boolean>>;
@@ -28,6 +29,7 @@ const LS_USER_DATA_VARIABLE = `${lowercaseAppName}UserData`;
 const EndGameModal: React.FC<IOptionsModal> = ({
   show,
   time,
+  isCustomGame,
   isUserBestTime,
   wordSequence,
   setShow,
@@ -64,8 +66,8 @@ const EndGameModal: React.FC<IOptionsModal> = ({
         <Modal.Body>
           <p className="d-flex flex-flow-wrap gap-2">
             Tempo impiegato: <em>{formatTime(time)}</em>{" "}
-            {isUserBestTime && (
-              <Badge bg="success" pill>
+            {isUserBestTime && !isCustomGame && (
+              <Badge bg="success" pill className="d-flex align-items-center">
                 Record! 💪
               </Badge>
             )}
