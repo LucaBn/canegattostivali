@@ -8,13 +8,17 @@ import { IImage } from "@/typings/images";
 
 // Utils
 import { getImageColor } from "@/utils/image-color";
+import { generateClassNameValue } from "@/utils/html-classes";
 
 interface IIconDelete extends IImage {}
 
-const IconDelete: React.FC<IIconDelete> = ({ forceColor }) => {
+const IconDelete: React.FC<IIconDelete> = ({ forceColor, forceOpacity }) => {
   const { theme } = useTheme();
 
   const iconColor = getImageColor(theme, forceColor);
+
+  const opacityClass = forceOpacity ? `opacity-${forceOpacity}` : "";
+  const classList = generateClassNameValue(["icon-delete", opacityClass]);
 
   return (
     <svg
@@ -25,7 +29,7 @@ const IconDelete: React.FC<IIconDelete> = ({ forceColor }) => {
       height="24"
       strokeWidth="1.5"
       stroke={iconColor}
-      className="icon-delete"
+      className={classList}
     >
       <path
         strokeLinecap="round"

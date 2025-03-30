@@ -1,10 +1,12 @@
 // Atoms
 @import "./Atoms/Confetti/styles";
+@import "./Atoms/IconClipboard/styles";
 @import "./Atoms/IconDelete/styles";
 @import "./Atoms/IconEyeSlash/styles";
 @import "./Atoms/IconLightbulb/styles";
 @import "./Atoms/IconMoon/styles";
 @import "./Atoms/IconNewspaper/styles";
+@import "./Atoms/IconPlus/styles";
 @import "./Atoms/IconSun/styles";
 @import "./Atoms/IconUser/styles";
 @import "./Atoms/NotificationCircle/styles";
@@ -14,6 +16,7 @@
 @import "./Molecules/TopSection/styles";
 
 // Organisms
+@import "./Organisms/CustomWordListButton/styles";
 @import "./Organisms/EndGameModal/styles";
 @import "./Organisms/Footer/styles";
 @import "./Organisms/GameSection/styles";
