@@ -39,6 +39,7 @@ const EndGameModal: React.FC<IOptionsModal> = ({
   );
 
   const handleClose = () => setShow(false);
+
   const handlePlayAgain = () => {
     startGame();
     handleClose();

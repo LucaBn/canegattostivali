@@ -8,9 +8,14 @@ import GameSection from "@/components/UI/Organisms/GameSection/GameSection";
 // Utils
 import { createWordSequence } from "@/utils/game-logic";
 
+// Constants
+import { WORD_LIST_LENGTH } from "@/constants/wordList";
+
 // console.log({ initialWordSequence });
 
-const initialWordSequence = createWordSequence();
+const initialWordSequence = createWordSequence({
+  wordListLength: WORD_LIST_LENGTH,
+});
 
 const HomePage: React.FC = () => {
   return (

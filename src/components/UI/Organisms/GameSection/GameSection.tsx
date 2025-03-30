@@ -331,7 +331,9 @@ const GameSection: React.FC<Props> = ({ initialWordSequence }: Props) => {
   };
 
   const startGame = () => {
-    const newWordSequence = createWordSequence();
+    const newWordSequence = createWordSequence({
+      wordListLength: WORD_LIST_LENGTH,
+    });
     if (RUN_TEST === "true") {
       console.log({ newWordSequence });
     }
