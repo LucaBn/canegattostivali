@@ -144,7 +144,7 @@ const CustomWordListButton: React.FC = () => {
                     }
                     maxLength={20}
                     className={
-                      word.length > 2 &&
+                      word.length >= 2 &&
                       wordList.indexOf(word) === wordList.lastIndexOf(word)
                         ? "is-valid"
                         : "is-invalid"
