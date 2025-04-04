@@ -156,8 +156,6 @@
       "SECCA",
       "MORBIDA",
       "OCA",
-      "BIANCA",
-      "NERA",
       "FINTA",
       "AMICO",
       "POLTRONA",
@@ -226,7 +224,8 @@
       "MESTIERE",
       "OCCUPAZIONE",
       "PRESTAZIONE",
-      "OCCASIONALE"
+      "OCCASIONALE",
+      "TROVARE"
     ]
   },
   {
@@ -282,7 +281,6 @@
       "PIZZA",
       "LUCE",
       "VOCE",
-      "PELLE",
       "CASA",
       "NOTTE",
       "PAGINA",
@@ -903,7 +901,8 @@
       "NIENTE",
       "INTERO",
       "ALTRO",
-      "FINE"
+      "FINE",
+      "FAME"
     ]
   },
   {
@@ -970,7 +969,8 @@
       "DARE",
       "LIBERA",
       "TINTA",
-      "GIOCO"
+      "GIOCO",
+      "LAVARE"
     ]
   },
   {
@@ -1019,7 +1019,7 @@
   },
   {
     "word": "MORIRE",
-    "nextWordList": ["NOIA", "RIDERE", "SONNO"]
+    "nextWordList": ["NOIA", "RIDERE", "SONNO", "FAME", "PAURA"]
   },
   {
     "word": "SONNO",
@@ -1095,7 +1095,9 @@
       "SANGUE",
       "PASTO",
       "PANE",
-      "BOTTE"
+      "BOTTE",
+      "FIASCO",
+      "BOTTIGLIA"
     ]
   },
   {
@@ -1165,7 +1167,7 @@
   },
   {
     "word": "PAURA",
-    "nextWordList": ["VUOTO", "BUIO", "FILM", "OMBRA", "BRIVIDO"]
+    "nextWordList": ["VUOTO", "BUIO", "FILM", "OMBRA", "BRIVIDO", "MORIRE"]
   },
   {
     "word": "PENNA",
@@ -1339,7 +1341,8 @@
       "PASTO",
       "BENZINA",
       "TESORO",
-      "SCONTO"
+      "SCONTO",
+      "QUALCOSA"
     ]
   },
   {
@@ -1517,7 +1520,8 @@
       "ALBERO",
       "CASSETTA",
       "CESTINO",
-      "STAGIONE"
+      "STAGIONE",
+      "LAVARE"
     ]
   },
   {
@@ -1958,7 +1962,19 @@
   },
   {
     "word": "PARENTESI",
-    "nextWordList": ["APERTA", "TONDA"]
+    "nextWordList": ["APERTA", "TONDA", "QUADRA"]
+  },
+  {
+    "word": "QUADRA",
+    "nextWordList": ["PARENTESI", "TROVARE", "QUALCOSA"]
+  },
+  {
+    "word": "QUALCOSA",
+    "nextWordList": ["QUADRA", "GRANDE", "BUONO"]
+  },
+  {
+    "word": "TROVARE",
+    "nextWordList": ["QUADRA", "LAVORO", "ACCORDO", "SOLUZIONE"]
   },
   {
     "word": "TONDA",
@@ -2060,11 +2076,15 @@
   },
   {
     "word": "CAMPAGNA",
-    "nextWordList": ["RUSSIA", "TOPO", "CASA"]
+    "nextWordList": ["RUSSIA", "TOPO", "CASA", "FIORE"]
   },
   {
     "word": "TOPO",
-    "nextWordList": ["CAMPAGNA", "GATTO", "BIBLIOTECA"]
+    "nextWordList": ["CAMPAGNA", "GATTO", "BIBLIOTECA", "GRIGIO"]
+  },
+  {
+    "word": "GRIGIO",
+    "nextWordList": ["TOPO", "CIELO", "LUPO"]
   },
   {
     "word": "BIBLIOTECA",
@@ -2236,7 +2256,14 @@
   },
   {
     "word": "CHIMICA",
-    "nextWordList": ["FORMULA", "BASE", "REAZIONE", "LABORATORIO", "SOLUZIONE"]
+    "nextWordList": [
+      "FORMULA",
+      "BASE",
+      "REAZIONE",
+      "LABORATORIO",
+      "SOLUZIONE",
+      "FAME"
+    ]
   },
   {
     "word": "REAZIONE",
@@ -2308,7 +2335,14 @@
   },
   {
     "word": "MINISTRO",
-    "nextWordList": ["INTERNO", "POLITICO", "PRIMO", "SPORT", "DIFESA"]
+    "nextWordList": [
+      "INTERNO",
+      "POLITICO",
+      "PRIMO",
+      "SPORT",
+      "DIFESA",
+      "CULTURA"
+    ]
   },
   {
     "word": "FUORI",
@@ -2462,7 +2496,7 @@
   },
   {
     "word": "ACCORDO",
-    "nextWordList": ["PATTO", "MUSICA", "COMUNE"]
+    "nextWordList": ["PATTO", "MUSICA", "COMUNE", "TROVARE"]
   },
   {
     "word": "ACCIAIO",
@@ -2770,7 +2804,7 @@
   },
   {
     "word": "SOLUZIONE",
-    "nextWordList": ["ACIDA", "PROBLEMA", "CHIMICA"]
+    "nextWordList": ["ACIDA", "PROBLEMA", "CHIMICA", "TROVARE"]
   },
   {
     "word": "PROBLEMA",
@@ -2782,15 +2816,39 @@
   },
   {
     "word": "PANNA",
-    "nextWordList": ["ACIDA", "COTTA", "CUCINA"]
+    "nextWordList": ["ACIDA", "COTTA", "CUCINA", "GELATO"]
   },
   {
     "word": "COTTA",
-    "nextWordList": ["PANNA", "FORNO", "MELA"]
+    "nextWordList": ["PANNA", "MAGLIA", "MELA"]
   },
   {
     "word": "FORNO",
-    "nextWordList": ["COTTA", "GAS", "ELETTRICO", "PATATE"]
+    "nextWordList": ["COTTO", "GAS", "ELETTRICO", "PATATE"]
+  },
+  {
+    "word": "COTTO",
+    "nextWordList": ["FORNO", "PROSCIUTTO", "PAVIMENTO"]
+  },
+  {
+    "word": "PAVIMENTO",
+    "nextWordList": ["COTTO", "LAVARE", "POSA"]
+  },
+  {
+    "word": "POSA",
+    "nextWordList": ["PAVIMENTO", "FOTO", "FIASCO"]
+  },
+  {
+    "word": "FIASCO",
+    "nextWordList": ["POSA", "VINO", "FARE"]
+  },
+  {
+    "word": "LAVARE",
+    "nextWordList": ["PAVIMENTO", "PIATTI", "FRUTTA", "MANO"]
+  },
+  {
+    "word": "PROSCIUTTO",
+    "nextWordList": ["COTTO", "PANINO", "PIZZA", "FETTA", "GRASSO"]
   },
   {
     "word": "GOCCIA",
@@ -2858,7 +2916,7 @@
   },
   {
     "word": "PIATTI",
-    "nextWordList": ["SPORCHI", "SERVIZIO", "BATTERIA"]
+    "nextWordList": ["SPORCHI", "SERVIZIO", "BATTERIA", "LAVARE"]
   },
   {
     "word": "FIOCCO",
@@ -2932,7 +2990,7 @@
   },
   {
     "word": "CIELO",
-    "nextWordList": ["ALTO", "STELLATO", "BLU", "COPERTO"]
+    "nextWordList": ["ALTO", "STELLATO", "BLU", "COPERTO", "GRIGIO"]
   },
   {
     "word": "COPERTO",
@@ -3467,7 +3525,11 @@
   },
   {
     "word": "BALENA",
-    "nextWordList": ["SQUALO", "OLIO", "CANTO"]
+    "nextWordList": ["SQUALO", "OLIO", "CANTO", "GRASSO"]
+  },
+  {
+    "word": "GRASSO",
+    "nextWordList": ["BALENA", "PROSCIUTTO", "FORMAGGIO"]
   },
   {
     "word": "CANTO",
@@ -3647,11 +3709,11 @@
   },
   {
     "word": "FETTA",
-    "nextWordList": ["SALAME", "TORTA", "PIZZA", "PANE"]
+    "nextWordList": ["SALAME", "TORTA", "PIZZA", "PANE", "PROSCIUTTO"]
   },
   {
     "word": "PANINO",
-    "nextWordList": ["SALAME", "LATTE", "KEBAB"]
+    "nextWordList": ["SALAME", "LATTE", "KEBAB", "PROSCIUTTO"]
   },
   {
     "word": "KEBAB",
@@ -3855,7 +3917,8 @@
       "FETTA",
       "IMPASTO",
       "KEBAB",
-      "MOZZARELLA"
+      "MOZZARELLA",
+      "PROSCIUTTO"
     ]
   },
   {
@@ -4001,7 +4064,8 @@
       "SALMONE",
       "FOGLIO",
       "SALSA",
-      "CRONACA"
+      "CRONACA",
+      "MAGLIA"
     ]
   },
   {
@@ -4148,7 +4212,15 @@
   },
   {
     "word": "MAGLIA",
-    "nextWordList": ["POLO", "SECONDA", "LANA", "CALCIO", "TERMICA"]
+    "nextWordList": [
+      "POLO",
+      "SECONDA",
+      "LANA",
+      "CALCIO",
+      "TERMICA",
+      "COTTA",
+      "ROSA"
+    ]
   },
   {
     "word": "CORRENTE",
@@ -4204,7 +4276,7 @@
   },
   {
     "word": "GRANDE",
-    "nextWordList": ["CARRO", "FRATELLO", "CIRCOLAZIONE"]
+    "nextWordList": ["CARRO", "FRATELLO", "CIRCOLAZIONE", "QUALCOSA"]
   },
   {
     "word": "CIRCOLAZIONE",
@@ -4340,7 +4412,7 @@
   },
   {
     "word": "BOTTIGLIA",
-    "nextWordList": ["COLLO", "ACQUA", "PLASTICA", "VUOTO", "BIRRA"]
+    "nextWordList": ["COLLO", "ACQUA", "PLASTICA", "VUOTO", "BIRRA", "VINO"]
   },
   {
     "word": "LUNGO",
@@ -4352,7 +4424,14 @@
   },
   {
     "word": "FIORE",
-    "nextWordList": ["ROSA", "FRUTTO", "OCCHIELLO", "CAMPO", "NARCISO"]
+    "nextWordList": [
+      "ROSA",
+      "FRUTTO",
+      "OCCHIELLO",
+      "CAMPO",
+      "NARCISO",
+      "CAMPAGNA"
+    ]
   },
   {
     "word": "OCCHIELLO",
@@ -4571,7 +4650,8 @@
       "SCATTO",
       "GALLERIA",
       "CORNICE",
-      "SVILUPPO"
+      "SVILUPPO",
+      "POSA"
     ]
   },
   {
@@ -4871,7 +4951,7 @@
   },
   {
     "word": "NERA",
-    "nextWordList": ["MAGIA", "PELLE", "NOTTE", "CRONACA", "PECORA"]
+    "nextWordList": ["MAGIA", "NOTTE", "CRONACA", "PECORA"]
   },
   {
     "word": "CRONACA",
@@ -5627,7 +5707,7 @@
   },
   {
     "word": "GELATO",
-    "nextWordList": ["SOIA", "CIOCCOLATO", "CONO", "GUSTO"]
+    "nextWordList": ["SOIA", "CIOCCOLATO", "CONO", "GUSTO", "PANNA"]
   },
   {
     "word": "CONO",
@@ -5793,7 +5873,7 @@
   },
   {
     "word": "LUPO",
-    "nextWordList": ["PECORA", "LUNA", "CANE", "BOCCA"]
+    "nextWordList": ["PECORA", "LUNA", "CANE", "BOCCA", "GRIGIO"]
   },
   {
     "word": "SALE",
@@ -5821,7 +5901,7 @@
   },
   {
     "word": "FORMAGGIO",
-    "nextWordList": ["CACIO", "LATTE", "PASTA", "MOZZARELLA", "GRANA"]
+    "nextWordList": ["CACIO", "LATTE", "PASTA", "MOZZARELLA", "GRANA", "GRASSO"]
   },
   {
     "word": "GROSSO",
@@ -6028,7 +6108,7 @@
   },
   {
     "word": "CLASSIFICA",
-    "nextWordList": ["CAMPIONATO", "TESTA", "PRIMO", "POSIZIONE"]
+    "nextWordList": ["CAMPIONATO", "TESTA", "PRIMO", "POSIZIONE", "GENERALE"]
   },
   {
     "word": "DIRE",
@@ -6050,7 +6130,8 @@
       "TAPPA",
       "BOTTE",
       "CONTI",
-      "PALO"
+      "PALO",
+      "FIASCO"
     ]
   },
   {
@@ -6229,7 +6310,23 @@
   },
   {
     "word": "MASSA",
-    "nextWordList": ["COMUNICAZIONE", "PESO", "ACQUA"]
+    "nextWordList": ["COMUNICAZIONE", "PESO", "ACQUA", "CULTURA", "SCIOPERO"]
+  },
+  {
+    "word": "CULTURA",
+    "nextWordList": ["MASSA", "GENERALE", "MINISTRO"]
+  },
+  {
+    "word": "GENERALE",
+    "nextWordList": ["CULTURA", "SCIOPERO", "CLASSIFICA"]
+  },
+  {
+    "word": "SCIOPERO",
+    "nextWordList": ["GENERALE", "MASSA", "FAME"]
+  },
+  {
+    "word": "FAME",
+    "nextWordList": ["SCIOPERO", "MONDO", "CHIMICA", "MORIRE"]
   },
   {
     "word": "COMUNICAZIONE",
