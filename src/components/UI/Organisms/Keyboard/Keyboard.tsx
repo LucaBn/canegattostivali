@@ -26,7 +26,7 @@ const keys: string[][] = [
   ["INVIO", "Z", "X", "C", "V", "B", "N", "M", "CANC"],
 ];
 
-interface KeyboardProps {
+interface Props {
   currentWord: string;
   filterKeys: boolean;
   onKeyPress: (key: string) => void;
@@ -36,7 +36,7 @@ interface KeyboardProps {
   bonusLetters: number;
 }
 
-const Keyboard: React.FC<KeyboardProps> = ({
+const Keyboard: React.FC<Props> = ({
   currentWord,
   filterKeys,
   onKeyPress,

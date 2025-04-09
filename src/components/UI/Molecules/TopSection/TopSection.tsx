@@ -5,7 +5,7 @@ import IconLightbulb from "@/components/UI/Atoms/IconLightbulb/IconLightbulb";
 const TopSection: React.FC = () => {
   return (
     <Row className="justify-content-center">
-      <Col xs="auto" md="8" lg="6" className="text-center mb-5">
+      <Col xs="auto" md="8" lg="6" className="text-center mb-3 mb-lg-4">
         <h1 className="mb-3">Cane Gatto Stivali</h1>
         <p className="mb-1">
           Indovina la parola usando quella precedente come indizio.
