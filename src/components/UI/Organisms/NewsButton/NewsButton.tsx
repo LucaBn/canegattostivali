@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 // Components
-import { Modal, Button, Toast } from "react-bootstrap";
 import IconNewspaper from "@/components/UI/Atoms/IconNewspaper/IconNewspaper";
 import NotificationCircle from "@/components/UI/Atoms/NotificationCircle/NotificationCircle";
+import NewsModal from "@/components/UI/Organisms/NewsModal/NewsModal";
 
 // Providers
 import { useKeyboardStatus } from "@/components/providers/KeyboardStatusProvider/useKeyboardStatus";
@@ -27,14 +27,14 @@ const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
 const LS_READ_NEWS_VARIABLE = `${lowercaseAppName}ReadNews`;
 
 const NewsButton: React.FC = () => {
-  const [showModal, setShowModal] = useState<boolean>(false);
-
-  const { changeKeyboardStatus } = useKeyboardStatus();
-
   // Leave it here so it runs every time the component is updated
   const storedReadNews: number | null = readFromLocalStorage(
     LS_READ_NEWS_VARIABLE
   );
+
+  const [showModal, setShowModal] = useState<boolean>(false);
+
+  const { changeKeyboardStatus } = useKeyboardStatus();
 
   const saveReadNews = () => {
     writeToLocalStorage(LS_READ_NEWS_VARIABLE, newsData.length);
@@ -50,37 +50,18 @@ const NewsButton: React.FC = () => {
     changeKeyboardStatus(KeyboardStatusList.Active);
   };
 
+  const isNotificationVisible =
+    !storedReadNews || storedReadNews < newsData.length;
+
   return (
     <>
       <span className="position-relative" onClick={handleOpen}>
         <IconNewspaper forceColor="#fff" />
-        {(!storedReadNews || storedReadNews < newsData.length) && (
+        {isNotificationVisible && (
           <NotificationCircle bgColor="warning" pulse />
         )}
       </span>
-      {showModal && (
-        <Modal show={showModal} onHide={handleClose} backdrop="static" centered>
-          <Modal.Header closeButton>
-            <Modal.Title>News</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            {newsData.map((news, index) => (
-              <Toast key={index} className="w-100 mb-3">
-                <Toast.Header closeButton={false} className="align-items-start">
-                  <p className="me-auto mb-0 pe-3">{news.title}</p>
-                  <small className="text-nowrap">{news.date}</small>
-                </Toast.Header>
-                <Toast.Body>{news.body}</Toast.Body>
-              </Toast>
-            ))}
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="primary" onClick={handleClose}>
-              Chiudi
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      )}
+      {showModal && <NewsModal handleClose={handleClose} />}
     </>
   );
 };

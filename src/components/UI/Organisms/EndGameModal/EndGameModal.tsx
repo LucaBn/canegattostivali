@@ -67,7 +67,11 @@ const EndGameModal: React.FC<IOptionsModal> = ({
           <p className="d-flex flex-flow-wrap gap-2">
             Tempo impiegato: <em>{formatTime(time)}</em>{" "}
             {isUserBestTime && !isCustomGame && (
-              <Badge bg="success" pill className="d-flex align-items-center">
+              <Badge
+                bg="success"
+                pill
+                className="d-flex align-items-center fw-normal"
+              >
                 Record! 💪
               </Badge>
             )}

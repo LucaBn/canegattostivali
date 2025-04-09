@@ -17,13 +17,16 @@
 
 // Organisms
 @import "./Organisms/CustomWordListButton/styles";
+@import "./Organisms/CustomWordListModal/styles";
 @import "./Organisms/EndGameModal/styles";
 @import "./Organisms/Footer/styles";
 @import "./Organisms/GameSection/styles";
 @import "./Organisms/Keyboard/styles";
 @import "./Organisms/Navbar/styles";
 @import "./Organisms/NewsButton/styles";
+@import "./Organisms/NewsModal/styles";
 @import "./Organisms/UserButton/styles";
+@import "./Organisms/UserModal/styles";
 
 // Templates
 @import "./Templates/Error404/styles";
