@@ -16,11 +16,11 @@ import { useLocation } from "react-router-dom";
 // Constants
 import { WORD_LIST_LENGTH } from "@/constants/wordList";
 
-// console.log({ initialWordSequence });
-
 const initialWordSequence = createWordSequence({
   wordListLength: WORD_LIST_LENGTH,
 });
+
+// console.log({ initialWordSequence });
 
 const queryParams = new URLSearchParams(location.search);
 const customListParam = queryParams.get("customList");
@@ -57,14 +57,25 @@ const HomePage: React.FC = () => {
     }
   }, [location.search]);
 
+  useEffect(() => {
+    const newWordSequence = createWordSequence({
+      wordListLength: WORD_LIST_LENGTH,
+    });
+
+    setWordSequence(newWordSequence);
+  }, [mode]);
+
   return (
     <Container className="mt-3 mt-md-5">
       <TopSection />
-      <ModeSelectionSection mode={mode} setMode={setMode} />
+      {mode !== "custom" && (
+        <ModeSelectionSection mode={mode} setMode={setMode} />
+      )}
       {(mode === "custom" || mode === "random") && (
         <GameSection
           isCustomGame={IS_CUSTOM_GAME}
           initialWordSequence={wordSequence}
+          setMode={setMode}
         />
       )}
     </Container>

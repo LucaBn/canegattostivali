@@ -34,11 +34,13 @@ const LS_USER_DATA_VARIABLE = `${lowercaseAppName}UserData`;
 interface Props {
   isCustomGame: boolean;
   initialWordSequence: string[];
+  setMode: React.Dispatch<React.SetStateAction<"random" | "levels" | "custom">>;
 }
 
 const GameSection: React.FC<Props> = ({
   isCustomGame: isCustomGameProp,
   initialWordSequence,
+  setMode,
 }: Props) => {
   // Leave it here so it runs every time the component is updated
   const storedUserData: UserData | null = readFromLocalStorage(
@@ -66,6 +68,7 @@ const GameSection: React.FC<Props> = ({
   const filterKeys = useRef<boolean>(false);
   const disableHelpBonusLetterButton = useRef<boolean>(false);
   const bonusLetters = useRef<number>(0);
+  const gameSectionRef = useRef<HTMLDivElement>(null);
 
   const currentWord = wordSequence[currentWordIndex];
   const isLastWord = currentWordIndex === wordSequence.length - 1;
@@ -343,6 +346,7 @@ const GameSection: React.FC<Props> = ({
     window.history.replaceState({}, document.title, url.toString());
 
     setIsCustomGame(false);
+    setMode("random");
 
     const newWordSequence = createWordSequence({
       wordListLength: WORD_LIST_LENGTH,
@@ -360,10 +364,29 @@ const GameSection: React.FC<Props> = ({
     setShowConfetti(false);
     setIsUserBestTime(false);
     isKeyPressEnabled.current = true;
+
+    requestAnimationFrame(() => {
+      scrollToGameSection();
+    });
+  };
+
+  const scrollToGameSection = () => {
+    if (gameSectionRef.current) {
+      gameSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   };
 
   return (
-    <>
+    <div
+      ref={gameSectionRef}
+      className="w-100"
+      style={{
+        scrollMarginTop: 85, // Navbar height + 20px
+      }}
+    >
       <InfoSection
         isGameEnded={isGameEnded}
         wordListLength={wordSequence.length}
@@ -465,7 +488,7 @@ const GameSection: React.FC<Props> = ({
         disableHelpBonusLetterButton={disableHelpBonusLetterButton.current}
         bonusLetters={bonusLetters.current}
       />
-    </>
+    </div>
   );
 };
 
