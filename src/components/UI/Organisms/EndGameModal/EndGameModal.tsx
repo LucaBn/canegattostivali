@@ -13,7 +13,7 @@ import { APP_NAME_SHORT } from "@/constants/app";
 // Typings
 import { UserData } from "@/typings/user";
 
-interface IOptionsModal {
+interface IEndGameModal {
   show: boolean;
   time: number;
   isCustomGame: boolean;
@@ -26,7 +26,7 @@ interface IOptionsModal {
 const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
 const LS_USER_DATA_VARIABLE = `${lowercaseAppName}UserData`;
 
-const EndGameModal: React.FC<IOptionsModal> = ({
+const EndGameModal: React.FC<IEndGameModal> = ({
   show,
   time,
   isCustomGame,
