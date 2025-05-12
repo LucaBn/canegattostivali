@@ -113,5 +113,69 @@
       "DIARIO",
       "CARO"
     ]
+  },
+  {
+    "id": 15,
+    "wordList": [
+      "PINZE",
+      "PRENDERE",
+      "VOLO",
+      "DIRETTO",
+      "DISCORSO",
+      "SUCCO",
+      "POMODORO",
+      "SALSA",
+      "SOIA",
+      "LATTE",
+      "GINOCCHIA"
+    ]
+  },
+  {
+    "id": 16,
+    "wordList": [
+      "PANDORA",
+      "VASO",
+      "NOTTE",
+      "GIOVANE",
+      "ETÀ",
+      "BRONZO",
+      "MEDAGLIA",
+      "VALORE",
+      "ASSOLUTO",
+      "ORECCHIO",
+      "TAPPATO"
+    ]
+  },
+  {
+    "id": 17,
+    "wordList": [
+      "VASETTO",
+      "VETRO",
+      "SOFFIATO",
+      "RISO",
+      "CHICCO",
+      "MAIS",
+      "FARINA",
+      "SACCO",
+      "BOXE",
+      "INCONTRO",
+      "UOVO"
+    ]
+  },
+  {
+    "id": 18,
+    "wordList": [
+      "MENSA",
+      "SCUOLA",
+      "SCI",
+      "ALPINO",
+      "SOCCORSO",
+      "OPERAZIONI",
+      "CALCOLI",
+      "RENI",
+      "COLPO",
+      "BASSO",
+      "MEDIOEVO"
+    ]
   }
 ]
