@@ -18,18 +18,15 @@ import {
 import newsData from "@/assets/data/newsData.json";
 
 // Constants
-import { APP_NAME_SHORT } from "@/constants/app";
+import { LS_KEY_LIST } from "@/constants/localStorage";
 
 // Typings
 import { KeyboardStatusList } from "@/typings/keyboardStatus";
 
-const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
-const LS_READ_NEWS_VARIABLE = `${lowercaseAppName}ReadNews`;
-
 const NewsButton: React.FC = () => {
   // Leave it here so it runs every time the component is updated
   const storedReadNews: number | null = readFromLocalStorage(
-    LS_READ_NEWS_VARIABLE
+    LS_KEY_LIST.READ_NEWS
   );
 
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -37,7 +34,7 @@ const NewsButton: React.FC = () => {
   const { changeKeyboardStatus } = useKeyboardStatus();
 
   const saveReadNews = () => {
-    writeToLocalStorage(LS_READ_NEWS_VARIABLE, newsData.length);
+    writeToLocalStorage(LS_KEY_LIST.READ_NEWS, newsData.length);
   };
 
   const handleOpen = () => {

@@ -16,7 +16,7 @@ import { useTheme } from "@/components/providers/ThemeProvider";
 // Typings
 import { ThemeList } from "@/typings/themes";
 
-// TODO: move this to an utils file
+// TODO: move this to an utils file and refactor all scroll functions
 const scrollToTop = () => {
   document.documentElement.scrollTo({
     top: 0,

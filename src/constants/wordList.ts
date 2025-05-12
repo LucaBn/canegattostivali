@@ -2,16 +2,9 @@ import { RUN_TEST } from "@/constants/app";
 import {
   runWordListTest,
   sortWordsByNextWordListLength,
-} from "@/test/wordListTest";
+} from "@/tests/wordListTest";
 import wordList from "@/assets/data/wordList.json";
-
-// TODO: move types into a different file in typings folder
-type Word = {
-  word: string;
-  nextWordList: string[];
-};
-
-type WordList = Word[];
+import { WordList } from "@/typings/game";
 
 const WORD_LIST: WordList = wordList;
 
@@ -23,4 +16,4 @@ if (RUN_TEST === "true") {
   sortWordsByNextWordListLength();
 }
 
-export { WORD_LIST, WORD_LIST_LENGTH, type Word, type WordList };
+export { WORD_LIST, WORD_LIST_LENGTH };

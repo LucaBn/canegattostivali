@@ -8,19 +8,16 @@ import {
 
 // Typings
 import { IGenericComponent } from "@/typings/components";
+import { ThemeList } from "@/typings/themes";
 
 // Constants
-import { APP_NAME_SHORT } from "@/constants/app";
-import { ThemeList } from "@/typings/themes";
+import { LS_KEY_LIST } from "@/constants/localStorage";
 
 // Define the context
 export interface IThemeContext {
   theme: ThemeList;
   changeTheme: (newTheme: ThemeList) => void;
 }
-
-const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
-const LS_THEME_VARIABLE = `${lowercaseAppName}Theme`;
 
 // Default createContextValue
 const defaultCreateContextValue = {
@@ -36,7 +33,7 @@ export const ThemeProvider: React.FC<IGenericComponent> = ({ children }) => {
   const [theme, setTheme] = useState<ThemeList>(ThemeList.Dark);
 
   useEffect(() => {
-    const storedPmjTheme = readFromLocalStorage(LS_THEME_VARIABLE);
+    const storedPmjTheme = readFromLocalStorage(LS_KEY_LIST.THEME);
 
     switch (storedPmjTheme) {
       case ThemeList.Dark:
@@ -52,7 +49,7 @@ export const ThemeProvider: React.FC<IGenericComponent> = ({ children }) => {
 
   const changeTheme = (newTheme: ThemeList) => {
     setTheme(newTheme);
-    writeToLocalStorage(LS_THEME_VARIABLE, newTheme);
+    writeToLocalStorage(LS_KEY_LIST.THEME, newTheme);
   };
 
   const themeValues: IThemeContext = {

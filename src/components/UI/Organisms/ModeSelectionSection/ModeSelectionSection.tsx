@@ -7,7 +7,7 @@ import IconLadder from "@/components/UI/Atoms/IconLadder/IconLadder";
 
 interface Props {
   mode: "random" | "levels" | "custom";
-  setMode: React.Dispatch<React.SetStateAction<"random" | "levels" | "custom">>;
+  setMode: (newMode: "random" | "levels" | "custom") => void;
 }
 
 const ModeSelectionSection: React.FC<Props> = ({ mode, setMode }) => {

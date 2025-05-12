@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import InfoSection from "@/components/UI/Molecules/InfoSection/InfoSection";
 import Keyboard from "@/components/UI/Organisms/Keyboard/Keyboard";
-import Confetti from "@/components/UI/Atoms/Confetti/Confetti";
 import EndGameModal from "@/components/UI/Organisms/EndGameModal/EndGameModal";
 
 // Providers
@@ -19,32 +18,35 @@ import {
 } from "@/utils/local-storage";
 
 // Constants
-import { APP_NAME_SHORT, RUN_TEST } from "@/constants/app";
+import { RUN_TEST } from "@/constants/app";
+import { LS_KEY_LIST } from "@/constants/localStorage";
 import { WORD_LIST_LENGTH } from "@/constants/wordList";
 
 // Typings
 import { ButtonVariant } from "react-bootstrap/esm/types";
+import { Mode } from "@/typings/game";
 import { UserData } from "@/typings/user";
 import { KeyboardStatusList } from "@/typings/keyboardStatus";
 type Message = "🤔" | "😃" | "😓" | "🥳";
 
-const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
-const LS_USER_DATA_VARIABLE = `${lowercaseAppName}UserData`;
-
 interface Props {
-  isCustomGame: boolean;
   initialWordSequence: string[];
-  setMode: React.Dispatch<React.SetStateAction<"random" | "levels" | "custom">>;
+  mode: Mode;
+  level?: number;
+  setMode?: (newMode: "random" | "levels" | "custom") => void;
+  handleLevelChange?: (levelId: number) => void;
 }
 
 const GameSection: React.FC<Props> = ({
-  isCustomGame: isCustomGameProp,
   initialWordSequence,
+  level,
+  mode,
   setMode,
+  handleLevelChange,
 }: Props) => {
   // Leave it here so it runs every time the component is updated
   const storedUserData: UserData | null = readFromLocalStorage(
-    LS_USER_DATA_VARIABLE
+    LS_KEY_LIST.USER_DATA
   );
 
   const [wordSequence, setWordSequence] = useState(initialWordSequence);
@@ -62,7 +64,6 @@ const GameSection: React.FC<Props> = ({
   const [showExtraTimeTooltip, setShowExtraTimeTooltip] = useState<number>(0);
   const [showEndGameModal, setShowEndGameModal] = useState<boolean>(false);
   const [isUserBestTime, setIsUserBestTime] = useState<boolean>(false);
-  const [isCustomGame, setIsCustomGame] = useState<boolean>(isCustomGameProp);
 
   const isKeyPressEnabled = useRef<boolean>(true);
   const filterKeys = useRef<boolean>(false);
@@ -134,19 +135,24 @@ const GameSection: React.FC<Props> = ({
   };
 
   const updateStoredUserData = () => {
-    const userMatchesWon: number =
-      (storedUserData && storedUserData?.matchesWon + 1) || 1;
-    const userBestTime: number =
-      storedUserData &&
-      storedUserData?.bestTime > 0 &&
-      storedUserData?.bestTime < time
-        ? storedUserData?.bestTime
-        : time;
-    if (!isCustomGame) {
-      writeToLocalStorage(LS_USER_DATA_VARIABLE, {
+    if (mode === "random") {
+      const userMatchesWon: number =
+        (storedUserData && storedUserData?.matchesWon + 1) || 1;
+      const userBestTime: number =
+        storedUserData &&
+        storedUserData?.bestTime > 0 &&
+        storedUserData?.bestTime < time
+          ? storedUserData?.bestTime
+          : time;
+      writeToLocalStorage(LS_KEY_LIST.USER_DATA, {
         ...storedUserData,
         matchesWon: userMatchesWon,
         bestTime: userBestTime,
+      });
+    } else if (mode === "levels") {
+      writeToLocalStorage(LS_KEY_LIST.USER_DATA, {
+        ...storedUserData,
+        lastLevelCompleted: level,
       });
     }
   };
@@ -340,13 +346,12 @@ const GameSection: React.FC<Props> = ({
     }, 1500);
   };
 
-  const startGame = () => {
+  const startRandomGame = () => {
     const url = new URL(window.location.href);
     url.search = "";
     window.history.replaceState({}, document.title, url.toString());
 
-    setIsCustomGame(false);
-    setMode("random");
+    setMode && setMode("random");
 
     const newWordSequence = createWordSequence({
       wordListLength: WORD_LIST_LENGTH,
@@ -389,11 +394,13 @@ const GameSection: React.FC<Props> = ({
     >
       <InfoSection
         isGameEnded={isGameEnded}
+        showConfetti={showConfetti}
         wordListLength={wordSequence.length}
         currentWordIndex={currentWordIndex}
         message={message}
         showExtraTimeTooltip={showExtraTimeTooltip}
         time={time}
+        level={level}
       />
 
       <Row>
@@ -465,17 +472,18 @@ const GameSection: React.FC<Props> = ({
         </Col>
       </Row>
 
-      {showConfetti && <Confetti />}
-
       {showEndGameModal && (
         <EndGameModal
           show={showEndGameModal}
           time={time}
-          isCustomGame={isCustomGame}
+          mode={mode}
           isUserBestTime={isUserBestTime}
           wordSequence={wordSequence}
           setShow={setShowEndGameModal}
-          startGame={startGame}
+          startRandomGame={startRandomGame}
+          setMode={setMode}
+          handleLevelChange={handleLevelChange}
+          level={level}
         />
       )}
 

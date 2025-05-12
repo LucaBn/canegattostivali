@@ -8,42 +8,56 @@ import { formatTime } from "@/utils/time";
 import { readFromLocalStorage } from "@/utils/local-storage";
 
 // Constants
-import { APP_NAME_SHORT } from "@/constants/app";
+import { LS_KEY_LIST } from "@/constants/localStorage";
 
 // Typings
+import { Mode } from "@/typings/game";
 import { UserData } from "@/typings/user";
 
 interface IEndGameModal {
   show: boolean;
   time: number;
-  isCustomGame: boolean;
+  mode: Mode;
   isUserBestTime: boolean;
   wordSequence: string[];
   setShow: Dispatch<SetStateAction<boolean>>;
-  startGame: () => void;
+  startRandomGame: () => void;
+  setMode?: (newMode: "random" | "levels" | "custom") => void;
+  handleLevelChange?: (levelId: number) => void;
+  level?: number;
 }
-
-const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
-const LS_USER_DATA_VARIABLE = `${lowercaseAppName}UserData`;
 
 const EndGameModal: React.FC<IEndGameModal> = ({
   show,
   time,
-  isCustomGame,
+  mode,
   isUserBestTime,
   wordSequence,
   setShow,
-  startGame,
+  startRandomGame,
+  setMode,
+  handleLevelChange,
+  level,
 }) => {
   // Leave it here so it runs every time the component is updated
   const storedUserData: UserData | null = readFromLocalStorage(
-    LS_USER_DATA_VARIABLE
+    LS_KEY_LIST.USER_DATA
   );
 
   const handleClose = () => setShow(false);
 
-  const handlePlayAgain = () => {
-    startGame();
+  const handlePlayRandomGame = () => {
+    startRandomGame();
+    handleClose();
+  };
+
+  const handleGoBackToLevelSelection = () => {
+    setMode && setMode("levels");
+    handleClose();
+  };
+
+  const handlePlayNextLevel = () => {
+    handleLevelChange && handleLevelChange(level ? level + 1 : 1); // Level should always be set
     handleClose();
   };
 
@@ -66,7 +80,7 @@ const EndGameModal: React.FC<IEndGameModal> = ({
         <Modal.Body>
           <p className="d-flex flex-flow-wrap gap-2">
             Tempo impiegato: <em>{formatTime(time)}</em>{" "}
-            {isUserBestTime && !isCustomGame && (
+            {isUserBestTime && mode === "random" && (
               <Badge
                 bg="success"
                 pill
@@ -86,9 +100,24 @@ const EndGameModal: React.FC<IEndGameModal> = ({
           </ul>
         </Modal.Body>
         <Modal.Footer className="justify-content-center">
-          <Button variant="primary" onClick={handlePlayAgain}>
-            Gioca ancora
-          </Button>
+          {mode === "random" && (
+            <Button variant="primary" onClick={handlePlayRandomGame}>
+              Gioca ancora
+            </Button>
+          )}
+          {mode === "levels" && (
+            <>
+              <Button
+                variant="secondary"
+                onClick={handleGoBackToLevelSelection}
+              >
+                Torna alla selezione livelli
+              </Button>
+              <Button variant="primary" onClick={handlePlayNextLevel}>
+                Gioca il prossimo livello
+              </Button>
+            </>
+          )}
         </Modal.Footer>
       </Modal>
     </>

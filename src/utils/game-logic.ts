@@ -1,5 +1,5 @@
-// Constants
-import { type Word, WORD_LIST_LENGTH, WORD_LIST } from "@/constants/wordList";
+import { Word } from "@/typings/game";
+import { WORD_LIST_LENGTH, WORD_LIST } from "@/constants/wordList";
 
 interface Props {
   wordListLength?: number;

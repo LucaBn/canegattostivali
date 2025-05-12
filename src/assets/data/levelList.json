@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "wordList": ["CANE", "INCROCIO", "SEMAFORO", "ROSSO", "FUOCO", "PAGLIA"]
+  },
+  {
+    "id": 2,
+    "wordList": [
+      "CARNEVALE",
+      "CARRO",
+      "COSTELLAZIONE",
+      "STELLE",
+      "STRISCE",
+      "PEDONALI"
+    ]
+  },
+  {
+    "id": 3,
+    "wordList": ["TSUNAMI", "ONDA", "URTO", "TERAPIA", "DOLORE", "LANCINANTE"]
+  },
+  {
+    "id": 4,
+    "wordList": [
+      "PULPITO",
+      "PREDICA",
+      "MESSA",
+      "SICUREZZA",
+      "CASSETTA",
+      "ATTREZZI"
+    ]
+  },
+  {
+    "id": 5,
+    "wordList": [
+      "LACRIME",
+      "COCCODRILLO",
+      "BORSA",
+      "STUDIO",
+      "SETTORE",
+      "TERZIARIO"
+    ]
+  },
+  {
+    "id": 6,
+    "wordList": ["CICLO", "STUDI", "PIANO", "COTTURA", "VAPORE", "ACQUEO"]
+  },
+  {
+    "id": 7,
+    "wordList": ["TEMPERATO", "CLIMA", "RIGIDO", "DURO", "OSSO", "SEPPIA"]
+  },
+  {
+    "id": 8,
+    "wordList": ["PISELLO", "PRINCIPESSA", "TITOLO", "OPERA", "ARTE", "POVERA"]
+  },
+  {
+    "id": 9,
+    "wordList": ["ASINELLO", "BUE", "OCCHIO", "CICLONE", "TROPICALE", "ISOLA"]
+  },
+  {
+    "id": 10,
+    "wordList": [
+      "POSTO",
+      "BLOCCO",
+      "SCHERMATA",
+      "BLU",
+      "ELETTRICO",
+      "SPAZZOLINO"
+    ]
+  },
+  {
+    "id": 11,
+    "wordList": [
+      "ORIONE",
+      "CINTURA",
+      "PASSANTE",
+      "FERROVIARIO",
+      "INCIDENTE",
+      "PERCORSO"
+    ]
+  },
+  {
+    "id": 12,
+    "wordList": ["PERSICO", "PESCE", "PALLA", "PIEDE", "PIATTO", "PLASTICA"]
+  },
+  {
+    "id": 13,
+    "wordList": [
+      "NANI",
+      "SETTE",
+      "MARI",
+      "MONTI",
+      "ADDIO",
+      "CELIBATO",
+      "ECCLESIASTICO",
+      "TRIBUNALE",
+      "SENTENZA",
+      "PENALE",
+      "CODICE"
+    ]
+  },
+  {
+    "id": 14,
+    "wordList": [
+      "VOLERE",
+      "POTERE",
+      "ACQUISTO",
+      "PROPOSTA",
+      "MATRIMONIO",
+      "INVITO",
+      "BIGLIETTO",
+      "TRENO",
+      "VIAGGIO",
+      "DIARIO",
+      "CARO"
+    ]
+  }
+]
