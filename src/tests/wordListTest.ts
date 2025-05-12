@@ -1,4 +1,5 @@
-import { WORD_LIST, type WordList } from "@/constants/wordList";
+import { WordList } from "@/typings/game";
+import { WORD_LIST } from "@/constants/wordList";
 
 function checkUniqueWords(array: WordList): boolean {
   const wordCount: Record<string, number> = array.reduce((acc, entry) => {

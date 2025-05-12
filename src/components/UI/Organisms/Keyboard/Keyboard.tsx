@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, OverlayTrigger, Tooltip } from "react-bootstrap";
 import IconDelete from "@/components/UI/Atoms/IconDelete/IconDelete";
 import IconLightbulb from "@/components/UI/Atoms/IconLightbulb/IconLightbulb";
 import IconKeyboard from "@/components/UI/Atoms/IconEyeSlash/IconEyeSlash";
@@ -26,7 +26,7 @@ const keys: string[][] = [
   ["INVIO", "Z", "X", "C", "V", "B", "N", "M", "CANC"],
 ];
 
-interface KeyboardProps {
+interface Props {
   currentWord: string;
   filterKeys: boolean;
   onKeyPress: (key: string) => void;
@@ -36,7 +36,7 @@ interface KeyboardProps {
   bonusLetters: number;
 }
 
-const Keyboard: React.FC<KeyboardProps> = ({
+const Keyboard: React.FC<Props> = ({
   currentWord,
   filterKeys,
   onKeyPress,
@@ -118,23 +118,35 @@ const Keyboard: React.FC<KeyboardProps> = ({
       );
     } else if (key === "HELP_KEYBOARD_FILTER") {
       return (
-        <span
-          className="h-100 w-100 d-flex align-items-center justify-content-center"
-          onClick={getHelpKeyboardFilter}
-          title="Rimuovi dalla tastiera le lettere che non servono"
+        <OverlayTrigger
+          key="HELP_KEYBOARD_FILTER"
+          placement="top"
+          overlay={
+            <Tooltip>Rimuovi dalla tastiera le lettere che non servono</Tooltip>
+          }
         >
-          <IconKeyboard forceColor="#000" forceOpacity={100} />
-        </span>
+          <span
+            className="h-100 w-100 d-flex align-items-center justify-content-center"
+            onClick={getHelpKeyboardFilter}
+          >
+            <IconKeyboard forceColor="#000" forceOpacity={100} />
+          </span>
+        </OverlayTrigger>
       );
     } else if (key === "HELP_BONUS_LETTER") {
       return (
-        <span
-          className="h-100 w-100 d-flex align-items-center justify-content-center"
-          onClick={getHelpBonusLetter}
-          title="Aggiungi una lettera alla parola"
+        <OverlayTrigger
+          key="HELP_BONUS_LETTER"
+          placement="top"
+          overlay={<Tooltip>Aggiungi una lettera alla parola</Tooltip>}
         >
-          <IconLightbulb forceColor="#000" forceOpacity={100} />
-        </span>
+          <span
+            className="h-100 w-100 d-flex align-items-center justify-content-center"
+            onClick={getHelpBonusLetter}
+          >
+            <IconLightbulb forceColor="#000" forceOpacity={100} />
+          </span>
+        </OverlayTrigger>
       );
     } else if (key === "SPACER") {
       return "";

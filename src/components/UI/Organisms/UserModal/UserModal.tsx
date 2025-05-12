@@ -11,13 +11,10 @@ import {
 import { formatTime } from "@/utils/time";
 
 // Constants
-import { APP_NAME_SHORT } from "@/constants/app";
+import { LS_KEY_LIST } from "@/constants/localStorage";
 
 // Typings
 import { UserData } from "@/typings/user";
-
-const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
-const LS_USER_DATA_VARIABLE = `${lowercaseAppName}UserData`;
 
 interface Props {
   handleClose: () => void;
@@ -26,7 +23,7 @@ interface Props {
 const UserModal: React.FC<Props> = ({ handleClose }: Props) => {
   // Leave it here so it runs every time the component is updated
   const storedUserData: UserData | null = readFromLocalStorage(
-    LS_USER_DATA_VARIABLE
+    LS_KEY_LIST.USER_DATA
   );
 
   const [username, setUsername] = useState<string>(
@@ -36,7 +33,7 @@ const UserModal: React.FC<Props> = ({ handleClose }: Props) => {
   const bestTime = storedUserData?.bestTime || 0;
 
   useEffect(() => {
-    writeToLocalStorage(LS_USER_DATA_VARIABLE, {
+    writeToLocalStorage(LS_KEY_LIST.USER_DATA, {
       username,
       matchesWon,
       bestTime,
@@ -73,9 +70,9 @@ const UserModal: React.FC<Props> = ({ handleClose }: Props) => {
           </p>
           <small>
             <em>
-              * Le statistiche tengono conto solo delle partite con sequenze di
-              parole generate casualmente, mentre non vengono conteggiate le
-              partite custom create dagli utenti!
+              * Le statistiche tengono conto solo delle partite giocate in
+              modalità random, mentre non vengono conteggiate le partite custom
+              create dagli utenti e la modalità a livelli!
             </em>
           </small>
         </div>

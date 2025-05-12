@@ -3,16 +3,19 @@
 @import "./Atoms/IconClipboard/styles";
 @import "./Atoms/IconDelete/styles";
 @import "./Atoms/IconEyeSlash/styles";
+@import "./Atoms/IconLadder/styles";
 @import "./Atoms/IconLightbulb/styles";
 @import "./Atoms/IconMoon/styles";
 @import "./Atoms/IconNewspaper/styles";
 @import "./Atoms/IconPlus/styles";
 @import "./Atoms/IconSun/styles";
+@import "./Atoms/IconTornado/styles";
 @import "./Atoms/IconUser/styles";
 @import "./Atoms/NotificationCircle/styles";
 
 // Molecules
 @import "./Molecules/InfoSection/styles";
+@import "./Molecules/LevelSelector/styles";
 @import "./Molecules/TopSection/styles";
 
 // Organisms
@@ -22,6 +25,7 @@
 @import "./Organisms/Footer/styles";
 @import "./Organisms/GameSection/styles";
 @import "./Organisms/Keyboard/styles";
+@import "./Organisms/ModeSelectionSection/styles";
 @import "./Organisms/Navbar/styles";
 @import "./Organisms/NewsButton/styles";
 @import "./Organisms/NewsModal/styles";
