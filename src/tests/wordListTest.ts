@@ -8,8 +8,7 @@ function checkUniqueWords(array: WordList): boolean {
   }, {} as Record<string, number>);
 
   const nonUniqueWords = Object.entries(wordCount)
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    .filter(([_, count]) => count > 1)
+    .filter(([, count]) => count > 1)
     .map(([word]) => word);
 
   if (nonUniqueWords.length > 0) {
@@ -39,6 +38,7 @@ function checkNextWordsExist(array: WordList): boolean {
   if (allExist) {
     console.log("Tutte le parole in nextWordList esistono anche come 'word'.");
   }
+
   return allExist;
 }
 
@@ -63,6 +63,7 @@ function checkBidirectionalLinks(array: WordList): boolean {
   if (bidirectional) {
     console.log("Tutti i collegamenti sono biunivoci.");
   }
+
   return bidirectional;
 }
 
@@ -110,7 +111,8 @@ function sortWordsByNextWordListLength() {
     if (lengthDifference !== 0) {
       return lengthDifference;
     }
-    return a.word.localeCompare(b.word); // Ordine alfabetico in caso di parità
+
+    return a.word.localeCompare(b.word); // Alphabetical order if lengths are equal
   });
 
   console.log({ sortedWordList });
