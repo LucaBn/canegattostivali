@@ -14,6 +14,9 @@ import { LS_KEY_LIST } from "@/constants/localStorage";
 import { Mode } from "@/typings/game";
 import { UserData } from "@/typings/user";
 
+// Data
+import levelList from "@/assets/data/levelList.json";
+
 interface IEndGameModal {
   show: boolean;
   time: number;
@@ -44,6 +47,8 @@ const EndGameModal: React.FC<IEndGameModal> = ({
     LS_KEY_LIST.USER_DATA
   );
 
+  const isLastLevel = levelList.length === level;
+
   const handleClose = () => setShow(false);
 
   const handlePlayRandomGame = () => {
@@ -57,7 +62,7 @@ const EndGameModal: React.FC<IEndGameModal> = ({
   };
 
   const handlePlayNextLevel = () => {
-    handleLevelChange && handleLevelChange(level ? level + 1 : 1); // Level should always be set
+    handleLevelChange && handleLevelChange(level ? level + 1 : 1);
     handleClose();
   };
 
@@ -113,9 +118,11 @@ const EndGameModal: React.FC<IEndGameModal> = ({
               >
                 Torna alla selezione livelli
               </Button>
-              <Button variant="primary" onClick={handlePlayNextLevel}>
-                Gioca il prossimo livello
-              </Button>
+              {!isLastLevel && (
+                <Button variant="primary" onClick={handlePlayNextLevel}>
+                  Gioca il prossimo livello
+                </Button>
+              )}
             </>
           )}
         </Modal.Footer>
