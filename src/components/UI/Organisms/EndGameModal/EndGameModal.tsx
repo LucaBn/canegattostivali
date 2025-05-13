@@ -5,7 +5,7 @@ import { Modal, Button, Badge } from "react-bootstrap";
 
 // Utils
 import { formatTime } from "@/utils/time";
-import { readFromLocalStorage } from "@/utils/local-storage";
+import { readFromLocalStorage } from "@/utils/localStorage";
 
 // Constants
 import { LS_KEY_LIST } from "@/constants/localStorage";

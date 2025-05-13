@@ -59,6 +59,7 @@ const decryptString = (encrypted: string | null): string => {
     }
     i++;
   }
+
   return decrypted;
 };
 

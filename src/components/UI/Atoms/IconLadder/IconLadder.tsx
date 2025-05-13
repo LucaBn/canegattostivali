@@ -7,8 +7,8 @@ import { useTheme } from "@/components/providers/ThemeProvider";
 import { IImage } from "@/typings/images";
 
 // Utils
-import { getImageColor } from "@/utils/image-color";
-import { generateClassNameValue } from "@/utils/html-classes";
+import { getImageColor } from "@/utils/imageColor";
+import { generateClassNameValue } from "@/utils/htmlClasses";
 
 interface IIconLadder extends IImage {}
 

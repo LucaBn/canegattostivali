@@ -7,7 +7,7 @@ import IconLightbulb from "@/components/UI/Atoms/IconLightbulb/IconLightbulb";
 import IconKeyboard from "@/components/UI/Atoms/IconEyeSlash/IconEyeSlash";
 
 // Utils
-import { generateClassNameValue } from "@/utils/html-classes";
+import { generateClassNameValue } from "@/utils/htmlClasses";
 
 const keys: string[][] = [
   [

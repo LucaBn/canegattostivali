@@ -10,12 +10,12 @@ import EndGameModal from "@/components/UI/Organisms/EndGameModal/EndGameModal";
 import { useKeyboardStatus } from "@/components/providers/KeyboardStatusProvider/useKeyboardStatus";
 
 // Utils
-import { createWordSequence } from "@/utils/game-logic";
+import { createWordSequence } from "@/utils/game";
 import { normalizeLetter } from "@/utils/string";
 import {
   readFromLocalStorage,
   writeToLocalStorage,
-} from "@/utils/local-storage";
+} from "@/utils/localStorage";
 
 // Constants
 import { RUN_TEST } from "@/constants/app";

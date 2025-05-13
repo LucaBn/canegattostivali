@@ -12,7 +12,7 @@ import { useKeyboardStatus } from "@/components/providers/KeyboardStatusProvider
 import {
   readFromLocalStorage,
   writeToLocalStorage,
-} from "@/utils/local-storage";
+} from "@/utils/localStorage";
 
 // Data
 import newsData from "@/assets/data/newsData.json";

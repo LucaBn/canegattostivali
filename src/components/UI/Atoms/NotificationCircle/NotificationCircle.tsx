@@ -1,7 +1,7 @@
 import React from "react";
 
 // Utils
-import { generateClassNameValue } from "@/utils/html-classes";
+import { generateClassNameValue } from "@/utils/htmlClasses";
 
 // Typings
 import { Color } from "react-bootstrap/esm/types";

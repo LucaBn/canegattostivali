@@ -7,7 +7,7 @@ import { Button, Modal, Form, FloatingLabel } from "react-bootstrap";
 import {
   readFromLocalStorage,
   writeToLocalStorage,
-} from "@/utils/local-storage";
+} from "@/utils/localStorage";
 import { formatTime } from "@/utils/time";
 
 // Constants

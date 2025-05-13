@@ -8,12 +8,12 @@ import GameSection from "@/components/UI/Organisms/GameSection/GameSection";
 import LevelSelector from "@/components/UI/Molecules/LevelSelector/LevelSelector";
 
 // Utils
-import { createWordSequence } from "@/utils/game-logic";
+import { createWordSequence } from "@/utils/game";
 import { decryptString } from "@/utils/encoding";
 import {
   readFromLocalStorage,
   writeToLocalStorage,
-} from "@/utils/local-storage";
+} from "@/utils/localStorage";
 
 // Hooks
 import { useLocation } from "react-router-dom";
