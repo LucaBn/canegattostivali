@@ -209,8 +209,8 @@ const GameSection: React.FC<Props> = ({
     const normalizedKey = normalizeLetter(key);
 
     if (
-      key !== "INVIO" &&
       key !== "CANC" &&
+      key !== "INVIO" &&
       key !== "1" &&
       key !== "2" &&
       filterKeys.current &&
