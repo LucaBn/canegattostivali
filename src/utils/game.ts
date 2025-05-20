@@ -13,6 +13,7 @@ const createWordSequence = ({
 
   const getRandomUnusedWord = (): Word | undefined => {
     const unusedWords = WORD_LIST.filter((w) => !usedWords.has(w.word));
+
     return unusedWords.length > 0
       ? unusedWords[Math.floor(Math.random() * unusedWords.length)]
       : undefined;
@@ -24,6 +25,7 @@ const createWordSequence = ({
         WORD_LIST.find((w) => w.word === nextWord && !usedWords.has(w.word))
       )
       .filter((w): w is Word => w !== undefined);
+
     return possibleNextWords.length > 0
       ? possibleNextWords[Math.floor(Math.random() * possibleNextWords.length)]
       : undefined;

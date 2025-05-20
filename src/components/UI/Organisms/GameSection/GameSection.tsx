@@ -10,12 +10,12 @@ import EndGameModal from "@/components/UI/Organisms/EndGameModal/EndGameModal";
 import { useKeyboardStatus } from "@/components/providers/KeyboardStatusProvider/useKeyboardStatus";
 
 // Utils
-import { createWordSequence } from "@/utils/game-logic";
+import { createWordSequence } from "@/utils/game";
 import { normalizeLetter } from "@/utils/string";
 import {
   readFromLocalStorage,
   writeToLocalStorage,
-} from "@/utils/local-storage";
+} from "@/utils/localStorage";
 
 // Constants
 import { RUN_TEST } from "@/constants/app";
@@ -44,11 +44,6 @@ const GameSection: React.FC<Props> = ({
   setMode,
   handleLevelChange,
 }: Props) => {
-  // Leave it here so it runs every time the component is updated
-  const storedUserData: UserData | null = readFromLocalStorage(
-    LS_KEY_LIST.USER_DATA
-  );
-
   const [wordSequence, setWordSequence] = useState(initialWordSequence);
   const [currentWordIndex, setCurrentWordIndex] = useState<number>(1);
   const [guessedWord, setGuessedWord] = useState<string>(wordSequence[1][0]);
@@ -77,6 +72,19 @@ const GameSection: React.FC<Props> = ({
   const { keyboardStatus } = useKeyboardStatus();
 
   useEffect(() => {
+    const updateSlotHeight = () => {
+      setSlotHeight(window.innerWidth >= 768 ? 64 : 56);
+    };
+
+    updateSlotHeight();
+    window.addEventListener("resize", updateSlotHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateSlotHeight);
+    };
+  }, []);
+
+  useEffect(() => {
     if (keyboardStatus === KeyboardStatusList.Inactive) {
       isKeyPressEnabled.current = false;
     } else {
@@ -100,19 +108,6 @@ const GameSection: React.FC<Props> = ({
     }
   }, [isGameRunning]);
 
-  useEffect(() => {
-    const updateSlotHeight = () => {
-      setSlotHeight(window.innerWidth >= 768 ? 64 : 56);
-    };
-
-    updateSlotHeight();
-    window.addEventListener("resize", updateSlotHeight);
-
-    return () => {
-      window.removeEventListener("resize", updateSlotHeight);
-    };
-  }, []);
-
   const updateButtonVariants = () => {
     setButtonVariants(
       currentWord
@@ -124,6 +119,10 @@ const GameSection: React.FC<Props> = ({
   };
 
   const checkIfUserBestTime = () => {
+    const storedUserData: UserData | null = readFromLocalStorage(
+      LS_KEY_LIST.USER_DATA
+    );
+
     if (
       (storedUserData &&
         storedUserData.bestTime > 0 &&
@@ -135,6 +134,10 @@ const GameSection: React.FC<Props> = ({
   };
 
   const updateStoredUserData = () => {
+    const storedUserData: UserData | null = readFromLocalStorage(
+      LS_KEY_LIST.USER_DATA
+    );
+
     if (mode === "random") {
       const userMatchesWon: number =
         (storedUserData && storedUserData?.matchesWon + 1) || 1;
@@ -150,10 +153,14 @@ const GameSection: React.FC<Props> = ({
         bestTime: userBestTime,
       });
     } else if (mode === "levels") {
-      writeToLocalStorage(LS_KEY_LIST.USER_DATA, {
-        ...storedUserData,
-        lastLevelCompleted: level,
-      });
+      if (level) {
+        if (level > (storedUserData?.lastLevelCompleted || 0)) {
+          writeToLocalStorage(LS_KEY_LIST.USER_DATA, {
+            ...storedUserData,
+            lastLevelCompleted: level,
+          });
+        }
+      }
     }
   };
 
@@ -205,8 +212,8 @@ const GameSection: React.FC<Props> = ({
     const normalizedKey = normalizeLetter(key);
 
     if (
-      key !== "INVIO" &&
       key !== "CANC" &&
+      key !== "INVIO" &&
       key !== "1" &&
       key !== "2" &&
       filterKeys.current &&
@@ -304,7 +311,9 @@ const GameSection: React.FC<Props> = ({
     }
 
     filterKeys.current = true;
-    setTime((prevTime) => prevTime + 10);
+    if (mode === "random" || mode === "custom") {
+      setTime((prevTime) => prevTime + 10);
+    }
     const partialSolution = wordSequence[currentWordIndex].slice(
       0,
       bonusLetters.current + 1
@@ -331,7 +340,9 @@ const GameSection: React.FC<Props> = ({
     );
 
     setGuessedWord(partialSolution);
-    setTime((prevTime) => prevTime + 5);
+    if (mode === "random" || mode === "custom") {
+      setTime((prevTime) => prevTime + 5);
+    }
     bonusLetters.current = bonusLetters.current + 1;
     setShowExtraTimeTooltip(5);
     disableHelpBonusLetterButton.current = true;

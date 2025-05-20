@@ -5,7 +5,7 @@ import { Row, Col, Button, Card } from "react-bootstrap";
 import GameSection from "@/components/UI/Organisms/GameSection/GameSection";
 
 // Utils
-import { readFromLocalStorage } from "@/utils/local-storage";
+import { readFromLocalStorage } from "@/utils/localStorage";
 
 // Constants
 import { LS_KEY_LIST } from "@/constants/localStorage";

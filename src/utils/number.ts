@@ -24,6 +24,7 @@ const getRandomInt = (
 ): number => {
   const minAdjusted = inclusiveMin ? Math.ceil(min) : Math.ceil(min) + 1;
   const maxAdjusted = inclusiveMax ? Math.floor(max) : Math.floor(max) - 1;
+
   return Math.floor(
     Math.random() * (maxAdjusted - minAdjusted + 1) + minAdjusted
   );
