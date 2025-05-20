@@ -153,8 +153,8 @@ const GameSection: React.FC<Props> = ({
         bestTime: userBestTime,
       });
     } else if (mode === "levels") {
-      if (level && storedUserData?.lastLevelCompleted) {
-        if (level > storedUserData.lastLevelCompleted) {
+      if (level) {
+        if (level > (storedUserData?.lastLevelCompleted || 0)) {
           writeToLocalStorage(LS_KEY_LIST.USER_DATA, {
             ...storedUserData,
             lastLevelCompleted: level,
