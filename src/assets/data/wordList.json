@@ -1569,7 +1569,7 @@
   },
   {
     "word": "MAESTRO",
-    "nextWordList": ["ALBERO", "MUSICA", "SCUOLA", "VITA"]
+    "nextWordList": ["ALBERO", "MUSICA", "SCUOLA", "VITA", "JUDO"]
   },
   {
     "word": "SCUOLA",
@@ -2388,7 +2388,8 @@
       "CONTROLLO",
       "TESTA",
       "MODA",
-      "PROGRAMMA"
+      "PROGRAMMA",
+      "ORARIO"
     ]
   },
   {
@@ -3164,7 +3165,14 @@
   },
   {
     "word": "LINGUA",
-    "nextWordList": ["DIALETTO", "GATTO", "SECONDA", "MADRE", "TEDESCO"]
+    "nextWordList": [
+      "DIALETTO",
+      "GATTO",
+      "SECONDA",
+      "MADRE",
+      "TEDESCO",
+      "PUNTA"
+    ]
   },
   {
     "word": "MADRE",
@@ -3410,7 +3418,7 @@
   },
   {
     "word": "ORARIO",
-    "nextWordList": ["LAVORO", "TRENO", "APERTURA", "DATA"]
+    "nextWordList": ["LAVORO", "TRENO", "APERTURA", "DATA", "FUORI"]
   },
   {
     "word": "APERTURA",
@@ -3429,7 +3437,8 @@
       "TOVAGLIA",
       "GIOCO",
       "BANDIERA",
-      "TORRE"
+      "TORRE",
+      "MOSSA"
     ]
   },
   {
@@ -3887,7 +3896,7 @@
   },
   {
     "word": "PUNTA",
-    "nextWordList": ["NASO", "PIEDE", "TACCO", "SPILLO"]
+    "nextWordList": ["NASO", "PIEDE", "TACCO", "SPILLO", "LINGUA"]
   },
   {
     "word": "PIEDE",
@@ -4093,7 +4102,15 @@
   },
   {
     "word": "INCONTRO",
-    "nextWordList": ["DURATA", "PARTITA", "PUNTO", "LOTTA"]
+    "nextWordList": ["DURATA", "PARTITA", "PUNTO", "LOTTA", "JUDO"]
+  },
+  {
+    "word": "JUDO",
+    "nextWordList": ["INCONTRO", "MAESTRO", "SPORT", "MOSSA"]
+  },
+  {
+    "word": "MOSSA",
+    "nextWordList": ["JUDO", "SCACCHI", "FOTO"]
   },
   {
     "word": "SEGNO",
@@ -4720,7 +4737,8 @@
       "GALLERIA",
       "CORNICE",
       "SVILUPPO",
-      "POSA"
+      "POSA",
+      "MOSSA"
     ]
   },
   {
@@ -5107,7 +5125,7 @@
   },
   {
     "word": "PELLICOLA",
-    "nextWordList": ["FILM", "TRASPARENTE"]
+    "nextWordList": ["FILM", "TRASPARENTE", "PLASTICA"]
   },
   {
     "word": "SCARSO",
@@ -5210,7 +5228,8 @@
       "CONTATTO",
       "MINISTRO",
       "ESTREMO",
-      "COMBATTIMENTO"
+      "COMBATTIMENTO",
+      "JUDO"
     ]
   },
   {
@@ -5765,7 +5784,7 @@
   },
   {
     "word": "PLASTICA",
-    "nextWordList": ["BUSTA", "NASO", "BOTTIGLIA", "PIATTO"]
+    "nextWordList": ["BUSTA", "NASO", "BOTTIGLIA", "PIATTO", "PELLICOLA"]
   },
   {
     "word": "SPESA",
