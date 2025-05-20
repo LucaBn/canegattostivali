@@ -99,9 +99,9 @@ const runWordListTest = () => {
     bidirectionalLinksValid &&
     duplicatesValid
   ) {
-    console.log("Tutti i controlli sono stati superati con successo.");
+    console.log("Random: tutti i controlli sono stati superati con successo.");
   } else {
-    console.error("Ci sono errori nei dati.");
+    console.error("Random: ci sono errori nei dati.");
   }
 };
 

@@ -10,6 +10,14 @@ import { useTheme } from "@/components/providers/ThemeProvider";
 
 // Constants
 import { ThemeList } from "@/typings/themes";
+import { RUN_TEST } from "@/constants/app";
+
+// Tests
+import {
+  runWordListTest,
+  sortWordsByNextWordListLength,
+} from "@/tests/wordListTest";
+import { runLevelListTest } from "@/tests/levelListTest";
 
 const App: React.FC = () => {
   const { theme } = useTheme();
@@ -20,6 +28,13 @@ const App: React.FC = () => {
       : `text-${ThemeList.Dark}`;
 
   document.body.dataset.bsTheme = theme;
+
+  // TODO: find a better place to run tests
+  if (RUN_TEST === "true") {
+    runLevelListTest();
+    runWordListTest();
+    sortWordsByNextWordListLength();
+  }
 
   return (
     <div className={`${textColorClass}`}>
