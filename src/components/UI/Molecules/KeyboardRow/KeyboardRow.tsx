@@ -50,7 +50,6 @@ const KeyboardRow: React.FC<KeyboardRowProps> = memo(
     disableHelpBonusLetterButton,
     bonusLetters,
   }) => {
-    // Memoize handlers and helpers
     const handleKeyClick = useCallback(
       (e: React.MouseEvent<HTMLDivElement, MouseEvent>, key: string) => {
         e.currentTarget.blur();

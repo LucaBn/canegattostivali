@@ -29,8 +29,6 @@ const initialWordSequence = createWordSequence({
   wordListLength: WORD_LIST_LENGTH,
 });
 
-// console.log({ initialWordSequence });
-
 const queryParams = new URLSearchParams(location.search);
 const customListParam = queryParams.get("customList");
 const decodedSequence = decryptString(customListParam);

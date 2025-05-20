@@ -44,11 +44,6 @@ const GameSection: React.FC<Props> = ({
   setMode,
   handleLevelChange,
 }: Props) => {
-  // Leave it here so it runs every time the component is updated
-  const storedUserData: UserData | null = readFromLocalStorage(
-    LS_KEY_LIST.USER_DATA
-  );
-
   const [wordSequence, setWordSequence] = useState(initialWordSequence);
   const [currentWordIndex, setCurrentWordIndex] = useState<number>(1);
   const [guessedWord, setGuessedWord] = useState<string>(wordSequence[1][0]);
@@ -124,6 +119,10 @@ const GameSection: React.FC<Props> = ({
   };
 
   const checkIfUserBestTime = () => {
+    const storedUserData: UserData | null = readFromLocalStorage(
+      LS_KEY_LIST.USER_DATA
+    );
+
     if (
       (storedUserData &&
         storedUserData.bestTime > 0 &&
@@ -135,6 +134,10 @@ const GameSection: React.FC<Props> = ({
   };
 
   const updateStoredUserData = () => {
+    const storedUserData: UserData | null = readFromLocalStorage(
+      LS_KEY_LIST.USER_DATA
+    );
+
     if (mode === "random") {
       const userMatchesWon: number =
         (storedUserData && storedUserData?.matchesWon + 1) || 1;
