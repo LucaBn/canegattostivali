@@ -177,5 +177,53 @@
       "BASSO",
       "MEDIOEVO"
     ]
+  },
+  {
+    "id": 19,
+    "wordList": [
+      "JET",
+      "SET",
+      "FOTOGRAFICO",
+      "ALBUM",
+      "FIGURINE",
+      "DOPPIE",
+      "PUNTE",
+      "MEZZE",
+      "STAGIONI",
+      "QUATTRO",
+      "GATTI"
+    ]
+  },
+  {
+    "id": 20,
+    "wordList": [
+      "ULIVO",
+      "RAMO",
+      "SECCO",
+      "ANALCOLICO",
+      "COCKTAIL",
+      "AMERICANO",
+      "SOGNO",
+      "LUCIDO",
+      "SCARPE",
+      "CORSA",
+      "CAMPESTRE"
+    ]
+  },
+  {
+    "id": 21,
+    "wordList": [
+      "ESPRESSO",
+      "MACCHIATO",
+      "LATTE",
+      "DENTE",
+      "GIUDIZIO",
+      "UNIVERSALE",
+      "TELECOMANDO",
+      "CONDIZIONATORE",
+      "SPLIT",
+      "BANANA",
+      "BUCCIA"
+    ]
   }
 ]
