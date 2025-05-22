@@ -225,5 +225,37 @@
       "BANANA",
       "BUCCIA"
     ]
+  },
+  {
+    "id": 22,
+    "wordList": [
+      "TUBETTO",
+      "DENTIFRICIO",
+      "MENTA",
+      "CARAMELLA",
+      "SCARTARE",
+      "REGALO",
+      "COMPLEANNO",
+      "AUGURI",
+      "BIGLIETTO",
+      "LOTTERIA",
+      "SCONTRINI"
+    ]
+  },
+  {
+    "id": 23,
+    "wordList": [
+      "PIÈ",
+      "PAGINA",
+      "PRIMA",
+      "DIVISIONE",
+      "SCISMA",
+      "GRANDE",
+      "STILE",
+      "CADUTA",
+      "LIBERA",
+      "LOTTA",
+      "INTESTINA"
+    ]
   }
 ]
