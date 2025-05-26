@@ -20,8 +20,8 @@ const TopSection: React.FC = () => {
           in più della parola da indovinare.
         </p>
         <p className="d-none d-lg-block mt-2 mb-0">
-          Da desktop puoi usare i tasti <em>1</em> e <em>2</em> per usare gli
-          aiuti rapidamente!
+          Da desktop puoi usare i tasti <em>1</em> e <em>2</em> per usufruire
+          degli aiuti rapidamente!
         </p>
       </Col>
     </Row>
