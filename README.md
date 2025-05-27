@@ -1,6 +1,6 @@
 # Cane🐶Gatto🐱Stivali👢
 
-[CaneGattoStivali.it](https://www.canegattostivali.it) is a simple web game where you are given a clue and have to guess a word logically connected to it. Do it ten times to create your word-chain and, once you finish, enjoy the confetti explosion 🎉
+[CaneGattoStivali.it](https://www.canegattostivali.it) is a simple web game where you are given a clue and have to guess a word logically connected to it. Do it ten times to complete the word-chain.
 
 ## Features
 
@@ -65,15 +65,6 @@ The main structure of the project includes:
 - **package.json**: Project dependencies and scripts.
 - **tsconfig.json**: TypeScript configuration.
 - **.eslintrc**: ESLint configuration for linting.
-
-## Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Commit your changes and push them to your fork.
-4. Open a pull request to the main repository.
 
 ## License
 
