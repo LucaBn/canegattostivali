@@ -311,13 +311,17 @@ const GameSection: React.FC<Props> = ({
     }
 
     filterKeys.current = true;
+
     if (mode === "random" || mode === "custom") {
       setTime((prevTime) => prevTime + 10);
     }
+
     const partialSolution = wordSequence[currentWordIndex].slice(
       0,
       bonusLetters.current + 1
     );
+
+    setIsGameRunning(true);
     setGuessedWord(partialSolution);
     setShowExtraTimeTooltip(10);
     setTimeout(() => {
@@ -340,15 +344,22 @@ const GameSection: React.FC<Props> = ({
     );
 
     setGuessedWord(partialSolution);
+
     if (mode === "random" || mode === "custom") {
       setTime((prevTime) => prevTime + 5);
     }
+
     bonusLetters.current = bonusLetters.current + 1;
+
+    setIsGameRunning(true);
     setShowExtraTimeTooltip(5);
+
     disableHelpBonusLetterButton.current = true;
+
     if (bonusLetters.current === currentWord.length - 1) {
       handleWordGuess();
     }
+
     setTimeout(() => {
       setShowExtraTimeTooltip(0);
       if (bonusLetters.current < currentWord.length - 1) {
