@@ -4,7 +4,7 @@ import React from "react";
 import { Modal, Button, Toast } from "react-bootstrap";
 
 // Data
-import newsData from "@/assets/data/newsData.json";
+import newsList from "@/assets/data/newsList.json";
 
 interface Props {
   handleClose: () => void;
@@ -17,7 +17,7 @@ const NewsModal: React.FC<Props> = ({ handleClose }: Props) => {
         <Modal.Title>News</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        {newsData.map((news, index) => (
+        {newsList.map((news, index) => (
           <Toast key={index} className="w-100 mb-3">
             <Toast.Header closeButton={false} className="align-items-start">
               <p className="me-auto mb-0 pe-3">{news.title}</p>
