@@ -183,6 +183,7 @@ const GameSection: React.FC<Props> = ({
 
     setTimeout(() => {
       filterKeys.current = false;
+      bonusLetters.current = 0;
 
       if (isLastWord) {
         setMessage("🥳");
@@ -199,7 +200,6 @@ const GameSection: React.FC<Props> = ({
     }, 1000);
 
     setTimeout(() => {
-      bonusLetters.current = 0;
       disableHelpBonusLetterButton.current = false;
     }, 1500);
   };
