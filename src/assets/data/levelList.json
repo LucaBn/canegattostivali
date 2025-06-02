@@ -213,17 +213,17 @@
   {
     "id": 21,
     "wordList": [
-      "ESPRESSO",
-      "MACCHIATO",
-      "LATTE",
-      "DENTE",
-      "GIUDIZIO",
-      "UNIVERSALE",
-      "TELECOMANDO",
-      "CONDIZIONATORE",
-      "SPLIT",
-      "BANANA",
-      "BUCCIA"
+      "PIÈ",
+      "PAGINA",
+      "PRIMA",
+      "DIVISIONE",
+      "SCISMA",
+      "GRANDE",
+      "STILE",
+      "CADUTA",
+      "LIBERA",
+      "LOTTA",
+      "INTESTINA"
     ]
   },
   {
@@ -245,17 +245,33 @@
   {
     "id": 23,
     "wordList": [
-      "PIÈ",
-      "PAGINA",
-      "PRIMA",
-      "DIVISIONE",
-      "SCISMA",
-      "GRANDE",
-      "STILE",
-      "CADUTA",
-      "LIBERA",
-      "LOTTA",
-      "INTESTINA"
+      "ESPRESSO",
+      "MACCHIATO",
+      "LATTE",
+      "DENTE",
+      "GIUDIZIO",
+      "UNIVERSALE",
+      "TELECOMANDO",
+      "CONDIZIONATORE",
+      "SPLIT",
+      "BANANA",
+      "BUCCIA"
+    ]
+  },
+  {
+    "id": 24,
+    "wordList": [
+      "ORSO",
+      "POLARE",
+      "STELLA",
+      "ALPINA",
+      "GUIDA",
+      "TURISTICA",
+      "STAGIONE",
+      "MEZZA",
+      "ETÀ",
+      "PIETRA",
+      "POMICE"
     ]
   }
 ]
