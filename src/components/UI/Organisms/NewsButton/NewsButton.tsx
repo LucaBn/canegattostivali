@@ -15,7 +15,7 @@ import {
 } from "@/utils/localStorage";
 
 // Data
-import newsData from "@/assets/data/newsData.json";
+import newsList from "@/assets/data/newsList.json";
 
 // Constants
 import { LS_KEY_LIST } from "@/constants/localStorage";
@@ -34,7 +34,7 @@ const NewsButton: React.FC = () => {
   const { changeKeyboardStatus } = useKeyboardStatus();
 
   const saveReadNews = () => {
-    writeToLocalStorage(LS_KEY_LIST.READ_NEWS, newsData.length);
+    writeToLocalStorage(LS_KEY_LIST.READ_NEWS, newsList.length);
   };
 
   const handleOpen = () => {
@@ -48,7 +48,7 @@ const NewsButton: React.FC = () => {
   };
 
   const isNotificationVisible =
-    !storedReadNews || storedReadNews < newsData.length;
+    !storedReadNews || storedReadNews < newsList.length;
 
   return (
     <>

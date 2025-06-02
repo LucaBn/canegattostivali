@@ -7,4 +7,11 @@ type Word = {
 
 type WordList = Word[];
 
-export type { Mode, Word, WordList };
+type Level = {
+  id: number;
+  wordList: string[];
+};
+
+type LevelList = Level[];
+
+export type { Mode, Word, WordList, Level, LevelList };

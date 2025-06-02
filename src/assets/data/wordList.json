@@ -226,7 +226,8 @@
       "OCCUPAZIONE",
       "PRESTAZIONE",
       "OCCASIONALE",
-      "TROVARE"
+      "TROVARE",
+      "STABILE"
     ]
   },
   {
@@ -341,7 +342,7 @@
   },
   {
     "word": "OCCUPAZIONE",
-    "nextWordList": ["MESTIERE", "LAVORO", "MILITARE", "SCUOLA"]
+    "nextWordList": ["MESTIERE", "LAVORO", "MILITARE", "SCUOLA", "TASSO"]
   },
   {
     "word": "TAGLIO",
@@ -353,7 +354,7 @@
   },
   {
     "word": "VEDERE",
-    "nextWordList": ["DOPPIO", "FILM", "ORA"]
+    "nextWordList": ["DOPPIO", "FILM", "ORA", "STELLE"]
   },
   {
     "word": "ALZARE",
@@ -501,7 +502,8 @@
       "CAMBIO",
       "ZERO",
       "RENDIMENTO",
-      "FREQUENZA"
+      "FREQUENZA",
+      "OCCUPAZIONE"
     ]
   },
   {
@@ -564,7 +566,7 @@
   },
   {
     "word": "PAGARE",
-    "nextWordList": ["PREZZO", "CARTA", "CONTO"]
+    "nextWordList": ["PREZZO", "CARTA", "CONTO", "NATURA"]
   },
   {
     "word": "CONTO",
@@ -690,11 +692,11 @@
   },
   {
     "word": "OPERA",
-    "nextWordList": ["CORSO", "ARTE", "FANTASMA"]
+    "nextWordList": ["CORSO", "ARTE", "FANTASMA", "BENE"]
   },
   {
     "word": "FANTASMA",
-    "nextWordList": ["OPERA", "SPIRITO", "CITTÀ"]
+    "nextWordList": ["OPERA", "SPIRITO", "CITTÀ", "NAVE"]
   },
   {
     "word": "CITTÀ",
@@ -736,7 +738,15 @@
   },
   {
     "word": "ETÀ",
-    "nextWordList": ["AMORE", "PENSIONE", "NUMERO", "LIMITE", "SVILUPPO"]
+    "nextWordList": [
+      "AMORE",
+      "PENSIONE",
+      "NUMERO",
+      "LIMITE",
+      "SVILUPPO",
+      "MEZZA",
+      "BRONZO"
+    ]
   },
   {
     "word": "LIMITE",
@@ -755,7 +765,7 @@
   },
   {
     "word": "VELOCITÀ",
-    "nextWordList": ["LIMITE", "LUCE", "ALTA"]
+    "nextWordList": ["LIMITE", "LUCE", "ALTA", "MEDIA"]
   },
   {
     "word": "ALTA",
@@ -767,7 +777,8 @@
       "STAGIONE",
       "MODA",
       "ONDA",
-      "FREQUENZA"
+      "FREQUENZA",
+      "QUOTA"
     ]
   },
   {
@@ -845,7 +856,8 @@
       "SOCCORSO",
       "FAMIGLIA",
       "PRIMARIO",
-      "BOLLETTINO"
+      "BOLLETTINO",
+      "DIRIGENTE"
     ]
   },
   {
@@ -913,7 +925,7 @@
   },
   {
     "word": "BENE",
-    "nextWordList": ["MONDO", "SERVIZIO", "PACE", "MALE"]
+    "nextWordList": ["MONDO", "SERVIZIO", "PACE", "MALE", "OPERA"]
   },
   {
     "word": "SERVIZIO",
@@ -1239,7 +1251,7 @@
   },
   {
     "word": "AZIENDA",
-    "nextWordList": ["PRIVATA", "BILANCIO", "SOCIETÀ"]
+    "nextWordList": ["PRIVATA", "BILANCIO", "SOCIETÀ", "DIRIGENTE"]
   },
   {
     "word": "SOCIETÀ",
@@ -1282,7 +1294,7 @@
   },
   {
     "word": "ATTACCO",
-    "nextWordList": ["DIRETTO", "MILITARE", "CUORE"]
+    "nextWordList": ["DIRETTO", "MILITARE", "CUORE", "LAVATRICE"]
   },
   {
     "word": "COPPIA",
@@ -1512,7 +1524,8 @@
       "FRUTTO",
       "TONDA",
       "PIANETA",
-      "MEZZO"
+      "MEZZO",
+      "PALMO"
     ]
   },
   {
@@ -1831,12 +1844,13 @@
       "CACTUS",
       "VASO",
       "ACERO",
-      "PIEDE"
+      "PIEDE",
+      "LARGA"
     ]
   },
   {
     "word": "STABILE",
-    "nextWordList": ["PIANTA", "CASA", "RELAZIONE"]
+    "nextWordList": ["PIANTA", "CASA", "RELAZIONE", "LAVORO"]
   },
   {
     "word": "RELAZIONE",
@@ -1922,7 +1936,8 @@
       "TRASMISSIONE",
       "SEGNALE",
       "BRACCIO",
-      "PROGRAMMA"
+      "PROGRAMMA",
+      "VOLUME"
     ]
   },
   {
@@ -2215,7 +2230,7 @@
   },
   {
     "word": "LIVELLO",
-    "nextWordList": ["CULTURALE", "MARE", "PASSAGGIO", "SCATTO"]
+    "nextWordList": ["CULTURALE", "MARE", "PASSAGGIO", "SCATTO", "SCOLASTICO"]
   },
   {
     "word": "GERMANIA",
@@ -2389,7 +2404,8 @@
       "TESTA",
       "MODA",
       "PROGRAMMA",
-      "ORARIO"
+      "ORARIO",
+      "QUOTA"
     ]
   },
   {
@@ -2504,7 +2520,14 @@
   },
   {
     "word": "MERCATO",
-    "nextWordList": ["RICERCA", "LIBERO", "LAVORO", "ECONOMIA", "INDAGINE"]
+    "nextWordList": [
+      "RICERCA",
+      "LIBERO",
+      "LAVORO",
+      "ECONOMIA",
+      "INDAGINE",
+      "QUOTA"
+    ]
   },
   {
     "word": "LIBERO",
@@ -2584,7 +2607,7 @@
   },
   {
     "word": "SOSTA",
-    "nextWordList": ["TAPPA", "DIVIETO", "EMERGENZA"]
+    "nextWordList": ["TAPPA", "DIVIETO", "EMERGENZA", "SENZA"]
   },
   {
     "word": "EMERGENZA",
@@ -2600,7 +2623,7 @@
   },
   {
     "word": "BOTTONE",
-    "nextWordList": ["PULSANTE", "CAMICIA", "GIACCA"]
+    "nextWordList": ["PULSANTE", "CAMICIA", "GIACCA", "BATTERIA"]
   },
   {
     "word": "ASCENSORE",
@@ -2632,7 +2655,7 @@
   },
   {
     "word": "SCENA",
-    "nextWordList": ["CRIMINE", "FILM", "MESSA", "COLPO", "FINALE"]
+    "nextWordList": ["CRIMINE", "FILM", "MESSA", "COLPO", "FINALE", "MADRE"]
   },
   {
     "word": "NAVE",
@@ -2644,7 +2667,8 @@
       "ROTTA",
       "CROCIERA",
       "PONTE",
-      "OBLÒ"
+      "OBLÒ",
+      "FANTASMA"
     ]
   },
   {
@@ -2689,7 +2713,7 @@
   },
   {
     "word": "VOLANTE",
-    "nextWordList": ["DISCO", "AUTO", "POLIZIA"]
+    "nextWordList": ["DISCO", "AUTO", "POLIZIA", "TAPPETO"]
   },
   {
     "word": "PRODOTTO",
@@ -2697,15 +2721,15 @@
   },
   {
     "word": "FINITO",
-    "nextWordList": ["PRODOTTO", "FATTO", "MALE"]
+    "nextWordList": ["PRODOTTO", "FATTO", "MALE", "NUMERO"]
   },
   {
     "word": "FATTO",
-    "nextWordList": ["FINITO", "CRONACA", "CASA", "AFFARE", "COPPIA", "DATO"]
+    "nextWordList": ["FINITO", "CRONACA", "CASA", "COPPIA", "DATO"]
   },
   {
-    "word": "AFFARE",
-    "nextWordList": ["FATTO", "STATO", "FARE"]
+    "word": "AFFARI",
+    "nextWordList": ["UOMO", "VOLUME", "GIRO"]
   },
   {
     "word": "BRISCOLA",
@@ -2713,7 +2737,7 @@
   },
   {
     "word": "VOLUME",
-    "nextWordList": ["LIBRO", "MUSICA", "SOLIDO"]
+    "nextWordList": ["LIBRO", "MUSICA", "SOLIDO", "TV", "AFFARI"]
   },
   {
     "word": "FRESCA",
@@ -2789,7 +2813,14 @@
   },
   {
     "word": "VOTO",
-    "nextWordList": ["CONDOTTA", "DIRITTO", "SEGRETO", "ESAME", "MASSIMO"]
+    "nextWordList": [
+      "CONDOTTA",
+      "DIRITTO",
+      "SEGRETO",
+      "ESAME",
+      "MASSIMO",
+      "PARTECIPAZIONE"
+    ]
   },
   {
     "word": "STATALE",
@@ -3079,7 +3110,14 @@
   },
   {
     "word": "PUBBLICA",
-    "nextWordList": ["QUIETE", "SICUREZZA", "BIBLIOTECA", "OPINIONE", "PISCINA"]
+    "nextWordList": [
+      "QUIETE",
+      "SICUREZZA",
+      "BIBLIOTECA",
+      "OPINIONE",
+      "PISCINA",
+      "PARTECIPAZIONE"
+    ]
   },
   {
     "word": "SICUREZZA",
@@ -3176,11 +3214,11 @@
   },
   {
     "word": "MADRE",
-    "nextWordList": ["LINGUA", "PARENTE", "NATURA"]
+    "nextWordList": ["LINGUA", "PARENTE", "NATURA", "SCENA"]
   },
   {
     "word": "NATURA",
-    "nextWordList": ["MADRE", "DONO", "UMANA"]
+    "nextWordList": ["MADRE", "DONO", "UMANA", "PAGARE"]
   },
   {
     "word": "DONO",
@@ -3378,7 +3416,7 @@
   },
   {
     "word": "BRONZO",
-    "nextWordList": ["FACCIA", "MEDAGLIA", "LEGA"]
+    "nextWordList": ["FACCIA", "MEDAGLIA", "LEGA", "ETÀ"]
   },
   {
     "word": "LEGA",
@@ -3569,7 +3607,8 @@
       "CAMICIA",
       "INVISIBILE",
       "ACCIAIO",
-      "ONORE"
+      "ONORE",
+      "AFFARI"
     ]
   },
   {
@@ -3578,7 +3617,7 @@
   },
   {
     "word": "STELLE",
-    "nextWordList": ["STRISCE", "SOTTO", "HOTEL"]
+    "nextWordList": ["STRISCE", "SOTTO", "HOTEL", "VEDERE"]
   },
   {
     "word": "HOTEL",
@@ -3654,7 +3693,7 @@
   },
   {
     "word": "LARGA",
-    "nextWordList": ["BANDA", "FOGLIA", "GAMBA"]
+    "nextWordList": ["BANDA", "FOGLIA", "GAMBA", "PIANTA"]
   },
   {
     "word": "FOGLIA",
@@ -3892,7 +3931,7 @@
   },
   {
     "word": "PALMO",
-    "nextWordList": ["NASO", "MANO", "PIEDE"]
+    "nextWordList": ["NASO", "MANO", "TERRA"]
   },
   {
     "word": "PUNTA",
@@ -3905,7 +3944,6 @@
       "MARTELLO",
       "COLLO",
       "DITA",
-      "PALMO",
       "PALLA",
       "IMPRONTA",
       "PIANTA"
@@ -4176,7 +4214,15 @@
   },
   {
     "word": "ANNO",
-    "nextWordList": ["NUOVO", "PROSSIMO", "NASCITA"]
+    "nextWordList": ["NUOVO", "PROSSIMO", "NASCITA", "SOLARE", "SCOLASTICO"]
+  },
+  {
+    "word": "SCOLASTICO",
+    "nextWordList": ["ANNO", "DIRIGENTE", "PROGRAMMA", "LIVELLO"]
+  },
+  {
+    "word": "DIRIGENTE",
+    "nextWordList": ["SCOLASTICO", "AZIENDA", "CLASSE", "MEDICO"]
   },
   {
     "word": "NASCITA",
@@ -4273,7 +4319,8 @@
       "TORCIA",
       "TELEFONO",
       "PIATTI",
-      "STAFFETTA"
+      "STAFFETTA",
+      "BOTTONE"
     ]
   },
   {
@@ -4677,7 +4724,7 @@
   },
   {
     "word": "BAGNO",
-    "nextWordList": ["COSTUME", "SERVIZIO", "MARE"]
+    "nextWordList": ["COSTUME", "SERVIZIO", "MARE", "PISCINA"]
   },
   {
     "word": "NOZZE",
@@ -4724,7 +4771,8 @@
       "FOTO",
       "LOTTA",
       "COMPITO",
-      "COMPAGNO"
+      "COMPAGNO",
+      "DIRIGENTE"
     ]
   },
   {
@@ -4901,7 +4949,6 @@
       "ANIMO",
       "CIVILE",
       "EMERGENZA",
-      "AFFARE",
       "BILANCIO",
       "CAPO",
       "PAESE",
@@ -4934,7 +4981,7 @@
   },
   {
     "word": "SOLARE",
-    "nextWordList": ["PROTEZIONE", "ENERGIA", "PANNELLO", "SISTEMA"]
+    "nextWordList": ["PROTEZIONE", "ENERGIA", "PANNELLO", "SISTEMA", "ANNO"]
   },
   {
     "word": "PANNELLO",
@@ -5031,7 +5078,8 @@
       "INTERO",
       "ETÀ",
       "NATURALE",
-      "ROMANO"
+      "ROMANO",
+      "FINITO"
     ]
   },
   {
@@ -5085,7 +5133,19 @@
   },
   {
     "word": "STIMA",
-    "nextWordList": ["VALORE", "VALUTAZIONE", "TEMPO"]
+    "nextWordList": ["VALORE", "VALUTAZIONE", "TEMPO", "ATTESTATO"]
+  },
+  {
+    "word": "ATTESTATO",
+    "nextWordList": ["STIMA", "PARTECIPAZIONE", "RISCHIO", "FREQUENZA"]
+  },
+  {
+    "word": "PARTECIPAZIONE",
+    "nextWordList": ["ATTESTATO", "VOTO", "QUOTA", "PUBBLICA"]
+  },
+  {
+    "word": "QUOTA",
+    "nextWordList": ["PARTECIPAZIONE", "ALTA", "FUORI", "MERCATO"]
   },
   {
     "word": "VALUTAZIONE",
@@ -5570,7 +5630,15 @@
   },
   {
     "word": "FREQUENZA",
-    "nextWordList": ["RADIO", "ONDA", "OBBLIGATORIA", "ALTA", "INDICE", "TASSO"]
+    "nextWordList": [
+      "RADIO",
+      "ONDA",
+      "OBBLIGATORIA",
+      "ALTA",
+      "INDICE",
+      "TASSO",
+      "ATTESTATO"
+    ]
   },
   {
     "word": "INDICE",
@@ -5606,7 +5674,7 @@
   },
   {
     "word": "TAPPETO",
-    "nextWordList": ["ELASTICO", "ROSSO", "MANDARE", "DOCCIA"]
+    "nextWordList": ["ELASTICO", "ROSSO", "MANDARE", "DOCCIA", "VOLANTE"]
   },
   {
     "word": "TRAMPOLINO",
@@ -5614,7 +5682,14 @@
   },
   {
     "word": "PISCINA",
-    "nextWordList": ["TRAMPOLINO", "PUBBLICA", "BORDO", "CORSIA", "SCALETTA"]
+    "nextWordList": [
+      "TRAMPOLINO",
+      "PUBBLICA",
+      "BORDO",
+      "CORSIA",
+      "SCALETTA",
+      "BAGNO"
+    ]
   },
   {
     "word": "SCALETTA",
@@ -5628,12 +5703,13 @@
       "RADIO",
       "FUORI",
       "COMPUTER",
-      "LAVATRICE"
+      "LAVATRICE",
+      "SCOLASTICO"
     ]
   },
   {
     "word": "LAVATRICE",
-    "nextWordList": ["PROGRAMMA", "OBLÒ", "CARICO", "FILTRO"]
+    "nextWordList": ["PROGRAMMA", "OBLÒ", "CARICO", "FILTRO", "ATTACCO"]
   },
   {
     "word": "FILTRO",
@@ -5641,7 +5717,7 @@
   },
   {
     "word": "SENZA",
-    "nextWordList": ["FILTRO", "PAURA", "ZUCCHERO", "VOCE"]
+    "nextWordList": ["FILTRO", "PAURA", "ZUCCHERO", "VOCE", "SOSTA"]
   },
   {
     "word": "OBLÒ",
@@ -5831,7 +5907,14 @@
   },
   {
     "word": "MEDIA",
-    "nextWordList": ["LICENZA", "BIRRA", "SCUOLA", "MATEMATICA", "STATISTICA"]
+    "nextWordList": [
+      "LICENZA",
+      "BIRRA",
+      "SCUOLA",
+      "MATEMATICA",
+      "STATISTICA",
+      "VELOCITÀ"
+    ]
   },
   {
     "word": "CARRELLO",
@@ -5916,7 +5999,8 @@
       "CAPITALE",
       "VALUTAZIONE",
       "ASSICURAZIONE",
-      "INCENDIO"
+      "INCENDIO",
+      "ATTESTATO"
     ]
   },
   {
@@ -6190,7 +6274,15 @@
   },
   {
     "word": "GIRO",
-    "nextWordList": ["CHIAVE", "VITE", "BOA", "ANGOLO", "PRENDERE", "CORSA"]
+    "nextWordList": [
+      "CHIAVE",
+      "VITE",
+      "BOA",
+      "ANGOLO",
+      "PRENDERE",
+      "CORSA",
+      "AFFARI"
+    ]
   },
   {
     "word": "VITE",
@@ -6226,7 +6318,7 @@
   },
   {
     "word": "MEZZA",
-    "nextWordList": ["CARTUCCIA", "GIORNATA", "VERITÀ"]
+    "nextWordList": ["CARTUCCIA", "GIORNATA", "VERITÀ", "ETÀ"]
   },
   {
     "word": "VERITÀ",
@@ -6304,7 +6396,6 @@
     "nextWordList": [
       "DIRE",
       "FUOCO",
-      "AFFARE",
       "POCO",
       "CENTRO",
       "PENA",

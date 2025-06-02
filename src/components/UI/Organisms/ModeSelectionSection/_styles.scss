@@ -1,6 +1,6 @@
 .mode-selection {
   &__card {
     width: 360px;
-    max-width: 80dvw;
+    max-width: calc(100dvw - (1.5rem * 2));
   }
 }

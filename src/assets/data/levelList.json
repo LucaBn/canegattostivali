@@ -177,5 +177,101 @@
       "BASSO",
       "MEDIOEVO"
     ]
+  },
+  {
+    "id": 19,
+    "wordList": [
+      "JET",
+      "SET",
+      "FOTOGRAFICO",
+      "ALBUM",
+      "FIGURINE",
+      "DOPPIE",
+      "PUNTE",
+      "MEZZE",
+      "STAGIONI",
+      "QUATTRO",
+      "GATTI"
+    ]
+  },
+  {
+    "id": 20,
+    "wordList": [
+      "ULIVO",
+      "RAMO",
+      "SECCO",
+      "ANALCOLICO",
+      "COCKTAIL",
+      "AMERICANO",
+      "SOGNO",
+      "LUCIDO",
+      "SCARPE",
+      "CORSA",
+      "CAMPESTRE"
+    ]
+  },
+  {
+    "id": 21,
+    "wordList": [
+      "PIÈ",
+      "PAGINA",
+      "PRIMA",
+      "DIVISIONE",
+      "SCISMA",
+      "GRANDE",
+      "STILE",
+      "CADUTA",
+      "LIBERA",
+      "LOTTA",
+      "INTESTINA"
+    ]
+  },
+  {
+    "id": 22,
+    "wordList": [
+      "TUBETTO",
+      "DENTIFRICIO",
+      "MENTA",
+      "CARAMELLA",
+      "SCARTARE",
+      "REGALO",
+      "COMPLEANNO",
+      "AUGURI",
+      "BIGLIETTO",
+      "LOTTERIA",
+      "SCONTRINI"
+    ]
+  },
+  {
+    "id": 23,
+    "wordList": [
+      "ESPRESSO",
+      "MACCHIATO",
+      "LATTE",
+      "DENTE",
+      "GIUDIZIO",
+      "UNIVERSALE",
+      "TELECOMANDO",
+      "CONDIZIONATORE",
+      "SPLIT",
+      "BANANA",
+      "BUCCIA"
+    ]
+  },
+  {
+    "id": 24,
+    "wordList": [
+      "ORSO",
+      "POLARE",
+      "STELLA",
+      "ALPINA",
+      "GUIDA",
+      "TURISTICA",
+      "STAGIONE",
+      "MEZZA",
+      "ETÀ",
+      "PIETRA",
+      "POMICE"
+    ]
   }
 ]
