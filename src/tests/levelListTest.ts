@@ -18,8 +18,8 @@ function checkNoDuplicateWords(data: LevelList): boolean {
 
   for (const [word, ids] of wordMap.entries()) {
     if (ids.length > 1) {
-      console.error(
-        `Parola duplicata "${word}" trovata negli array con ID: ${ids.join(
+      console.warn(
+        `Parola duplicata: "${word}" trovata negli array con ID ${ids.join(
           ", "
         )}`
       );
@@ -36,7 +36,7 @@ const runLevelListTest = () => {
   if (noDuplicateWordsValid) {
     console.log("Livelli: tutti i controlli sono stati superati con successo.");
   } else {
-    console.error("Livelli: ci sono errori nei dati.");
+    console.warn("Livelli: ci sono parole usate più volte.");
   }
 };
 
