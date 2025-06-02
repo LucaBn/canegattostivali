@@ -566,7 +566,7 @@
   },
   {
     "word": "PAGARE",
-    "nextWordList": ["PREZZO", "CARTA", "CONTO"]
+    "nextWordList": ["PREZZO", "CARTA", "CONTO", "NATURA"]
   },
   {
     "word": "CONTO",
@@ -692,11 +692,11 @@
   },
   {
     "word": "OPERA",
-    "nextWordList": ["CORSO", "ARTE", "FANTASMA"]
+    "nextWordList": ["CORSO", "ARTE", "FANTASMA", "BENE"]
   },
   {
     "word": "FANTASMA",
-    "nextWordList": ["OPERA", "SPIRITO", "CITTÀ"]
+    "nextWordList": ["OPERA", "SPIRITO", "CITTÀ", "NAVE"]
   },
   {
     "word": "CITTÀ",
@@ -738,7 +738,15 @@
   },
   {
     "word": "ETÀ",
-    "nextWordList": ["AMORE", "PENSIONE", "NUMERO", "LIMITE", "SVILUPPO"]
+    "nextWordList": [
+      "AMORE",
+      "PENSIONE",
+      "NUMERO",
+      "LIMITE",
+      "SVILUPPO",
+      "MEZZA",
+      "BRONZO"
+    ]
   },
   {
     "word": "LIMITE",
@@ -917,7 +925,7 @@
   },
   {
     "word": "BENE",
-    "nextWordList": ["MONDO", "SERVIZIO", "PACE", "MALE"]
+    "nextWordList": ["MONDO", "SERVIZIO", "PACE", "MALE", "OPERA"]
   },
   {
     "word": "SERVIZIO",
@@ -2599,7 +2607,7 @@
   },
   {
     "word": "SOSTA",
-    "nextWordList": ["TAPPA", "DIVIETO", "EMERGENZA"]
+    "nextWordList": ["TAPPA", "DIVIETO", "EMERGENZA", "SENZA"]
   },
   {
     "word": "EMERGENZA",
@@ -2647,7 +2655,7 @@
   },
   {
     "word": "SCENA",
-    "nextWordList": ["CRIMINE", "FILM", "MESSA", "COLPO", "FINALE"]
+    "nextWordList": ["CRIMINE", "FILM", "MESSA", "COLPO", "FINALE", "MADRE"]
   },
   {
     "word": "NAVE",
@@ -2659,7 +2667,8 @@
       "ROTTA",
       "CROCIERA",
       "PONTE",
-      "OBLÒ"
+      "OBLÒ",
+      "FANTASMA"
     ]
   },
   {
@@ -2704,7 +2713,7 @@
   },
   {
     "word": "VOLANTE",
-    "nextWordList": ["DISCO", "AUTO", "POLIZIA"]
+    "nextWordList": ["DISCO", "AUTO", "POLIZIA", "TAPPETO"]
   },
   {
     "word": "PRODOTTO",
@@ -3205,11 +3214,11 @@
   },
   {
     "word": "MADRE",
-    "nextWordList": ["LINGUA", "PARENTE", "NATURA"]
+    "nextWordList": ["LINGUA", "PARENTE", "NATURA", "SCENA"]
   },
   {
     "word": "NATURA",
-    "nextWordList": ["MADRE", "DONO", "UMANA"]
+    "nextWordList": ["MADRE", "DONO", "UMANA", "PAGARE"]
   },
   {
     "word": "DONO",
@@ -3407,7 +3416,7 @@
   },
   {
     "word": "BRONZO",
-    "nextWordList": ["FACCIA", "MEDAGLIA", "LEGA"]
+    "nextWordList": ["FACCIA", "MEDAGLIA", "LEGA", "ETÀ"]
   },
   {
     "word": "LEGA",
@@ -5665,7 +5674,7 @@
   },
   {
     "word": "TAPPETO",
-    "nextWordList": ["ELASTICO", "ROSSO", "MANDARE", "DOCCIA"]
+    "nextWordList": ["ELASTICO", "ROSSO", "MANDARE", "DOCCIA", "VOLANTE"]
   },
   {
     "word": "TRAMPOLINO",
@@ -5708,7 +5717,7 @@
   },
   {
     "word": "SENZA",
-    "nextWordList": ["FILTRO", "PAURA", "ZUCCHERO", "VOCE"]
+    "nextWordList": ["FILTRO", "PAURA", "ZUCCHERO", "VOCE", "SOSTA"]
   },
   {
     "word": "OBLÒ",
@@ -6309,7 +6318,7 @@
   },
   {
     "word": "MEZZA",
-    "nextWordList": ["CARTUCCIA", "GIORNATA", "VERITÀ"]
+    "nextWordList": ["CARTUCCIA", "GIORNATA", "VERITÀ", "ETÀ"]
   },
   {
     "word": "VERITÀ",
