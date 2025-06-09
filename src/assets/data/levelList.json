@@ -353,5 +353,21 @@
       "MATRIMONIO",
       "ANNIVERSARIO"
     ]
+  },
+  {
+    "id": 30,
+    "wordList": [
+      "GRAVITÀ",
+      "FORZA",
+      "CAMICIA",
+      "BOTTONE",
+      "ATTACCARE",
+      "BRIGA",
+      "PRENDERSI",
+      "CURA",
+      "CASA",
+      "CHIAVI",
+      "MANO"
+    ]
   }
 ]
