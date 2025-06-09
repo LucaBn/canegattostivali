@@ -108,7 +108,12 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
           <br />
           Ah, e ovviamente devono essere tutte diverse tra loro!
         </p>
-        <Form>
+        <Form
+          onSubmit={(e) => {
+            e.preventDefault();
+            addWord();
+          }}
+        >
           {wordList.map((word, index) => (
             <InputGroup className="mb-2" key={index}>
               <InputGroup.Text>{index + 1}</InputGroup.Text>
@@ -151,7 +156,7 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
               />
               <Button
                 variant="primary"
-                onClick={addWord}
+                type="submit"
                 disabled={currentWord.length < 2 || wordList.length >= 11}
                 title="Aggiungi parola"
               >

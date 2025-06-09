@@ -105,7 +105,7 @@ const EndGameModal: React.FC<IEndGameModal> = ({
           </ul>
         </Modal.Body>
         <Modal.Footer className="justify-content-center">
-          {mode === "random" && (
+          {(mode === "random" || mode === "custom") && (
             <Button variant="primary" onClick={handlePlayRandomGame}>
               Gioca ancora
             </Button>

@@ -273,5 +273,101 @@
       "PIETRA",
       "POMICE"
     ]
+  },
+  {
+    "id": 25,
+    "wordList": [
+      "SCARICATORE",
+      "PORTO",
+      "FRANCO",
+      "SVIZZERO",
+      "CIOCCOLATO",
+      "BIANCO",
+      "PUNTO",
+      "SITUAZIONE",
+      "ECONOMICA",
+      "CRISI",
+      "NERVI"
+    ]
+  },
+  {
+    "id": 26,
+    "wordList": [
+      "INSALATA",
+      "BUSTA",
+      "PAGA",
+      "BASE",
+      "PIRAMIDE",
+      "ALIMENTARE",
+      "REGIME",
+      "VELOCITÀ",
+      "FUGA",
+      "NOTIZIE",
+      "ULTIME"
+    ]
+  },
+  {
+    "id": 27,
+    "wordList": [
+      "ERNIA",
+      "DISCO",
+      "ROTTO",
+      "CUFFIA",
+      "PISCINA",
+      "BORDO",
+      "SALIRE",
+      "SCALE",
+      "TROMBA",
+      "ARIA",
+      "FRIGGITRICE"
+    ]
+  },
+  {
+    "id": 28,
+    "wordList": [
+      "TARPARE",
+      "ALI",
+      "POLLO",
+      "COTOLETTA",
+      "MILANESE",
+      "RISOTTO",
+      "ORTICHE",
+      "GETTARE",
+      "SPUGNA",
+      "DOCCIA",
+      "SOLARE"
+    ]
+  },
+  {
+    "id": 29,
+    "wordList": [
+      "FUORI",
+      "TESTA",
+      "CROCE",
+      "ROSSA",
+      "CARNE",
+      "PESCE",
+      "MERCATO",
+      "QUOTA",
+      "PARTECIPAZIONE",
+      "MATRIMONIO",
+      "ANNIVERSARIO"
+    ]
+  },
+  {
+    "id": 30,
+    "wordList": [
+      "GRAVITÀ",
+      "FORZA",
+      "CAMICIA",
+      "BOTTONE",
+      "ATTACCARE",
+      "BRIGA",
+      "PRENDERSI",
+      "CURA",
+      "CASA",
+      "CHIAVI",
+      "MANO"
+    ]
   }
 ]
