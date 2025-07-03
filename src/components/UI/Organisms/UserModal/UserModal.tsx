@@ -29,14 +29,17 @@ const UserModal: React.FC<Props> = ({ handleClose }: Props) => {
   const [username, setUsername] = useState<string>(
     storedUserData?.username || ""
   );
+  // TODO: rewrite this with ...prev value of storedUserData
   const matchesWon = storedUserData?.matchesWon || 0;
   const bestTime = storedUserData?.bestTime || 0;
+  const lastLevelCompleted = storedUserData?.lastLevelCompleted || 0;
 
   useEffect(() => {
     writeToLocalStorage(LS_KEY_LIST.USER_DATA, {
       username,
       matchesWon,
       bestTime,
+      lastLevelCompleted,
     });
   }, [username]);
 
