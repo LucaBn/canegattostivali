@@ -134,33 +134,43 @@ const GameSection: React.FC<Props> = ({
   };
 
   const updateStoredUserData = () => {
-    const storedUserData: UserData | null = readFromLocalStorage(
-      LS_KEY_LIST.USER_DATA
-    );
+    const updater = (prev: UserData | null): UserData => {
+      if (mode === "random") {
+        const userMatchesWon: number = (prev?.matchesWon || 0) + 1;
 
-    if (mode === "random") {
-      const userMatchesWon: number =
-        (storedUserData && storedUserData?.matchesWon + 1) || 1;
-      const userBestTime: number =
-        storedUserData &&
-        storedUserData?.bestTime > 0 &&
-        storedUserData?.bestTime < time
-          ? storedUserData?.bestTime
-          : time;
-      writeToLocalStorage(LS_KEY_LIST.USER_DATA, {
-        ...storedUserData,
-        matchesWon: userMatchesWon,
-        bestTime: userBestTime,
-      });
-    } else if (mode === "levels") {
-      if (level) {
-        if (level > (storedUserData?.lastLevelCompleted || 0)) {
-          writeToLocalStorage(LS_KEY_LIST.USER_DATA, {
-            ...storedUserData,
-            lastLevelCompleted: level,
-          });
+        const userBestTime: number =
+          prev?.bestTime && prev.bestTime > 0 && prev.bestTime < time
+            ? prev.bestTime
+            : time;
+
+        return {
+          ...prev,
+          matchesWon: userMatchesWon,
+          bestTime: userBestTime,
+        } as UserData;
+      } else if (mode === "levels") {
+        if (level) {
+          const lastLevelCompleted = prev?.lastLevelCompleted || 0;
+          if (level > lastLevelCompleted) {
+            return {
+              ...prev,
+              lastLevelCompleted: level,
+            } as UserData;
+          }
         }
       }
+
+      return prev || ({} as UserData);
+    };
+
+    const current = readFromLocalStorage(
+      LS_KEY_LIST.USER_DATA
+    ) as UserData | null;
+
+    const updated = updater(current);
+
+    if (updated) {
+      writeToLocalStorage(LS_KEY_LIST.USER_DATA, updated);
     }
   };
 
