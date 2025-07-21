@@ -369,5 +369,101 @@
       "CHIAVI",
       "MANO"
     ]
+  },
+  {
+    "id": 31,
+    "wordList": [
+      "DADO",
+      "TRATTO",
+      "MARE",
+      "ALTO",
+      "MORALE",
+      "DANNO",
+      "IMMAGINE",
+      "QUALITÀ",
+      "VITA",
+      "ASPETTATIVA",
+      "LAVORO"
+    ]
+  },
+  {
+    "id": 32,
+    "wordList": [
+      "VIZIO",
+      "CAPITALE",
+      "PENA",
+      "ANIMA",
+      "FESTA",
+      "MASCHERA",
+      "BELLEZZA",
+      "PRODOTTO",
+      "ALIMENTARE",
+      "CATENA",
+      "MONTUOSA"
+    ]
+  },
+  {
+    "id": 33,
+    "wordList": [
+      "RIFARE",
+      "LETTO",
+      "FIUME",
+      "FOCE",
+      "DELTA",
+      "LETTERA",
+      "RICHIAMO",
+      "FORMALE",
+      "INCONTRO",
+      "VENIRE",
+      "CAPO"
+    ]
+  },
+  {
+    "id": 34,
+    "wordList": [
+      "OPERA",
+      "INGEGNERIA",
+      "SUONO",
+      "CAMPIONATO",
+      "GIORNATA",
+      "VIVERE",
+      "RENDITA",
+      "CATASTALE",
+      "PARTICELLA",
+      "ELEMENTARE",
+      "WATSON"
+    ]
+  },
+  {
+    "id": 35,
+    "wordList": [
+      "DECUBITO",
+      "PIAGA",
+      "DITO",
+      "PUNTARE",
+      "ALTO",
+      "LIVELLO",
+      "PASSAGGIO",
+      "AUTO",
+      "BOLLO",
+      "IMPOSTA",
+      "SOSTITUTIVA"
+    ]
+  },
+  {
+    "id": 36,
+    "wordList": [
+      "MONDIALI",
+      "CALCIO",
+      "ANGOLO",
+      "GIRO",
+      "MORALE",
+      "PAROLE",
+      "VENTO",
+      "SOFFIO",
+      "CUORE",
+      "PIETRA",
+      "MILIARE"
+    ]
   }
 ]
