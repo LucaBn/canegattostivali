@@ -858,7 +858,8 @@
       "MATERIA",
       "VACANZA",
       "SETTORE",
-      "INDIRIZZO"
+      "INDIRIZZO",
+      "FUNZIONE"
     ]
   },
   {
@@ -2447,7 +2448,8 @@
       "ELEGANTE",
       "CERIMONIA",
       "SPEZZATO",
-      "SCURO"
+      "SCURO",
+      "CAMBIO"
     ]
   },
   {
@@ -3468,7 +3470,8 @@
       "ROTTA",
       "DIREZIONE",
       "GUARDIA",
-      "RESIDENZA"
+      "RESIDENZA",
+      "ABITO"
     ]
   },
   {
@@ -4601,7 +4604,7 @@
   },
   {
     "word": "FUNZIONE",
-    "nextWordList": ["CONTINUA", "MATEMATICA", "RELIGIOSA"]
+    "nextWordList": ["CONTINUA", "MATEMATICA", "RELIGIOSA", "STUDIO"]
   },
   {
     "word": "RELIGIOSA",
@@ -6437,7 +6440,7 @@
   },
   {
     "word": "CRISTALLO",
-    "nextWordList": ["SALE", "BICCHIERE", "SFERA"]
+    "nextWordList": ["SALE", "BICCHIERE", "SFERA", "PALAZZO"]
   },
   {
     "word": "BICCHIERE",
@@ -6836,7 +6839,7 @@
   },
   {
     "word": "PALAZZO",
-    "nextWordList": ["CUSTODE", "CASA", "EPOCA", "GIUSTIZIA"]
+    "nextWordList": ["CUSTODE", "CASA", "EPOCA", "GIUSTIZIA", "CRISTALLO"]
   },
   {
     "word": "GIUSTIZIA",
