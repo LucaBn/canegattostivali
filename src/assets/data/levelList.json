@@ -465,5 +465,37 @@
       "PIETRA",
       "MILIARE"
     ]
+  },
+  {
+    "id": 37,
+    "wordList": [
+      "TRIBUNA",
+      "ONORE",
+      "PAROLA",
+      "LIBERTÀ",
+      "STATUA",
+      "EQUESTRE",
+      "CIRCO",
+      "MASSIMO",
+      "VOTI",
+      "PIENI",
+      "POTERI"
+    ]
+  },
+  {
+    "id": 38,
+    "wordList": [
+      "MONACO",
+      "ABITO",
+      "CERIMONIA",
+      "RELIGIOSA",
+      "FUNZIONE",
+      "METTERE",
+      "CHIARO",
+      "LUNA",
+      "CRESCENTE",
+      "RITMO",
+      "MUSICA"
+    ]
   }
 ]
