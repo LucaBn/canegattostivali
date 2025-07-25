@@ -6,11 +6,14 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 // Constants
 import { AUTHOR_NAME, WEBSITE_URL } from "@/constants/app";
 
-const Footer: React.FC = () => {
-  const siteUrl: string = WEBSITE_URL;
-  const authorName: string = AUTHOR_NAME;
-  const authorLink: string = "https://github.com/LucaBn";
+const siteUrl: string = WEBSITE_URL;
+const authorName: string = AUTHOR_NAME;
+const authorLink: string = "https://github.com/LucaBn";
+const googlePlayLink: string = "#"; // TODO: add Google Play link
+const pimpMyJpgLink: string = "https://www.pimpmyjpg.com/it";
+const buyMeACoffeeLink: string = "https://www.buymeacoffee.com/lucabn";
 
+const Footer: React.FC = () => {
   return (
     <footer className="bg-dark text-white py-4 border-top">
       <Container>
@@ -31,13 +34,31 @@ const Footer: React.FC = () => {
             </p>
             <p className="text-center">Logo realizzato da Manuela</p>
           </Col>
-        </Row>
-        <Row>
+          <Col xs={12} className="mb-4">
+            <p>
+              <a
+                href={googlePlayLink}
+                title="Disponibile su Google Play"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="d-contents"
+              >
+                <Image
+                  src="/assets/img/GetItOnGooglePlay_Badge.png"
+                  height={80}
+                  width={270}
+                  className="d-block mx-auto rounded"
+                  alt="Disponibile su Google Play"
+                  draggable={false}
+                />
+              </a>
+            </p>
+          </Col>
           <Col xs={12} className="mb-4">
             <p className="mb-2 text-center">Powered by</p>
             <p className="d-flex flex-column align-items-center">
               <a
-                href="https://www.pimpmyjpg.com/it"
+                href={pimpMyJpgLink}
                 title="Pimp my Jpg"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
@@ -55,12 +76,10 @@ const Footer: React.FC = () => {
               </a>
             </p>
           </Col>
-        </Row>
-        <Row>
           <Col xs={12} className="mb-4">
             <p>
               <a
-                href="https://www.buymeacoffee.com/lucabn"
+                href={buyMeACoffeeLink}
                 title="Offrimi un Caffè"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
