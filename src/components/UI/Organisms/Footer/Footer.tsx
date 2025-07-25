@@ -14,6 +14,9 @@ const pimpMyJpgLink: string = "https://www.pimpmyjpg.com/it";
 const buyMeACoffeeLink: string = "https://www.buymeacoffee.com/lucabn";
 
 const Footer: React.FC = () => {
+  const isApp =
+    new URLSearchParams(window.location.search).get("isApp") === "true";
+
   return (
     <footer className="bg-dark text-white py-4 border-top">
       <Container>
@@ -34,26 +37,28 @@ const Footer: React.FC = () => {
             </p>
             <p className="text-center">Logo realizzato da Manuela</p>
           </Col>
-          <Col xs={12} className="mb-4">
-            <p>
-              <a
-                href={googlePlayLink}
-                title="Disponibile su Google Play"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="d-contents"
-              >
-                <Image
-                  src="/assets/img/GetItOnGooglePlay_Badge.png"
-                  height={80}
-                  width={270}
-                  className="d-block mx-auto rounded"
-                  alt="Disponibile su Google Play"
-                  draggable={false}
-                />
-              </a>
-            </p>
-          </Col>
+          {!isApp && (
+            <Col xs={12} className="mb-4">
+              <p>
+                <a
+                  href={googlePlayLink}
+                  title="Disponibile su Google Play"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="d-contents"
+                >
+                  <Image
+                    src="/assets/img/GetItOnGooglePlay_Badge.png"
+                    height={80}
+                    width={270}
+                    className="d-block mx-auto rounded"
+                    alt="Disponibile su Google Play"
+                    draggable={false}
+                  />
+                </a>
+              </p>
+            </Col>
+          )}
           <Col xs={12} className="mb-4">
             <p className="mb-2 text-center">Powered by</p>
             <p className="d-flex flex-column align-items-center">
