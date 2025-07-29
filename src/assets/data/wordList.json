@@ -438,7 +438,7 @@
   },
   {
     "word": "PERIODO",
-    "nextWordList": ["MEDIO", "LUNGO", "NERO", "FERTILE", "PROVA"]
+    "nextWordList": ["MEDIO", "LUNGO", "NERO", "FERTILE", "PROVA", "BLU"]
   },
   {
     "word": "FERTILE",
@@ -484,7 +484,8 @@
       "RISO",
       "GIOCO",
       "BATTAGLIA",
-      "POSIZIONE"
+      "POSIZIONE",
+      "APERTO"
     ]
   },
   {
@@ -1422,7 +1423,7 @@
   },
   {
     "word": "ACQUISTO",
-    "nextWordList": ["POTERE", "FATTURA", "BUONO"]
+    "nextWordList": ["POTERE", "FATTURA", "BUONO", "PROVA"]
   },
   {
     "word": "BUONO",
@@ -2079,6 +2080,10 @@
     "nextWordList": ["RELAZIONE", "MENTE", "PARENTESI", "QUESTIONE", "COPPIA"]
   },
   {
+    "word": "APERTO",
+    "nextWordList": ["CUORE", "PUBBLICO", "CAMPO", "MARE"]
+  },
+  {
     "word": "PARENTESI",
     "nextWordList": ["APERTA", "TONDA", "QUADRA"]
   },
@@ -2169,7 +2174,8 @@
       "DIPINTO",
       "ELETTRICO",
       "STRISCE",
-      "PIANETA"
+      "PIANETA",
+      "PERIODO"
     ]
   },
   {
@@ -3571,7 +3577,8 @@
       "PATRIMONIO",
       "ORDINE",
       "TELEFONO",
-      "TRASPORTO"
+      "TRASPORTO",
+      "APERTO"
     ]
   },
   {
@@ -4219,7 +4226,14 @@
   },
   {
     "word": "PROVA",
-    "nextWordList": ["ANTINCENDIO", "PERIODO", "PRIMA", "ESAME", "ERRORE"]
+    "nextWordList": [
+      "ANTINCENDIO",
+      "PERIODO",
+      "PRIMA",
+      "ESAME",
+      "ERRORE",
+      "ACQUISTO"
+    ]
   },
   {
     "word": "TORCIA",
@@ -4918,7 +4932,8 @@
       "ONDA",
       "SPUGNA",
       "LIVELLO",
-      "PORTO"
+      "PORTO",
+      "APERTO"
     ]
   },
   {
@@ -5474,7 +5489,9 @@
       "AMICO",
       "ATTACCO",
       "OPERAZIONE",
-      "INTERVENTO"
+      "INTERVENTO",
+      "APERTO",
+      "SQUADRA"
     ]
   },
   {
@@ -5560,7 +5577,7 @@
   },
   {
     "word": "SQUADRA",
-    "nextWordList": ["SPORT", "GEOMETRIA", "CALCIO", "SPECIALE"]
+    "nextWordList": ["SPORT", "GEOMETRIA", "CALCIO", "SPECIALE", "CUORE"]
   },
   {
     "word": "CONTATTO",
