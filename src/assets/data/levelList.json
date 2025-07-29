@@ -497,5 +497,37 @@
       "RITMO",
       "MUSICA"
     ]
+  },
+  {
+    "id": 39,
+    "wordList": [
+      "TRAPIANTO",
+      "CUORE",
+      "APERTO",
+      "CIRCUITO",
+      "PARALLELO",
+      "UNIVERSO",
+      "CENTRO",
+      "STORICO",
+      "PERIODO",
+      "PROVA",
+      "CONTRARIA"
+    ]
+  },
+  {
+    "id": 40,
+    "wordList": [
+      "QUINTA",
+      "COLONNA",
+      "SONORA",
+      "SCONFITTA",
+      "BRUCIANTE",
+      "SCATTO",
+      "ANZIANITÀ",
+      "SERVIZIO",
+      "GRATUITO",
+      "PARCHEGGIO",
+      "ORE"
+    ]
   }
 ]
