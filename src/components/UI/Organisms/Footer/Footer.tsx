@@ -37,7 +37,8 @@ const Footer: React.FC = () => {
             </p>
             <p className="text-center">Logo realizzato da Manuela</p>
           </Col>
-          {!isApp && (
+          {/* TODO: remove false condition when app will be public and update googlePlayLink value */}
+          {false && !isApp && (
             <Col xs={12} className="mb-4">
               <p>
                 <a
