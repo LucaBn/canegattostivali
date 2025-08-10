@@ -529,5 +529,37 @@
       "PARCHEGGIO",
       "ORE"
     ]
+  },
+  {
+    "id": 41,
+    "wordList": [
+      "TALAMO",
+      "NUZIALE",
+      "MARCIA",
+      "MELA",
+      "SPICCHIO",
+      "AGLIO",
+      "PANE",
+      "DENTI",
+      "UNGHIE",
+      "GEL",
+      "CAPELLI"
+    ]
+  },
+  {
+    "id": 42,
+    "wordList": [
+      "GUIDA",
+      "SCUOLA",
+      "SUPERIORE",
+      "DIRETTO",
+      "ROSSO",
+      "RELATIVO",
+      "PRONOME",
+      "PERSONALE",
+      "INTERESSE",
+      "COMPOSTO",
+      "CHIMICO"
+    ]
   }
 ]
