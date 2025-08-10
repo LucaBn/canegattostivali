@@ -561,5 +561,37 @@
       "COMPOSTO",
       "CHIMICO"
     ]
+  },
+  {
+    "id": 43,
+    "wordList": [
+      "ARTISTA",
+      "STRADA",
+      "CICLISMO",
+      "GARA",
+      "APPALTO",
+      "PUBBLICO",
+      "IP",
+      "INDIRIZZO",
+      "CASA",
+      "USCIRE",
+      "GANGHERI"
+    ]
+  },
+  {
+    "id": 44,
+    "wordList": [
+      "QUARANTAQUATTRO",
+      "GATTI",
+      "TRIPPA",
+      "ROMANA",
+      "PORTA",
+      "BLINDATA",
+      "CAMERA",
+      "COMMERCIO",
+      "DETTAGLIO",
+      "MINIMO",
+      "SALARIO"
+    ]
   }
 ]
