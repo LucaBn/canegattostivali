@@ -593,5 +593,37 @@
       "MINIMO",
       "SALARIO"
     ]
+  },
+  {
+    "id": 45,
+    "wordList": [
+      "CAMPAGNA",
+      "ELETTORALE",
+      "SCHEDA",
+      "GRAFICA",
+      "TAVOLETTA",
+      "CIOCCOLATO",
+      "SALAME",
+      "FELINO",
+      "SCATTO",
+      "IRA",
+      "FUNESTA"
+    ]
+  },
+  {
+    "id": 46,
+    "wordList": [
+      "ALLENAMENTO",
+      "FUORI",
+      "SENNO",
+      "PERDERE",
+      "PAZIENZA",
+      "SANTA",
+      "MESSA",
+      "SCENA",
+      "COLPO",
+      "SPADA",
+      "DAMOCLE"
+    ]
   }
 ]
