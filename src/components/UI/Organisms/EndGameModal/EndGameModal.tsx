@@ -95,7 +95,7 @@ const EndGameModal: React.FC<IEndGameModal> = ({
               </Badge>
             )}
           </p>
-          <p className="mb-1">Catena di parole:</p>
+          <p className="mb-1">Sequenza di parole:</p>
           <ul className="list-unstyled">
             {wordSequence.map((word) => (
               <li key={word}>
