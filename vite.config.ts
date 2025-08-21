@@ -10,6 +10,25 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
+      workbox: {
+        globPatterns: [
+          "**/*.{js,css,html,ico,svg,jpg,jpeg,webp}",
+          "images/*.{png}",
+        ],
+        runtimeCaching: [
+          {
+            urlPattern: ({ request }) => request.destination === "image",
+            handler: "CacheFirst",
+            options: {
+              cacheName: "images-cache",
+              expiration: {
+                maxEntries: 100,
+                maxAgeSeconds: 60 * 60 * 24 * 30,
+              },
+            },
+          },
+        ],
+      },
       // devOptions: {
       //   enabled: true,
       // },
