@@ -4068,7 +4068,15 @@
   },
   {
     "word": "CIOCCOLATO",
-    "nextWordList": ["SALAME", "UOVO", "TORTA", "BIANCO", "BANANA", "GELATO"]
+    "nextWordList": [
+      "SALAME",
+      "UOVO",
+      "TORTA",
+      "BIANCO",
+      "BANANA",
+      "GELATO",
+      "MONETA"
+    ]
   },
   {
     "word": "FETTA",
@@ -4671,7 +4679,7 @@
   },
   {
     "word": "CARRO",
-    "nextWordList": ["FUNEBRE", "RUOTA", "GRANDE"]
+    "nextWordList": ["FUNEBRE", "RUOTA", "GRANDE", "CARNEVALE"]
   },
   {
     "word": "GRANDE",
@@ -4983,7 +4991,7 @@
   },
   {
     "word": "CARNEVALE",
-    "nextWordList": ["MASCHERA", "COSTUME", "FESTA"]
+    "nextWordList": ["MASCHERA", "COSTUME", "FESTA", "CARRO"]
   },
   {
     "word": "COSTUME",
@@ -6392,7 +6400,14 @@
   },
   {
     "word": "MONETA",
-    "nextWordList": ["COLLEZIONE", "ORO", "LANCIO", "FRANCO", "SOLDO"]
+    "nextWordList": [
+      "COLLEZIONE",
+      "ORO",
+      "LANCIO",
+      "FRANCO",
+      "SOLDO",
+      "CIOCCOLATO"
+    ]
   },
   {
     "word": "FENOMENO",
