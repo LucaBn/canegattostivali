@@ -625,5 +625,37 @@
       "SPADA",
       "DAMOCLE"
     ]
+  },
+  {
+    "id": 47,
+    "wordList": [
+      "CRISTOFORO",
+      "COLOMBO",
+      "UOVO",
+      "CAMICIA",
+      "COLLO",
+      "BOTTIGLIA",
+      "ACQUA",
+      "POZZO",
+      "FONDO",
+      "INVESTIMENTO",
+      "IMPRODUTTIVO"
+    ]
+  },
+  {
+    "id": 48,
+    "wordList": [
+      "BIOLOGO",
+      "MARINO",
+      "LEONE",
+      "TASTIERA",
+      "ELETTRONICA",
+      "FATTURA",
+      "SCONTO",
+      "PENA",
+      "VALERE",
+      "FARSI",
+      "NOTARE"
+    ]
   }
 ]
