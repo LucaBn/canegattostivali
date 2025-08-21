@@ -15,6 +15,7 @@ import { UserData } from "@/typings/user";
 
 // Data
 import levelList from "@/assets/data/levelList.json";
+import NotificationCircle from "../../Atoms/NotificationCircle/NotificationCircle";
 
 interface Props {
   setMode: (newMode: "random" | "levels" | "custom") => void;
@@ -61,7 +62,7 @@ const LevelSelector: React.FC<Props> = ({ setMode }: Props) => {
               <Card.Body className="level-selector__card-body pb-0">
                 {areAllLevelsCompleted ? (
                   <div className="text-center mb-3">
-                    <em>Hai completato tutti i livelli!</em>
+                    <em>Hai completato tutti i livelli!</em> 😎
                   </div>
                 ) : (
                   <div className="text-center mb-3">
@@ -89,8 +90,11 @@ const LevelSelector: React.FC<Props> = ({ setMode }: Props) => {
                         }
                         disabled={level.id > lastLevelCompleted + 1}
                         onClick={() => handleLevelChange(level.id)}
-                        className="w-100"
+                        className="position-relative w-100"
                       >
+                        {level.id === lastLevelCompleted + 1 && (
+                          <NotificationCircle bgColor="warning" pulse />
+                        )}
                         Lvl {level.id}
                       </Button>
                     </Col>

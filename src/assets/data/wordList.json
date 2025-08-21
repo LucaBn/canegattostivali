@@ -155,7 +155,6 @@
       "GIACCA",
       "CREMA",
       "SECCA",
-      "MORBIDA",
       "OCA",
       "FINTA",
       "AMICO",
@@ -2696,11 +2695,18 @@
   },
   {
     "word": "MORALE",
-    "nextWordList": ["VITTORIA", "FILOSOFIA", "ALTO"]
+    "nextWordList": ["VITTORIA", "FILOSOFIA", "ALTO", "PROFILO"]
   },
   {
     "word": "FILOSOFIA",
-    "nextWordList": ["MORALE", "MATERIA", "PROFESSORE", "MODERNA", "CLASSICA"]
+    "nextWordList": [
+      "MORALE",
+      "MATERIA",
+      "PROFESSORE",
+      "MODERNA",
+      "CLASSICA",
+      "PRATICA"
+    ]
   },
   {
     "word": "MATERIA",
@@ -2716,7 +2722,7 @@
   },
   {
     "word": "RICERCA",
-    "nextWordList": ["TASTO", "INTERNET", "MERCATO", "SVILUPPO"]
+    "nextWordList": ["TASTO", "INTERNET", "MERCATO", "SVILUPPO", "SCIENTIFICA"]
   },
   {
     "word": "SVILUPPO",
@@ -2900,7 +2906,7 @@
   },
   {
     "word": "BOX",
-    "nextWordList": ["RAMPA", "DOCCIA", "AUTO"]
+    "nextWordList": ["RAMPA", "DOCCIA", "AUTO", "CORSIA"]
   },
   {
     "word": "LANCIO",
@@ -2956,12 +2962,8 @@
     "nextWordList": ["FRUTTA", "ARIA", "PASTA", "NEVE"]
   },
   {
-    "word": "MORBIDA",
-    "nextWordList": ["PELLE", "SETA", "COPERTA"]
-  },
-  {
     "word": "COPERTA",
-    "nextWordList": ["MORBIDA", "ANTINCENDIO", "LANA", "TERMICA"]
+    "nextWordList": ["ANTINCENDIO", "LANA", "TERMICA", "PISCINA"]
   },
   {
     "word": "TERMICA",
@@ -2973,7 +2975,7 @@
   },
   {
     "word": "SETA",
-    "nextWordList": ["MORBIDA", "VIA", "CAMICIA", "CRAVATTA"]
+    "nextWordList": ["VIA", "CAMICIA", "CRAVATTA"]
   },
   {
     "word": "VIA",
@@ -3289,7 +3291,7 @@
   },
   {
     "word": "CIELO",
-    "nextWordList": ["ALTO", "STELLATO", "BLU", "COPERTO", "GRIGIO"]
+    "nextWordList": ["STELLATO", "BLU", "COPERTO", "GRIGIO"]
   },
   {
     "word": "COPERTO",
@@ -3579,7 +3581,8 @@
       "ORDINE",
       "TELEFONO",
       "TRASPORTO",
-      "APERTO"
+      "APERTO",
+      "BAGNO"
     ]
   },
   {
@@ -3721,7 +3724,7 @@
   },
   {
     "word": "ASTA",
-    "nextWordList": ["BANDIERA", "CASA", "SALTO"]
+    "nextWordList": ["BANDIERA", "CASA", "SALTO", "OCCHIALI"]
   },
   {
     "word": "TOVAGLIA",
@@ -4065,7 +4068,15 @@
   },
   {
     "word": "CIOCCOLATO",
-    "nextWordList": ["SALAME", "UOVO", "TORTA", "BIANCO", "BANANA", "GELATO"]
+    "nextWordList": [
+      "SALAME",
+      "UOVO",
+      "TORTA",
+      "BIANCO",
+      "BANANA",
+      "GELATO",
+      "MONETA"
+    ]
   },
   {
     "word": "FETTA",
@@ -4257,7 +4268,7 @@
   },
   {
     "word": "MELA",
-    "nextWordList": ["ROSSA", "COTTA", "MARCIA", "FRUTTO"]
+    "nextWordList": ["ROSSA", "COTTA", "MARCIA", "FRUTTO", "GIORNO"]
   },
   {
     "word": "CROCE",
@@ -4452,7 +4463,15 @@
   },
   {
     "word": "UTENTE",
-    "nextWordList": ["NOME", "NUOVO", "PASSWORD"]
+    "nextWordList": ["NOME", "NUOVO", "PASSWORD", "PROFILO"]
+  },
+  {
+    "word": "PROFILO",
+    "nextWordList": ["UTENTE", "FOTO", "BASSO", "MORALE"]
+  },
+  {
+    "word": "BASSO",
+    "nextWordList": ["PROFILO", "STRUMENTO", "COLPO", "CHIAVE", "ALTO"]
   },
   {
     "word": "PASSWORD",
@@ -4516,7 +4535,8 @@
       "SABATO",
       "ALTRO",
       "ORDINE",
-      "SPECIALE"
+      "SPECIALE",
+      "MELA"
     ]
   },
   {
@@ -4659,7 +4679,7 @@
   },
   {
     "word": "CARRO",
-    "nextWordList": ["FUNEBRE", "RUOTA", "GRANDE"]
+    "nextWordList": ["FUNEBRE", "RUOTA", "GRANDE", "CARNEVALE"]
   },
   {
     "word": "GRANDE",
@@ -4763,7 +4783,7 @@
   },
   {
     "word": "ALTO",
-    "nextWordList": ["SALTO", "MARE", "COLLO", "CIELO", "MORALE"]
+    "nextWordList": ["SALTO", "MARE", "COLLO", "MORALE", "BASSO"]
   },
   {
     "word": "COLLO",
@@ -4971,7 +4991,7 @@
   },
   {
     "word": "CARNEVALE",
-    "nextWordList": ["MASCHERA", "COSTUME", "FESTA"]
+    "nextWordList": ["MASCHERA", "COSTUME", "FESTA", "CARRO"]
   },
   {
     "word": "COSTUME",
@@ -4990,7 +5010,7 @@
   },
   {
     "word": "BAGNO",
-    "nextWordList": ["COSTUME", "SERVIZIO", "MARE", "PISCINA"]
+    "nextWordList": ["COSTUME", "SERVIZIO", "MARE", "PISCINA", "PUBBLICO"]
   },
   {
     "word": "NOZZE",
@@ -5056,7 +5076,8 @@
       "CORNICE",
       "SVILUPPO",
       "POSA",
-      "MOSSA"
+      "MOSSA",
+      "PROFILO"
     ]
   },
   {
@@ -5211,7 +5232,8 @@
       "OPERAZIONE",
       "COMANDO",
       "POSTALE",
-      "INDAGINE"
+      "INDAGINE",
+      "SCIENTIFICA"
     ]
   },
   {
@@ -5299,7 +5321,8 @@
       "TEST",
       "COSCIENZA",
       "PROVA",
-      "PRENDERE"
+      "PRENDERE",
+      "TEORIA"
     ]
   },
   {
@@ -5601,7 +5624,8 @@
       "CUSTODIA",
       "RIPOSO",
       "LETTURA",
-      "PANNO"
+      "PANNO",
+      "ASTA"
     ]
   },
   {
@@ -5752,7 +5776,8 @@
       "CHITARRA",
       "FIATO",
       "TROMBA",
-      "MUSICALE"
+      "MUSICALE",
+      "BASSO"
     ]
   },
   {
@@ -5875,7 +5900,8 @@
       "FORTUNA",
       "SOLE",
       "TACCO",
-      "FREDDO"
+      "FREDDO",
+      "BASSO"
     ]
   },
   {
@@ -5984,7 +6010,8 @@
       "BORDO",
       "CORSIA",
       "SCALETTA",
-      "BAGNO"
+      "BAGNO",
+      "COPERTA"
     ]
   },
   {
@@ -6021,7 +6048,7 @@
   },
   {
     "word": "CORSIA",
-    "nextWordList": ["PISCINA", "EMERGENZA", "OSPEDALE"]
+    "nextWordList": ["PISCINA", "EMERGENZA", "OSPEDALE", "BOX"]
   },
   {
     "word": "OSPEDALE",
@@ -6373,7 +6400,14 @@
   },
   {
     "word": "MONETA",
-    "nextWordList": ["COLLEZIONE", "ORO", "LANCIO", "FRANCO", "SOLDO"]
+    "nextWordList": [
+      "COLLEZIONE",
+      "ORO",
+      "LANCIO",
+      "FRANCO",
+      "SOLDO",
+      "CIOCCOLATO"
+    ]
   },
   {
     "word": "FENOMENO",
@@ -6591,7 +6625,7 @@
   },
   {
     "word": "CHIAVE",
-    "nextWordList": ["PAROLA", "PORTA", "VOLTA", "GIRO", "LETTURA"]
+    "nextWordList": ["PAROLA", "PORTA", "VOLTA", "GIRO", "LETTURA", "BASSO"]
   },
   {
     "word": "LETTURA",
@@ -6845,7 +6879,19 @@
   },
   {
     "word": "EVASIONE",
-    "nextWordList": ["FISCALE", "ORDINE", "IVA"]
+    "nextWordList": ["FISCALE", "ORDINE", "IVA", "PRATICA"]
+  },
+  {
+    "word": "PRATICA",
+    "nextWordList": ["EVASIONE", "TEORIA", "FILOSOFIA"]
+  },
+  {
+    "word": "TEORIA",
+    "nextWordList": ["PRATICA", "ESAME", "SCIENTIFICA"]
+  },
+  {
+    "word": "SCIENTIFICA",
+    "nextWordList": ["TEORIA", "RICERCA", "POLIZIA"]
   },
   {
     "word": "ANGELO",

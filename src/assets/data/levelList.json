@@ -529,5 +529,133 @@
       "PARCHEGGIO",
       "ORE"
     ]
+  },
+  {
+    "id": 41,
+    "wordList": [
+      "TALAMO",
+      "NUZIALE",
+      "MARCIA",
+      "MELA",
+      "SPICCHIO",
+      "AGLIO",
+      "PANE",
+      "DENTI",
+      "UNGHIE",
+      "GEL",
+      "CAPELLI"
+    ]
+  },
+  {
+    "id": 42,
+    "wordList": [
+      "GUIDA",
+      "SCUOLA",
+      "SUPERIORE",
+      "DIRETTO",
+      "ROSSO",
+      "RELATIVO",
+      "PRONOME",
+      "PERSONALE",
+      "INTERESSE",
+      "COMPOSTO",
+      "CHIMICO"
+    ]
+  },
+  {
+    "id": 43,
+    "wordList": [
+      "ARTISTA",
+      "STRADA",
+      "CICLISMO",
+      "GARA",
+      "APPALTO",
+      "PUBBLICO",
+      "IP",
+      "INDIRIZZO",
+      "CASA",
+      "USCIRE",
+      "GANGHERI"
+    ]
+  },
+  {
+    "id": 44,
+    "wordList": [
+      "QUARANTAQUATTRO",
+      "GATTI",
+      "TRIPPA",
+      "ROMANA",
+      "PORTA",
+      "BLINDATA",
+      "CAMERA",
+      "COMMERCIO",
+      "DETTAGLIO",
+      "MINIMO",
+      "SALARIO"
+    ]
+  },
+  {
+    "id": 45,
+    "wordList": [
+      "CAMPAGNA",
+      "ELETTORALE",
+      "SCHEDA",
+      "GRAFICA",
+      "TAVOLETTA",
+      "CIOCCOLATO",
+      "SALAME",
+      "FELINO",
+      "SCATTO",
+      "IRA",
+      "FUNESTA"
+    ]
+  },
+  {
+    "id": 46,
+    "wordList": [
+      "ALLENAMENTO",
+      "FUORI",
+      "SENNO",
+      "PERDERE",
+      "PAZIENZA",
+      "SANTA",
+      "MESSA",
+      "SCENA",
+      "COLPO",
+      "SPADA",
+      "DAMOCLE"
+    ]
+  },
+  {
+    "id": 47,
+    "wordList": [
+      "CRISTOFORO",
+      "COLOMBO",
+      "UOVO",
+      "CAMICIA",
+      "COLLO",
+      "BOTTIGLIA",
+      "ACQUA",
+      "POZZO",
+      "FONDO",
+      "INVESTIMENTO",
+      "IMPRODUTTIVO"
+    ]
+  },
+  {
+    "id": 48,
+    "wordList": [
+      "BIOLOGO",
+      "MARINO",
+      "LEONE",
+      "TASTIERA",
+      "ELETTRONICA",
+      "FATTURA",
+      "SCONTO",
+      "PENA",
+      "VALERE",
+      "FARSI",
+      "NOTARE"
+    ]
   }
 ]
