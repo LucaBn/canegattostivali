@@ -42,6 +42,7 @@ const NewsButton: React.FC = () => {
     changeKeyboardStatus(KeyboardStatusList.Inactive);
     saveReadNews();
   };
+
   const handleClose = () => {
     setShowModal(false);
     changeKeyboardStatus(KeyboardStatusList.Active);
