@@ -35,8 +35,10 @@ const UserModal: React.FC<Props> = ({ handleClose }: Props) => {
   const lastLevelCompleted = storedUserData?.lastLevelCompleted || 0;
 
   useEffect(() => {
+    const trimmedUsername = username.trim();
+
     writeToLocalStorage(LS_KEY_LIST.USER_DATA, {
-      username,
+      username: trimmedUsername,
       matchesWon,
       bestTime,
       lastLevelCompleted,
