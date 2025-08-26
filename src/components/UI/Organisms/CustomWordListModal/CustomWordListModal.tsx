@@ -75,6 +75,10 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
   };
 
   const handleCurrentWordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.value === " ") {
+      e.preventDefault();
+      return;
+    }
     const value = getFormattedWord(e.target.value);
     setCurrentWord(value);
   };
