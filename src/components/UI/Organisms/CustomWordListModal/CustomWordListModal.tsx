@@ -203,7 +203,7 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
               variant="success"
               onClick={() => {
                 navigator.share({
-                  title: "Cane Gatto Stivali",
+                  title: "Cane Gatto Stivali! #CaneGattoStivali",
                   text: "Risolvi questa sequenza di parole se sei capace!",
                   url: getCustomListUrl(),
                 });
