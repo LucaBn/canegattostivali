@@ -121,7 +121,7 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
               <InputGroup.Text>{index + 1}</InputGroup.Text>
               <Form.Control
                 type="text"
-                placeholder="Inserisci una parola"
+                placeholder="Scrivi una parola"
                 value={word}
                 onChange={(e) =>
                   handleWordChange(
@@ -136,6 +136,7 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
                     ? "is-valid"
                     : "is-invalid"
                 }
+                spellCheck={false}
               />
               <Button
                 variant="danger"
@@ -150,11 +151,12 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
             <InputGroup className="mt-4 mb-3">
               <Form.Control
                 type="text"
-                placeholder="Inserisci una parola"
+                placeholder="Scrivi una parola"
                 value={currentWord}
                 onChange={handleCurrentWordChange}
                 maxLength={20}
-                aria-label="Inserisci una parola"
+                aria-label="Scrivi una parola"
+                spellCheck={false}
               />
               <Button
                 variant="primary"
