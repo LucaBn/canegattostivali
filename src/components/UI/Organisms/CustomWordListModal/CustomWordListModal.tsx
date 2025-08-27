@@ -137,6 +137,8 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
                     : "is-invalid"
                 }
                 spellCheck={false}
+                autoCorrect="off"
+                autoCapitalize="off"
               />
               <Button
                 variant="danger"
@@ -157,6 +159,8 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
                 maxLength={20}
                 aria-label="Scrivi una parola"
                 spellCheck={false}
+                autoCorrect="off"
+                autoCapitalize="off"
               />
               <Button
                 variant="primary"
