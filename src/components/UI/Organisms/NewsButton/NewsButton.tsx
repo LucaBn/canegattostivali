@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 // Components
+import { Button } from "react-bootstrap";
 import IconNewspaper from "@/components/UI/Atoms/IconNewspaper/IconNewspaper";
 import NotificationCircle from "@/components/UI/Atoms/NotificationCircle/NotificationCircle";
 import NewsModal from "@/components/UI/Organisms/NewsModal/NewsModal";
@@ -53,23 +54,17 @@ const NewsButton: React.FC = () => {
 
   return (
     <>
-      <span
-        onClick={handleOpen}
-        tabIndex={0}
-        role="button"
+      <Button
         aria-label="News"
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            handleOpen();
-            e.preventDefault();
-          }
-        }}
+        title="News"
+        variant="link"
+        onClick={handleOpen}
       >
         <IconNewspaper forceColor="#fff" />
         {isNotificationVisible && (
           <NotificationCircle bgColor="warning" pulse />
         )}
-      </span>
+      </Button>
       {showModal && <NewsModal handleClose={handleClose} />}
     </>
   );

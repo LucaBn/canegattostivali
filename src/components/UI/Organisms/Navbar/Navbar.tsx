@@ -1,7 +1,7 @@
 import React /* useState, useEffect, useRef */ from "react";
 
 // Components
-import { Image } from "react-bootstrap";
+import { Button, Image } from "react-bootstrap";
 import { Container, Navbar } from "react-bootstrap";
 // import { LinkContainer } from "react-router-bootstrap";
 import IconSun from "@/components/UI/Atoms/IconSun/IconSun";
@@ -105,32 +105,17 @@ const NavbarComponent: React.FC = () => {
             />
           </Navbar.Brand>
 
-          <span
-            onClick={toggleTheme}
-            className="ms-auto cursor-pointer"
-            title="Cambia il tema"
-            tabIndex={0}
-            role="button"
-            aria-label="Tema"
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                toggleTheme();
-                e.preventDefault();
-              }
-            }}
-          >
-            {toggleThemeIcon}
-          </span>
-          <span className="ms-3 ms-md-4 me-0 cursor-pointer" title="News">
+          <span>
+            <Button
+              aria-label="Cambia il tema"
+              title="Cambia il tema"
+              variant="link"
+              onClick={toggleTheme}
+            >
+              {toggleThemeIcon}
+            </Button>
             <NewsButton />
-          </span>
-          <span
-            className="ms-3 ms-md-4 me-0 cursor-pointer"
-            title="Crea la tua sequenza di parole"
-          >
             <CustomWordListButton />
-          </span>
-          <span className="ms-3 ms-md-4 me-0 cursor-pointer" title="Profilo">
             <UserButton />
           </span>
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 // Components
+import { Button } from "react-bootstrap";
 import IconUser from "@/components/UI/Atoms/IconUser/IconUser";
 import UserModal from "@/components/UI/Organisms/UserModal/UserModal";
 
@@ -26,20 +27,14 @@ const UserButton: React.FC = () => {
 
   return (
     <>
-      <span
-        onClick={handleOpen}
-        tabIndex={0}
-        role="button"
+      <Button
         aria-label="Profilo"
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            handleOpen();
-            e.preventDefault();
-          }
-        }}
+        title="Profilo"
+        variant="link"
+        onClick={handleOpen}
       >
         <IconUser forceColor="#fff" />
-      </span>
+      </Button>
       {showModal && <UserModal handleClose={handleClose} />}
     </>
   );

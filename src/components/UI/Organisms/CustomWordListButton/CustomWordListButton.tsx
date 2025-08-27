@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 // Components
+import { Button } from "react-bootstrap";
 import IconPlus from "@/components/UI/Atoms/IconPlus/IconPlus";
 import CustomWordListModal from "@/components/UI/Organisms/CustomWordListModal/CustomWordListModal";
 
@@ -19,6 +20,7 @@ const CustomWordListButton: React.FC = () => {
     setShowModal(true);
     changeKeyboardStatus(KeyboardStatusList.Inactive);
   };
+
   const handleClose = () => {
     setShowModal(false);
     changeKeyboardStatus(KeyboardStatusList.Active);
@@ -26,20 +28,14 @@ const CustomWordListButton: React.FC = () => {
 
   return (
     <>
-      <span
-        onClick={handleOpen}
-        tabIndex={0}
-        role="button"
+      <Button
         aria-label="Crea la tua sequenza di parole"
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            handleOpen();
-            e.preventDefault();
-          }
-        }}
+        title="Crea la tua sequenza di parole"
+        variant="link"
+        onClick={handleOpen}
       >
         <IconPlus forceColor="#fff" />
-      </span>
+      </Button>
       {showModal && <CustomWordListModal handleClose={handleClose} />}
     </>
   );
