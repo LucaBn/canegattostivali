@@ -35,6 +35,10 @@ const HomePage: React.FC = () => {
   const customListParam = queryParams.get("customList");
   const decodedSequence = decryptString(customListParam);
 
+  const isDecodedSequenceValid = decodedSequence
+    ? /^[A-ZÀÈÌÒÙ-]+$/.test(decodedSequence)
+    : false;
+
   const decodedSequenceArray = decodedSequence
     ? decodedSequence.split("-").filter(Boolean)
     : [];
@@ -43,7 +47,7 @@ const HomePage: React.FC = () => {
     new Set(decodedSequenceArray).size < decodedSequenceArray.length;
 
   const IS_CUSTOM_GAME: boolean =
-    decodedSequenceArray.length > 1 && !hasDuplicates;
+    decodedSequenceArray.length > 1 && !hasDuplicates && isDecodedSequenceValid;
 
   const WORD_SEQUENCE_DEFAULT: string[] = IS_CUSTOM_GAME
     ? decodedSequenceArray
