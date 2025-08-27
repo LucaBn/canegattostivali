@@ -588,7 +588,43 @@
   },
   {
     "word": "CONTO",
-    "nextWordList": ["PAGARE", "CORRENTE", "POCO"]
+    "nextWordList": ["PAGARE", "CORRENTE", "POCO", "ECONOMICO"]
+  },
+  {
+    "word": "ECONOMICO",
+    "nextWordList": ["CONTO", "SACRIFICIO", "DANNO"]
+  },
+  {
+    "word": "DANNO",
+    "nextWordList": ["ECONOMICO", "MORALE", "IMMAGINE"]
+  },
+  {
+    "word": "IMMAGINE",
+    "nextWordList": ["DANNO", "RITORNO", "UOMO", "DIRITTO"]
+  },
+  {
+    "word": "RITORNO",
+    "nextWordList": ["IMMAGINE", "VIA", "FIAMMA", "GIRONE", "VIAGGIO"]
+  },
+  {
+    "word": "GIRONE",
+    "nextWordList": ["RITORNO", "INFERNO", "QUALIFICAZIONE"]
+  },
+  {
+    "word": "QUALIFICAZIONE",
+    "nextWordList": ["GIRONE", "INCONTRO", "DIRETTA"]
+  },
+  {
+    "word": "FIAMMA",
+    "nextWordList": ["RITORNO", "OLIMPICA", "ETERNA"]
+  },
+  {
+    "word": "ETERNA",
+    "nextWordList": ["FIAMMA", "CITTÀ", "VITA", "LOTTA"]
+  },
+  {
+    "word": "OLIMPICA",
+    "nextWordList": ["FIAMMA", "BANDIERA", "PISCINA", "GARA", "TORCIA"]
   },
   {
     "word": "POCO",
@@ -718,7 +754,15 @@
   },
   {
     "word": "CITTÀ",
-    "nextWordList": ["FANTASMA", "ARTE", "COMUNE", "ROMA", "MOSCA", "BERLINO"]
+    "nextWordList": [
+      "FANTASMA",
+      "ARTE",
+      "COMUNE",
+      "ROMA",
+      "MOSCA",
+      "BERLINO",
+      "ETERNA"
+    ]
   },
   {
     "word": "ARTE",
@@ -2012,7 +2056,7 @@
   },
   {
     "word": "DIRETTA",
-    "nextWordList": ["TV", "TRASMISSIONE", "ELIMINAZIONE"]
+    "nextWordList": ["TV", "TRASMISSIONE", "ELIMINAZIONE", "QUALIFICAZIONE"]
   },
   {
     "word": "ELIMINAZIONE",
@@ -2024,7 +2068,7 @@
   },
   {
     "word": "GARA",
-    "nextWordList": ["ELIMINAZIONE", "SCI", "GIUDICE", "STAFFETTA"]
+    "nextWordList": ["ELIMINAZIONE", "SCI", "GIUDICE", "STAFFETTA", "OLIMPICA"]
   },
   {
     "word": "GIUDICE",
@@ -2129,7 +2173,7 @@
   },
   {
     "word": "COMANDO",
-    "nextWordList": ["RIGA", "PONTE", "POLIZIA"]
+    "nextWordList": ["RIGA", "PONTE", "POLIZIA", "POSIZIONE"]
   },
   {
     "word": "MENTE",
@@ -2695,7 +2739,7 @@
   },
   {
     "word": "MORALE",
-    "nextWordList": ["VITTORIA", "FILOSOFIA", "ALTO", "PROFILO"]
+    "nextWordList": ["VITTORIA", "FILOSOFIA", "ALTO", "PROFILO", "DANNO"]
   },
   {
     "word": "FILOSOFIA",
@@ -2781,7 +2825,7 @@
   },
   {
     "word": "INFERNO",
-    "nextWordList": ["DIAVOLO", "VITA", "DISCO", "PARADISO"]
+    "nextWordList": ["DIAVOLO", "VITA", "DISCO", "PARADISO", "GIRONE"]
   },
   {
     "word": "SPIRITO",
@@ -2869,7 +2913,7 @@
   },
   {
     "word": "LOTTA",
-    "nextWordList": ["CRIMINE", "CLASSE", "INCONTRO"]
+    "nextWordList": ["CRIMINE", "CLASSE", "INCONTRO", "ETERNA"]
   },
   {
     "word": "SCENA",
@@ -2990,7 +3034,8 @@
       "SVILUPPO",
       "ACCESSO",
       "FUGA",
-      "EMAIL"
+      "EMAIL",
+      "RITORNO"
     ]
   },
   {
@@ -3603,7 +3648,7 @@
   },
   {
     "word": "SACRIFICIO",
-    "nextWordList": ["ALTARE", "SPIRITO", "OFFERTA", "UMANO"]
+    "nextWordList": ["ALTARE", "SPIRITO", "OFFERTA", "UMANO", "ECONOMICO"]
   },
   {
     "word": "UMANO",
@@ -3720,7 +3765,7 @@
   },
   {
     "word": "BANDIERA",
-    "nextWordList": ["SCACCHI", "BIANCA", "ASTA", "ROSSA"]
+    "nextWordList": ["SCACCHI", "BIANCA", "ASTA", "ROSSA", "OLIMPICA"]
   },
   {
     "word": "ASTA",
@@ -3848,7 +3893,8 @@
       "INVISIBILE",
       "ACCIAIO",
       "ONORE",
-      "AFFARI"
+      "AFFARI",
+      "IMMAGINE"
     ]
   },
   {
@@ -4068,15 +4114,7 @@
   },
   {
     "word": "CIOCCOLATO",
-    "nextWordList": [
-      "SALAME",
-      "UOVO",
-      "TORTA",
-      "BIANCO",
-      "BANANA",
-      "GELATO",
-      "MONETA"
-    ]
+    "nextWordList": ["SALAME", "UOVO", "TORTA", "BIANCO", "GELATO", "MONETA"]
   },
   {
     "word": "FETTA",
@@ -4209,7 +4247,8 @@
       "DITA",
       "PALLA",
       "IMPRONTA",
-      "PIANTA"
+      "PIANTA",
+      "BANANA"
     ]
   },
   {
@@ -4249,7 +4288,7 @@
   },
   {
     "word": "TORCIA",
-    "nextWordList": ["UMANA", "TELEFONO", "BATTERIA"]
+    "nextWordList": ["UMANA", "TELEFONO", "BATTERIA", "OLIMPICA"]
   },
   {
     "word": "TELEFONO",
@@ -4412,7 +4451,14 @@
   },
   {
     "word": "INCONTRO",
-    "nextWordList": ["DURATA", "PARTITA", "PUNTO", "LOTTA", "JUDO"]
+    "nextWordList": [
+      "DURATA",
+      "PARTITA",
+      "PUNTO",
+      "LOTTA",
+      "JUDO",
+      "QUALIFICAZIONE"
+    ]
   },
   {
     "word": "JUDO",
@@ -4825,7 +4871,7 @@
   },
   {
     "word": "TENDA",
-    "nextWordList": ["LINO", "SOLE", "DOCCIA", "GANCIO"]
+    "nextWordList": ["LINO", "SOLE", "DOCCIA", "GANCIO", "CARRELLO"]
   },
   {
     "word": "BOTTIGLIA",
@@ -5181,7 +5227,8 @@
       "PARTENZA",
       "PIACERE",
       "ESCURSIONE",
-      "DIARIO"
+      "DIARIO",
+      "RITORNO"
     ]
   },
   {
@@ -5420,7 +5467,8 @@
       "VITA",
       "VOTO",
       "ACQUISITO",
-      "ASILO"
+      "ASILO",
+      "IMMAGINE"
     ]
   },
   {
@@ -5742,7 +5790,7 @@
   },
   {
     "word": "BANANA",
-    "nextWordList": ["BUCCIA", "FRUTTO", "CIOCCOLATO"]
+    "nextWordList": ["BUCCIA", "FRUTTO", "PIEDE"]
   },
   {
     "word": "ARANCIA",
@@ -6011,7 +6059,8 @@
       "CORSIA",
       "SCALETTA",
       "BAGNO",
-      "COPERTA"
+      "COPERTA",
+      "OLIMPICA"
     ]
   },
   {
@@ -6249,7 +6298,7 @@
   },
   {
     "word": "CARRELLO",
-    "nextWordList": ["SPESA", "AEREO", "RUOTA"]
+    "nextWordList": ["SPESA", "AEREO", "RUOTA", "TENDA"]
   },
   {
     "word": "BILANCIA",
@@ -6600,7 +6649,8 @@
       "PERCORSO",
       "SOCIALE",
       "BOTTA",
-      "QUALITÀ"
+      "QUALITÀ",
+      "ETERNA"
     ]
   },
   {
@@ -6699,7 +6749,8 @@
       "ULTIMA",
       "GUERRA",
       "CAMPO",
-      "CLASSIFICA"
+      "CLASSIFICA",
+      "COMANDO"
     ]
   },
   {
