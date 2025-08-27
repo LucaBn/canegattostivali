@@ -57,15 +57,16 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
   };
 
   const getFormattedWord = (word: string) => {
+    word = word.replace(/\. $/, ""); // Handle like this when the mobile keyboard adds a dot and a space at the end of the word when pressing spacebar twice
+
     return word
-      .trim()
       .replace(/[^a-zàáèéìíòóúùÀÁÈÉÌÒÙ]/gi, "")
-      .replace("á", "à")
-      .replace("é", "è")
-      .replace("í", "ì")
-      .replace("ó", "ò")
-      .replace("ú", "ù")
-      .toUpperCase();
+      .toUpperCase()
+      .replace("Á", "À")
+      .replace("É", "È")
+      .replace("Í", "Ì")
+      .replace("Ó", "Ò")
+      .replace("Ú", "Ù");
   };
 
   const handleWordChange = (
