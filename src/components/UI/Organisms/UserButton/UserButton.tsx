@@ -26,7 +26,18 @@ const UserButton: React.FC = () => {
 
   return (
     <>
-      <span onClick={handleOpen}>
+      <span
+        onClick={handleOpen}
+        tabIndex={0}
+        role="button"
+        aria-label="Profilo"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            handleOpen();
+            e.preventDefault();
+          }
+        }}
+      >
         <IconUser forceColor="#fff" />
       </span>
       {showModal && <UserModal handleClose={handleClose} />}

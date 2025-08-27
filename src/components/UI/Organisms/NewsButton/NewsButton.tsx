@@ -53,7 +53,18 @@ const NewsButton: React.FC = () => {
 
   return (
     <>
-      <span className="position-relative" onClick={handleOpen}>
+      <span
+        onClick={handleOpen}
+        tabIndex={0}
+        role="button"
+        aria-label="News"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            handleOpen();
+            e.preventDefault();
+          }
+        }}
+      >
         <IconNewspaper forceColor="#fff" />
         {isNotificationVisible && (
           <NotificationCircle bgColor="warning" pulse />

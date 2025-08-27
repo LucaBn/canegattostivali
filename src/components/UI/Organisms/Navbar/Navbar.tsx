@@ -88,6 +88,13 @@ const NavbarComponent: React.FC = () => {
             onClick={handleLogoClick}
             className="cursor-pointer p-0"
             title="Cane Gatto Stivali"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                handleLogoClick();
+                e.preventDefault();
+              }
+            }}
           >
             <Image
               src="/assets/img/logo.png"
@@ -102,6 +109,15 @@ const NavbarComponent: React.FC = () => {
             onClick={toggleTheme}
             className="ms-auto cursor-pointer"
             title="Cambia il tema"
+            tabIndex={0}
+            role="button"
+            aria-label="Tema"
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                toggleTheme();
+                e.preventDefault();
+              }
+            }}
           >
             {toggleThemeIcon}
           </span>

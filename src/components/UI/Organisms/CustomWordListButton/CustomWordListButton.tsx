@@ -26,7 +26,18 @@ const CustomWordListButton: React.FC = () => {
 
   return (
     <>
-      <span onClick={handleOpen}>
+      <span
+        onClick={handleOpen}
+        tabIndex={0}
+        role="button"
+        aria-label="Crea la tua sequenza di parole"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            handleOpen();
+            e.preventDefault();
+          }
+        }}
+      >
         <IconPlus forceColor="#fff" />
       </span>
       {showModal && <CustomWordListModal handleClose={handleClose} />}

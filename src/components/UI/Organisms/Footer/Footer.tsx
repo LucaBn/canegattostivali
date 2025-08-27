@@ -26,11 +26,12 @@ const Footer: React.FC = () => {
             <p className="text-center mb-1">
               Creato con ♥ da{" "}
               <a
+                href={authorLink}
                 title="Visita la Pagina GitHub di LucaBn"
+                target="_blank"
                 rel="noopener noreferrer nofollow"
                 className="text-white"
-                href={authorLink}
-                target="_blank"
+                tabIndex={0}
               >
                 {authorName}
               </a>
@@ -40,13 +41,13 @@ const Footer: React.FC = () => {
           {/* TODO: remove false condition when app will be public and update googlePlayLink value */}
           {false && !isApp && (
             <Col xs={12} className="mb-4">
-              <p>
+              <p className="d-flex justify-content-center">
                 <a
                   href={googlePlayLink}
                   title="Disponibile su Google Play"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="d-contents"
+                  tabIndex={0}
                 >
                   <Image
                     src="/assets/img/GetItOnGooglePlay_Badge.png"
@@ -62,13 +63,14 @@ const Footer: React.FC = () => {
           )}
           <Col xs={12} className="mb-4">
             <p className="mb-2 text-center">Powered by</p>
-            <p className="d-flex flex-column align-items-center">
+            <p className="d-flex justify-content-center">
               <a
                 href={pimpMyJpgLink}
                 title="Pimp my Jpg"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="d-contents text-white"
+                className="d-flex flex-column align-items-center text-white text-decoration-none"
+                tabIndex={0}
               >
                 <Image
                   src="/assets/img/pimp-my-jpg.png"
@@ -83,13 +85,13 @@ const Footer: React.FC = () => {
             </p>
           </Col>
           <Col xs={12} className="mb-4">
-            <p>
+            <p className="d-flex justify-content-center">
               <a
                 href={buyMeACoffeeLink}
                 title="Offrimi un Caffè"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="d-contents"
+                tabIndex={0}
               >
                 <Image
                   src="/assets/img/buy-me-a-coffee.png"
