@@ -60,6 +60,8 @@ const UserModal: React.FC<Props> = ({ handleClose }: Props) => {
               onChange={(e) => setUsername(e.target.value)}
               value={username}
               maxLength={20}
+              className={`${username && "is-valid"}`}
+              spellCheck={false}
             />
           </FloatingLabel>
 
