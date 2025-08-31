@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Components
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
 
 // Constants
 import { AUTHOR_NAME, WEBSITE_URL } from "@/constants/app";
+import CreditsModal from "../CreditsModal/CreditsModal";
 
 const siteUrl: string = WEBSITE_URL;
 const authorName: string = AUTHOR_NAME;
@@ -14,8 +15,15 @@ const pimpMyJpgLink: string = "https://www.pimpmyjpg.com/it";
 const buyMeACoffeeLink: string = "https://www.buymeacoffee.com/lucabn";
 
 const Footer: React.FC = () => {
+  const [isCreditsModalActive, setIsCreditsModalActive] =
+    useState<boolean>(false);
+
   const isApp =
     new URLSearchParams(window.location.search).get("isApp") === "true";
+
+  const handleCloseCreditsModal = () => {
+    setIsCreditsModalActive(false);
+  };
 
   return (
     <footer className="bg-dark text-white py-4 border-top">
@@ -36,7 +44,19 @@ const Footer: React.FC = () => {
                 {authorName}
               </a>
             </p>
-            <p className="text-center">Logo realizzato da Manuela</p>
+            <p className="text-center mb-1">
+              <Button
+                variant="link"
+                tabIndex={0}
+                className="p-0 text-white"
+                onClick={() => setIsCreditsModalActive(true)}
+              >
+                Credits
+              </Button>
+            </p>
+            {isCreditsModalActive && (
+              <CreditsModal handleClose={handleCloseCreditsModal} />
+            )}
           </Col>
           {/* TODO: remove false condition when app will be public and update googlePlayLink value */}
           {false && !isApp && (
