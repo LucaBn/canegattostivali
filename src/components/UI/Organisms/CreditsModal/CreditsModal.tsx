@@ -4,12 +4,13 @@ import React from "react";
 import { Modal, Button } from "react-bootstrap";
 
 interface Props {
-  handleClose: () => void;
+  show: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const CreditsModal: React.FC<Props> = ({ handleClose }: Props) => {
+const CreditsModal: React.FC<Props> = ({ show, setShow }: Props) => {
   return (
-    <Modal show={true} onHide={handleClose} backdrop="static" centered>
+    <Modal show={show} onHide={() => setShow(false)} backdrop="static" centered>
       <Modal.Header closeButton>
         <Modal.Title>Credits</Modal.Title>
       </Modal.Header>
@@ -32,7 +33,7 @@ const CreditsModal: React.FC<Props> = ({ handleClose }: Props) => {
         </ul>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={handleClose}>
+        <Button variant="primary" onClick={() => setShow(false)}>
           Chiudi
         </Button>
       </Modal.Footer>

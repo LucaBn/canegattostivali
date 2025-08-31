@@ -15,10 +15,11 @@ const COPY_TO_CLIPBOARD_BUTTON_TEXT_DEFAULT = "";
 const COPY_TO_CLIPBOARD_BUTTON_TEXT_COPIED = "Copiata!";
 
 interface Props {
-  handleClose: () => void;
+  show: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
+const CustomWordListModal: React.FC<Props> = ({ show, setShow }: Props) => {
   const [wordList, setWordList] = useState<string[]>([]);
   const [currentWord, setCurrentWord] = useState<string>("");
   const [copyToClipboardButtonText, setCopyToClipboardButtonText] =
@@ -97,7 +98,7 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
     );
 
   return (
-    <Modal show={true} onHide={handleClose} backdrop="static" centered>
+    <Modal show={show} onHide={() => setShow(false)} backdrop="static" centered>
       <Modal.Header closeButton>
         <Modal.Title>Crea la tua sequenza di parole</Modal.Title>
       </Modal.Header>
@@ -234,7 +235,7 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={handleClose}>
+        <Button variant="primary" onClick={() => setShow(false)}>
           Chiudi
         </Button>
       </Modal.Footer>

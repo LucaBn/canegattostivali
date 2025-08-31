@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 // Components
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import CreditsModal from "@/components/UI/Organisms/CreditsModal/CreditsModal";
 
 // Constants
 import { AUTHOR_NAME, WEBSITE_URL } from "@/constants/app";
-import CreditsModal from "../CreditsModal/CreditsModal";
 
 const siteUrl: string = WEBSITE_URL;
 const authorName: string = AUTHOR_NAME;
@@ -20,10 +20,6 @@ const Footer: React.FC = () => {
 
   const isApp =
     new URLSearchParams(window.location.search).get("isApp") === "true";
-
-  const handleCloseCreditsModal = () => {
-    setIsCreditsModalActive(false);
-  };
 
   return (
     <footer className="bg-dark text-white py-4 border-top">
@@ -54,9 +50,10 @@ const Footer: React.FC = () => {
                 Credits
               </Button>
             </p>
-            {isCreditsModalActive && (
-              <CreditsModal handleClose={handleCloseCreditsModal} />
-            )}
+            <CreditsModal
+              show={isCreditsModalActive}
+              setShow={setIsCreditsModalActive}
+            />
           </Col>
           {/* TODO: remove false condition when app will be public and update googlePlayLink value */}
           {false && !isApp && (

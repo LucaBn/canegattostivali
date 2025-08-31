@@ -7,12 +7,13 @@ import { Modal, Button, Toast } from "react-bootstrap";
 import newsList from "@/assets/data/newsList.json";
 
 interface Props {
-  handleClose: () => void;
+  show: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const NewsModal: React.FC<Props> = ({ handleClose }: Props) => {
+const NewsModal: React.FC<Props> = ({ show, setShow }: Props) => {
   return (
-    <Modal show={true} onHide={handleClose} backdrop="static" centered>
+    <Modal show={show} onHide={() => setShow(false)} backdrop="static" centered>
       <Modal.Header closeButton>
         <Modal.Title>News</Modal.Title>
       </Modal.Header>
@@ -28,7 +29,7 @@ const NewsModal: React.FC<Props> = ({ handleClose }: Props) => {
         ))}
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={handleClose}>
+        <Button variant="primary" onClick={() => setShow(false)}>
           Chiudi
         </Button>
       </Modal.Footer>

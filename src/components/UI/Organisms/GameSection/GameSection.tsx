@@ -505,20 +505,18 @@ const GameSection: React.FC<Props> = ({
         </Col>
       </Row>
 
-      {showEndGameModal && (
-        <EndGameModal
-          show={showEndGameModal}
-          time={time}
-          mode={mode}
-          isUserBestTime={isUserBestTime}
-          wordSequence={wordSequence}
-          setShow={setShowEndGameModal}
-          startRandomGame={startRandomGame}
-          setMode={setMode}
-          handleLevelChange={handleLevelChange}
-          level={level}
-        />
-      )}
+      <EndGameModal
+        show={showEndGameModal}
+        time={time}
+        mode={mode}
+        isUserBestTime={isUserBestTime}
+        wordSequence={wordSequence}
+        setShow={setShowEndGameModal}
+        startRandomGame={startRandomGame}
+        setMode={setMode}
+        handleLevelChange={handleLevelChange}
+        level={level}
+      />
 
       <Keyboard
         currentWord={currentWord}

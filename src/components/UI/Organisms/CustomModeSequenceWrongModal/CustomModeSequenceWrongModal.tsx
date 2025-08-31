@@ -4,16 +4,18 @@ import React from "react";
 import { Modal, Button } from "react-bootstrap";
 
 interface ICustomModeSequenceWrongModal {
-  handleClose?: () => void;
+  show: boolean;
+  setShow: () => void;
 }
 
 const CustomModeSequenceWrongModal: React.FC<ICustomModeSequenceWrongModal> = ({
-  handleClose,
+  show,
+  setShow,
 }) => {
   return (
     <Modal
-      show={true}
-      onHide={handleClose}
+      show={show}
+      onHide={setShow}
       backdrop="static"
       keyboard={false}
       centered
@@ -30,7 +32,7 @@ const CustomModeSequenceWrongModal: React.FC<ICustomModeSequenceWrongModal> = ({
         <p>Chiudi questo messaggio e continua a giocare normalmente!</p>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={handleClose}>
+        <Button variant="primary" onClick={setShow}>
           Chiudi
         </Button>
       </Modal.Footer>
