@@ -657,5 +657,37 @@
       "FARSI",
       "NOTARE"
     ]
+  },
+  {
+    "id": 49,
+    "wordList": [
+      "PESCI",
+      "FACCIA",
+      "MEDAGLIA",
+      "ORO",
+      "RISERVA",
+      "CACCIA",
+      "BATTUTA",
+      "ARRESTO",
+      "MANDATO",
+      "FINE",
+      "PALATO"
+    ]
+  },
+  {
+    "id": 50,
+    "wordList": [
+      "MERLO",
+      "INDIANO",
+      "AMERICA",
+      "SCOPERTA",
+      "RUOTA",
+      "RAGGIO",
+      "AZIONE",
+      "FILM",
+      "DVD",
+      "LETTORE",
+      "INCALLITO"
+    ]
   }
 ]
