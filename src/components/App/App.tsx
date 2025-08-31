@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 
 // Components
@@ -35,6 +35,21 @@ const App: React.FC = () => {
     runWordListTest();
     sortWordsByNextWordListLength();
   }
+
+  useEffect(() => {
+    const isApp =
+      new URLSearchParams(window.location.search).get("isApp") === "true";
+
+    if (isApp) {
+      const viewport = document.querySelector('meta[name="viewport"]');
+      if (viewport) {
+        viewport.setAttribute(
+          "content",
+          "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        );
+      }
+    }
+  }, []);
 
   return (
     <div className={`${textColorClass}`}>
