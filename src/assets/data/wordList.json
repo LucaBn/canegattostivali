@@ -700,7 +700,7 @@
   },
   {
     "word": "SCORTA",
-    "nextWordList": ["RUOTA", "POLIZIA", "FARE"]
+    "nextWordList": ["RUOTA", "POLIZIA", "CIBO", "SICUREZZA"]
   },
   {
     "word": "PESI",
@@ -3389,7 +3389,8 @@
       "MESSA",
       "DISTANZA",
       "CASSETTA",
-      "STANDARD"
+      "STANDARD",
+      "SCORTA"
     ]
   },
   {
@@ -5750,7 +5751,7 @@
   },
   {
     "word": "CIBO",
-    "nextWordList": ["AVVELENATO", "SPAZZATURA", "SPRECO"]
+    "nextWordList": ["AVVELENATO", "SPAZZATURA", "SPRECO", "SCORTA"]
   },
   {
     "word": "SPRECO",
@@ -6815,7 +6816,6 @@
       "PENA",
       "NIENTE",
       "NOTIZIA",
-      "SCORTA",
       "ESEMPIO",
       "TAPPA",
       "BOTTE",
