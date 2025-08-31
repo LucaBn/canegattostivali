@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 // Components
+import { Button } from "react-bootstrap";
 import IconNewspaper from "@/components/UI/Atoms/IconNewspaper/IconNewspaper";
 import NotificationCircle from "@/components/UI/Atoms/NotificationCircle/NotificationCircle";
 import NewsModal from "@/components/UI/Organisms/NewsModal/NewsModal";
@@ -42,6 +43,7 @@ const NewsButton: React.FC = () => {
     changeKeyboardStatus(KeyboardStatusList.Inactive);
     saveReadNews();
   };
+
   const handleClose = () => {
     setShowModal(false);
     changeKeyboardStatus(KeyboardStatusList.Active);
@@ -52,12 +54,17 @@ const NewsButton: React.FC = () => {
 
   return (
     <>
-      <span className="position-relative" onClick={handleOpen}>
+      <Button
+        aria-label="News"
+        title="News"
+        variant="link"
+        onClick={handleOpen}
+      >
         <IconNewspaper forceColor="#fff" />
         {isNotificationVisible && (
           <NotificationCircle bgColor="warning" pulse />
         )}
-      </span>
+      </Button>
       {showModal && <NewsModal handleClose={handleClose} />}
     </>
   );

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // Components
 import { Form, Modal, InputGroup, Button } from "react-bootstrap";
 import IconClipboard from "@/components/UI/Atoms/IconClipboard/IconClipboard";
+import IconShare from "@/components/UI/Atoms/IconShare/IconShare";
 
 // Utils
 import { encryptStringArray } from "@/utils/encoding";
@@ -10,8 +11,8 @@ import { encryptStringArray } from "@/utils/encoding";
 // Constants
 import { WEBSITE_URL } from "@/constants/app";
 
-const COPY_TO_CLIPBOARD_BUTTON_TEXT_DEFAULT = "Copia la URL generata";
-const COPY_TO_CLIPBOARD_BUTTON_TEXT_COPIED = "URL copiata negli appunti!";
+const COPY_TO_CLIPBOARD_BUTTON_TEXT_DEFAULT = "";
+const COPY_TO_CLIPBOARD_BUTTON_TEXT_COPIED = "Copiata!";
 
 interface Props {
   handleClose: () => void;
@@ -56,14 +57,16 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
   };
 
   const getFormattedWord = (word: string) => {
+    word = word.replace(/\. $/, ""); // Handle like this when the mobile keyboard adds a dot and a space at the end of the word when pressing spacebar twice
+
     return word
       .replace(/[^a-zàáèéìíòóúùÀÁÈÉÌÒÙ]/gi, "")
-      .replace("á", "à")
-      .replace("é", "è")
-      .replace("í", "ì")
-      .replace("ó", "ò")
-      .replace("ú", "ù")
-      .toUpperCase();
+      .toUpperCase()
+      .replace("Á", "À")
+      .replace("É", "È")
+      .replace("Í", "Ì")
+      .replace("Ó", "Ò")
+      .replace("Ú", "Ù");
   };
 
   const handleWordChange = (
@@ -119,7 +122,7 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
               <InputGroup.Text>{index + 1}</InputGroup.Text>
               <Form.Control
                 type="text"
-                placeholder="Inserisci una parola"
+                placeholder="Scrivi una parola"
                 value={word}
                 onChange={(e) =>
                   handleWordChange(
@@ -134,6 +137,9 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
                     ? "is-valid"
                     : "is-invalid"
                 }
+                spellCheck={false}
+                autoCorrect="off"
+                autoCapitalize="off"
               />
               <Button
                 variant="danger"
@@ -148,11 +154,14 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
             <InputGroup className="mt-4 mb-3">
               <Form.Control
                 type="text"
-                placeholder="Inserisci una parola"
+                placeholder="Scrivi una parola"
                 value={currentWord}
                 onChange={handleCurrentWordChange}
                 maxLength={20}
-                aria-label="Inserisci una parola"
+                aria-label="Scrivi una parola"
+                spellCheck={false}
+                autoCorrect="off"
+                autoCapitalize="off"
               />
               <Button
                 variant="primary"
@@ -169,6 +178,7 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
         <hr />
 
         <Form.Control
+          id="customListUrl"
           as="textarea"
           value={getCustomListUrl()}
           onClick={(e) => {
@@ -183,15 +193,35 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
         />
 
         <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mt-2">
-          <Button
-            variant="success"
-            onClick={copyToClipboard}
-            disabled={!isWordListValid}
-            className="copy-to-clipboard__button d-flex gap-2 text-nowrap"
-          >
-            <IconClipboard forceColor="#fff" forceOpacity={100} />{" "}
-            {copyToClipboardButtonText}
-          </Button>
+          <span className="d-flex gap-2">
+            <Button
+              variant="success"
+              onClick={copyToClipboard}
+              disabled={!isWordListValid}
+              className="copy-to-clipboard__button d-flex align-items-center text-nowrap"
+              title="Copia la URL generata negli appunti"
+            >
+              <IconClipboard forceColor="#fff" forceOpacity={100} />
+              {copyToClipboardButtonText && (
+                <small className="ms-2">{copyToClipboardButtonText}</small>
+              )}
+            </Button>
+            <Button
+              variant="success"
+              onClick={() => {
+                navigator.share({
+                  title: "Cane Gatto Stivali! #CaneGattoStivali",
+                  text: "Risolvi questa sequenza di parole se sei capace!",
+                  url: getCustomListUrl(),
+                });
+              }}
+              disabled={!isWordListValid}
+              className="share__button d-flex align-items-center text-nowrap"
+              title="Condividi la URL generata"
+            >
+              <IconShare forceColor="#fff" forceOpacity={100} />
+            </Button>
+          </span>
           <Button
             variant="danger"
             onClick={resetWordList}

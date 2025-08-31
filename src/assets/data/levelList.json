@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "wordList": ["CANE", "INCROCIO", "SEMAFORO", "ROSSO", "FUOCO", "PAGLIA"]
+    "wordList": ["CANE", "INCROCIO", "STRADALE", "POLIZIA", "AGENTE", "CHIMICO"]
   },
   {
     "id": 2,
@@ -42,7 +42,7 @@
   },
   {
     "id": 6,
-    "wordList": ["CICLO", "STUDI", "PIANO", "COTTURA", "VAPORE", "ACQUEO"]
+    "wordList": ["PERSICO", "PESCE", "PALLA", "PIEDE", "PIATTO", "PLASTICA"]
   },
   {
     "id": 7,
@@ -80,7 +80,7 @@
   },
   {
     "id": 12,
-    "wordList": ["PERSICO", "PESCE", "PALLA", "PIEDE", "PIATTO", "PLASTICA"]
+    "wordList": ["CICLO", "STUDI", "PIANO", "COTTURA", "VAPORE", "ACQUEO"]
   },
   {
     "id": 13,
@@ -656,6 +656,38 @@
       "VALERE",
       "FARSI",
       "NOTARE"
+    ]
+  },
+  {
+    "id": 49,
+    "wordList": [
+      "PESCI",
+      "FACCIA",
+      "MEDAGLIA",
+      "ORO",
+      "RISERVA",
+      "CACCIA",
+      "BATTUTA",
+      "ARRESTO",
+      "MANDATO",
+      "FINE",
+      "PALATO"
+    ]
+  },
+  {
+    "id": 50,
+    "wordList": [
+      "MERLO",
+      "INDIANO",
+      "AMERICA",
+      "SCOPERTA",
+      "RUOTA",
+      "RAGGIO",
+      "AZIONE",
+      "FILM",
+      "DVD",
+      "LETTORE",
+      "INCALLITO"
     ]
   }
 ]

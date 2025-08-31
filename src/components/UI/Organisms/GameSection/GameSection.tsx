@@ -490,6 +490,7 @@ const GameSection: React.FC<Props> = ({
                         word.split("").length
                       }) - 0.5rem)`, // Remove 0.5rem because of the gap
                     }}
+                    tabIndex={-1}
                   >
                     {getButtonLetter(
                       index,

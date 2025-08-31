@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 // Components
+import { Button } from "react-bootstrap";
 import IconUser from "@/components/UI/Atoms/IconUser/IconUser";
 import UserModal from "@/components/UI/Organisms/UserModal/UserModal";
 
@@ -26,9 +27,14 @@ const UserButton: React.FC = () => {
 
   return (
     <>
-      <span onClick={handleOpen}>
+      <Button
+        aria-label="Profilo"
+        title="Profilo"
+        variant="link"
+        onClick={handleOpen}
+      >
         <IconUser forceColor="#fff" />
-      </span>
+      </Button>
       {showModal && <UserModal handleClose={handleClose} />}
     </>
   );

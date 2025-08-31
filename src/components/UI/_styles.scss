@@ -8,6 +8,7 @@
 @import "./Atoms/IconMoon/styles";
 @import "./Atoms/IconNewspaper/styles";
 @import "./Atoms/IconPlus/styles";
+@import "./Atoms/IconShare/styles";
 @import "./Atoms/IconSun/styles";
 @import "./Atoms/IconTornado/styles";
 @import "./Atoms/IconUser/styles";
@@ -20,6 +21,7 @@
 @import "./Molecules/TopSection/styles";
 
 // Organisms
+@import "./Organisms/CustomModeSequenceWrongModal/styles";
 @import "./Organisms/CustomWordListButton/styles";
 @import "./Organisms/CustomWordListModal/styles";
 @import "./Organisms/EndGameModal/styles";
