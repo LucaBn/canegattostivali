@@ -689,5 +689,37 @@
       "LETTORE",
       "INCALLITO"
     ]
+  },
+  {
+    "id": 51,
+    "wordList": [
+      "RICAMBIO",
+      "PEZZO",
+      "GROSSO",
+      "SALE",
+      "ZUCCA",
+      "HALLOWEEN",
+      "COSTUME",
+      "BAGNO",
+      "VASCA",
+      "LAMINAZIONE",
+      "CIGLIA"
+    ]
+  },
+  {
+    "id": 52,
+    "wordList": [
+      "ABBIGLIAMENTO",
+      "CAPO",
+      "MONDO",
+      "SPETTACOLO",
+      "TEATRALE",
+      "COMPAGNIA",
+      "BANDIERA",
+      "SCACCHI",
+      "MAESTRO",
+      "ALBERO",
+      "GENEALOGICO"
+    ]
   }
 ]
