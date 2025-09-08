@@ -1,14 +1,53 @@
 import React from "react";
-
-// Components
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, Badge } from "react-bootstrap";
 
 interface Props {
   show: boolean;
   setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+const author = ["Luca"];
+const logoArtist = ["Manuela"];
+const testers = [
+  "Alessandro",
+  "Andrea",
+  "Andrea",
+  "Andrea",
+  "Chiara",
+  "Christian",
+  "Daria",
+  "Domenico",
+  "Emanuele",
+  "Francesco",
+  "Gaia",
+  "Giorgio",
+  "Glici",
+  "Grazia",
+  "Jon",
+  "Luca",
+  "Manuela",
+  "Manuela",
+  "Marco",
+  "Marco",
+  "Mattia",
+  "Sara",
+  "Sofia",
+  "Stefano",
+];
+
 const CreditsModal: React.FC<Props> = ({ show, setShow }: Props) => {
+  const countDuplicates = (arr: string[]) => {
+    const map = new Map<string, number>();
+    arr.forEach((name) => {
+      map.set(name, (map.get(name) || 0) + 1);
+    });
+    return Array.from(map.entries()).map(([name, count]) =>
+      count > 1 ? `${name} ×${count}` : name
+    );
+  };
+
+  const uniqueTesters = countDuplicates(testers);
+
   return (
     <Modal show={show} onHide={() => setShow(false)} backdrop="static" centered>
       <Modal.Header closeButton>
@@ -16,21 +55,46 @@ const CreditsModal: React.FC<Props> = ({ show, setShow }: Props) => {
       </Modal.Header>
       <Modal.Body>
         <h6 className="mb-2">Autore 💻</h6>
-        <ul className="mb-4">
-          <li className="mb-1 fst-italic">Luca</li>
-        </ul>
+        <div className="mb-4">
+          {author.map((name, i) => (
+            <Badge
+              key={i}
+              bg="light"
+              text="dark"
+              className="fs-6 fw-normal me-2 mb-2 border"
+            >
+              {name}
+            </Badge>
+          ))}
+        </div>
 
         <h6 className="mb-2">Logo Artist 🎨</h6>
-        <ul className="mb-4">
-          <li className="mb-1 fst-italic">Manuela</li>
-        </ul>
+        <div className="mb-4">
+          {logoArtist.map((name, i) => (
+            <Badge
+              key={i}
+              bg="light"
+              text="dark"
+              className="fs-6 fw-normal me-2 mb-2 border"
+            >
+              {name}
+            </Badge>
+          ))}
+        </div>
 
         <h6 className="mb-2">Tester 🧪</h6>
-        <ul>
-          <li className="mb-1 fst-italic">Tizio</li>
-          <li className="mb-1 fst-italic">Caio</li>
-          <li className="mb-1 fst-italic">Sempronio</li>
-        </ul>
+        <div className="d-flex flex-wrap">
+          {uniqueTesters.map((name, i) => (
+            <Badge
+              key={i}
+              bg="light"
+              text="dark"
+              className="fs-6 fw-normal me-2 mb-2 border"
+            >
+              {name}
+            </Badge>
+          ))}
+        </div>
       </Modal.Body>
       <Modal.Footer>
         <Button variant="primary" onClick={() => setShow(false)}>
