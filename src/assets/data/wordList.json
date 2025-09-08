@@ -1695,7 +1695,15 @@
   },
   {
     "word": "MAESTRO",
-    "nextWordList": ["ALBERO", "MUSICA", "SCUOLA", "VITA", "JUDO"]
+    "nextWordList": [
+      "ALBERO",
+      "MUSICA",
+      "SCUOLA",
+      "VITA",
+      "JUDO",
+      "COLPO",
+      "SCACCHI"
+    ]
   },
   {
     "word": "SCUOLA",
@@ -3296,7 +3304,8 @@
       "PELO",
       "MUSICA",
       "DISCOTECA",
-      "FUOCO"
+      "FUOCO",
+      "CENTRO"
     ]
   },
   {
@@ -3779,7 +3788,8 @@
       "GIOCO",
       "BANDIERA",
       "TORRE",
-      "MOSSA"
+      "MOSSA",
+      "MAESTRO"
     ]
   },
   {
@@ -4850,7 +4860,8 @@
       "METEOROLOGICO",
       "PIENO",
       "CULTURALE",
-      "SOCIALE"
+      "SOCIALE",
+      "PALLA"
     ]
   },
   {
@@ -5976,7 +5987,8 @@
       "SOLE",
       "TACCO",
       "FREDDO",
-      "BASSO"
+      "BASSO",
+      "MAESTRO"
     ]
   },
   {
