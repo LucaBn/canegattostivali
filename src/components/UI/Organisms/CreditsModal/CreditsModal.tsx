@@ -34,6 +34,7 @@ const testers = [
   "Sofia",
   "Stefano",
 ];
+const virtualAssistants = ["ChatGPT"];
 
 const CreditsModal: React.FC<Props> = ({ show, setShow }: Props) => {
   const countDuplicates = (arr: string[]) => {
@@ -83,8 +84,22 @@ const CreditsModal: React.FC<Props> = ({ show, setShow }: Props) => {
         </div>
 
         <h6 className="mb-2">Tester 🧪</h6>
-        <div className="d-flex flex-wrap">
+        <div className="d-flex flex-wrap mb-4">
           {uniqueTesters.map((name, i) => (
+            <Badge
+              key={i}
+              bg="light"
+              text="dark"
+              className="fs-6 fw-normal me-2 mb-2 border"
+            >
+              {name}
+            </Badge>
+          ))}
+        </div>
+
+        <h6 className="mb-2">Assistente Virtuale 🤖</h6>
+        <div className="d-flex flex-wrap">
+          {virtualAssistants.map((name, i) => (
             <Badge
               key={i}
               bg="light"
