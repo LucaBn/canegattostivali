@@ -14,6 +14,7 @@ import { playSound } from "@/utils/sounds";
 // Constants
 import { LS_KEY_LIST } from "@/constants/localStorage";
 
+// TODO: save keyboard layout in context to update keyboard component accordingly
 const KeyboardHandler: React.FC = () => {
   const [enterFirst, setEnterFirst] = useState<boolean>(
     readFromLocalStorage(LS_KEY_LIST.KEYBOARD_SWAP) !== null
@@ -27,6 +28,7 @@ const KeyboardHandler: React.FC = () => {
     playSound("/assets/sounds/click-positive.wav");
   };
 
+  // TODO: remove inline styles
   const enterButton = (
     <Button
       variant="success"
@@ -65,7 +67,7 @@ const KeyboardHandler: React.FC = () => {
           }
           checked={!enterFirst}
           onChange={() => handleChange(false)}
-          title="Enter prima del CANC"
+          title="INVIO prima del CANC"
         />
         <Form.Check
           type="radio"
@@ -80,7 +82,7 @@ const KeyboardHandler: React.FC = () => {
           }
           checked={enterFirst}
           onChange={() => handleChange(true)}
-          title="CANC prima di Enter"
+          title="CANC prima di INVIO"
         />
       </Form.Group>
     </Form>
