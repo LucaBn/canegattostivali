@@ -34,7 +34,7 @@ const KeyboardHandler: React.FC = () => {
       tabIndex={-1}
       style={{ height: "35px" }}
     >
-      Enter
+      INVIO
     </Button>
   );
   const deleteButton = (
