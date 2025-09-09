@@ -1,22 +1,14 @@
 import React from "react";
 
 // Components
-import { Button, Image } from "react-bootstrap";
-import { Container, Navbar } from "react-bootstrap";
-import IconSun from "@/components/UI/Atoms/IconSun/IconSun";
-import IconMoon from "@/components/UI/Atoms/IconMoon/IconMoon";
+import { Container, Navbar, Image } from "react-bootstrap";
 import CustomWordListButton from "@/components/UI/Organisms/CustomWordListButton/CustomWordListButton";
 import NewsButton from "@/components/UI/Organisms/NewsButton/NewsButton";
+import OptionsButton from "@/components/UI/Organisms/OptionsButton/OptionsButton";
 import UserButton from "@/components/UI/Organisms/UserButton/UserButton";
 
 // Utils
 import { playSound } from "@/utils/sounds";
-
-// Hook
-import { useTheme } from "@/components/providers/ThemeProvider";
-
-// Typings
-import { ThemeList } from "@/typings/themes";
 
 // TODO: move this to an utils file and refactor all scroll functions
 const scrollToTop = () => {
@@ -28,8 +20,6 @@ const scrollToTop = () => {
 };
 
 const NavbarComponent: React.FC = () => {
-  const { theme, changeTheme } = useTheme();
-
   const handleLogoClick = () => {
     if (window.scrollY > 0) {
       playSound("/assets/sounds/scroll-to-top.wav");
@@ -37,21 +27,6 @@ const NavbarComponent: React.FC = () => {
 
     scrollToTop();
   };
-
-  const toggleTheme = () => {
-    playSound("/assets/sounds/click-positive.wav");
-
-    theme === "light"
-      ? changeTheme("dark" as ThemeList)
-      : changeTheme("light" as ThemeList);
-  };
-
-  const toggleThemeIcon: JSX.Element =
-    theme === "dark" ? (
-      <IconMoon forceColor="#fff" />
-    ) : (
-      <IconSun forceColor="#fff" />
-    );
 
   return (
     <>
@@ -83,14 +58,7 @@ const NavbarComponent: React.FC = () => {
           </Navbar.Brand>
 
           <span>
-            <Button
-              aria-label="Cambia il tema"
-              title="Cambia il tema"
-              variant="link"
-              onClick={toggleTheme}
-            >
-              {toggleThemeIcon}
-            </Button>
+            <OptionsButton />
             <NewsButton />
             <CustomWordListButton />
             <UserButton />

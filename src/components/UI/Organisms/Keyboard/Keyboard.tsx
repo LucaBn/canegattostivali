@@ -3,23 +3,10 @@ import React from "react";
 // Components
 import { Row, Col } from "react-bootstrap";
 import KeyboardRow from "@/components/UI/Molecules/KeyboardRow/KeyboardRow";
+import { readFromLocalStorage } from "@/utils/localStorage";
 
-const keys: string[][] = [
-  [
-    "SPACER",
-    "À",
-    "È",
-    "Ì",
-    "Ò",
-    "Ù",
-    "HELP_KEYBOARD_FILTER",
-    "HELP_BONUS_LETTER",
-    "SPACER",
-  ],
-  ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
-  ["SPACER", "A", "S", "D", "F", "G", "H", "J", "K", "L", "SPACER"],
-  ["INVIO", "Z", "X", "C", "V", "B", "N", "M", "CANC"],
-];
+// Constants
+import { LS_KEY_LIST } from "@/constants/localStorage";
 
 interface Props {
   currentWord: string;
@@ -40,6 +27,27 @@ const Keyboard: React.FC<Props> = ({
   disableHelpBonusLetterButton,
   bonusLetters,
 }) => {
+  const lastRowKeys = readFromLocalStorage(LS_KEY_LIST.KEYBOARD_SWAP)
+    ? ["CANC", "Z", "X", "C", "V", "B", "N", "M", "INVIO"]
+    : ["INVIO", "Z", "X", "C", "V", "B", "N", "M", "CANC"];
+
+  const keys: string[][] = [
+    [
+      "SPACER",
+      "À",
+      "È",
+      "Ì",
+      "Ò",
+      "Ù",
+      "HELP_KEYBOARD_FILTER",
+      "HELP_BONUS_LETTER",
+      "SPACER",
+    ],
+    ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
+    ["SPACER", "A", "S", "D", "F", "G", "H", "J", "K", "L", "SPACER"],
+    lastRowKeys,
+  ];
+
   const rowProps = {
     currentWord,
     filterKeys,

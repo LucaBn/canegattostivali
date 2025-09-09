@@ -5,6 +5,7 @@ const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
 // TODO: add typization for the values stored in localStorage
 const LS_KEY_LIST = {
   GAME_MODE: `${lowercaseAppName}GameMode`,
+  KEYBOARD_SWAP: `${lowercaseAppName}KeyboardSwap`,
   READ_NEWS: `${lowercaseAppName}ReadNews`,
   SOUNDS: `${lowercaseAppName}Sounds`,
   THEME: `${lowercaseAppName}Theme`,

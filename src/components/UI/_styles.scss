@@ -3,6 +3,7 @@
 @import "./Atoms/IconClipboard/styles";
 @import "./Atoms/IconDelete/styles";
 @import "./Atoms/IconEyeSlash/styles";
+@import "./Atoms/IconGear/styles";
 @import "./Atoms/IconLadder/styles";
 @import "./Atoms/IconLightbulb/styles";
 @import "./Atoms/IconMoon/styles";
@@ -29,10 +30,15 @@
 @import "./Organisms/Footer/styles";
 @import "./Organisms/GameSection/styles";
 @import "./Organisms/Keyboard/styles";
+@import "./Organisms/KeyboardHandler/styles";
 @import "./Organisms/ModeSelectionSection/styles";
 @import "./Organisms/Navbar/styles";
 @import "./Organisms/NewsButton/styles";
 @import "./Organisms/NewsModal/styles";
+@import "./Organisms/OptionsButton/styles";
+@import "./Organisms/OptionsModal/styles";
+@import "./Organisms/SoundsHandler/styles";
+@import "./Organisms/ThemeHandler/styles";
 @import "./Organisms/UserButton/styles";
 @import "./Organisms/UserModal/styles";
 
