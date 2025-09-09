@@ -1,5 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+// Components
 import { Modal, Button, Badge } from "react-bootstrap";
+
+// Utils
+import { playSound } from "@/utils/sounds";
 
 interface Props {
   show: boolean;
@@ -37,6 +42,14 @@ const testers = [
 const virtualAssistants = ["ChatGPT"];
 
 const CreditsModal: React.FC<Props> = ({ show, setShow }: Props) => {
+  useEffect(() => {
+    if (show) {
+      playSound("/assets/sounds/modal-open.wav");
+    } else {
+      playSound("/assets/sounds/modal-close.wav");
+    }
+  }, [show]);
+
   const countDuplicates = (arr: string[]) => {
     const map = new Map<string, number>();
     arr.forEach((name) => {

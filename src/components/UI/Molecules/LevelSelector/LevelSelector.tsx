@@ -5,6 +5,7 @@ import { Row, Col, Button, Card } from "react-bootstrap";
 import GameSection from "@/components/UI/Organisms/GameSection/GameSection";
 
 // Utils
+import { playSound } from "@/utils/sounds";
 import { readFromLocalStorage } from "@/utils/localStorage";
 
 // Constants
@@ -43,6 +44,7 @@ const LevelSelector: React.FC<Props> = ({ setMode }: Props) => {
   };
 
   const handleLevelChange = (levelId: number) => {
+    playSound("/assets/sounds/click-positive.wav");
     setCurrentLevel(levelId);
     setGameSectionRefreshKey((prev) => prev + 1);
     requestAnimationFrame(() => {

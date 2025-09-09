@@ -6,6 +6,7 @@ const lowercaseAppName = APP_NAME_SHORT.toLowerCase();
 const LS_KEY_LIST = {
   GAME_MODE: `${lowercaseAppName}GameMode`,
   READ_NEWS: `${lowercaseAppName}ReadNews`,
+  SOUNDS: `${lowercaseAppName}Sounds`,
   THEME: `${lowercaseAppName}Theme`,
   USER_DATA: `${lowercaseAppName}UserData`,
 } as const;

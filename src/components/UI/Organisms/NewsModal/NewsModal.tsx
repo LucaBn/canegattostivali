@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // Components
 import { Modal, Button, Toast } from "react-bootstrap";
@@ -6,12 +6,23 @@ import { Modal, Button, Toast } from "react-bootstrap";
 // Data
 import newsList from "@/assets/data/newsList.json";
 
+// Utils
+import { playSound } from "@/utils/sounds";
+
 interface Props {
   show: boolean;
   setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const NewsModal: React.FC<Props> = ({ show, setShow }: Props) => {
+  useEffect(() => {
+    if (show) {
+      playSound("/assets/sounds/modal-open.wav");
+    } else {
+      playSound("/assets/sounds/modal-close.wav");
+    }
+  }, [show]);
+
   return (
     <Modal show={show} onHide={() => setShow(false)} backdrop="static" centered>
       <Modal.Header closeButton>

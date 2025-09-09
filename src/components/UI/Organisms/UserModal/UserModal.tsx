@@ -9,6 +9,7 @@ import {
   writeToLocalStorage,
 } from "@/utils/localStorage";
 import { formatTime } from "@/utils/time";
+import { playSound } from "@/utils/sounds";
 
 // Constants
 import { LS_KEY_LIST } from "@/constants/localStorage";
@@ -34,6 +35,14 @@ const UserModal: React.FC<Props> = ({ show, setShow }: Props) => {
   const matchesWon = storedUserData?.matchesWon || 0;
   const bestTime = storedUserData?.bestTime || 0;
   const lastLevelCompleted = storedUserData?.lastLevelCompleted || 0;
+
+  useEffect(() => {
+    if (show) {
+      playSound("/assets/sounds/modal-open.wav");
+    } else {
+      playSound("/assets/sounds/modal-close.wav");
+    }
+  }, [show]);
 
   useEffect(() => {
     const trimmedUsername = username.trim();

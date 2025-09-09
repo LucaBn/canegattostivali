@@ -5,6 +5,9 @@ import { Row, Col, Button } from "react-bootstrap";
 import IconTornado from "@/components/UI/Atoms/IconTornado/IconTornado";
 import IconLadder from "@/components/UI/Atoms/IconLadder/IconLadder";
 
+// Utils
+import { playSound } from "@/utils/sounds";
+
 interface Props {
   mode: "random" | "levels" | "custom";
   setMode: (newMode: "random" | "levels" | "custom") => void;
@@ -22,7 +25,8 @@ const ModeSelectionSection: React.FC<Props> = ({ mode, setMode }) => {
     }
   };
 
-  const handleCardClick = (selectedMode: "random" | "levels") => {
+  const handleModeClick = (selectedMode: "random" | "levels") => {
+    playSound("/assets/sounds/click-positive.wav");
     setMode(selectedMode);
     requestAnimationFrame(() => {
       scrollToBottom();
@@ -39,7 +43,15 @@ const ModeSelectionSection: React.FC<Props> = ({ mode, setMode }) => {
               className="mode-selection__card mb-2 py-3"
               variant={mode === "random" ? "primary" : "secondary"}
               title="Gioca con sequenze di parole casuali e senza limiti di tempo"
-              onClick={() => handleCardClick("random")}
+              onClick={(e) => {
+                handleModeClick("random");
+                e.currentTarget.blur();
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.stopPropagation();
+                }
+              }}
             >
               <div className="fs-5 mb-1">
                 <IconTornado forceOpacity={100} forceColor="#fff" /> Random
@@ -52,7 +64,15 @@ const ModeSelectionSection: React.FC<Props> = ({ mode, setMode }) => {
               className="mode-selection__card mb-2 py-3"
               variant={mode === "levels" ? "primary" : "secondary"}
               title="Supera i livelli e sfida i tuoi amici a starti dietro"
-              onClick={() => handleCardClick("levels")}
+              onClick={(e) => {
+                handleModeClick("levels");
+                e.currentTarget.blur();
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.stopPropagation();
+                }
+              }}
             >
               <div className="fs-5 mb-1">
                 <IconLadder forceOpacity={100} forceColor="#fff" /> Livelli

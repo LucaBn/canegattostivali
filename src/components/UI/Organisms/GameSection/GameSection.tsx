@@ -12,6 +12,7 @@ import { useKeyboardStatus } from "@/components/providers/KeyboardStatusProvider
 // Utils
 import { createWordSequence } from "@/utils/game";
 import { normalizeLetter } from "@/utils/string";
+import { playSound } from "@/utils/sounds";
 import {
   readFromLocalStorage,
   writeToLocalStorage,
@@ -196,6 +197,7 @@ const GameSection: React.FC<Props> = ({
       bonusLetters.current = 0;
 
       if (isLastWord) {
+        playSound("/assets/sounds/victory.wav");
         setMessage("🥳");
         setShowConfetti(true);
         setTimeout(() => {
@@ -242,26 +244,34 @@ const GameSection: React.FC<Props> = ({
     } else if (key === "2" && !disableHelpBonusLetterButton.current) {
       getHelpBonusLetter();
     } else if (key === "CANC") {
+      if (guessedWord.length > 1 + bonusLetters.current) {
+        playSound("/assets/sounds/delete.wav");
+      }
       setGuessedWord((prev) =>
         prev.length > bonusLetters.current + 1 ? prev.slice(0, -1) : prev
       );
     } else if (key === "INVIO") {
       if (guessedWord === currentWord) {
+        playSound("/assets/sounds/click-positive.wav");
         handleWordGuess();
       } else {
-        setMessage("😓");
-        setIsBuzzing(true);
-        setTimeout(() => {
-          setIsBuzzing(false);
-        }, 500);
-        if (navigator.vibrate) {
-          navigator.vibrate(200);
+        if (guessedWord.length > 1 + bonusLetters.current) {
+          playSound("/assets/sounds/click-negative.wav");
+          setMessage("😓");
+          setIsBuzzing(true);
+          setTimeout(() => {
+            setIsBuzzing(false);
+          }, 500);
+          if (navigator.vibrate) {
+            navigator.vibrate(200);
+          }
         }
       }
     } else if (
       /^[A-ZÀÈÌÒÙ]$/.test(normalizedKey) &&
       guessedWord.length < currentWord.length
     ) {
+      playSound("/assets/sounds/write.wav");
       setGuessedWord((prev) => prev + normalizedKey.toUpperCase());
     }
   };
@@ -331,6 +341,7 @@ const GameSection: React.FC<Props> = ({
       bonusLetters.current + 1
     );
 
+    playSound("/assets/sounds/help-1.wav");
     setIsGameRunning(true);
     setGuessedWord(partialSolution);
     setShowExtraTimeTooltip(10);
@@ -361,6 +372,7 @@ const GameSection: React.FC<Props> = ({
 
     bonusLetters.current = bonusLetters.current + 1;
 
+    playSound("/assets/sounds/help-2.wav");
     setIsGameRunning(true);
     setShowExtraTimeTooltip(5);
 

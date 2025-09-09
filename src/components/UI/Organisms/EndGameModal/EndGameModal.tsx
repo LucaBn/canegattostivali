@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction, useEffect } from "react";
 
 // Components
 import { Modal, Button, Badge } from "react-bootstrap";
@@ -6,6 +6,7 @@ import { Modal, Button, Badge } from "react-bootstrap";
 // Utils
 import { formatTime } from "@/utils/time";
 import { readFromLocalStorage } from "@/utils/localStorage";
+import { playSound } from "@/utils/sounds";
 
 // Constants
 import { LS_KEY_LIST } from "@/constants/localStorage";
@@ -47,21 +48,30 @@ const EndGameModal: React.FC<IEndGameModal> = ({
     LS_KEY_LIST.USER_DATA
   );
 
+  useEffect(() => {
+    if (time && show) {
+      playSound("/assets/sounds/modal-open.wav");
+    }
+  }, [show]);
+
   const isLastLevel = levelList.length === level;
 
   const handleClose = () => setShow(false);
 
   const handlePlayRandomGame = () => {
+    playSound("/assets/sounds/click-positive.wav");
     startRandomGame();
     handleClose();
   };
 
   const handleGoBackToLevelSelection = () => {
+    playSound("/assets/sounds/click-positive.wav");
     setMode && setMode("levels");
     handleClose();
   };
 
   const handlePlayNextLevel = () => {
+    playSound("/assets/sounds/click-positive.wav");
     handleLevelChange && handleLevelChange(level ? level + 1 : 1);
     handleClose();
   };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Components
 import { Form, Modal, InputGroup, Button } from "react-bootstrap";
@@ -7,6 +7,7 @@ import IconShare from "@/components/UI/Atoms/IconShare/IconShare";
 
 // Utils
 import { encryptStringArray } from "@/utils/encoding";
+import { playSound } from "@/utils/sounds";
 
 // Constants
 import { WEBSITE_URL } from "@/constants/app";
@@ -25,8 +26,17 @@ const CustomWordListModal: React.FC<Props> = ({ show, setShow }: Props) => {
   const [copyToClipboardButtonText, setCopyToClipboardButtonText] =
     useState<string>(COPY_TO_CLIPBOARD_BUTTON_TEXT_DEFAULT);
 
+  useEffect(() => {
+    if (show) {
+      playSound("/assets/sounds/modal-open.wav");
+    } else {
+      playSound("/assets/sounds/modal-close.wav");
+    }
+  }, [show]);
+
   const addWord = () => {
     if (currentWord.length >= 2 && wordList.length < 11) {
+      playSound("/assets/sounds/click-positive.wav");
       setWordList([...wordList, currentWord]);
       setCurrentWord("");
     }
@@ -40,15 +50,18 @@ const CustomWordListModal: React.FC<Props> = ({ show, setShow }: Props) => {
   };
 
   const removeWord = (index: number) => {
+    playSound("/assets/sounds/click-negative.wav");
     setWordList(wordList.filter((_, i) => i !== index));
   };
 
   const resetWordList = () => {
+    playSound("/assets/sounds/click-negative.wav");
     setWordList([]);
     setCurrentWord("");
   };
 
   const copyToClipboard = () => {
+    playSound("/assets/sounds/click-positive.wav");
     const customListUrl = getCustomListUrl();
     navigator.clipboard.writeText(customListUrl);
     setCopyToClipboardButtonText(COPY_TO_CLIPBOARD_BUTTON_TEXT_COPIED);
