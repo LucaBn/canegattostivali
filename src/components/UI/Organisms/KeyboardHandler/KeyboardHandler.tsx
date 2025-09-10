@@ -1,51 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 
 // Components
 import { Form, Col, Button } from "react-bootstrap";
 import IconDelete from "@/components/UI/Atoms/IconDelete/IconDelete";
 
 // Utils
-import {
-  readFromLocalStorage,
-  writeToLocalStorage,
-} from "@/utils/localStorage";
 import { playSound } from "@/utils/sounds";
 
-// Constants
-import { LS_KEY_LIST } from "@/constants/localStorage";
+// Hooks
+import { useKeyboardSwap } from "@/components/providers/KeyboardSwapProvider";
 
-// TODO: save keyboard layout in context to update keyboard component accordingly
 const KeyboardHandler: React.FC = () => {
-  const [enterFirst, setEnterFirst] = useState<boolean>(
-    readFromLocalStorage(LS_KEY_LIST.KEYBOARD_SWAP) !== null
-      ? !!readFromLocalStorage(LS_KEY_LIST.KEYBOARD_SWAP)
-      : false
-  );
+  const { changeKeyboardSwapValue, keyboardSwapValue } = useKeyboardSwap();
 
   const handleChange = (value: boolean) => {
-    setEnterFirst(value);
-    writeToLocalStorage(LS_KEY_LIST.KEYBOARD_SWAP, value);
+    changeKeyboardSwapValue(value);
     playSound("/assets/sounds/click-positive.wav");
   };
 
-  // TODO: remove inline styles
   const enterButton = (
-    <Button
-      variant="success"
-      size="sm"
-      tabIndex={-1}
-      style={{ height: "35px" }}
-    >
+    <Button id="enter-button" variant="success" size="sm" tabIndex={-1}>
       INVIO
     </Button>
   );
   const deleteButton = (
-    <Button
-      variant="danger"
-      size="sm"
-      tabIndex={-1}
-      style={{ height: "35px", paddingLeft: "12px", paddingRight: "15px" }}
-    >
+    <Button id="delete-button" variant="danger" size="sm" tabIndex={-1}>
       <IconDelete forceColor="#fff" forceOpacity={100} />
     </Button>
   );
@@ -53,19 +32,22 @@ const KeyboardHandler: React.FC = () => {
   return (
     <Form>
       <p className="mb-1">Layout di tastiera</p>
-      <Form.Group as={Col} className="d-flex flex-wrap gap-3">
+      <Form.Group
+        as={Col}
+        className="d-flex flex-wrap gap-3 keyboard-layout__container"
+      >
         <Form.Check
           type="radio"
           name="keyboard-layout"
           id="keyboard-enter-first"
           label={
-            <div className="d-flex gap-2 align-items-center cursor-pointer">
-              <div className="pointer-events-none">
+            <div className="cursor-pointer">
+              <div className="d-flex gap-1 align-items-center pointer-events-none user-select-none">
                 {enterButton} {deleteButton}
               </div>
             </div>
           }
-          checked={!enterFirst}
+          checked={!keyboardSwapValue}
           onChange={() => handleChange(false)}
           title="INVIO prima del CANC"
         />
@@ -74,13 +56,13 @@ const KeyboardHandler: React.FC = () => {
           name="keyboard-layout"
           id="keyboard-delete-first"
           label={
-            <div className="d-flex gap-2 align-items-center cursor-pointer">
-              <div className="pointer-events-none">
+            <div className="cursor-pointer">
+              <div className="d-flex gap-1 align-items-center pointer-events-none user-select-none">
                 {deleteButton} {enterButton}
               </div>
             </div>
           }
-          checked={enterFirst}
+          checked={keyboardSwapValue}
           onChange={() => handleChange(true)}
           title="CANC prima di INVIO"
         />

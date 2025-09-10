@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@/components/providers/ThemeProvider/ThemeProvider";
-import { useTheme } from "@/components/providers/ThemeProvider/useTheme";
+import { KeyboardStatusProvider } from "@/components/providers/KeyboardStatusProvider/KeyboardStatusProvider";
+import { useKeyboardStatus } from "@/components/providers/KeyboardStatusProvider/useKeyboardStatus";
 
-export { ThemeProvider, useTheme };
+export { KeyboardStatusProvider, useKeyboardStatus };

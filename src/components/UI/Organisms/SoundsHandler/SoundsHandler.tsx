@@ -34,7 +34,7 @@ const SoundsHandler: React.FC = () => {
           type="radio"
           name="sounds"
           id="sounds-on"
-          label="On"
+          label={<span className="cursor-pointer user-select-none">On</span>}
           checked={soundsEnabled}
           onChange={() => handleChange(true)}
           title="Attiva i suoni"
@@ -43,7 +43,7 @@ const SoundsHandler: React.FC = () => {
           type="radio"
           name="sounds"
           id="sounds-off"
-          label="Off"
+          label={<span className="cursor-pointer user-select-none">Off</span>}
           checked={!soundsEnabled}
           onChange={() => handleChange(false)}
           title="Disattiva i suoni"

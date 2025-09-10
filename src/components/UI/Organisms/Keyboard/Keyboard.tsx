@@ -3,10 +3,9 @@ import React from "react";
 // Components
 import { Row, Col } from "react-bootstrap";
 import KeyboardRow from "@/components/UI/Molecules/KeyboardRow/KeyboardRow";
-import { readFromLocalStorage } from "@/utils/localStorage";
 
-// Constants
-import { LS_KEY_LIST } from "@/constants/localStorage";
+// Hooks
+import { useKeyboardSwap } from "@/components/providers/KeyboardSwapProvider";
 
 interface Props {
   currentWord: string;
@@ -27,7 +26,9 @@ const Keyboard: React.FC<Props> = ({
   disableHelpBonusLetterButton,
   bonusLetters,
 }) => {
-  const lastRowKeys = readFromLocalStorage(LS_KEY_LIST.KEYBOARD_SWAP)
+  const { keyboardSwapValue } = useKeyboardSwap();
+
+  const lastRowKeys = keyboardSwapValue
     ? ["CANC", "Z", "X", "C", "V", "B", "N", "M", "INVIO"]
     : ["INVIO", "Z", "X", "C", "V", "B", "N", "M", "CANC"];
 
