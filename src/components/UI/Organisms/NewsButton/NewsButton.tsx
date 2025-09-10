@@ -62,10 +62,12 @@ const NewsButton: React.FC = () => {
         variant="link"
         onClick={handleOpen}
       >
-        <IconNewspaper forceColor="#fff" />
-        {isNotificationVisible && (
-          <NotificationCircle bgColor="warning" pulse />
-        )}
+        <span className="position-relative">
+          <IconNewspaper forceColor="#fff" />
+          {isNotificationVisible && (
+            <NotificationCircle bgColor="warning" pulse />
+          )}
+        </span>
       </Button>
       <NewsModal show={showModal} setShow={setShowModal} />
     </>
