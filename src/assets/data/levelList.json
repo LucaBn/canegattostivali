@@ -721,5 +721,37 @@
       "ALBERO",
       "GENEALOGICO"
     ]
+  },
+  {
+    "id": 53,
+    "wordList": [
+      "CONGIURA",
+      "POLVERI",
+      "SOTTILI",
+      "LABBRA",
+      "MATITA",
+      "PUNTA",
+      "LINGUA",
+      "MADRE",
+      "NATURA",
+      "MORTA",
+      "GATTA"
+    ]
+  },
+  {
+    "id": 54,
+    "wordList": [
+      "USB",
+      "CAVO",
+      "MOUSE",
+      "CLICCARE",
+      "TASTO",
+      "PIANOFORTE",
+      "CODA",
+      "OCCHIO",
+      "DITO",
+      "MEDIO",
+      "ORIENTE"
+    ]
   }
 ]
