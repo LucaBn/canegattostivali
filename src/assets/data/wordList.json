@@ -425,11 +425,11 @@
   },
   {
     "word": "LEGARE",
-    "nextWordList": ["MATTO", "DITO", "CAPELLI"]
+    "nextWordList": ["MATTO", "CAPELLI", "BICICLETTA"]
   },
   {
     "word": "DITO",
-    "nextWordList": ["LEGARE", "NASO", "SCATTO", "MEDIO", "INDICE"]
+    "nextWordList": ["NASO", "SCATTO", "MEDIO", "INDICE"]
   },
   {
     "word": "MEDIO",
@@ -681,7 +681,7 @@
   },
   {
     "word": "BICICLETTA",
-    "nextWordList": ["MANUBRIO", "RUOTA", "CATENA", "SELLA", "CORSA"]
+    "nextWordList": ["MANUBRIO", "RUOTA", "CATENA", "SELLA", "CORSA", "LEGARE"]
   },
   {
     "word": "CORSA",
@@ -2788,11 +2788,11 @@
   },
   {
     "word": "TASTO",
-    "nextWordList": ["DESTRO", "PIANOFORTE", "PULSANTE", "RICERCA"]
+    "nextWordList": ["DESTRO", "PIANOFORTE", "PULSANTE"]
   },
   {
     "word": "RICERCA",
-    "nextWordList": ["TASTO", "INTERNET", "MERCATO", "SVILUPPO", "SCIENTIFICA"]
+    "nextWordList": ["INTERNET", "MERCATO", "SVILUPPO", "SCIENTIFICA"]
   },
   {
     "word": "SVILUPPO",
