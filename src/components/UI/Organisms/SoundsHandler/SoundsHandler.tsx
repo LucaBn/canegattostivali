@@ -28,25 +28,31 @@ const SoundsHandler: React.FC = () => {
 
   return (
     <Form>
-      <p className="mb-1">Suoni</p>
+      <p className="mb-1">Suoni (work in progress)</p>
       <Form.Group as={Col} className="d-flex flex-wrap gap-3">
         <Form.Check
           type="radio"
           name="sounds"
           id="sounds-on"
-          label={<span className="cursor-pointer user-select-none">On</span>}
+          label={
+            <span className="cursor-not-allowed user-select-none">On</span>
+          }
           checked={soundsEnabled}
           onChange={() => handleChange(true)}
           title="Attiva i suoni"
+          disabled
         />
         <Form.Check
           type="radio"
           name="sounds"
           id="sounds-off"
-          label={<span className="cursor-pointer user-select-none">Off</span>}
+          label={
+            <span className="cursor-not-allowed user-select-none">Off</span>
+          }
           checked={!soundsEnabled}
           onChange={() => handleChange(false)}
           title="Disattiva i suoni"
+          disabled
         />
       </Form.Group>
     </Form>
