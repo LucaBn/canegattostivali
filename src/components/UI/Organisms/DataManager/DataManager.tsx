@@ -4,10 +4,12 @@ import React, { useState } from "react";
 import { Button, Form, Alert, Card } from "react-bootstrap";
 
 // Constants
+import { APP_NAME_SHORT } from "@/constants/app";
 import { LS_KEY_LIST } from "@/constants/localStorage";
 
 // Utils
 import { playSound } from "@/utils/sounds";
+import { decryptData, encryptData } from "@/utils/string";
 
 const LOCAL_STORAGE_KEYS = [
   LS_KEY_LIST.USER_DATA,
@@ -17,6 +19,8 @@ const LOCAL_STORAGE_KEYS = [
   LS_KEY_LIST.READ_NEWS,
   LS_KEY_LIST.THEME,
 ];
+
+const SECRET_KEY = APP_NAME_SHORT;
 
 const DataManager: React.FC = () => {
   const [importError, setImportError] = useState<string | null>(null);
@@ -29,12 +33,15 @@ const DataManager: React.FC = () => {
     playSound("/assets/sounds/click-positive.wav");
 
     const data: Record<string, unknown> = {};
+
     LOCAL_STORAGE_KEYS.forEach((key) => {
       const value = localStorage.getItem(key);
       if (value !== null) data[key] = JSON.parse(value);
     });
 
-    const blob = new Blob([JSON.stringify(data, null, 2)], {
+    const encrypted = encryptData(data, SECRET_KEY);
+
+    const blob = new Blob([JSON.stringify(encrypted, null, 2)], {
       type: "application/json",
     });
     const url = URL.createObjectURL(blob);
@@ -55,9 +62,11 @@ const DataManager: React.FC = () => {
     reader.onload = (e) => {
       try {
         const importedData = JSON.parse(e.target?.result as string);
+        const decrypted = decryptData(importedData, APP_NAME_SHORT);
+
         LOCAL_STORAGE_KEYS.forEach((key) => {
-          if (key in importedData) {
-            localStorage.setItem(key, JSON.stringify(importedData[key]));
+          if (key in decrypted) {
+            localStorage.setItem(key, JSON.stringify(decrypted[key]));
           }
         });
         if (isApp) {
