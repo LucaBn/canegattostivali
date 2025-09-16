@@ -1,9 +1,12 @@
 import React, { useRef } from "react";
 
 // Components
-import { Row, Col, Card } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import IconTornado from "@/components/UI/Atoms/IconTornado/IconTornado";
 import IconLadder from "@/components/UI/Atoms/IconLadder/IconLadder";
+
+// Utils
+import { playSound } from "@/utils/sounds";
 
 interface Props {
   mode: "random" | "levels" | "custom";
@@ -22,7 +25,8 @@ const ModeSelectionSection: React.FC<Props> = ({ mode, setMode }) => {
     }
   };
 
-  const handleCardClick = (selectedMode: "random" | "levels") => {
+  const handleModeClick = (selectedMode: "random" | "levels") => {
+    playSound("/assets/sounds/click-positive.wav");
     setMode(selectedMode);
     requestAnimationFrame(() => {
       scrollToBottom();
@@ -35,38 +39,46 @@ const ModeSelectionSection: React.FC<Props> = ({ mode, setMode }) => {
         <Col xs={12} md={8} className="text-center">
           <h2 className="mb-3 fs-4">Seleziona la modalità di gioco</h2>
           <Row className="justify-content-center gap-2">
-            <Card
-              className="mode-selection__card mb-2"
-              bg={mode === "random" ? "primary" : "secondary"}
-              text="light"
+            <Button
+              className="mode-selection__card mb-2 py-3"
+              variant={mode === "random" ? "primary" : "secondary"}
+              title="Gioca con sequenze di parole casuali e senza limiti di tempo"
+              onClick={(e) => {
+                handleModeClick("random");
+                e.currentTarget.blur();
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.stopPropagation();
+                }
+              }}
             >
-              <Card.Body
-                onClick={() => handleCardClick("random")}
-                className="cursor-pointer"
-              >
-                <div className="fs-5 mb-1">
-                  <IconTornado forceOpacity={100} forceColor="#fff" /> Random
-                </div>
-                <div>
-                  Gioca con sequenze di parole casuali e senza limiti di tempo
-                </div>
-              </Card.Body>
-            </Card>
-            <Card
-              className="mode-selection__card mb-2"
-              bg={mode === "levels" ? "primary" : "secondary"}
-              text="light"
+              <div className="fs-5 mb-1">
+                <IconTornado forceOpacity={100} forceColor="#fff" /> Random
+              </div>
+              <div>
+                Gioca con sequenze di parole casuali e senza limiti di tempo
+              </div>
+            </Button>
+            <Button
+              className="mode-selection__card mb-2 py-3"
+              variant={mode === "levels" ? "primary" : "secondary"}
+              title="Supera i livelli e sfida i tuoi amici a starti dietro"
+              onClick={(e) => {
+                handleModeClick("levels");
+                e.currentTarget.blur();
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.stopPropagation();
+                }
+              }}
             >
-              <Card.Body
-                onClick={() => handleCardClick("levels")}
-                className="cursor-pointer"
-              >
-                <div className="fs-5 mb-1">
-                  <IconLadder forceOpacity={100} forceColor="#fff" /> Livelli
-                </div>
-                <div>Supera i livelli e sfida i tuoi amici a starti dietro</div>
-              </Card.Body>
-            </Card>
+              <div className="fs-5 mb-1">
+                <IconLadder forceOpacity={100} forceColor="#fff" /> Livelli
+              </div>
+              <div>Supera i livelli e sfida i tuoi amici a starti dietro</div>
+            </Button>
           </Row>
         </Col>
       </Row>

@@ -95,10 +95,11 @@ const HomePage: React.FC = () => {
       {mode !== "custom" && (
         <ModeSelectionSection mode={mode} setMode={handleSetMode} />
       )}
-
-      {isCustomModeSequenceWrong ? (
-        <CustomModeSequenceWrongModal handleClose={handleCloseModal} />
-      ) : (
+      <CustomModeSequenceWrongModal
+        show={isCustomModeSequenceWrong}
+        setShow={handleCloseModal}
+      />
+      {!isCustomModeSequenceWrong && (
         <>
           {(mode === "custom" || mode === "random") && (
             <GameSection

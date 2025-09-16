@@ -21,7 +21,7 @@ export interface IThemeContext {
 
 // Default createContextValue
 const defaultCreateContextValue = {
-  theme: ThemeList.Light,
+  theme: ThemeList.Dark,
   changeTheme: () => {},
 };
 
@@ -33,9 +33,9 @@ export const ThemeProvider: React.FC<IGenericComponent> = ({ children }) => {
   const [theme, setTheme] = useState<ThemeList>(ThemeList.Dark);
 
   useEffect(() => {
-    const storedPmjTheme = readFromLocalStorage(LS_KEY_LIST.THEME);
+    const storedCgsTheme = readFromLocalStorage(LS_KEY_LIST.THEME);
 
-    switch (storedPmjTheme) {
+    switch (storedCgsTheme) {
       case ThemeList.Dark:
         setTheme(ThemeList.Dark);
         break;

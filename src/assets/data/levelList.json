@@ -689,5 +689,69 @@
       "LETTORE",
       "INCALLITO"
     ]
+  },
+  {
+    "id": 51,
+    "wordList": [
+      "RICAMBIO",
+      "PEZZO",
+      "GROSSO",
+      "SALE",
+      "ZUCCA",
+      "HALLOWEEN",
+      "COSTUME",
+      "BAGNO",
+      "VASCA",
+      "LAMINAZIONE",
+      "CIGLIA"
+    ]
+  },
+  {
+    "id": 52,
+    "wordList": [
+      "ABBIGLIAMENTO",
+      "CAPO",
+      "MONDO",
+      "SPETTACOLO",
+      "TEATRALE",
+      "COMPAGNIA",
+      "BANDIERA",
+      "SCACCHI",
+      "MAESTRO",
+      "ALBERO",
+      "GENEALOGICO"
+    ]
+  },
+  {
+    "id": 53,
+    "wordList": [
+      "CONGIURA",
+      "POLVERI",
+      "SOTTILI",
+      "LABBRA",
+      "MATITA",
+      "PUNTA",
+      "LINGUA",
+      "MADRE",
+      "NATURA",
+      "MORTA",
+      "GATTA"
+    ]
+  },
+  {
+    "id": 54,
+    "wordList": [
+      "USB",
+      "CAVO",
+      "MOUSE",
+      "CLICCARE",
+      "TASTO",
+      "PIANOFORTE",
+      "CODA",
+      "OCCHIO",
+      "DITO",
+      "MEDIO",
+      "ORIENTE"
+    ]
   }
 ]

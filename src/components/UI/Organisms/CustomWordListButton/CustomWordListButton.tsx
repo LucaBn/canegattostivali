@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Components
 import { Button } from "react-bootstrap";
@@ -16,14 +16,16 @@ const CustomWordListButton: React.FC = () => {
 
   const { changeKeyboardStatus } = useKeyboardStatus();
 
+  useEffect(() => {
+    if (showModal) {
+      changeKeyboardStatus(KeyboardStatusList.Inactive);
+    } else {
+      changeKeyboardStatus(KeyboardStatusList.Active);
+    }
+  }, [showModal]);
+
   const handleOpen = () => {
     setShowModal(true);
-    changeKeyboardStatus(KeyboardStatusList.Inactive);
-  };
-
-  const handleClose = () => {
-    setShowModal(false);
-    changeKeyboardStatus(KeyboardStatusList.Active);
   };
 
   return (
@@ -36,7 +38,7 @@ const CustomWordListButton: React.FC = () => {
       >
         <IconPlus forceColor="#fff" />
       </Button>
-      {showModal && <CustomWordListModal handleClose={handleClose} />}
+      <CustomWordListModal show={showModal} setShow={setShowModal} />
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Components
 import { Form, Modal, InputGroup, Button } from "react-bootstrap";
@@ -7,6 +7,7 @@ import IconShare from "@/components/UI/Atoms/IconShare/IconShare";
 
 // Utils
 import { encryptStringArray } from "@/utils/encoding";
+import { playSound } from "@/utils/sounds";
 
 // Constants
 import { WEBSITE_URL } from "@/constants/app";
@@ -15,17 +16,27 @@ const COPY_TO_CLIPBOARD_BUTTON_TEXT_DEFAULT = "";
 const COPY_TO_CLIPBOARD_BUTTON_TEXT_COPIED = "Copiata!";
 
 interface Props {
-  handleClose: () => void;
+  show: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
+const CustomWordListModal: React.FC<Props> = ({ show, setShow }: Props) => {
   const [wordList, setWordList] = useState<string[]>([]);
   const [currentWord, setCurrentWord] = useState<string>("");
   const [copyToClipboardButtonText, setCopyToClipboardButtonText] =
     useState<string>(COPY_TO_CLIPBOARD_BUTTON_TEXT_DEFAULT);
 
+  useEffect(() => {
+    if (show) {
+      playSound("/assets/sounds/modal-open.wav");
+    } else {
+      playSound("/assets/sounds/modal-close.wav");
+    }
+  }, [show]);
+
   const addWord = () => {
     if (currentWord.length >= 2 && wordList.length < 11) {
+      playSound("/assets/sounds/click-positive.wav");
       setWordList([...wordList, currentWord]);
       setCurrentWord("");
     }
@@ -39,15 +50,18 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
   };
 
   const removeWord = (index: number) => {
+    playSound("/assets/sounds/click-negative.wav");
     setWordList(wordList.filter((_, i) => i !== index));
   };
 
   const resetWordList = () => {
+    playSound("/assets/sounds/click-negative.wav");
     setWordList([]);
     setCurrentWord("");
   };
 
   const copyToClipboard = () => {
+    playSound("/assets/sounds/click-positive.wav");
     const customListUrl = getCustomListUrl();
     navigator.clipboard.writeText(customListUrl);
     setCopyToClipboardButtonText(COPY_TO_CLIPBOARD_BUTTON_TEXT_COPIED);
@@ -97,7 +111,7 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
     );
 
   return (
-    <Modal show={true} onHide={handleClose} backdrop="static" centered>
+    <Modal show={show} onHide={() => setShow(false)} backdrop="static" centered>
       <Modal.Header closeButton>
         <Modal.Title>Crea la tua sequenza di parole</Modal.Title>
       </Modal.Header>
@@ -234,7 +248,7 @@ const CustomWordListModal: React.FC<Props> = ({ handleClose }: Props) => {
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={handleClose}>
+        <Button variant="primary" onClick={() => setShow(false)}>
           Chiudi
         </Button>
       </Modal.Footer>

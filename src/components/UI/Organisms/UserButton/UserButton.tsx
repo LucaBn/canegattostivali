@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Components
 import { Button } from "react-bootstrap";
@@ -16,13 +16,16 @@ const UserButton: React.FC = () => {
 
   const [showModal, setShowModal] = useState<boolean>(false);
 
+  useEffect(() => {
+    if (showModal) {
+      changeKeyboardStatus(KeyboardStatusList.Inactive);
+    } else {
+      changeKeyboardStatus(KeyboardStatusList.Active);
+    }
+  }, [showModal]);
+
   const handleOpen = () => {
     setShowModal(true);
-    changeKeyboardStatus(KeyboardStatusList.Inactive);
-  };
-  const handleClose = () => {
-    setShowModal(false);
-    changeKeyboardStatus(KeyboardStatusList.Active);
   };
 
   return (
@@ -35,7 +38,7 @@ const UserButton: React.FC = () => {
       >
         <IconUser forceColor="#fff" />
       </Button>
-      {showModal && <UserModal handleClose={handleClose} />}
+      <UserModal show={showModal} setShow={setShowModal} />
     </>
   );
 };

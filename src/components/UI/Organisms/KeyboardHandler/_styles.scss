@@ -1,0 +1,25 @@
+.custom-button {
+  height: 35px;
+  width: 65px;
+}
+
+.keyboard-layout__container .form-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+
+#enter-button {
+  @extend .custom-button;
+}
+
+#delete-button {
+  @extend .custom-button;
+  padding-left: 3px;
+}
+
+#keyboard-enter-first,
+#keyboard-delete-first {
+  margin-bottom: 3px;
+}

@@ -425,11 +425,11 @@
   },
   {
     "word": "LEGARE",
-    "nextWordList": ["MATTO", "DITO", "CAPELLI"]
+    "nextWordList": ["MATTO", "CAPELLI", "BICICLETTA"]
   },
   {
     "word": "DITO",
-    "nextWordList": ["LEGARE", "NASO", "SCATTO", "MEDIO", "INDICE"]
+    "nextWordList": ["NASO", "SCATTO", "MEDIO", "INDICE"]
   },
   {
     "word": "MEDIO",
@@ -681,7 +681,7 @@
   },
   {
     "word": "BICICLETTA",
-    "nextWordList": ["MANUBRIO", "RUOTA", "CATENA", "SELLA", "CORSA"]
+    "nextWordList": ["MANUBRIO", "RUOTA", "CATENA", "SELLA", "CORSA", "LEGARE"]
   },
   {
     "word": "CORSA",
@@ -1695,7 +1695,15 @@
   },
   {
     "word": "MAESTRO",
-    "nextWordList": ["ALBERO", "MUSICA", "SCUOLA", "VITA", "JUDO"]
+    "nextWordList": [
+      "ALBERO",
+      "MUSICA",
+      "SCUOLA",
+      "VITA",
+      "JUDO",
+      "COLPO",
+      "SCACCHI"
+    ]
   },
   {
     "word": "SCUOLA",
@@ -2780,11 +2788,11 @@
   },
   {
     "word": "TASTO",
-    "nextWordList": ["DESTRO", "PIANOFORTE", "PULSANTE", "RICERCA"]
+    "nextWordList": ["DESTRO", "PIANOFORTE", "PULSANTE"]
   },
   {
     "word": "RICERCA",
-    "nextWordList": ["TASTO", "INTERNET", "MERCATO", "SVILUPPO", "SCIENTIFICA"]
+    "nextWordList": ["INTERNET", "MERCATO", "SVILUPPO", "SCIENTIFICA"]
   },
   {
     "word": "SVILUPPO",
@@ -3296,7 +3304,8 @@
       "PELO",
       "MUSICA",
       "DISCOTECA",
-      "FUOCO"
+      "FUOCO",
+      "CENTRO"
     ]
   },
   {
@@ -3779,7 +3788,8 @@
       "GIOCO",
       "BANDIERA",
       "TORRE",
-      "MOSSA"
+      "MOSSA",
+      "MAESTRO"
     ]
   },
   {
@@ -4850,7 +4860,8 @@
       "METEOROLOGICO",
       "PIENO",
       "CULTURALE",
-      "SOCIALE"
+      "SOCIALE",
+      "PALLA"
     ]
   },
   {
@@ -5976,7 +5987,8 @@
       "SOLE",
       "TACCO",
       "FREDDO",
-      "BASSO"
+      "BASSO",
+      "MAESTRO"
     ]
   },
   {

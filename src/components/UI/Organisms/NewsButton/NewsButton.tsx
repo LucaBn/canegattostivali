@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Components
 import { Button } from "react-bootstrap";
@@ -38,15 +38,17 @@ const NewsButton: React.FC = () => {
     writeToLocalStorage(LS_KEY_LIST.READ_NEWS, newsList.length);
   };
 
+  useEffect(() => {
+    if (showModal) {
+      changeKeyboardStatus(KeyboardStatusList.Inactive);
+    } else {
+      changeKeyboardStatus(KeyboardStatusList.Active);
+    }
+  }, [showModal]);
+
   const handleOpen = () => {
     setShowModal(true);
-    changeKeyboardStatus(KeyboardStatusList.Inactive);
     saveReadNews();
-  };
-
-  const handleClose = () => {
-    setShowModal(false);
-    changeKeyboardStatus(KeyboardStatusList.Active);
   };
 
   const isNotificationVisible =
@@ -60,12 +62,14 @@ const NewsButton: React.FC = () => {
         variant="link"
         onClick={handleOpen}
       >
-        <IconNewspaper forceColor="#fff" />
-        {isNotificationVisible && (
-          <NotificationCircle bgColor="warning" pulse />
-        )}
+        <span className="position-relative">
+          <IconNewspaper forceColor="#fff" />
+          {isNotificationVisible && (
+            <NotificationCircle bgColor="warning" pulse />
+          )}
+        </span>
       </Button>
-      {showModal && <NewsModal handleClose={handleClose} />}
+      <NewsModal show={showModal} setShow={setShowModal} />
     </>
   );
 };

@@ -9,6 +9,7 @@ import {
   writeToLocalStorage,
 } from "@/utils/localStorage";
 import { formatTime } from "@/utils/time";
+import { playSound } from "@/utils/sounds";
 
 // Constants
 import { LS_KEY_LIST } from "@/constants/localStorage";
@@ -17,10 +18,11 @@ import { LS_KEY_LIST } from "@/constants/localStorage";
 import { UserData } from "@/typings/user";
 
 interface Props {
-  handleClose: () => void;
+  show: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const UserModal: React.FC<Props> = ({ handleClose }: Props) => {
+const UserModal: React.FC<Props> = ({ show, setShow }: Props) => {
   // Leave it here so it runs every time the component is updated
   const storedUserData: UserData | null = readFromLocalStorage(
     LS_KEY_LIST.USER_DATA
@@ -35,6 +37,14 @@ const UserModal: React.FC<Props> = ({ handleClose }: Props) => {
   const lastLevelCompleted = storedUserData?.lastLevelCompleted || 0;
 
   useEffect(() => {
+    if (show) {
+      playSound("/assets/sounds/modal-open.wav");
+    } else {
+      playSound("/assets/sounds/modal-close.wav");
+    }
+  }, [show]);
+
+  useEffect(() => {
     const trimmedUsername = username.trim();
 
     writeToLocalStorage(LS_KEY_LIST.USER_DATA, {
@@ -46,7 +56,7 @@ const UserModal: React.FC<Props> = ({ handleClose }: Props) => {
   }, [username]);
 
   return (
-    <Modal show={true} onHide={handleClose} backdrop="static" centered>
+    <Modal show={show} onHide={() => setShow(false)} backdrop="static" centered>
       <Modal.Header closeButton>
         <Modal.Title>Profilo</Modal.Title>
       </Modal.Header>
@@ -85,7 +95,7 @@ const UserModal: React.FC<Props> = ({ handleClose }: Props) => {
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={handleClose}>
+        <Button variant="primary" onClick={() => setShow(false)}>
           Chiudi
         </Button>
       </Modal.Footer>

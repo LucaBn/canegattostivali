@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // Components
 import { Modal, Button, Toast } from "react-bootstrap";
@@ -6,13 +6,25 @@ import { Modal, Button, Toast } from "react-bootstrap";
 // Data
 import newsList from "@/assets/data/newsList.json";
 
+// Utils
+import { playSound } from "@/utils/sounds";
+
 interface Props {
-  handleClose: () => void;
+  show: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const NewsModal: React.FC<Props> = ({ handleClose }: Props) => {
+const NewsModal: React.FC<Props> = ({ show, setShow }: Props) => {
+  useEffect(() => {
+    if (show) {
+      playSound("/assets/sounds/modal-open.wav");
+    } else {
+      playSound("/assets/sounds/modal-close.wav");
+    }
+  }, [show]);
+
   return (
-    <Modal show={true} onHide={handleClose} backdrop="static" centered>
+    <Modal show={show} onHide={() => setShow(false)} backdrop="static" centered>
       <Modal.Header closeButton>
         <Modal.Title>News</Modal.Title>
       </Modal.Header>
@@ -28,7 +40,7 @@ const NewsModal: React.FC<Props> = ({ handleClose }: Props) => {
         ))}
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={handleClose}>
+        <Button variant="primary" onClick={() => setShow(false)}>
           Chiudi
         </Button>
       </Modal.Footer>

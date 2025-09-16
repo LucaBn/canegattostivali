@@ -12,8 +12,9 @@ export default defineConfig({
       registerType: "autoUpdate",
       workbox: {
         globPatterns: [
-          "**/*.{js,css,html,ico,svg,jpg,jpeg,webp}",
+          "**/*.{js,css,html,ico,svg,jpg,jpeg,webp,wav}",
           "assets/img/*.{jpg,png}",
+          "assets/sounds/*.{mp3,wav,ogg}",
         ],
         runtimeCaching: [
           {
@@ -23,6 +24,17 @@ export default defineConfig({
               cacheName: "images-cache",
               expiration: {
                 maxEntries: 100,
+                maxAgeSeconds: 60 * 60 * 24 * 30,
+              },
+            },
+          },
+          {
+            urlPattern: ({ request }) => request.destination === "audio",
+            handler: "CacheFirst",
+            options: {
+              cacheName: "audio-cache",
+              expiration: {
+                maxEntries: 20,
                 maxAgeSeconds: 60 * 60 * 24 * 30,
               },
             },

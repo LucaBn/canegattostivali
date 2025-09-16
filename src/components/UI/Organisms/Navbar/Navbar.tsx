@@ -1,20 +1,14 @@
-import React /* useState, useEffect, useRef */ from "react";
+import React from "react";
 
 // Components
-import { Button, Image } from "react-bootstrap";
-import { Container, Navbar } from "react-bootstrap";
-// import { LinkContainer } from "react-router-bootstrap";
-import IconSun from "@/components/UI/Atoms/IconSun/IconSun";
-import IconMoon from "@/components/UI/Atoms/IconMoon/IconMoon";
+import { Container, Navbar, Image } from "react-bootstrap";
 import CustomWordListButton from "@/components/UI/Organisms/CustomWordListButton/CustomWordListButton";
 import NewsButton from "@/components/UI/Organisms/NewsButton/NewsButton";
+import OptionsButton from "@/components/UI/Organisms/OptionsButton/OptionsButton";
 import UserButton from "@/components/UI/Organisms/UserButton/UserButton";
 
-// Hook
-import { useTheme } from "@/components/providers/ThemeProvider";
-
-// Typings
-import { ThemeList } from "@/typings/themes";
+// Utils
+import { playSound } from "@/utils/sounds";
 
 // TODO: move this to an utils file and refactor all scroll functions
 const scrollToTop = () => {
@@ -26,53 +20,13 @@ const scrollToTop = () => {
 };
 
 const NavbarComponent: React.FC = () => {
-  // const [expanded, setExpanded] = useState<boolean>(false);
-
-  // const navbarRef = useRef<HTMLDivElement>(null);
-
-  const { theme, changeTheme } = useTheme();
-
-  // const handleOutsideClick = (event: MouseEvent) => {
-  //   if (
-  //     navbarRef.current &&
-  //     !navbarRef.current.contains(event.target as Node)
-  //   ) {
-  //     setExpanded(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   document.addEventListener("click", handleOutsideClick);
-  //   return () => {
-  //     document.removeEventListener("click", handleOutsideClick);
-  //   };
-  // }, []);
-
-  // const toggleNavbarDropdownStatus = () => {
-  //   setExpanded((prevValue) => !prevValue);
-  // };
-
-  // const closeNavbarDropdown = () => {
-  //   setExpanded(false);
-  // };
-
   const handleLogoClick = () => {
-    // closeNavbarDropdown();
+    if (window.scrollY > 0) {
+      playSound("/assets/sounds/scroll-to-top.wav");
+    }
+
     scrollToTop();
   };
-
-  const toggleTheme = () => {
-    theme === "light"
-      ? changeTheme("dark" as ThemeList)
-      : changeTheme("light" as ThemeList);
-  };
-
-  const toggleThemeIcon: JSX.Element =
-    theme === "dark" ? (
-      <IconMoon forceColor="#fff" />
-    ) : (
-      <IconSun forceColor="#fff" />
-    );
 
   return (
     <>
@@ -80,8 +34,6 @@ const NavbarComponent: React.FC = () => {
         expand="lg"
         fixed="top"
         className="navbar navbar-dark bg-dark border-bottom py-1"
-        // expanded={expanded}
-        // ref={navbarRef as React.RefObject<HTMLDivElement>}
       >
         <Container>
           <Navbar.Brand
@@ -106,38 +58,11 @@ const NavbarComponent: React.FC = () => {
           </Navbar.Brand>
 
           <span>
-            <Button
-              aria-label="Cambia il tema"
-              title="Cambia il tema"
-              variant="link"
-              onClick={toggleTheme}
-            >
-              {toggleThemeIcon}
-            </Button>
+            <OptionsButton />
             <NewsButton />
             <CustomWordListButton />
             <UserButton />
           </span>
-
-          {/* <LinkContainer to={`/one`}>
-
-          {/* <Navbar.Toggle
-            aria-controls="navbar-collpsable"
-            onClick={toggleNavbarDropdownStatus}
-          /> */}
-          {/* <Navbar.Collapse onClick={closeNavbarDropdown} id="navbar-collpsable">
-            <Nav className="ms-auto gap-1">
-              <LinkContainer to={`/one`}>
-                <Nav.Link>Link One</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to={`/two`}>
-                <Nav.Link>Link Two</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to={`/three`}>
-                <Nav.Link>Link Three</Nav.Link>
-              </LinkContainer>
-            </Nav>
-          </Navbar.Collapse> */}
         </Container>
       </Navbar>
     </>
