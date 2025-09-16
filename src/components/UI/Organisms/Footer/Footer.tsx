@@ -10,7 +10,8 @@ import { AUTHOR_NAME, WEBSITE_URL } from "@/constants/app";
 const siteUrl: string = WEBSITE_URL;
 const authorName: string = AUTHOR_NAME;
 const authorLink: string = "https://github.com/LucaBn";
-const googlePlayLink: string = "#"; // TODO: add Google Play link
+const googlePlayLink: string =
+  "https://play.google.com/store/apps/details?id=it.canegattostivali.app";
 const pimpMyJpgLink: string = "https://www.pimpmyjpg.com/it";
 const buyMeACoffeeLink: string = "https://www.buymeacoffee.com/lucabn";
 
@@ -55,10 +56,9 @@ const Footer: React.FC = () => {
               setShow={setIsCreditsModalActive}
             />
           </Col>
-          {/* TODO: remove false condition when app will be public and update googlePlayLink value */}
-          {false && !isApp && (
+          {!isApp && (
             <Col xs={12} className="mb-4">
-              <p className="d-flex justify-content-center">
+              <p className="d-flex flex-column justify-content-center gap-1">
                 <a
                   href={googlePlayLink}
                   title="Disponibile su Google Play"
@@ -75,6 +75,9 @@ const Footer: React.FC = () => {
                     draggable={false}
                   />
                 </a>
+                <small className="text-center">
+                  Google Play è un marchio di Google LLC.
+                </small>
               </p>
             </Col>
           )}
