@@ -753,5 +753,37 @@
       "MEDIO",
       "ORIENTE"
     ]
+  },
+  {
+    "id": 55,
+    "wordList": [
+      "VUOTO",
+      "RENDERE",
+      "OMAGGIO",
+      "CAMPIONE",
+      "CARICA",
+      "DURATA",
+      "VOLO",
+      "LINEA",
+      "FISSA",
+      "COPPIA",
+      "AFFINITÀ"
+    ]
+  },
+  {
+    "id": 56,
+    "wordList": [
+      "SCOGLIO",
+      "SPAGHETTI",
+      "CHITARRA",
+      "CLASSICA",
+      "MUSICA",
+      "CAMERA",
+      "LETTO",
+      "CASTELLO",
+      "CARTE",
+      "GIOCO",
+      "AZZARDO"
+    ]
   }
 ]
