@@ -1443,7 +1443,8 @@
       "RETTA",
       "CONDOTTA",
       "TEMPORALE",
-      "DIFESA"
+      "DIFESA",
+      "VOLO"
     ]
   },
   {
@@ -4478,11 +4479,11 @@
   },
   {
     "word": "VOLO",
-    "nextWordList": ["TIRO", "AEREO", "DURATA"]
+    "nextWordList": ["TIRO", "AEREO", "DURATA", "LINEA"]
   },
   {
     "word": "DURATA",
-    "nextWordList": ["VOLO", "LUNGA", "INCONTRO", "MUTUO"]
+    "nextWordList": ["VOLO", "LUNGA", "INCONTRO", "MUTUO", "FILM"]
   },
   {
     "word": "INCONTRO",
@@ -5570,7 +5571,8 @@
       "PAURA",
       "CINEMA",
       "AMORE",
-      "CORTO"
+      "CORTO",
+      "DURATA"
     ]
   },
   {
