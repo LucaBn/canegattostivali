@@ -785,5 +785,37 @@
       "GIOCO",
       "AZZARDO"
     ]
+  },
+  {
+    "id": 57,
+    "wordList": [
+      "LUNGHEZZA",
+      "ONDA",
+      "VERDE",
+      "OLIVA",
+      "OLIO",
+      "COPPA",
+      "GELATO",
+      "ARTIGIANALE",
+      "BIRRA",
+      "SPINA",
+      "DORSALE"
+    ]
+  },
+  {
+    "id": 58,
+    "wordList": [
+      "ORMONE",
+      "CRESCITA",
+      "TASSO",
+      "CAMBIO",
+      "ABITO",
+      "ELEGANTE",
+      "CENA",
+      "NATALE",
+      "STELLA",
+      "MARINA",
+      "MILITARE"
+    ]
   }
 ]
