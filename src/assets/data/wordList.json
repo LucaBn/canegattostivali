@@ -535,7 +535,7 @@
   },
   {
     "word": "PIRAMIDE",
-    "nextWordList": ["TOMBA", "GEOMETRIA", "ALIMENTARE", "BASE"]
+    "nextWordList": ["TOMBA", "GEOMETRIA", "ALIMENTARE", "BASE", "DEMOGRAFICA"]
   },
   {
     "word": "ALIMENTARE",
@@ -565,7 +565,31 @@
   },
   {
     "word": "CRESCITA",
-    "nextWordList": ["TASSO", "CAPELLI", "PERSONALE"]
+    "nextWordList": ["TASSO", "CAPELLI", "PERSONALE", "DEMOGRAFICA"]
+  },
+  {
+    "word": "DEMOGRAFICA",
+    "nextWordList": ["CRESCITA", "CRISI", "PIRAMIDE"]
+  },
+  {
+    "word": "CRISI",
+    "nextWordList": ["DEMOGRAFICA", "IDENTITÀ", "COPPIA", "UNITÀ"]
+  },
+  {
+    "word": "UNITÀ",
+    "nextWordList": ["CRISI", "MILITARE", "MISURA", "ITALIA"]
+  },
+  {
+    "word": "ITALIA",
+    "nextWordList": ["UNITÀ", "GIRO", "BANCA", "DERBY"]
+  },
+  {
+    "word": "DERBY",
+    "nextWordList": ["ITALIA", "CAPITALE", "STRETTO", "SCALA", "CUORE"]
+  },
+  {
+    "word": "MISURA",
+    "nextWordList": ["UNITÀ", "SICUREZZA", "VITTORIA", "UOMO", "MOBILE"]
   },
   {
     "word": "PERSONALE",
@@ -741,7 +765,8 @@
       "OPERA",
       "TEATRO",
       "UNIVERSITÀ",
-      "ANTINCENDIO"
+      "ANTINCENDIO",
+      "ACQUA"
     ]
   },
   {
@@ -761,7 +786,8 @@
       "ROMA",
       "MOSCA",
       "BERLINO",
-      "ETERNA"
+      "ETERNA",
+      "CENTRO"
     ]
   },
   {
@@ -975,7 +1001,8 @@
       "OCCUPAZIONE",
       "DIVISIONE",
       "OSPEDALE",
-      "GRADO"
+      "GRADO",
+      "UNITÀ"
     ]
   },
   {
@@ -1392,7 +1419,8 @@
       "APERTA",
       "POKER",
       "TERAPIA",
-      "DOPPIA"
+      "DOPPIA",
+      "CRISI"
     ]
   },
   {
@@ -2062,7 +2090,7 @@
   },
   {
     "word": "SERIE",
-    "nextWordList": ["TESTA", "CIRCUITO", "TV", "FINE"]
+    "nextWordList": ["TESTA", "CIRCUITO", "TV", "FINE", "AUTO"]
   },
   {
     "word": "FINE",
@@ -2078,7 +2106,8 @@
       "SEGNALE",
       "BRACCIO",
       "PROGRAMMA",
-      "VOLUME"
+      "VOLUME",
+      "SPAZZATURA"
     ]
   },
   {
@@ -2123,7 +2152,7 @@
   },
   {
     "word": "INTERNET",
-    "nextWordList": ["COMPUTER", "WEB", "CASA", "RETE", "RICERCA", "FIBRA"]
+    "nextWordList": ["COMPUTER", "WEB", "CASA", "RETE", "FIBRA"]
   },
   {
     "word": "CIRCUITO",
@@ -2225,7 +2254,8 @@
       "ANALISI",
       "CIRCOLAZIONE",
       "FRATELLO",
-      "FREDDO"
+      "FREDDO",
+      "GOCCIA"
     ]
   },
   {
@@ -2259,7 +2289,7 @@
   },
   {
     "word": "RISO",
-    "nextWordList": ["INSALATA", "TORTA", "CAMPO", "SUPPLÌ"]
+    "nextWordList": ["INSALATA", "TORTA", "CAMPO", "SUPPLÌ", "BIANCO"]
   },
   {
     "word": "SUPPLÌ",
@@ -2307,7 +2337,8 @@
       "FILTRO",
       "PALMA",
       "COCCO",
-      "PICCANTE"
+      "PICCANTE",
+      "SOTTO"
     ]
   },
   {
@@ -2427,7 +2458,8 @@
       "ASCENSORE",
       "BARCA",
       "SPIA",
-      "BLOCCO"
+      "BLOCCO",
+      "RICERCA"
     ]
   },
   {
@@ -2452,7 +2484,8 @@
       "ROMA",
       "RIGA",
       "RISCHIO",
-      "MODA"
+      "MODA",
+      "DERBY"
     ]
   },
   {
@@ -2616,7 +2649,7 @@
   },
   {
     "word": "MINIERA",
-    "nextWordList": ["CARBONE", "ORO", "SALE"]
+    "nextWordList": ["CARBONE", "ORO", "SALE", "FERRO"]
   },
   {
     "word": "BRODO",
@@ -2762,7 +2795,7 @@
   },
   {
     "word": "VITTORIA",
-    "nextWordList": ["PUGNO", "PUNTO", "MORALE"]
+    "nextWordList": ["PUGNO", "PUNTO", "MORALE", "MISURA"]
   },
   {
     "word": "MORALE",
@@ -2793,7 +2826,7 @@
   },
   {
     "word": "RICERCA",
-    "nextWordList": ["INTERNET", "MERCATO", "SVILUPPO", "SCIENTIFICA"]
+    "nextWordList": ["MERCATO", "SVILUPPO", "SCIENTIFICA", "MOTORE"]
   },
   {
     "word": "SVILUPPO",
@@ -3225,7 +3258,7 @@
   },
   {
     "word": "GOCCIA",
-    "nextWordList": ["PIOGGIA", "ACQUA", "VASO"]
+    "nextWordList": ["PIOGGIA", "ACQUA", "VASO", "SANGUE"]
   },
   {
     "word": "BATTENTE",
@@ -3418,7 +3451,8 @@
       "DISTANZA",
       "CASSETTA",
       "STANDARD",
-      "SCORTA"
+      "SCORTA",
+      "MISURA"
     ]
   },
   {
@@ -3493,7 +3527,7 @@
   },
   {
     "word": "STRETTO",
-    "nextWordList": ["PARENTE", "PONTE", "DIALETTO", "CONTATTO"]
+    "nextWordList": ["PARENTE", "PONTE", "DIALETTO", "CONTATTO", "DERBY"]
   },
   {
     "word": "DIALETTO",
@@ -3837,11 +3871,18 @@
   },
   {
     "word": "SCALA",
-    "nextWordList": ["MUSICALE", "MOBILE", "POKER", "ECONOMIA", "CHIOCCIOLA"]
+    "nextWordList": [
+      "MUSICALE",
+      "MOBILE",
+      "POKER",
+      "ECONOMIA",
+      "CHIOCCIOLA",
+      "DERBY"
+    ]
   },
   {
     "word": "MOBILE",
-    "nextWordList": ["SCALA", "ARMADIO", "CUCINA"]
+    "nextWordList": ["SCALA", "ARMADIO", "CUCINA", "MISURA"]
   },
   {
     "word": "REGISTRO",
@@ -3924,7 +3965,8 @@
       "ACCIAIO",
       "ONORE",
       "AFFARI",
-      "IMMAGINE"
+      "IMMAGINE",
+      "MISURA"
     ]
   },
   {
@@ -4185,7 +4227,9 @@
       "NATURALE",
       "MASSA",
       "FILTRO",
-      "PELO"
+      "PELO",
+      "VERDE",
+      "CORSO"
     ]
   },
   {
@@ -4479,7 +4523,7 @@
   },
   {
     "word": "VOLO",
-    "nextWordList": ["TIRO", "AEREO", "DURATA", "LINEA"]
+    "nextWordList": ["TIRO", "AEREO", "DURATA", "LINEA", "STATO"]
   },
   {
     "word": "DURATA",
@@ -4753,7 +4797,8 @@
       "GANCIO",
       "CORSA",
       "SPORTIVA",
-      "BENZINA"
+      "BENZINA",
+      "SERIE"
     ]
   },
   {
@@ -4862,7 +4907,8 @@
       "PIENO",
       "CULTURALE",
       "SOCIALE",
-      "PALLA"
+      "PALLA",
+      "CITTÀ"
     ]
   },
   {
@@ -5336,7 +5382,8 @@
       "FAMIGLIA",
       "LIQUIDO",
       "MATERIA",
-      "QUESTIONE"
+      "QUESTIONE",
+      "VOLO"
     ]
   },
   {
@@ -5389,7 +5436,9 @@
       "SCACCO",
       "STELLE",
       "FERRI",
-      "INDAGINE"
+      "INDAGINE",
+      "OLIO",
+      "SALE"
     ]
   },
   {
@@ -5469,7 +5518,8 @@
       "NATURALE",
       "ROMANO",
       "FINITO",
-      "FATTURA"
+      "FATTURA",
+      "VERDE"
     ]
   },
   {
@@ -5603,7 +5653,8 @@
       "OPERAZIONE",
       "INTERVENTO",
       "APERTO",
-      "SQUADRA"
+      "SQUADRA",
+      "DERBY"
     ]
   },
   {
@@ -5798,7 +5849,7 @@
   },
   {
     "word": "SPAZZATURA",
-    "nextWordList": ["CIBO", "SACCO", "CESTINO", "CAMION"]
+    "nextWordList": ["CIBO", "SACCO", "CESTINO", "CAMION", "TV"]
   },
   {
     "word": "CESTINO",
@@ -6162,7 +6213,15 @@
   },
   {
     "word": "VERDE",
-    "nextWordList": ["ONDA", "BENZINA", "OLIVA", "MILITARE", "OASI"]
+    "nextWordList": [
+      "ONDA",
+      "BENZINA",
+      "OLIVA",
+      "MILITARE",
+      "OASI",
+      "NUMERO",
+      "ACQUA"
+    ]
   },
   {
     "word": "OLIVA",
@@ -6436,7 +6495,7 @@
   },
   {
     "word": "IDENTITÀ",
-    "nextWordList": ["FURTO", "CARTA", "GENERE", "DIGITALE"]
+    "nextWordList": ["FURTO", "CARTA", "GENERE", "DIGITALE", "CRISI"]
   },
   {
     "word": "BIANCO",
@@ -6449,7 +6508,8 @@
       "VINO",
       "CIOCCOLATO",
       "CIGNO",
-      "PUNTO"
+      "PUNTO",
+      "RISO"
     ]
   },
   {
@@ -6585,7 +6645,15 @@
   },
   {
     "word": "SALE",
-    "nextWordList": ["MARINO", "PEPE", "GROSSO", "CRISTALLO", "FINO", "MINIERA"]
+    "nextWordList": [
+      "MARINO",
+      "PEPE",
+      "GROSSO",
+      "CRISTALLO",
+      "FINO",
+      "MINIERA",
+      "SOTTO"
+    ]
   },
   {
     "word": "CRISTALLO",
@@ -6670,7 +6738,15 @@
   },
   {
     "word": "SEGNALE",
-    "nextWordList": ["FUMO", "DIVIETO", "TV", "PERICOLO", "OBBLIGO", "STOP"]
+    "nextWordList": [
+      "FUMO",
+      "DIVIETO",
+      "TV",
+      "PERICOLO",
+      "OBBLIGO",
+      "STOP",
+      "VITA"
+    ]
   },
   {
     "word": "PERICOLO",
@@ -6699,7 +6775,8 @@
       "BOTTA",
       "QUALITÀ",
       "ETERNA",
-      "UTILE"
+      "UTILE",
+      "SEGNALE"
     ]
   },
   {
@@ -6743,7 +6820,8 @@
       "ANGOLO",
       "PRENDERE",
       "CORSA",
-      "AFFARI"
+      "AFFARI",
+      "ITALIA"
     ]
   },
   {
@@ -7059,7 +7137,8 @@
       "CAVALLO",
       "BRACCIO",
       "BOTTE",
-      "PUGNO"
+      "PUGNO",
+      "MINIERA"
     ]
   },
   {
@@ -7088,7 +7167,7 @@
   },
   {
     "word": "BANCA",
-    "nextWordList": ["POPOLARE", "AFFARI", "CONTO", "CENTRALE"]
+    "nextWordList": ["POPOLARE", "AFFARI", "CONTO", "CENTRALE", "ITALIA"]
   },
   {
     "word": "GENERALE",
