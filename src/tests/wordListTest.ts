@@ -118,4 +118,19 @@ function sortWordsByNextWordListLength() {
   console.log({ sortedWordList });
 }
 
-export { runWordListTest, sortWordsByNextWordListLength };
+function calculateAverageNextWordListLength() {
+  const totalNextWords = WORD_LIST.reduce(
+    (sum, { nextWordList }) => sum + nextWordList.length,
+    0
+  );
+
+  const averageWordListLength = totalNextWords / WORD_LIST.length;
+
+  console.log({ averageWordListLength });
+}
+
+export {
+  runWordListTest,
+  sortWordsByNextWordListLength,
+  calculateAverageNextWordListLength,
+};

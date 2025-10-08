@@ -16,6 +16,7 @@ import { RUN_TEST } from "@/constants/app";
 import {
   runWordListTest,
   sortWordsByNextWordListLength,
+  calculateAverageNextWordListLength,
 } from "@/tests/wordListTest";
 import { runLevelListTest } from "@/tests/levelListTest";
 
@@ -34,6 +35,7 @@ const App: React.FC = () => {
     runLevelListTest();
     runWordListTest();
     sortWordsByNextWordListLength();
+    calculateAverageNextWordListLength();
   }
 
   useEffect(() => {
