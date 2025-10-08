@@ -41,7 +41,7 @@ const ThemeHandler: React.FC = () => {
             name="theme"
             id={`theme-option-${option}`}
             className="option-radio"
-            label={<div className="mx-1">{getThemeIcon(option)}</div>}
+            label={<span>{getThemeIcon(option)}</span>}
             checked={theme === option}
             onChange={() => changeTheme(option)}
             title={option === ThemeList.Dark ? "Tema Scuro" : "Tema Chiaro"}
