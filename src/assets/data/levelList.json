@@ -817,5 +817,69 @@
       "MARINA",
       "MILITARE"
     ]
+  },
+  {
+    "id": 59,
+    "wordList": [
+      "PIRRO",
+      "VITTORIA",
+      "PUGNO",
+      "FERRO",
+      "MINIERA",
+      "SALE",
+      "SOTTO",
+      "ATTACCO",
+      "PANICO",
+      "CRISI",
+      "ASTINENZA"
+    ]
+  },
+  {
+    "id": 60,
+    "wordList": [
+      "ROMANZO",
+      "ROSA",
+      "SALMONE",
+      "CRUDO",
+      "PROSCIUTTO",
+      "FETTA",
+      "TORTA",
+      "RISO",
+      "BIANCO",
+      "COLLETTO",
+      "COREANA"
+    ]
+  },
+  {
+    "id": 61,
+    "wordList": [
+      "COLARE",
+      "PICCO",
+      "CIMA",
+      "RAPA",
+      "TESTA",
+      "SERIE",
+      "TV",
+      "CANALE",
+      "PANAMA",
+      "CAPPELLO",
+      "CHEF"
+    ]
+  },
+  {
+    "id": 62,
+    "wordList": [
+      "ORCHESTRA",
+      "DIRETTORE",
+      "LAVORI",
+      "CORSO",
+      "ACQUA",
+      "BOCCA",
+      "STOMACO",
+      "PIENO",
+      "CENTRO",
+      "CITTÀ",
+      "PROIBITA"
+    ]
   }
 ]
