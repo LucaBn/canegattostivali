@@ -945,5 +945,37 @@
       "PRIMAVERA",
       "BOTTICELLI"
     ]
+  },
+  {
+    "id": 67,
+    "wordList": [
+      "DIAGRAMMA",
+      "FLUSSO",
+      "COSCIENZA",
+      "ESAME",
+      "TEORIA",
+      "STRINGHE",
+      "SCARPE",
+      "GINNASTICA",
+      "ARTISTICA",
+      "CORRENTE",
+      "GOLFO"
+    ]
+  },
+  {
+    "id": 68,
+    "wordList": [
+      "IMPASTO",
+      "TORTA",
+      "VIENNESE",
+      "VALZER",
+      "MOSCERINO",
+      "FRUTTA",
+      "SUCCO",
+      "BARBABIETOLA",
+      "ZUCCHERO",
+      "VELO",
+      "PIETOSO"
+    ]
   }
 ]

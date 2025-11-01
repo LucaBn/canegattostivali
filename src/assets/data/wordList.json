@@ -250,7 +250,7 @@
   },
   {
     "word": "LEONE",
-    "nextWordList": ["FELINO", "RE", "MARINO", "MONTAGNA"]
+    "nextWordList": ["FELINO", "RE", "MARINO", "MONTAGNA", "DENTE"]
   },
   {
     "word": "SALAME",
@@ -360,7 +360,7 @@
   },
   {
     "word": "QUALITÀ",
-    "nextWordList": ["STANDARD", "VITA", "ALTA", "PREZZO"]
+    "nextWordList": ["STANDARD", "VITA", "ALTA", "PREZZO", "SONNO"]
   },
   {
     "word": "VEDERE",
@@ -612,7 +612,14 @@
   },
   {
     "word": "CONTO",
-    "nextWordList": ["PAGARE", "CORRENTE", "POCO", "ECONOMICO", "BANCA"]
+    "nextWordList": [
+      "PAGARE",
+      "CORRENTE",
+      "POCO",
+      "ECONOMICO",
+      "BANCA",
+      "SOSPESO"
+    ]
   },
   {
     "word": "ECONOMICO",
@@ -801,7 +808,8 @@
       "MUSEO",
       "PROFESSORE",
       "REGOLA",
-      "FORMA"
+      "FORMA",
+      "CRITICO"
     ]
   },
   {
@@ -1144,11 +1152,23 @@
   },
   {
     "word": "SONNO",
-    "nextWordList": ["MORIRE", "PERDERE", "PROFONDO", "FASE"]
+    "nextWordList": ["MORIRE", "PERDERE", "PROFONDO", "FASE", "QUALITÀ"]
   },
   {
     "word": "PROFONDO",
-    "nextWordList": ["SONNO", "ROSSO", "MARE"]
+    "nextWordList": ["SONNO", "ROSSO", "MARE", "PENSIERO"]
+  },
+  {
+    "word": "PENSIERO",
+    "nextWordList": ["PROFONDO", "CRITICO", "LIBERTÀ", "SCUOLA"]
+  },
+  {
+    "word": "CRITICO",
+    "nextWordList": ["PENSIERO", "MUSICALE", "ARTE", "SPIRITO", "PUNTO"]
+  },
+  {
+    "word": "LIBERTÀ",
+    "nextWordList": ["PENSIERO", "PAROLA", "STAMPA"]
   },
   {
     "word": "AMMAZZARE",
@@ -1247,7 +1267,7 @@
   },
   {
     "word": "REGOLA",
-    "nextWordList": ["AMICO", "STRAPPO", "ARTE"]
+    "nextWordList": ["AMICO", "STRAPPO", "ARTE", "CARTE"]
   },
   {
     "word": "STRAPPO",
@@ -1754,7 +1774,8 @@
       "OBBLIGO",
       "BANCO",
       "OCCUPAZIONE",
-      "DIARIO"
+      "DIARIO",
+      "PENSIERO"
     ]
   },
   {
@@ -1928,7 +1949,15 @@
   },
   {
     "word": "CARTE",
-    "nextWordList": ["SCOPA", "CASTELLO", "POKER", "BRISCOLA", "MAZZO", "GIOCO"]
+    "nextWordList": [
+      "SCOPA",
+      "CASTELLO",
+      "POKER",
+      "BRISCOLA",
+      "MAZZO",
+      "GIOCO",
+      "REGOLA"
+    ]
   },
   {
     "word": "POSTA",
@@ -2895,7 +2924,8 @@
       "POVERO",
       "SOTTO",
       "FANTASMA",
-      "SACRIFICIO"
+      "SACRIFICIO",
+      "CRITICO"
     ]
   },
   {
@@ -3867,7 +3897,7 @@
   },
   {
     "word": "MUSICALE",
-    "nextWordList": ["NOTA", "SCALA", "STRUMENTO", "BANDA"]
+    "nextWordList": ["NOTA", "SCALA", "STRUMENTO", "BANDA", "CRITICO"]
   },
   {
     "word": "SCALA",
@@ -5833,7 +5863,7 @@
   },
   {
     "word": "DENTE",
-    "nextWordList": ["OCCHIO", "LATTE", "AVVELENATO", "GIUDIZIO"]
+    "nextWordList": ["OCCHIO", "LATTE", "AVVELENATO", "GIUDIZIO", "LEONE"]
   },
   {
     "word": "AVVELENATO",
@@ -5869,7 +5899,7 @@
   },
   {
     "word": "PRANZO",
-    "nextWordList": ["SACCO", "NATALE", "CENA", "PASTO", "PAUSA"]
+    "nextWordList": ["SACCO", "NATALE", "CENA", "PASTO", "PAUSA", "SALA"]
   },
   {
     "word": "PATATE",
@@ -5937,7 +5967,7 @@
   },
   {
     "word": "SOSPESO",
-    "nextWordList": ["FIATO", "PONTE", "SCUOLA", "CAFFÈ"]
+    "nextWordList": ["FIATO", "PONTE", "SCUOLA", "CAFFÈ", "CONTO"]
   },
   {
     "word": "PONTE",
@@ -6356,7 +6386,7 @@
   },
   {
     "word": "SALA",
-    "nextWordList": ["ATTESA", "BALLO", "CINEMA", "STAMPA"]
+    "nextWordList": ["ATTESA", "BALLO", "CINEMA", "STAMPA", "PRANZO"]
   },
   {
     "word": "CINEMA",
@@ -6721,7 +6751,8 @@
       "VITTORIA",
       "RACCOLTA",
       "BIANCO",
-      "VISTA"
+      "VISTA",
+      "CRITICO"
     ]
   },
   {
@@ -6792,7 +6823,8 @@
       "DATA",
       "DIO",
       "DEFINIZIONE",
-      "TERMINE"
+      "TERMINE",
+      "LIBERTÀ"
     ]
   },
   {
@@ -7199,7 +7231,14 @@
   },
   {
     "word": "STAMPA",
-    "nextWordList": ["MEZZO", "LOCALE", "DIGITALE", "SILENZIO", "SALA"]
+    "nextWordList": [
+      "MEZZO",
+      "LOCALE",
+      "DIGITALE",
+      "SILENZIO",
+      "SALA",
+      "LIBERTÀ"
+    ]
   },
   {
     "word": "TRASPORTO",
