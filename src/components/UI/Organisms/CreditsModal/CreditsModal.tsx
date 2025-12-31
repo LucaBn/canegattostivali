@@ -6,12 +6,15 @@ import { Modal, Button, Badge } from "react-bootstrap";
 // Utils
 import { playSound } from "@/utils/sounds";
 
+// Constants
+import { AUTHOR_NAME } from "@/constants/app";
+
 interface Props {
   show: boolean;
   setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const author = ["Luca"];
+const author = [AUTHOR_NAME];
 const logoArtist = ["Manuela"];
 const testers = [
   "Alessandro",

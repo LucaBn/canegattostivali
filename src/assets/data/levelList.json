@@ -881,5 +881,101 @@
       "CITTÀ",
       "PROIBITA"
     ]
+  },
+  {
+    "id": 63,
+    "wordList": [
+      "INNO",
+      "NAZIONALE",
+      "PARCO",
+      "GIOCHI",
+      "SALA",
+      "PRANZO",
+      "LAVORO",
+      "SQUADRA",
+      "BATTERE",
+      "CASSA",
+      "INTEGRAZIONE"
+    ]
+  },
+  {
+    "id": 64,
+    "wordList": [
+      "ORDIRE",
+      "INGANNO",
+      "TRARRE",
+      "BENEFICIO",
+      "DUBBIO",
+      "SENZA",
+      "REGOLE",
+      "GIOCO",
+      "RAGAZZI",
+      "VITA",
+      "SPERANZA"
+    ]
+  },
+  {
+    "id": 65,
+    "wordList": [
+      "DISPOSTO",
+      "TUTTO",
+      "NIENTE",
+      "MONDO",
+      "ANIMALE",
+      "COMPAGNIA",
+      "AEREA",
+      "FLOTTA",
+      "OMBRA",
+      "CONO",
+      "VULCANICO"
+    ]
+  },
+  {
+    "id": 66,
+    "wordList": [
+      "MANIA",
+      "CONTROLLO",
+      "FUMI",
+      "ALCOL",
+      "TEST",
+      "GRAVIDANZA",
+      "RISCHIO",
+      "IMPRESA",
+      "PULIZIE",
+      "PRIMAVERA",
+      "BOTTICELLI"
+    ]
+  },
+  {
+    "id": 67,
+    "wordList": [
+      "DIAGRAMMA",
+      "FLUSSO",
+      "COSCIENZA",
+      "ESAME",
+      "TEORIA",
+      "STRINGHE",
+      "SCARPE",
+      "GINNASTICA",
+      "ARTISTICA",
+      "CORRENTE",
+      "GOLFO"
+    ]
+  },
+  {
+    "id": 68,
+    "wordList": [
+      "IMPASTO",
+      "TORTA",
+      "VIENNESE",
+      "VALZER",
+      "MOSCERINO",
+      "FRUTTA",
+      "SUCCO",
+      "BARBABIETOLA",
+      "ZUCCHERO",
+      "VELO",
+      "PIETOSO"
+    ]
   }
 ]

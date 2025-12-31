@@ -64,13 +64,13 @@ const Footer: React.FC = () => {
                   title="Disponibile su Google Play"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
+                  className="d-block mx-auto rounded"
                   tabIndex={0}
                 >
                   <Image
                     src="/assets/img/GetItOnGooglePlay_Badge.png"
                     height={80}
                     width={270}
-                    className="d-block mx-auto rounded"
                     alt="Disponibile su Google Play"
                     draggable={false}
                   />
