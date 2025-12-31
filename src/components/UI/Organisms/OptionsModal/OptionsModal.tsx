@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { Button, Modal } from "react-bootstrap";
 import DataManager from "@/components/UI/Organisms/DataManager/DataManager";
 import KeyboardHandler from "@/components/UI/Organisms/KeyboardHandler/KeyboardHandler";
-import SoundsHandler from "@/components/UI/Organisms/SoundsHandler/SoundsHandler";
+// import SoundsHandler from "@/components/UI/Organisms/SoundsHandler/SoundsHandler";
 import ThemeHandler from "@/components/UI/Organisms/ThemeHandler/ThemeHandler";
 
 // Utils
@@ -32,7 +32,7 @@ const OptionsModal: React.FC<Props> = ({ show, setShow }: Props) => {
       <Modal.Body>
         <div className="d-flex flex-column gap-4 mb-4">
           <ThemeHandler />
-          <SoundsHandler />
+          {/* <SoundsHandler /> */}
           <KeyboardHandler />
         </div>
 
