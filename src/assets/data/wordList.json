@@ -603,7 +603,9 @@
       "GIUSTO",
       "AUMENTO",
       "INCLUSA",
-      "QUALITÀ"
+      "QUALITÀ",
+      "DETTAGLIO",
+      "VENDITA"
     ]
   },
   {
@@ -618,7 +620,8 @@
       "POCO",
       "ECONOMICO",
       "BANCA",
-      "SOSPESO"
+      "SOSPESO",
+      "VENDITA"
     ]
   },
   {
@@ -1343,7 +1346,8 @@
       "MORTO",
       "MISURE",
       "CURA",
-      "UMANO"
+      "UMANO",
+      "LINGUAGGIO"
     ]
   },
   {
@@ -1380,7 +1384,7 @@
   },
   {
     "word": "PRIVATA",
-    "nextWordList": ["CHAT", "VITA", "AZIENDA", "VIOLENZA"]
+    "nextWordList": ["CHAT", "VITA", "AZIENDA", "VIOLENZA", "PROPRIETÀ"]
   },
   {
     "word": "AZIENDA",
@@ -1828,7 +1832,8 @@
       "MUSICA",
       "VISTA",
       "DOPPIA",
-      "HOTEL"
+      "HOTEL",
+      "COMMERCIO"
     ]
   },
   {
@@ -2041,7 +2046,8 @@
       "PIEDE",
       "LARGA",
       "PEPERONCINO",
-      "POMODORO"
+      "POMODORO",
+      "COTONE"
     ]
   },
   {
@@ -2468,7 +2474,7 @@
   },
   {
     "word": "SPRAY",
-    "nextWordList": ["GHIACCIO", "GOLA", "PEPERONCINO"]
+    "nextWordList": ["GHIACCIO", "GOLA", "PEPERONCINO", "PANNA"]
   },
   {
     "word": "PEPERONCINO",
@@ -2563,7 +2569,7 @@
   },
   {
     "word": "GERMANIA",
-    "nextWordList": ["BERLINO", "MONACO", "TEDESCO"]
+    "nextWordList": ["BERLINO", "TEDESCO", "COTONE"]
   },
   {
     "word": "TEDESCO",
@@ -2574,13 +2580,12 @@
     "nextWordList": ["TEDESCO", "CANE", "PRESEPE"]
   },
   {
-    "word": "MONACO",
-    "nextWordList": ["GERMANIA", "CHIESA", "ABITO"]
+    "word": "COTONE",
+    "nextWordList": ["GERMANIA", "PIANTA", "FIBRA", "FIOCCO"]
   },
   {
     "word": "ABITO",
     "nextWordList": [
-      "MONACO",
       "SERA",
       "SPOSA",
       "SARTO",
@@ -2641,7 +2646,8 @@
       "REAZIONE",
       "LABORATORIO",
       "SOLUZIONE",
-      "FAME"
+      "FAME",
+      "PROPRIETÀ"
     ]
   },
   {
@@ -2859,7 +2865,7 @@
   },
   {
     "word": "SVILUPPO",
-    "nextWordList": ["RICERCA", "VIA", "FOTO", "ETÀ"]
+    "nextWordList": ["RICERCA", "VIA", "FOTO", "ETÀ", "LINGUAGGIO"]
   },
   {
     "word": "MERCATO",
@@ -3007,7 +3013,15 @@
   },
   {
     "word": "SCENA",
-    "nextWordList": ["CRIMINE", "FILM", "MESSA", "COLPO", "FINALE", "MADRE"]
+    "nextWordList": [
+      "CRIMINE",
+      "FILM",
+      "MESSA",
+      "COLPO",
+      "FINALE",
+      "MADRE",
+      "USCIRE"
+    ]
   },
   {
     "word": "NAVE",
@@ -3252,7 +3266,7 @@
   },
   {
     "word": "PANNA",
-    "nextWordList": ["ACIDA", "COTTA", "CUCINA", "GELATO"]
+    "nextWordList": ["ACIDA", "COTTA", "CUCINA", "GELATO", "SPRAY"]
   },
   {
     "word": "COTTA",
@@ -3356,7 +3370,7 @@
   },
   {
     "word": "FIOCCO",
-    "nextWordList": ["NEVE", "ROSA", "CAPELLI"]
+    "nextWordList": ["NEVE", "ROSA", "CAPELLI", "COTONE"]
   },
   {
     "word": "PALLA",
@@ -3863,7 +3877,7 @@
   },
   {
     "word": "ASTA",
-    "nextWordList": ["BANDIERA", "CASA", "SALTO", "OCCHIALI"]
+    "nextWordList": ["BANDIERA", "CASA", "SALTO", "OCCHIALI", "VENDITA"]
   },
   {
     "word": "TOVAGLIA",
@@ -4029,7 +4043,7 @@
   },
   {
     "word": "VITELLO",
-    "nextWordList": ["GRASSO", "ORO", "ARROSTO"]
+    "nextWordList": ["GRASSO", "ORO", "ARROSTO", "MARE"]
   },
   {
     "word": "ARROSTO",
@@ -4516,7 +4530,9 @@
       "FURTO",
       "MODA",
       "INDIRIZZO",
-      "POPOLARE"
+      "POPOLARE",
+      "USCIRE",
+      "PROPRIETÀ"
     ]
   },
   {
@@ -4717,11 +4733,11 @@
   },
   {
     "word": "FIBRA",
-    "nextWordList": ["SINTETICA", "INTERNET", "VETRO", "CAVO"]
+    "nextWordList": ["SINTETICA", "INTERNET", "VETRO", "CAVO", "COTONE"]
   },
   {
     "word": "CAVO",
-    "nextWordList": ["FIBRA", "ELETTRICO", "RETE", "VUOTO"]
+    "nextWordList": ["FIBRA", "ELETTRICO", "RETE", "VUOTO", "SCOPERTO"]
   },
   {
     "word": "CIUFFO",
@@ -4807,7 +4823,15 @@
   },
   {
     "word": "PASSAGGIO",
-    "nextWordList": ["RITO", "AUTO", "LIVELLO", "TESTIMONE"]
+    "nextWordList": ["RITO", "AUTO", "LIVELLO", "TESTIMONE", "PROPRIETÀ"]
+  },
+  {
+    "word": "PROPRIETÀ",
+    "nextWordList": ["PASSAGGIO", "PRIVATA", "CASA", "CHIMICA", "LINGUAGGIO"]
+  },
+  {
+    "word": "LINGUAGGIO",
+    "nextWordList": ["PROPRIETÀ", "CORPO", "SVILUPPO"]
   },
   {
     "word": "AUTO",
@@ -5114,7 +5138,8 @@
       "SPUGNA",
       "LIVELLO",
       "PORTO",
-      "APERTO"
+      "APERTO",
+      "VITELLO"
     ]
   },
   {
@@ -5307,7 +5332,34 @@
   },
   {
     "word": "AGENTE",
-    "nextWordList": ["SEGRETO", "POLIZIA", "BORSA"]
+    "nextWordList": ["SEGRETO", "POLIZIA", "BORSA", "COMMERCIO"]
+  },
+  {
+    "word": "COMMERCIO",
+    "nextWordList": ["AGENTE", "ECONOMIA", "CAMERA", "DETTAGLIO"]
+  },
+  {
+    "word": "DETTAGLIO",
+    "nextWordList": ["COMMERCIO", "PREZZO", "VENDITA"]
+  },
+  {
+    "word": "VENDITA",
+    "nextWordList": [
+      "DETTAGLIO",
+      "PUNTO",
+      "PREZZO",
+      "ASTA",
+      "CONTO",
+      "SCOPERTO"
+    ]
+  },
+  {
+    "word": "SCOPERTO",
+    "nextWordList": ["VENDITA", "ASSEGNO", "USCIRE", "CAVO"]
+  },
+  {
+    "word": "USCIRE",
+    "nextWordList": ["SCOPERTO", "CASA", "SCENA"]
   },
   {
     "word": "BORSA",
@@ -6544,7 +6596,7 @@
   },
   {
     "word": "ASSEGNO",
-    "nextWordList": ["BIANCO", "UNICO", "CIRCOLARE", "ORDINARIO"]
+    "nextWordList": ["BIANCO", "UNICO", "CIRCOLARE", "ORDINARIO", "SCOPERTO"]
   },
   {
     "word": "CIRCOLARE",
@@ -6552,7 +6604,14 @@
   },
   {
     "word": "ECONOMIA",
-    "nextWordList": ["CIRCOLARE", "UNIVERSITÀ", "SCALA", "GUERRA", "MERCATO"]
+    "nextWordList": [
+      "CIRCOLARE",
+      "UNIVERSITÀ",
+      "SCALA",
+      "GUERRA",
+      "MERCATO",
+      "COMMERCIO"
+    ]
   },
   {
     "word": "SEGA",
@@ -6752,7 +6811,8 @@
       "RACCOLTA",
       "BIANCO",
       "VISTA",
-      "CRITICO"
+      "CRITICO",
+      "VENDITA"
     ]
   },
   {
@@ -7124,7 +7184,7 @@
   },
   {
     "word": "CHIESA",
-    "nextWordList": ["SANTA", "CAMPANILE", "MESSA", "MONACO", "CASA", "ALTARE"]
+    "nextWordList": ["SANTA", "CAMPANILE", "MESSA", "CASA", "ALTARE"]
   },
   {
     "word": "CAMPANILE",
