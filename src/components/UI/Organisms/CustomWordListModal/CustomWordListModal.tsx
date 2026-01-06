@@ -191,20 +191,23 @@ const CustomWordListModal: React.FC<Props> = ({ show, setShow }: Props) => {
 
         <hr />
 
-        <Form.Control
-          id="customListUrl"
-          as="textarea"
-          value={getCustomListUrl()}
-          onClick={(e) => {
-            const target = e.target as HTMLTextAreaElement;
-            target.select();
-            target.setSelectionRange(0, 99999); // For mobile devices
-          }}
-          readOnly
-          disabled={!isWordListValid}
-          className={!isWordListValid ? "pointer-events-none text-muted" : ""}
-          rows={2}
-        />
+        <div className={!isWordListValid ? "user-select-none" : ""}>
+          <Form.Control
+            id="customListUrl"
+            as="textarea"
+            value={getCustomListUrl()}
+            onClick={(e) => {
+              const target = e.target as HTMLTextAreaElement;
+              target.select();
+              target.setSelectionRange(0, 99999); // For mobile devices
+            }}
+            readOnly
+            disabled={!isWordListValid}
+            className={!isWordListValid ? "pointer-events-none text-muted" : ""}
+            rows={2}
+            height={200}
+          />
+        </div>
 
         <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mt-2">
           <span className="d-flex gap-2">
