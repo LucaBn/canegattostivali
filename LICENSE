@@ -42,7 +42,7 @@ DevDependencies (MIT or Apache 2.0, used for development/build):
 - [@types/react-router-bootstrap](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE) (MIT)
 - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/LICENSE) (MIT)
 - [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/parser/LICENSE) (MIT)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/LICENSE) (MIT)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc/blob/main/LICENSE) (MIT)
 - [eslint](https://github.com/eslint/eslint/blob/main/LICENSE) (MIT)
 - [eslint-plugin-react-hooks](https://github.com/facebook/react/blob/main/LICENSE) (MIT)
 - [eslint-plugin-react-refresh](https://github.com/pmmmwh/react-refresh-webpack-plugin/blob/main/LICENSE) (MIT)
