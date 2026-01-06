@@ -30,8 +30,8 @@ Dependencies (MIT or Apache 2.0):
 
 - [bootstrap](https://github.com/twbs/bootstrap/blob/main/LICENSE) (MIT)
 - [react](https://github.com/facebook/react/blob/main/LICENSE) (MIT)
-- [react-dom](https://github.com/facebook/react/blob/main/LICENSE) (MIT)
 - [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap/blob/master/LICENSE) (MIT)
+- [react-dom](https://github.com/facebook/react/blob/main/LICENSE) (MIT)
 - [react-router-bootstrap](https://github.com/react-bootstrap/react-router-bootstrap/blob/master/LICENSE) (Apache 2.0)
 
 DevDependencies (MIT or Apache 2.0, used for development/build):
