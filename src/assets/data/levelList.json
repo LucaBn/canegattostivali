@@ -977,5 +977,37 @@
       "VELO",
       "PIETOSO"
     ]
+  },
+  {
+    "id": 69,
+    "wordList": [
+      "DIRE",
+      "FARE",
+      "NUMERO",
+      "PRIMO",
+      "PIATTO",
+      "PASTA",
+      "INTEGRALE",
+      "DOPPIO",
+      "FINE",
+      "GIOCHI",
+      "OLIMPICI"
+    ]
+  },
+  {
+    "id": 70,
+    "wordList": [
+      "QUADRATURA",
+      "CERCHIO",
+      "TESTA",
+      "POSTO",
+      "SEDERE",
+      "TERRA",
+      "FUOCHI",
+      "ARTIFICIO",
+      "RETORICO",
+      "STILE",
+      "ROCOCÒ"
+    ]
   }
 ]
