@@ -774,9 +774,9 @@
       "VIGORE",
       "OPERA",
       "TEATRO",
-      "UNIVERSITÀ",
       "ANTINCENDIO",
-      "ACQUA"
+      "ACQUA",
+      "LAUREA"
     ]
   },
   {
@@ -856,7 +856,8 @@
       "PAZIENZA",
       "TEMPO",
       "PESO",
-      "MATEMATICA"
+      "MATEMATICA",
+      "MASSIMO"
     ]
   },
   {
@@ -865,7 +866,15 @@
   },
   {
     "word": "VELOCITÀ",
-    "nextWordList": ["LIMITE", "LUCE", "ALTA", "MEDIA", "REGIME", "FUGA"]
+    "nextWordList": [
+      "LIMITE",
+      "LUCE",
+      "ALTA",
+      "MEDIA",
+      "REGIME",
+      "FUGA",
+      "CROCIERA"
+    ]
   },
   {
     "word": "FUGA",
@@ -965,7 +974,8 @@
       "FAMIGLIA",
       "PRIMARIO",
       "BOLLETTINO",
-      "DIRIGENTE"
+      "DIRIGENTE",
+      "SOSTITUTO"
     ]
   },
   {
@@ -1183,7 +1193,7 @@
   },
   {
     "word": "DUBBIO",
-    "nextWordList": ["ELIMINARE", "SCIOGLIERE", "OMBRA"]
+    "nextWordList": ["ELIMINARE", "SCIOGLIERE", "OMBRA", "MINIMO"]
   },
   {
     "word": "SCIOGLIERE",
@@ -1396,7 +1406,7 @@
   },
   {
     "word": "MARGINE",
-    "nextWordList": ["TEMPO", "FOGLIO", "GUADAGNO", "ERRORE"]
+    "nextWordList": ["TEMPO", "FOGLIO", "GUADAGNO", "ERRORE", "NOTA"]
   },
   {
     "word": "GUADAGNO",
@@ -1625,7 +1635,8 @@
       "CUPIDO",
       "DONO",
       "PAROLA",
-      "GIUDIZIO"
+      "GIUDIZIO",
+      "LODE"
     ]
   },
   {
@@ -2120,7 +2131,8 @@
       "LEGNO",
       "CLASSIFICA",
       "BOTTA",
-      "CROCE"
+      "CROCE",
+      "POSTO"
     ]
   },
   {
@@ -2195,7 +2207,7 @@
   },
   {
     "word": "CHIUSO",
-    "nextWordList": ["CIRCUITO", "GRUPPO", "NASO"]
+    "nextWordList": ["CIRCUITO", "GRUPPO", "NASO", "NUMERO"]
   },
   {
     "word": "ELETTRICO",
@@ -2244,7 +2256,7 @@
   },
   {
     "word": "SOMMA",
-    "nextWordList": ["CIFRA", "DENARO", "ADDIZIONE"]
+    "nextWordList": ["CIFRA", "DENARO", "ADDIZIONE", "RISCATTO"]
   },
   {
     "word": "ADDIZIONE",
@@ -2470,7 +2482,7 @@
   },
   {
     "word": "POSTO",
-    "nextWordList": ["BLOCCO", "FISSO", "LIBERO", "LAVORO", "PRIMO"]
+    "nextWordList": ["BLOCCO", "FISSO", "LIBERO", "LAVORO", "PRIMO", "TESTA"]
   },
   {
     "word": "SPRAY",
@@ -3148,14 +3160,7 @@
   },
   {
     "word": "UNIVERSITÀ",
-    "nextWordList": [
-      "RETTA",
-      "CORSO",
-      "ESAME",
-      "INGEGNERIA",
-      "PROFESSORE",
-      "ECONOMIA"
-    ]
+    "nextWordList": ["RETTA", "ESAME", "INGEGNERIA", "PROFESSORE", "ECONOMIA"]
   },
   {
     "word": "STRADA",
@@ -3907,7 +3912,14 @@
   },
   {
     "word": "NOTA",
-    "nextWordList": ["CREDITO", "REGISTRO", "DEBITO", "MUSICALE"]
+    "nextWordList": [
+      "CREDITO",
+      "REGISTRO",
+      "DEBITO",
+      "MUSICALE",
+      "MARGINE",
+      "DEGNO"
+    ]
   },
   {
     "word": "MUSICALE",
@@ -3934,7 +3946,27 @@
   },
   {
     "word": "IMPOSTA",
-    "nextWordList": ["CREDITO", "IVA", "FINESTRA"]
+    "nextWordList": ["CREDITO", "IVA", "FINESTRA", "SOSTITUTO"]
+  },
+  {
+    "word": "SOSTITUTO",
+    "nextWordList": ["IMPOSTA", "MEDICO", "DEGNO"]
+  },
+  {
+    "word": "DEGNO",
+    "nextWordList": ["SOSTITUTO", "NOTA", "LODE"]
+  },
+  {
+    "word": "LODE",
+    "nextWordList": ["DEGNO", "MERITO", "DIO", "LAUREA"]
+  },
+  {
+    "word": "LAUREA",
+    "nextWordList": ["LODE", "FESTA", "CORSO", "RISCATTO"]
+  },
+  {
+    "word": "RISCATTO",
+    "nextWordList": ["LAUREA", "DIRITTO", "SOMMA", "SOCIALE"]
   },
   {
     "word": "FINESTRA",
@@ -4811,7 +4843,7 @@
   },
   {
     "word": "FUNZIONE",
-    "nextWordList": ["CONTINUA", "MATEMATICA", "RELIGIOSA", "STUDIO"]
+    "nextWordList": ["CONTINUA", "MATEMATICA", "RELIGIOSA", "STUDIO", "MINIMO"]
   },
   {
     "word": "RELIGIOSA",
@@ -5190,7 +5222,8 @@
       "DONNA",
       "MASCHERA",
       "CARNEVALE",
-      "NATALE"
+      "NATALE",
+      "LAUREA"
     ]
   },
   {
@@ -5294,7 +5327,7 @@
   },
   {
     "word": "MERITO",
-    "nextWordList": ["CLASSE", "CIVILE", "CROCE", "ONORE"]
+    "nextWordList": ["CLASSE", "CIVILE", "CROCE", "ONORE", "LODE"]
   },
   {
     "word": "CIVILE",
@@ -5340,7 +5373,11 @@
   },
   {
     "word": "DETTAGLIO",
-    "nextWordList": ["COMMERCIO", "PREZZO", "VENDITA"]
+    "nextWordList": ["COMMERCIO", "PREZZO", "VENDITA", "MINIMO"]
+  },
+  {
+    "word": "MINIMO",
+    "nextWordList": ["DETTAGLIO", "DUBBIO", "FUNZIONE"]
   },
   {
     "word": "VENDITA",
@@ -5601,7 +5638,9 @@
       "ROMANO",
       "FINITO",
       "FATTURA",
-      "VERDE"
+      "VERDE",
+      "FARE",
+      "CHIUSO"
     ]
   },
   {
@@ -5639,7 +5678,8 @@
       "VOTO",
       "ACQUISITO",
       "ASILO",
-      "IMMAGINE"
+      "IMMAGINE",
+      "RISCATTO"
     ]
   },
   {
@@ -5770,7 +5810,7 @@
   },
   {
     "word": "MASSIMO",
-    "nextWordList": ["ESPERTO", "VOTO", "IMPEGNO", "PENA"]
+    "nextWordList": ["ESPERTO", "VOTO", "IMPEGNO", "PENA", "LIMITE"]
   },
   {
     "word": "IMPEGNO",
@@ -6055,7 +6095,14 @@
   },
   {
     "word": "SOCIALE",
-    "nextWordList": ["INGEGNERIA", "SERVIZIO", "CLASSE", "CENTRO", "VITA"]
+    "nextWordList": [
+      "INGEGNERIA",
+      "SERVIZIO",
+      "CLASSE",
+      "CENTRO",
+      "VITA",
+      "RISCATTO"
+    ]
   },
   {
     "word": "ROMA",
@@ -6564,7 +6611,8 @@
       "VALUTAZIONE",
       "ASSICURAZIONE",
       "INCENDIO",
-      "ATTESTATO"
+      "ATTESTATO",
+      "PERICOLO"
     ]
   },
   {
@@ -6841,7 +6889,7 @@
   },
   {
     "word": "PERICOLO",
-    "nextWordList": ["SEGNALE", "VITA", "CASO"]
+    "nextWordList": ["SEGNALE", "VITA", "CASO", "RISCHIO"]
   },
   {
     "word": "VITA",
@@ -7042,7 +7090,8 @@
       "FIASCO",
       "FEDE",
       "PAUSA",
-      "DIFFERENZA"
+      "DIFFERENZA",
+      "NUMERO"
     ]
   },
   {
@@ -7239,7 +7288,7 @@
   },
   {
     "word": "CROCIERA",
-    "nextWordList": ["VOLTA", "NAVE", "VACANZA"]
+    "nextWordList": ["VOLTA", "NAVE", "VACANZA", "VELOCITÀ"]
   },
   {
     "word": "VACANZA",
