@@ -519,7 +519,7 @@
   },
   {
     "word": "ZERO",
-    "nextWordList": ["TASSO", "ASSOLUTO", "SOTTO", "CAPELLI"]
+    "nextWordList": ["TASSO", "ASSOLUTO", "SOTTO", "CAPELLI", "ANNO"]
   },
   {
     "word": "ASSOLUTO",
@@ -949,7 +949,8 @@
       "VACANZA",
       "SETTORE",
       "INDIRIZZO",
-      "FUNZIONE"
+      "FUNZIONE",
+      "AVVOCATO"
     ]
   },
   {
@@ -994,7 +995,7 @@
   },
   {
     "word": "ALTEZZA",
-    "nextWordList": ["BASE", "GEOMETRIA", "RE"]
+    "nextWordList": ["BASE", "GEOMETRIA", "RE", "ESSERE"]
   },
   {
     "word": "GEOMETRIA",
@@ -2175,7 +2176,14 @@
   },
   {
     "word": "GIUDICE",
-    "nextWordList": ["GARA", "TRIBUNALE", "APPELLO", "PACE", "POPOLARE"]
+    "nextWordList": [
+      "GARA",
+      "TRIBUNALE",
+      "APPELLO",
+      "PACE",
+      "POPOLARE",
+      "ARBITRO"
+    ]
   },
   {
     "word": "TRASMISSIONE",
@@ -2912,7 +2920,7 @@
   },
   {
     "word": "AVVOCATO",
-    "nextWordList": ["DIFENSORE", "UFFICIO", "LAVORO", "DIAVOLO"]
+    "nextWordList": ["DIFENSORE", "UFFICIO", "LAVORO", "DIAVOLO", "STUDIO"]
   },
   {
     "word": "DIAVOLO",
@@ -3820,7 +3828,7 @@
   },
   {
     "word": "SENSO",
-    "nextWordList": ["VISTA", "UNICO", "MARCIA", "VITA", "DOPPIO"]
+    "nextWordList": ["VISTA", "UNICO", "MARCIA", "VITA", "DOPPIO", "CIVICO"]
   },
   {
     "word": "MARCIA",
@@ -4178,7 +4186,7 @@
   },
   {
     "word": "ARBITRO",
-    "nextWordList": ["CORROTTO", "CALCIO", "CARTELLINO"]
+    "nextWordList": ["CORROTTO", "CALCIO", "CARTELLINO", "GIUDICE"]
   },
   {
     "word": "CARTELLINO",
@@ -4597,7 +4605,7 @@
   },
   {
     "word": "TIRO",
-    "nextWordList": ["ARCO", "SEGNO", "VOLO"]
+    "nextWordList": ["ARCO", "SEGNO", "VOLO", "GIRO"]
   },
   {
     "word": "VOLO",
@@ -4699,7 +4707,14 @@
   },
   {
     "word": "ANNO",
-    "nextWordList": ["NUOVO", "PROSSIMO", "NASCITA", "SOLARE", "SCOLASTICO"]
+    "nextWordList": [
+      "NUOVO",
+      "PROSSIMO",
+      "NASCITA",
+      "SOLARE",
+      "SCOLASTICO",
+      "ZERO"
+    ]
   },
   {
     "word": "SCOLASTICO",
@@ -5431,7 +5446,8 @@
       "PIACERE",
       "ESCURSIONE",
       "DIARIO",
-      "RITORNO"
+      "RITORNO",
+      "SPERANZA"
     ]
   },
   {
@@ -5838,7 +5854,7 @@
   },
   {
     "word": "CIVICO",
-    "nextWordList": ["MUSEO", "NUMERO", "IMPEGNO"]
+    "nextWordList": ["MUSEO", "NUMERO", "IMPEGNO", "SENSO"]
   },
   {
     "word": "PARCO",
@@ -6191,7 +6207,15 @@
   },
   {
     "word": "ESSERE",
-    "nextWordList": ["SINCERO", "VERBO", "VIVENTE", "UMANO", "SOLDO", "GRADO"]
+    "nextWordList": [
+      "SINCERO",
+      "VERBO",
+      "VIVENTE",
+      "UMANO",
+      "SOLDO",
+      "GRADO",
+      "ALTEZZA"
+    ]
   },
   {
     "word": "VIVENTE",
@@ -6349,8 +6373,13 @@
       "MILITARE",
       "OASI",
       "NUMERO",
-      "ACQUA"
+      "ACQUA",
+      "SPERANZA"
     ]
+  },
+  {
+    "word": "SPERANZA",
+    "nextWordList": ["VERDE", "VITA", "VIAGGIO"]
   },
   {
     "word": "OLIVA",
@@ -6915,7 +6944,8 @@
       "QUALITÀ",
       "ETERNA",
       "UTILE",
-      "SEGNALE"
+      "SEGNALE",
+      "SPERANZA"
     ]
   },
   {
@@ -6962,7 +6992,8 @@
       "CORSA",
       "AFFARI",
       "ITALIA",
-      "OCA"
+      "OCA",
+      "TIRO"
     ]
   },
   {
