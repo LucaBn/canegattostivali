@@ -453,11 +453,11 @@
   {
     "id": 36,
     "wordList": [
-      "MONDIALI",
+      "GUERRA",
+      "MONDIALE",
       "CALCIO",
       "ANGOLO",
       "GIRO",
-      "MORALE",
       "PAROLE",
       "VENTO",
       "SOFFIO",
@@ -977,5 +977,105 @@
       "VELO",
       "PIETOSO"
     ]
+  },
+  {
+    "id": 69,
+    "wordList": [
+      "DIRE",
+      "FARE",
+      "NUMERO",
+      "PRIMO",
+      "PIATTO",
+      "PASTA",
+      "INTEGRALE",
+      "DOPPIO",
+      "FINE",
+      "GIOCHI",
+      "OLIMPICI"
+    ]
+  },
+  {
+    "id": 70,
+    "wordList": [
+      "QUADRATURA",
+      "CERCHIO",
+      "TESTA",
+      "POSTO",
+      "SEDERE",
+      "TERRA",
+      "FUOCHI",
+      "ARTIFICIO",
+      "RETORICO",
+      "STILE",
+      "ROCOCÒ"
+    ]
+  },
+  {
+    "id": 71,
+    "wordList": [
+      "SCHIOCCO",
+      "FRUSTA",
+      "COLPO",
+      "BRUTTO",
+      "TIRO",
+      "GIRO",
+      "CHIAVE",
+      "VOLTA",
+      "BUONA",
+      "COMPAGNIA",
+      "PETROLIFERA"
+    ]
+  },
+  {
+    "id": 72,
+    "wordList": [
+      "TERNO",
+      "LOTTO",
+      "TERRENO",
+      "GIOCO",
+      "SCATOLA",
+      "SCARPE",
+      "CALCIO",
+      "RIGORE",
+      "SCIENTIFICO",
+      "METODO",
+      "STUDIO"
+    ]
+  },
+  {
+    "id": 73,
+    "wordList": [
+      "SORDO",
+      "CAMPANA",
+      "GONNA",
+      "PORTAFOGLIO",
+      "MINISTRO",
+      "SPORT",
+      "ESTREMO",
+      "DIFENSORE",
+      "AVVOCATO",
+      "DIAVOLO",
+      "TASMANIA"
+    ]
+  },
+  {
+    "id": 74,
+    "wordList": [
+      "CHILOMETRO",
+      "ZERO",
+      "ANNO",
+      "SIGNORE",
+      "ANELLI",
+      "GIOVE",
+      "FULMINE",
+      "GUERRA",
+      "GOLFO",
+      "VENEZIA",
+      "CARNEVALE"
+    ]
+  },
+  {
+    "id": 75,
+    "wordList": ["CANE", "GATTO", "STIVALI"]
   }
 ]

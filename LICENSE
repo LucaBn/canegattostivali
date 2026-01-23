@@ -19,3 +19,37 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## Third-Party Licenses
+
+This project uses the following open-source libraries:
+
+Dependencies (MIT or Apache 2.0):
+
+- [bootstrap](https://github.com/twbs/bootstrap/blob/main/LICENSE) (MIT)
+- [react](https://github.com/facebook/react/blob/main/LICENSE) (MIT)
+- [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap/blob/master/LICENSE) (MIT)
+- [react-dom](https://github.com/facebook/react/blob/main/LICENSE) (MIT)
+- [react-router-bootstrap](https://github.com/react-bootstrap/react-router-bootstrap/blob/master/LICENSE) (Apache 2.0)
+
+DevDependencies (MIT or Apache 2.0, used for development/build):
+
+- [@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE) (MIT)
+- [@types/react](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE) (MIT)
+- [@types/react-dom](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE) (MIT)
+- [@types/react-router-bootstrap](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE) (MIT)
+- [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/LICENSE) (MIT)
+- [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/parser/LICENSE) (MIT)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc/blob/main/LICENSE) (MIT)
+- [eslint](https://github.com/eslint/eslint/blob/main/LICENSE) (MIT)
+- [eslint-plugin-react-hooks](https://github.com/facebook/react/blob/main/LICENSE) (MIT)
+- [eslint-plugin-react-refresh](https://github.com/pmmmwh/react-refresh-webpack-plugin/blob/main/LICENSE) (MIT)
+- [sass](https://github.com/sass/dart-sass/blob/master/LICENSE) (MIT)
+- [typescript](https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt) (Apache 2.0)
+- [vite](https://github.com/vitejs/vite/blob/main/LICENSE) (MIT)
+- [vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa/blob/main/LICENSE) (MIT)
+
+All third-party libraries are MIT or Apache 2.0 licensed.  
+Please refer to their LICENSE files or repositories for full terms.
