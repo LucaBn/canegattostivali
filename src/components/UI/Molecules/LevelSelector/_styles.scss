@@ -3,4 +3,8 @@
     max-height: 300px;
     overflow-y: auto;
   }
+
+  &__level-list {
+    scroll-behavior: smooth;
+  }
 }

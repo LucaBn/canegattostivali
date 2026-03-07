@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 // Components
 import { Row, Col, Button, Card } from "react-bootstrap";
@@ -25,7 +25,7 @@ interface Props {
 const LevelSelector: React.FC<Props> = ({ setMode }: Props) => {
   // Leave it here so it runs every time the component is updated
   const storedUserData: UserData | null = readFromLocalStorage(
-    LS_KEY_LIST.USER_DATA
+    LS_KEY_LIST.USER_DATA,
   );
   const lastLevelCompleted = storedUserData?.lastLevelCompleted || 0;
 
@@ -33,9 +33,19 @@ const LevelSelector: React.FC<Props> = ({ setMode }: Props) => {
   const [gameSectionRefreshKey, setGameSectionRefreshKey] = useState(0);
 
   const gameSectionRef = useRef<HTMLDivElement>(null);
+  const nextLevelRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    scrollToGameSection();
+  }, []);
 
   const scrollToGameSection = () => {
-    if (gameSectionRef.current) {
+    if (!areAllLevelsCompleted && nextLevelRef.current) {
+      nextLevelRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    } else if (gameSectionRef.current) {
       gameSectionRef.current.scrollIntoView({
         behavior: "smooth",
         block: "start",
@@ -74,33 +84,38 @@ const LevelSelector: React.FC<Props> = ({ setMode }: Props) => {
                     </em>
                   </div>
                 )}
-                <Row>
-                  {levelList.map((level) => (
-                    <Col
-                      key={level.id}
-                      xs={6}
-                      sm={4}
-                      lg={3}
-                      xl={2}
-                      className="mb-3"
-                    >
-                      <Button
-                        variant={
-                          level.id > lastLevelCompleted + 1
-                            ? "secondary"
-                            : "primary"
-                        }
-                        disabled={level.id > lastLevelCompleted + 1}
-                        onClick={() => handleLevelChange(level.id)}
-                        className="position-relative w-100"
+                <Row className="level-selector__level-list">
+                  {levelList.map((level) => {
+                    const isNextLevel = level.id === lastLevelCompleted + 1;
+
+                    return (
+                      <Col
+                        key={level.id}
+                        xs={6}
+                        sm={4}
+                        lg={3}
+                        xl={2}
+                        className="mb-3"
                       >
-                        {level.id === lastLevelCompleted + 1 && (
-                          <NotificationCircle bgColor="warning" pulse />
-                        )}
-                        Lvl {level.id}
-                      </Button>
-                    </Col>
-                  ))}
+                        <Button
+                          ref={isNextLevel ? nextLevelRef : undefined}
+                          variant={
+                            level.id > lastLevelCompleted + 1
+                              ? "secondary"
+                              : "primary"
+                          }
+                          disabled={level.id > lastLevelCompleted + 1}
+                          onClick={() => handleLevelChange(level.id)}
+                          className="position-relative w-100"
+                        >
+                          {isNextLevel && (
+                            <NotificationCircle bgColor="warning" pulse />
+                          )}
+                          Lvl {level.id}
+                        </Button>
+                      </Col>
+                    );
+                  })}
                 </Row>
               </Card.Body>
             </Card>
