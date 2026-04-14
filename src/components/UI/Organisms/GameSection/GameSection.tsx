@@ -114,14 +114,14 @@ const GameSection: React.FC<Props> = ({
       currentWord
         .split("")
         .map((_, index) =>
-          guessedWord[index] ? "primary" : "outline-secondary"
-        )
+          guessedWord[index] ? "primary" : "outline-secondary",
+        ),
     );
   };
 
   const checkIfUserBestTime = () => {
     const storedUserData: UserData | null = readFromLocalStorage(
-      LS_KEY_LIST.USER_DATA
+      LS_KEY_LIST.USER_DATA,
     );
 
     if (
@@ -165,7 +165,7 @@ const GameSection: React.FC<Props> = ({
     };
 
     const current = readFromLocalStorage(
-      LS_KEY_LIST.USER_DATA
+      LS_KEY_LIST.USER_DATA,
     ) as UserData | null;
 
     const updated = updater(current);
@@ -248,7 +248,7 @@ const GameSection: React.FC<Props> = ({
         playSound("/assets/sounds/delete.wav");
       }
       setGuessedWord((prev) =>
-        prev.length > bonusLetters.current + 1 ? prev.slice(0, -1) : prev
+        prev.length > bonusLetters.current + 1 ? prev.slice(0, -1) : prev,
       );
     } else if (key === "INVIO") {
       if (guessedWord === currentWord) {
@@ -285,7 +285,7 @@ const GameSection: React.FC<Props> = ({
   const getButtonVariant = (
     index: number,
     wordSequenceIndex: number,
-    currentWordIndex: number
+    currentWordIndex: number,
   ): string => {
     if (wordSequenceIndex === currentWordIndex && isCorrect) {
       return "success";
@@ -294,35 +294,35 @@ const GameSection: React.FC<Props> = ({
     return wordSequenceIndex < currentWordIndex
       ? "primary"
       : wordSequenceIndex === currentWordIndex
-      ? buttonVariants[index] || "outline-secondary"
-      : "outline-secondary";
+        ? buttonVariants[index] || "outline-secondary"
+        : "outline-secondary";
   };
 
   const getButtonClass = (
     wordSequenceIndex: number,
-    currentWordIndex: number
+    currentWordIndex: number,
   ): string => {
     return `p-1 ${
       wordSequenceIndex < currentWordIndex
         ? "theme-sensitive-color bg-transparent border-0"
         : wordSequenceIndex === currentWordIndex + 1
-        ? "opacity-50"
-        : wordSequenceIndex > currentWordIndex + 1
-        ? "opacity-0"
-        : ""
+          ? "opacity-50"
+          : wordSequenceIndex > currentWordIndex + 1
+            ? "opacity-0"
+            : ""
     }`;
   };
 
   const getButtonLetter = (
     index: number,
     wordSequenceIndex: number,
-    currentWordIndex: number
+    currentWordIndex: number,
   ) => {
     return wordSequenceIndex < currentWordIndex
       ? wordSequence[wordSequenceIndex][index]
       : wordSequenceIndex === currentWordIndex
-      ? guessedWord[index]
-      : "";
+        ? guessedWord[index]
+        : "";
   };
 
   const getHelpKeyboardFilter = () => {
@@ -338,7 +338,7 @@ const GameSection: React.FC<Props> = ({
 
     const partialSolution = wordSequence[currentWordIndex].slice(
       0,
-      bonusLetters.current + 1
+      bonusLetters.current + 1,
     );
 
     playSound("/assets/sounds/help-1.wav");
@@ -361,7 +361,7 @@ const GameSection: React.FC<Props> = ({
 
     const partialSolution = wordSequence[currentWordIndex].slice(
       0,
-      bonusLetters.current + 2
+      bonusLetters.current + 2,
     );
 
     setGuessedWord(partialSolution);
@@ -491,11 +491,11 @@ const GameSection: React.FC<Props> = ({
                     variant={getButtonVariant(
                       index,
                       wordSequenceIndex,
-                      currentWordIndex
+                      currentWordIndex,
                     )}
                     className={getButtonClass(
                       wordSequenceIndex,
-                      currentWordIndex
+                      currentWordIndex,
                     )}
                     style={{
                       maxWidth: `calc((100dvw / ${
@@ -507,7 +507,7 @@ const GameSection: React.FC<Props> = ({
                     {getButtonLetter(
                       index,
                       wordSequenceIndex,
-                      currentWordIndex
+                      currentWordIndex,
                     )}
                   </Button>
                 </Col>
@@ -532,6 +532,7 @@ const GameSection: React.FC<Props> = ({
 
       <Keyboard
         currentWord={currentWord}
+        guessedWord={guessedWord}
         filterKeys={filterKeys.current}
         onKeyPress={handleKeyPress}
         getHelpKeyboardFilter={getHelpKeyboardFilter}
