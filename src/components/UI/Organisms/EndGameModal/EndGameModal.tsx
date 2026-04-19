@@ -26,7 +26,7 @@ interface IEndGameModal {
   wordSequence: string[];
   setShow: Dispatch<SetStateAction<boolean>>;
   startRandomGame: () => void;
-  setMode?: (newMode: "random" | "levels" | "custom") => void;
+  setMode?: (newMode: Mode) => void;
   handleLevelChange?: (levelId: number) => void;
   level?: number;
 }
@@ -45,7 +45,7 @@ const EndGameModal: React.FC<IEndGameModal> = ({
 }) => {
   // Leave it here so it runs every time the component is updated
   const storedUserData: UserData | null = readFromLocalStorage(
-    LS_KEY_LIST.USER_DATA
+    LS_KEY_LIST.USER_DATA,
   );
 
   useEffect(() => {

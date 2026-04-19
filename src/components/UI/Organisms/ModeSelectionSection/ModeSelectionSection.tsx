@@ -8,9 +8,12 @@ import IconLadder from "@/components/UI/Atoms/IconLadder/IconLadder";
 // Utils
 import { playSound } from "@/utils/sounds";
 
+// Typings
+import { Mode } from "@/typings/game";
+
 interface Props {
-  mode: "random" | "levels" | "custom";
-  setMode: (newMode: "random" | "levels" | "custom") => void;
+  mode: Mode;
+  setMode: (newMode: Mode) => void;
 }
 
 const ModeSelectionSection: React.FC<Props> = ({ mode, setMode }) => {
@@ -25,7 +28,7 @@ const ModeSelectionSection: React.FC<Props> = ({ mode, setMode }) => {
     }
   };
 
-  const handleModeClick = (selectedMode: "random" | "levels") => {
+  const handleModeClick = (selectedMode: Exclude<Mode, "custom">) => {
     playSound("/assets/sounds/click-positive.wav");
     setMode(selectedMode);
     requestAnimationFrame(() => {

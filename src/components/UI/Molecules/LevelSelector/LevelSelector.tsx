@@ -12,14 +12,15 @@ import { readFromLocalStorage } from "@/utils/localStorage";
 import { LS_KEY_LIST } from "@/constants/localStorage";
 
 // Typings
+import { Mode } from "@/typings/game";
 import { UserData } from "@/typings/user";
 
 // Data
 import levelList from "@/assets/data/levelList.json";
-import NotificationCircle from "../../Atoms/NotificationCircle/NotificationCircle";
+import NotificationCircle from "@/components/UI/Atoms/NotificationCircle/NotificationCircle";
 
 interface Props {
-  setMode: (newMode: "random" | "levels" | "custom") => void;
+  setMode: (newMode: Mode) => void;
 }
 
 const LevelSelector: React.FC<Props> = ({ setMode }: Props) => {
@@ -30,7 +31,7 @@ const LevelSelector: React.FC<Props> = ({ setMode }: Props) => {
   const lastLevelCompleted = storedUserData?.lastLevelCompleted || 0;
 
   const [currentLevel, setCurrentLevel] = useState<number>(-1);
-  const [gameSectionRefreshKey, setGameSectionRefreshKey] = useState(0);
+  const [gameSectionRefreshKey, setGameSectionRefreshKey] = useState<number>(0);
 
   const gameSectionRef = useRef<HTMLDivElement>(null);
   const nextLevelRef = useRef<HTMLButtonElement | null>(null);

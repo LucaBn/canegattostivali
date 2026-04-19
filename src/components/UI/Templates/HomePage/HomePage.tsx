@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
     : initialWordSequence;
 
   const gameModeFromLocalStorage = readFromLocalStorage(
-    LS_KEY_LIST.GAME_MODE
+    LS_KEY_LIST.GAME_MODE,
   ) as Mode;
 
   const MODE_DEFAULT: Mode = IS_CUSTOM_GAME
@@ -64,10 +64,11 @@ const HomePage: React.FC = () => {
   const isCustomModeSequenceWrong = Boolean(customListParam && !IS_CUSTOM_GAME);
 
   const [wordSequence, setWordSequence] = useState<string[]>(
-    WORD_SEQUENCE_DEFAULT
+    WORD_SEQUENCE_DEFAULT,
   );
   const [mode, setMode] = useState<Mode>(MODE_DEFAULT);
-  const [levelSelectorRefreshKey, setLevelSelectorRefreshKey] = useState(0);
+  const [levelSelectorRefreshKey, setLevelSelectorRefreshKey] =
+    useState<number>(0);
 
   const navigate = useNavigate();
 

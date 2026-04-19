@@ -34,7 +34,7 @@ interface Props {
   initialWordSequence: string[];
   mode: Mode;
   level?: number;
-  setMode?: (newMode: "random" | "levels" | "custom") => void;
+  setMode?: (newMode: Mode) => void;
   handleLevelChange?: (levelId: number) => void;
 }
 
