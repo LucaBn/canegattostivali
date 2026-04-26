@@ -4,7 +4,7 @@ import React, { useCallback, memo } from "react";
 import { Row } from "react-bootstrap";
 import IconDelete from "@/components/UI/Atoms/IconDelete/IconDelete";
 import IconLightbulb from "@/components/UI/Atoms/IconLightbulb/IconLightbulb";
-import IconKeyboard from "@/components/UI/Atoms/IconEyeSlash/IconEyeSlash";
+import IconEyeSlash from "@/components/UI/Atoms/IconEyeSlash/IconEyeSlash";
 
 // Utils
 import { generateClassNameValue } from "@/utils/htmlClasses";
@@ -117,7 +117,7 @@ const KeyboardRow: React.FC<KeyboardRowProps> = memo(
               onClick={getHelpKeyboardFilter}
               title="Rimuovi dalla tastiera le lettere che non servono"
             >
-              <IconKeyboard forceColor="#000" forceOpacity={100} />
+              <IconEyeSlash forceColor="#000" forceOpacity={100} />
             </span>
           );
         } else if (key === "HELP_BONUS_LETTER") {
