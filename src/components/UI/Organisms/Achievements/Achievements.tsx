@@ -32,13 +32,13 @@ const achievements: Achievement[] = [
   },
   {
     type: "wins",
-    title: "Esperto 🏆",
+    title: "Esperto 🎯",
     description: "Raggiungi 10 vittorie",
     target: 10,
   },
   {
     type: "wins",
-    title: "Veterano 🎯",
+    title: "Veterano 🏅",
     description: "Raggiungi 50 vittorie",
     target: 50,
   },
