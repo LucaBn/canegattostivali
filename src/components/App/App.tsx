@@ -9,8 +9,10 @@ import Footer from "@/components/UI/Organisms/Footer/Footer";
 import { useTheme } from "@/components/providers/ThemeProvider";
 
 // Constants
-import { ThemeList } from "@/typings/themes";
 import { RUN_TEST } from "@/constants/app";
+
+// Typings
+import { ThemeList } from "@/typings/themes";
 
 // Tests
 import {
@@ -19,9 +21,11 @@ import {
   calculateAverageNextWordListLength,
 } from "@/tests/wordListTest";
 import { runLevelListTest } from "@/tests/levelListTest";
+import { useBackground } from "../providers/BackgroundProvider";
 
 const App: React.FC = () => {
   const { theme } = useTheme();
+  const { backgroundEffect } = useBackground();
 
   const textColorClass =
     theme === ThemeList.Dark
@@ -47,7 +51,7 @@ const App: React.FC = () => {
       if (viewport) {
         viewport.setAttribute(
           "content",
-          "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
         );
       }
     }
@@ -56,7 +60,7 @@ const App: React.FC = () => {
   return (
     <div className={`${textColorClass}`}>
       <Navbar />
-      <main className="bg-body-secondary">
+      <main className={`bg-body-secondary ${backgroundEffect}`}>
         <Outlet />
       </main>
       <Footer />

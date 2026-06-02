@@ -1,0 +1,52 @@
+.achievement-status {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.achievement-status.completed {
+  background: rgba(25, 135, 84, 0.15);
+  color: #28a745;
+  box-shadow: 0 0 0 1px rgba(25, 135, 84, 0.25);
+}
+
+.achievement-status.locked {
+  background: rgba(108, 117, 125, 0.15);
+  color: rgba(108, 117, 125, 0.8);
+}
+
+.achievement-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.2px;
+  color: var(--bs-body-color);
+}
+
+.achievement-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(var(--bs-body-color-rgb), 0.6);
+  flex-shrink: 0;
+}
+
+.bg-success-subtle .achievement-title {
+  color: rgba(25, 135, 84, 0.95);
+}
+
+.bg-success-subtle .achievement-dot {
+  background: rgba(25, 135, 84, 0.9);
+}
+
+.achievement-desc {
+  font-style: italic;
+  font-size: 12px;
+  opacity: 0.85;
+  letter-spacing: 0.1px;
+}

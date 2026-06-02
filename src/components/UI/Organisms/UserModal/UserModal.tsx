@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 // Components
 import { Button, Modal, Form, FloatingLabel } from "react-bootstrap";
+import Achievements from "@/components/UI/Organisms/Achievements/Achievements";
 
 // Utils
 import {
@@ -25,11 +26,11 @@ interface Props {
 const UserModal: React.FC<Props> = ({ show, setShow }: Props) => {
   // Leave it here so it runs every time the component is updated
   const storedUserData: UserData | null = readFromLocalStorage(
-    LS_KEY_LIST.USER_DATA
+    LS_KEY_LIST.USER_DATA,
   );
 
   const [username, setUsername] = useState<string>(
-    storedUserData?.username || ""
+    storedUserData?.username || "",
   );
   // TODO: rewrite this with ...prev value of storedUserData
   const matchesWon = storedUserData?.matchesWon || 0;
@@ -85,7 +86,10 @@ const UserModal: React.FC<Props> = ({ show, setShow }: Props) => {
             <span className="d-inline-block stats__icon">⏳</span>Miglior tempo:{" "}
             {bestTime === 0 ? "-" : formatTime(bestTime)}
           </p>
-          <small>
+
+          <Achievements />
+
+          <small className="mt-4">
             <em>
               * Le statistiche tengono conto solo delle partite giocate in
               modalità random, mentre non vengono conteggiate le partite custom

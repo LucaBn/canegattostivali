@@ -10,9 +10,12 @@ import { IImage } from "@/typings/images";
 import { getImageColor } from "@/utils/imageColor";
 import { generateClassNameValue } from "@/utils/htmlClasses";
 
-interface IIconSun extends IImage {}
+interface IIconLightbulb extends IImage {}
 
-const IconLightbulb: React.FC<IIconSun> = ({ forceColor, forceOpacity }) => {
+const IconLightbulb: React.FC<IIconLightbulb> = ({
+  forceColor,
+  forceOpacity,
+}) => {
   const { theme } = useTheme();
 
   const iconColor = getImageColor(theme, forceColor);

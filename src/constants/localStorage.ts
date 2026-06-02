@@ -9,6 +9,7 @@ const LS_KEY_LIST = {
   READ_NEWS: `${lowercaseAppName}ReadNews`,
   SOUNDS: `${lowercaseAppName}Sounds`,
   THEME: `${lowercaseAppName}Theme`,
+  BACKGROUND_EFFECT: `${lowercaseAppName}BackgroundEffect`,
   USER_DATA: `${lowercaseAppName}UserData`,
 } as const;
 

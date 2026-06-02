@@ -4,7 +4,7 @@ import React, { useCallback, memo } from "react";
 import { Row } from "react-bootstrap";
 import IconDelete from "@/components/UI/Atoms/IconDelete/IconDelete";
 import IconLightbulb from "@/components/UI/Atoms/IconLightbulb/IconLightbulb";
-import IconKeyboard from "@/components/UI/Atoms/IconEyeSlash/IconEyeSlash";
+import IconEyeSlash from "@/components/UI/Atoms/IconEyeSlash/IconEyeSlash";
 
 // Utils
 import { generateClassNameValue } from "@/utils/htmlClasses";
@@ -31,6 +31,7 @@ const getSpecificClass = (key: string): string => {
 interface KeyboardRowProps {
   row: string[];
   currentWord: string;
+  guessedWord: string;
   filterKeys: boolean;
   onKeyPress: (key: string) => void;
   getHelpKeyboardFilter: () => void;
@@ -43,6 +44,7 @@ const KeyboardRow: React.FC<KeyboardRowProps> = memo(
   ({
     row,
     currentWord,
+    guessedWord,
     filterKeys,
     onKeyPress,
     getHelpKeyboardFilter,
@@ -55,7 +57,7 @@ const KeyboardRow: React.FC<KeyboardRowProps> = memo(
         e.currentTarget.blur();
         onKeyPress(key);
       },
-      [onKeyPress]
+      [onKeyPress],
     );
 
     const getDisabledClass = useCallback(
@@ -73,11 +75,21 @@ const KeyboardRow: React.FC<KeyboardRowProps> = memo(
           disableHelpBonusLetterButton
         ) {
           return "keyboard__btn--disabled keyboard__btn--loading";
+        } else if (key === "INVIO" && guessedWord.length < currentWord.length) {
+          return "keyboard__btn--disabled";
+        } else if (key === "CANC" && guessedWord.length === 1) {
+          return "keyboard__btn--disabled";
         } else {
           return "";
         }
       },
-      [currentWord, filterKeys, bonusLetters, disableHelpBonusLetterButton]
+      [
+        currentWord,
+        guessedWord,
+        filterKeys,
+        bonusLetters,
+        disableHelpBonusLetterButton,
+      ],
     );
 
     const getExtraClasses = useCallback(
@@ -87,7 +99,7 @@ const KeyboardRow: React.FC<KeyboardRowProps> = memo(
         const specificClass = getSpecificClass(key);
         return generateClassNameValue([bgClass, disabledClass, specificClass]);
       },
-      [getDisabledClass]
+      [getDisabledClass],
     );
 
     const getButtonContent = useCallback(
@@ -105,7 +117,7 @@ const KeyboardRow: React.FC<KeyboardRowProps> = memo(
               onClick={getHelpKeyboardFilter}
               title="Rimuovi dalla tastiera le lettere che non servono"
             >
-              <IconKeyboard forceColor="#000" forceOpacity={100} />
+              <IconEyeSlash forceColor="#000" forceOpacity={100} />
             </span>
           );
         } else if (key === "HELP_BONUS_LETTER") {
@@ -124,7 +136,7 @@ const KeyboardRow: React.FC<KeyboardRowProps> = memo(
           return key;
         }
       },
-      [getHelpKeyboardFilter, getHelpBonusLetter]
+      [getHelpKeyboardFilter, getHelpBonusLetter],
     );
 
     return (
@@ -134,7 +146,7 @@ const KeyboardRow: React.FC<KeyboardRowProps> = memo(
             key={keyIndex}
             onClick={(e) => handleKeyClick(e, key)}
             className={`keyboard__btn d-flex align-items-center justify-content-center rounded text-nowrap text-white px-0 ${getExtraClasses(
-              key
+              key,
             )}`}
           >
             {getButtonContent(key)}
@@ -142,7 +154,7 @@ const KeyboardRow: React.FC<KeyboardRowProps> = memo(
         ))}
       </Row>
     );
-  }
+  },
 );
 
 export default KeyboardRow;

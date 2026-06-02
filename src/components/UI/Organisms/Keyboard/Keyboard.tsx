@@ -9,6 +9,7 @@ import { useKeyboardSwap } from "@/components/providers/KeyboardSwapProvider";
 
 interface Props {
   currentWord: string;
+  guessedWord: string;
   filterKeys: boolean;
   onKeyPress: (key: string) => void;
   getHelpKeyboardFilter: () => void;
@@ -19,6 +20,7 @@ interface Props {
 
 const Keyboard: React.FC<Props> = ({
   currentWord,
+  guessedWord,
   filterKeys,
   onKeyPress,
   getHelpKeyboardFilter,
@@ -51,6 +53,7 @@ const Keyboard: React.FC<Props> = ({
 
   const rowProps = {
     currentWord,
+    guessedWord,
     filterKeys,
     onKeyPress,
     getHelpKeyboardFilter,
