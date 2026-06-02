@@ -86,17 +86,16 @@ const UserModal: React.FC<Props> = ({ show, setShow }: Props) => {
             <span className="d-inline-block stats__icon">⏳</span>Miglior tempo:{" "}
             {bestTime === 0 ? "-" : formatTime(bestTime)}
           </p>
-          <small>
+
+          <Achievements />
+
+          <small className="mt-4">
             <em>
               * Le statistiche tengono conto solo delle partite giocate in
               modalità random, mentre non vengono conteggiate le partite custom
               create dagli utenti e la modalità a livelli!
             </em>
           </small>
-
-          <hr />
-
-          <Achievements />
         </div>
       </Modal.Body>
       <Modal.Footer>
