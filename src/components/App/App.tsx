@@ -21,9 +21,11 @@ import {
   calculateAverageNextWordListLength,
 } from "@/tests/wordListTest";
 import { runLevelListTest } from "@/tests/levelListTest";
+import { useBackground } from "../providers/BackgroundProvider";
 
 const App: React.FC = () => {
   const { theme } = useTheme();
+  const { backgroundEffect } = useBackground();
 
   const textColorClass =
     theme === ThemeList.Dark
@@ -58,7 +60,7 @@ const App: React.FC = () => {
   return (
     <div className={`${textColorClass}`}>
       <Navbar />
-      <main className="bg-body-secondary">
+      <main className={`bg-body-secondary ${backgroundEffect}`}>
         <Outlet />
       </main>
       <Footer />

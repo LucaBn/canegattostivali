@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 
 // Components
 import { Button, Modal } from "react-bootstrap";
-import DataManager from "@/components/UI/Organisms/DataManager/DataManager";
-import KeyboardHandler from "@/components/UI/Organisms/KeyboardHandler/KeyboardHandler";
-// import SoundsHandler from "@/components/UI/Organisms/SoundsHandler/SoundsHandler";
 import ThemeHandler from "@/components/UI/Organisms/ThemeHandler/ThemeHandler";
+import BackgroundHandler from "@/components/UI/Organisms/BackgroundHandler/BackgroundHandler";
+// import SoundsHandler from "@/components/UI/Organisms/SoundsHandler/SoundsHandler";
+import KeyboardHandler from "@/components/UI/Organisms/KeyboardHandler/KeyboardHandler";
+import DataManager from "@/components/UI/Organisms/DataManager/DataManager";
 
 // Utils
 import { playSound } from "@/utils/sounds";
@@ -32,6 +33,7 @@ const OptionsModal: React.FC<Props> = ({ show, setShow }: Props) => {
       <Modal.Body>
         <div className="d-flex flex-column gap-4 mb-4">
           <ThemeHandler />
+          <BackgroundHandler />
           {/* <SoundsHandler /> */}
           <KeyboardHandler />
         </div>
