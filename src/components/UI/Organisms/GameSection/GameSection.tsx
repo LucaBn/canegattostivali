@@ -305,11 +305,13 @@ const GameSection: React.FC<Props> = ({
     return `p-1 ${
       wordSequenceIndex < currentWordIndex
         ? "theme-sensitive-color bg-transparent border-0"
-        : wordSequenceIndex === currentWordIndex + 1
-          ? "opacity-50"
-          : wordSequenceIndex > currentWordIndex + 1
-            ? "opacity-0"
-            : ""
+        : wordSequenceIndex === currentWordIndex
+          ? "guessed-word__slot--fill-bg"
+          : wordSequenceIndex === currentWordIndex + 1
+            ? "guessed-word__slot--fill-bg opacity-50"
+            : wordSequenceIndex > currentWordIndex + 1
+              ? "opacity-0"
+              : ""
     }`;
   };
 
