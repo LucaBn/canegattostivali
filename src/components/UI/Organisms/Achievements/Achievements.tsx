@@ -21,12 +21,17 @@ type Achievement =
       title: string;
       description: string;
       timeLimit: number;
+    }
+  | {
+      type: "readNews";
+      title: string;
+      description: string;
     };
 
 const achievements: Achievement[] = [
   {
     type: "wins",
-    title: "Primi passi 🐾",
+    title: "Neofita 📚",
     description: "Vinci la tua prima partita",
     target: 1,
   },
@@ -44,7 +49,7 @@ const achievements: Achievement[] = [
   },
   {
     type: "wins",
-    title: "Leggenda vivente 👑",
+    title: "Leggenda 👑",
     description: "Raggiungi 100 vittorie",
     target: 100,
   },
@@ -66,11 +71,20 @@ const achievements: Achievement[] = [
     description: "Vinci una partita in 100 secondi o meno",
     timeLimit: 100,
   },
+  {
+    type: "readNews",
+    title: "Informato 📰",
+    description: "Leggi almeno una notizia",
+  },
 ];
 
 const Achievements: React.FC = () => {
   const storedUserData: UserData | null = readFromLocalStorage(
     LS_KEY_LIST.USER_DATA,
+  );
+
+  const storedReadNews: number | null = readFromLocalStorage(
+    LS_KEY_LIST.READ_NEWS,
   );
 
   const matchesWon = storedUserData?.matchesWon || 0;
@@ -83,6 +97,10 @@ const Achievements: React.FC = () => {
 
     if (a.type === "time") {
       return bestTime > 0 && bestTime <= a.timeLimit;
+    }
+
+    if (a.type === "readNews") {
+      return storedReadNews !== null && storedReadNews > 0;
     }
 
     return false;
@@ -104,33 +122,32 @@ const Achievements: React.FC = () => {
           return (
             <div key={idx} className="col-6">
               <div
-                className={`p-2 h-100 rounded border position-relative overflow-hidden ${
+                className={`p-2 h-100 rounded border position-relative d-flex flex-column justify-content-between overflow-hidden ${
                   completed
                     ? "bg-success-subtle border-success"
                     : "bg-body-secondary"
                 }`}
               >
-                <div className={`${completed ? "glow-on" : ""}`} />
+                <div>
+                  <div className="d-flex align-items-center gap-2">
+                    <div className="achievement-title small lh-sm">
+                      {a.title}
+                    </div>
 
-                <div className="d-flex align-items-center gap-2">
-                  <div className="achievement-title small lh-sm">
-                    <span className="achievement-dot" />
-                    {a.title}
+                    <div className="ms-auto d-flex align-items-center">
+                      {completed ? (
+                        <span className="achievement-status completed">✔</span>
+                      ) : (
+                        <span className="achievement-status locked">🔒</span>
+                      )}
+                    </div>
                   </div>
 
-                  <div className="ms-auto d-flex align-items-center">
-                    {completed ? (
-                      <span className="achievement-status completed">✔</span>
-                    ) : (
-                      <span className="achievement-status locked">🔒</span>
-                    )}
-                  </div>
+                  <p className="achievement-desc mt-1 mb-0">{a.description}</p>
                 </div>
 
-                <p className="achievement-desc mt-1 mb-0">{a.description}</p>
-
                 {a.type === "wins" && (
-                  <>
+                  <div>
                     <div className="d-flex justify-content-between small mt-2">
                       <span>
                         {getProgress(a)}/{a.target}
@@ -151,7 +168,7 @@ const Achievements: React.FC = () => {
                         }}
                       />
                     </div>
-                  </>
+                  </div>
                 )}
 
                 {a.type === "time" && (
