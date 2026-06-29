@@ -35,6 +35,25 @@
       }
     }
 
+    &--fill-bg {
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(
+          var(--bs-secondary-bg-rgb),
+          var(--bs-bg-opacity)
+        );
+        z-index: -1;
+      }
+    }
+
     &--previous {
       width: math.div($slot-width-desktop, 2);
       transform: translateY(20%);

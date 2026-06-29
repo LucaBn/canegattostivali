@@ -17,6 +17,9 @@ interface Props {
 }
 
 const OptionsModal: React.FC<Props> = ({ show, setShow }: Props) => {
+  const isApp =
+    new URLSearchParams(window.location.search).get("isApp") === "true";
+
   useEffect(() => {
     if (show) {
       playSound("/assets/sounds/modal-open.wav");
@@ -38,7 +41,7 @@ const OptionsModal: React.FC<Props> = ({ show, setShow }: Props) => {
           <KeyboardHandler />
         </div>
 
-        <DataManager />
+        {!isApp && <DataManager />}
       </Modal.Body>
       <Modal.Footer>
         <Button variant="primary" onClick={() => setShow(false)}>

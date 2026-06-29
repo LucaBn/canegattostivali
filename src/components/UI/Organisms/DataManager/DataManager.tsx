@@ -47,7 +47,7 @@ const DataManager: React.FC = () => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "cgs_data.json";
+    a.download = "canegattostivali_data.json";
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -71,11 +71,11 @@ const DataManager: React.FC = () => {
         });
         if (isApp) {
           setImportSuccess(
-            "Dati importati con successo!\nIn caso di problemi riavvia l'app."
+            "Dati importati con successo!\nIn caso di problemi riavvia l'app.",
           );
         } else {
           setImportSuccess(
-            "Dati importati con successo!\nIn caso di problemi ricarica la pagina."
+            "Dati importati con successo!\nIn caso di problemi ricarica la pagina.",
           );
         }
       } catch (err) {
