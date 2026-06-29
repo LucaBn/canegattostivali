@@ -255,7 +255,7 @@ const GameSection: React.FC<Props> = ({
         playSound("/assets/sounds/click-positive.wav");
         handleWordGuess();
       } else {
-        if (guessedWord.length > 1 + bonusLetters.current) {
+        if (guessedWord.length === currentWord.length) {
           playSound("/assets/sounds/click-negative.wav");
           setMessage("😓");
           setIsBuzzing(true);
