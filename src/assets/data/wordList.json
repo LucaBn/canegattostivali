@@ -47,7 +47,8 @@
       "ZAMPA",
       "LUPO",
       "PASTORE",
-      "GUARDIA"
+      "GUARDIA",
+      "CACCIA"
     ]
   },
   {
@@ -412,7 +413,8 @@
       "ESEMPIO",
       "RISPOSTA",
       "MANO",
-      "ACQUISITO"
+      "ACQUISITO",
+      "RAGIONE"
     ]
   },
   {
@@ -501,7 +503,9 @@
       "COMPUTER",
       "TASSO",
       "PREZZO",
-      "POSTO"
+      "POSTO",
+      "RESIDUO",
+      "CLIENTE"
     ]
   },
   {
@@ -593,7 +597,7 @@
   },
   {
     "word": "PERSONALE",
-    "nextWordList": ["CRESCITA", "NEGOZIO", "DIFESA", "DATO"]
+    "nextWordList": ["CRESCITA", "NEGOZIO", "DIFESA", "DATO", "ORGANICO"]
   },
   {
     "word": "PREZZO",
@@ -1166,7 +1170,14 @@
   },
   {
     "word": "SONNO",
-    "nextWordList": ["MORIRE", "PERDERE", "PROFONDO", "FASE", "QUALITÀ"]
+    "nextWordList": [
+      "MORIRE",
+      "PERDERE",
+      "PROFONDO",
+      "FASE",
+      "QUALITÀ",
+      "RAGIONE"
+    ]
   },
   {
     "word": "PROFONDO",
@@ -1403,7 +1414,7 @@
   },
   {
     "word": "SOCIETÀ",
-    "nextWordList": ["AZIENDA", "CIVILE", "GIOCO", "SPORTIVA"]
+    "nextWordList": ["AZIENDA", "CIVILE", "GIOCO", "SPORTIVA", "RIFIUTO"]
   },
   {
     "word": "MARGINE",
@@ -1472,7 +1483,7 @@
   },
   {
     "word": "INTERESSE",
-    "nextWordList": ["RATA", "PASSIONE", "COMUNE", "TASSO"]
+    "nextWordList": ["RATA", "PASSIONE", "COMUNE", "TASSO", "COMPOSTO"]
   },
   {
     "word": "PASSIONE",
@@ -1568,7 +1579,8 @@
       "BATTUTA",
       "AEREO",
       "RISERVA",
-      "LICENZA"
+      "LICENZA",
+      "CANE"
     ]
   },
   {
@@ -1703,7 +1715,8 @@
       "PIANETA",
       "MEZZO",
       "PALMO",
-      "TARTARUGA"
+      "TARTARUGA",
+      "SEDUTO"
     ]
   },
   {
@@ -2490,7 +2503,15 @@
   },
   {
     "word": "POSTO",
-    "nextWordList": ["BLOCCO", "FISSO", "LIBERO", "LAVORO", "PRIMO", "TESTA"]
+    "nextWordList": [
+      "BLOCCO",
+      "FISSO",
+      "LIBERO",
+      "LAVORO",
+      "PRIMO",
+      "TESTA",
+      "SEDUTO"
+    ]
   },
   {
     "word": "SPRAY",
@@ -2573,7 +2594,7 @@
   },
   {
     "word": "NETTO",
-    "nextWordList": ["STIPENDIO", "PESO", "PATRIMONIO", "UTILE"]
+    "nextWordList": ["STIPENDIO", "PESO", "PATRIMONIO", "UTILE", "RIFIUTO"]
   },
   {
     "word": "PATRIMONIO",
@@ -2639,7 +2660,8 @@
       "PROFONDO",
       "CARTELLINO",
       "PIANETA",
-      "TAPPETO"
+      "TAPPETO",
+      "TORO"
     ]
   },
   {
@@ -3184,7 +3206,7 @@
   },
   {
     "word": "BUONA",
-    "nextWordList": ["STRADA", "SERATA", "CONDOTTA", "FORTUNA"]
+    "nextWordList": ["STRADA", "SERATA", "CONDOTTA", "FORTUNA", "RAGIONE"]
   },
   {
     "word": "CONDOTTA",
@@ -3198,7 +3220,8 @@
       "SEGRETO",
       "ESAME",
       "MASSIMO",
-      "PARTECIPAZIONE"
+      "PARTECIPAZIONE",
+      "FIDUCIA"
     ]
   },
   {
@@ -3271,7 +3294,7 @@
   },
   {
     "word": "PROBLEMA",
-    "nextWordList": ["SOLUZIONE", "MATEMATICA", "DATO", "FONDO"]
+    "nextWordList": ["SOLUZIONE", "MATEMATICA", "DATO", "FONDO", "MECCANICO"]
   },
   {
     "word": "DATO",
@@ -3730,7 +3753,7 @@
   },
   {
     "word": "SOLIDO",
-    "nextWordList": ["ROCCIOSO", "CUBO", "STATO", "VOLUME"]
+    "nextWordList": ["ROCCIOSO", "CUBO", "STATO", "VOLUME", "TORO"]
   },
   {
     "word": "PUBBLICO",
@@ -3911,12 +3934,53 @@
       "FOGLIO",
       "CIRCOLAZIONE",
       "IDENTITÀ",
-      "CARBONE"
+      "CARBONE",
+      "STAMPANTE"
     ]
   },
   {
     "word": "CREDITO",
-    "nextWordList": ["CARTA", "IMPOSTA", "NOTA"]
+    "nextWordList": ["CARTA", "IMPOSTA", "NOTA", "RESIDUO"]
+  },
+  {
+    "word": "RESIDUO",
+    "nextWordList": ["CREDITO", "FISSO", "ORGANICO"]
+  },
+  {
+    "word": "ORGANICO",
+    "nextWordList": ["RESIDUO", "COMPOSTO", "PERSONALE", "RIFIUTO"]
+  },
+  {
+    "word": "RIFIUTO",
+    "nextWordList": ["ORGANICO", "SPECIALE", "NETTO", "SOCIETÀ"]
+  },
+  {
+    "word": "COMPOSTO",
+    "nextWordList": ["ORGANICO", "INTERESSE", "SEDUTO", "NOME"]
+  },
+  {
+    "word": "SEDUTO",
+    "nextWordList": ["COMPOSTO", "TORO", "TERRA", "POSTO"]
+  },
+  {
+    "word": "TORO",
+    "nextWordList": ["SEDUTO", "MECCANICO", "SOLIDO", "ROSSO"]
+  },
+  {
+    "word": "MECCANICO",
+    "nextWordList": ["TORO", "OROLOGIO", "FIDUCIA", "PROBLEMA"]
+  },
+  {
+    "word": "FIDUCIA",
+    "nextWordList": ["MECCANICO", "VOTO", "PROSSIMO", "CLIENTE"]
+  },
+  {
+    "word": "CLIENTE",
+    "nextWordList": ["FIDUCIA", "FISSO", "RAGIONE", "FINALE", "POTENZIALE"]
+  },
+  {
+    "word": "RAGIONE",
+    "nextWordList": ["CLIENTE", "SOCIALE", "SONNO", "BUONA", "VITA", "DARE"]
   },
   {
     "word": "NOTA",
@@ -4671,7 +4735,7 @@
   },
   {
     "word": "NOME",
-    "nextWordList": ["ROSA", "CODICE", "COMUNE", "UTENTE"]
+    "nextWordList": ["ROSA", "CODICE", "COMUNE", "UTENTE", "COMPOSTO"]
   },
   {
     "word": "UTENTE",
@@ -4764,7 +4828,7 @@
   },
   {
     "word": "PROSSIMO",
-    "nextWordList": ["ANNO", "VICINO", "AVANTI", "PASSATO"]
+    "nextWordList": ["ANNO", "VICINO", "AVANTI", "PASSATO", "FIDUCIA"]
   },
   {
     "word": "VICINO",
@@ -5744,7 +5808,7 @@
   },
   {
     "word": "FINALE",
-    "nextWordList": ["VALUTAZIONE", "FILM", "SCENA", "AMARO", "FASE"]
+    "nextWordList": ["VALUTAZIONE", "FILM", "SCENA", "AMARO", "FASE", "CLIENTE"]
   },
   {
     "word": "FILM",
@@ -6117,7 +6181,8 @@
       "CLASSE",
       "CENTRO",
       "VITA",
-      "RISCATTO"
+      "RISCATTO",
+      "RAGIONE"
     ]
   },
   {
@@ -6479,7 +6544,7 @@
   },
   {
     "word": "POTENZIALE",
-    "nextWordList": ["DIFFERENZA", "ENERGIA", "ELETTRICO"]
+    "nextWordList": ["DIFFERENZA", "ENERGIA", "ELETTRICO", "CLIENTE"]
   },
   {
     "word": "LETTERA",
@@ -6945,7 +7010,8 @@
       "ETERNA",
       "UTILE",
       "SEGNALE",
-      "SPERANZA"
+      "SPERANZA",
+      "RAGIONE"
     ]
   },
   {
@@ -7022,7 +7088,7 @@
   },
   {
     "word": "STAMPANTE",
-    "nextWordList": ["LASER", "INCHIOSTRO", "CARTUCCIA"]
+    "nextWordList": ["LASER", "INCHIOSTRO", "CARTUCCIA", "CARTA"]
   },
   {
     "word": "CARTUCCIA",
@@ -7062,7 +7128,7 @@
   },
   {
     "word": "SPECIALE",
-    "nextWordList": ["OFFERTA", "GIORNO", "SQUADRA", "SLALOM"]
+    "nextWordList": ["OFFERTA", "GIORNO", "SQUADRA", "SLALOM", "RIFIUTO"]
   },
   {
     "word": "SLALOM",
@@ -7273,7 +7339,7 @@
   },
   {
     "word": "OROLOGIO",
-    "nextWordList": ["CAMPANILE", "QUARZO", "CIPOLLA", "LUSSO"]
+    "nextWordList": ["CAMPANILE", "QUARZO", "CIPOLLA", "LUSSO", "MECCANICO"]
   },
   {
     "word": "CIPOLLA",
