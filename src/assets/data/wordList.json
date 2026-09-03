@@ -251,7 +251,7 @@
   },
   {
     "word": "LEONE",
-    "nextWordList": ["FELINO", "RE", "MARINO", "MONTAGNA", "DENTE"]
+    "nextWordList": ["FELINO", "RE", "MARINO", "MONTAGNA", "DENTE", "SEGNO"]
   },
   {
     "word": "SALAME",
@@ -324,7 +324,8 @@
       "TEATRO",
       "PROVA",
       "FASE",
-      "MATERIA"
+      "MATERIA",
+      "ORA"
     ]
   },
   {
@@ -3964,7 +3965,7 @@
   },
   {
     "word": "TORO",
-    "nextWordList": ["SEDUTO", "MECCANICO", "SOLIDO", "ROSSO"]
+    "nextWordList": ["SEDUTO", "MECCANICO", "SOLIDO", "ROSSO", "SEGNO"]
   },
   {
     "word": "MECCANICO",
@@ -4700,7 +4701,19 @@
   },
   {
     "word": "SEGNO",
-    "nextWordList": ["TIRO", "PACE", "MENO", "FILO", "INDELEBILE"]
+    "nextWordList": [
+      "TIRO",
+      "PACE",
+      "MENO",
+      "FILO",
+      "INDELEBILE",
+      "TORO",
+      "LEONE",
+      "VERGINE",
+      "BILANCIA",
+      "ACQUARIO",
+      "PESCI"
+    ]
   },
   {
     "word": "MENO",
@@ -6002,7 +6015,7 @@
   },
   {
     "word": "ORA",
-    "nextWordList": ["ULTIMA", "LEGALE", "CAMBIO", "VEDERE", "ARIA"]
+    "nextWordList": ["ULTIMA", "LEGALE", "CAMBIO", "VEDERE", "ARIA", "PRIMA"]
   },
   {
     "word": "LEGALE",
@@ -6511,24 +6524,15 @@
   },
   {
     "word": "VERGINE",
-    "nextWordList": ["SANTA", "ACQUARIO", "PESCI", "BILANCIA", "CD"]
+    "nextWordList": ["SANTA", "CD", "SEGNO"]
   },
   {
     "word": "ACQUARIO",
-    "nextWordList": ["VERGINE", "PESCI", "BILANCIA", "MARINO", "VETRO"]
+    "nextWordList": ["MARINO", "VETRO", "SEGNO"]
   },
   {
     "word": "PESCI",
-    "nextWordList": [
-      "ACQUARIO",
-      "VERGINE",
-      "BILANCIA",
-      "RETE",
-      "MARE",
-      "FIUME",
-      "FACCIA",
-      "BANCO"
-    ]
+    "nextWordList": ["RETE", "MARE", "FIUME", "FACCIA", "BANCO", "SEGNO"]
   },
   {
     "word": "FIUME",
@@ -6625,15 +6629,7 @@
   },
   {
     "word": "BILANCIA",
-    "nextWordList": [
-      "CUCINA",
-      "ACQUARIO",
-      "PESCI",
-      "VERGINE",
-      "PIATTO",
-      "ELETTRONICA",
-      "AGO"
-    ]
+    "nextWordList": ["CUCINA", "PIATTO", "ELETTRONICA", "AGO", "SEGNO"]
   },
   {
     "word": "PIATTO",
@@ -7115,7 +7111,8 @@
       "GUERRA",
       "CAMPO",
       "CLASSIFICA",
-      "COMANDO"
+      "COMANDO",
+      "PRIMA"
     ]
   },
   {
