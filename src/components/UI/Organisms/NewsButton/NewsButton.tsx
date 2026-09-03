@@ -27,7 +27,7 @@ import { KeyboardStatusList } from "@/typings/keyboardStatus";
 const NewsButton: React.FC = () => {
   // Leave it here so it runs every time the component is updated
   const storedReadNews: number | null = readFromLocalStorage(
-    LS_KEY_LIST.READ_NEWS
+    LS_KEY_LIST.READ_NEWS,
   );
 
   const [showModal, setShowModal] = useState<boolean>(false);

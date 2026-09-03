@@ -74,7 +74,7 @@ const achievements: Achievement[] = [
   {
     type: "readNews",
     title: "Informato 📰",
-    description: "Leggi almeno una notizia",
+    description: "Leggi almeno una volta la sezione News",
   },
 ];
 
