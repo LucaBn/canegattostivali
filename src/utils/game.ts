@@ -7,13 +7,15 @@ import {
 
 interface Props {
   wordListLength?: number;
+  excludedWords?: string[];
 }
 
 const createWordSequence = ({
   wordListLength = WORD_LIST_LENGTH,
+  excludedWords: wordsToExclude = [],
 }: Props): string[] => {
   const usedWords = new Set<string>();
-  const excludedWords = new Set<string>();
+  const excludedWords = new Set<string>(wordsToExclude);
   const sequence: string[] = [];
 
   const excludeRelatedWords = (word: string) => {
@@ -69,6 +71,7 @@ const createWordSequence = ({
       sequence.length = 0;
       usedWords.clear();
       excludedWords.clear();
+      wordsToExclude.forEach((word) => excludedWords.add(word));
       currentWord = getRandomUnusedWord();
     }
   }

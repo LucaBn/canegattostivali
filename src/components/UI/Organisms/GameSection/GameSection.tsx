@@ -401,6 +401,7 @@ const GameSection: React.FC<Props> = ({
 
     const newWordSequence = createWordSequence({
       wordListLength: WORD_LIST_LENGTH,
+      excludedWords: initialWordSequence,
     });
     if (RUN_TEST === "true") {
       console.log({ newWordSequence });
