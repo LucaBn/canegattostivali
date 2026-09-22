@@ -161,7 +161,8 @@
       "FINTA",
       "AMICO",
       "POLTRONA",
-      "CUOIO"
+      "CUOIO",
+      "STRATO"
     ]
   },
   {
@@ -173,7 +174,8 @@
       "GOCCIA",
       "BATTENTE",
       "OMBRELLO",
-      "ROVESCIO"
+      "ROVESCIO",
+      "LEGGERA"
     ]
   },
   {
@@ -229,7 +231,8 @@
       "OCCASIONALE",
       "TROVARE",
       "STABILE",
-      "POSTO"
+      "POSTO",
+      "DOMESTICO"
     ]
   },
   {
@@ -351,7 +354,7 @@
   },
   {
     "word": "TAGLIO",
-    "nextWordList": ["CAPELLI", "PIZZA", "DOPPIO", "CORTO", "ARMA"]
+    "nextWordList": ["CAPELLI", "PIZZA", "DOPPIO", "CORTO", "ARMA", "FERITA"]
   },
   {
     "word": "DOPPIO",
@@ -457,7 +460,7 @@
   },
   {
     "word": "TERRENO",
-    "nextWordList": ["FERTILE", "CAMPO", "GIOCO"]
+    "nextWordList": ["FERTILE", "CAMPO", "GIOCO", "STRATO"]
   },
   {
     "word": "GIOCO",
@@ -898,7 +901,8 @@
       "ONDA",
       "FREQUENZA",
       "QUOTA",
-      "QUALITÀ"
+      "QUALITÀ",
+      "TENSIONE"
     ]
   },
   {
@@ -996,7 +1000,8 @@
       "COCKTAIL",
       "CHIMICA",
       "PIRAMIDE",
-      "NAVALE"
+      "NAVALE",
+      "PREPARAZIONE"
     ]
   },
   {
@@ -1533,7 +1538,8 @@
       "VOLO",
       "CACCIA",
       "TRASPORTO",
-      "OBLÒ"
+      "OBLÒ",
+      "TRAFFICO"
     ]
   },
   {
@@ -1595,7 +1601,7 @@
   },
   {
     "word": "ISOLA",
-    "nextWordList": ["TESORO", "CUCINA", "PASQUA"]
+    "nextWordList": ["TESORO", "CUCINA", "PASQUA", "TRAFFICO"]
   },
   {
     "word": "PASQUA",
@@ -1670,7 +1676,8 @@
       "CHIODO",
       "CRAVATTA",
       "TASCA",
-      "BOTTONE"
+      "BOTTONE",
+      "LEGGERA"
     ]
   },
   {
@@ -1869,7 +1876,14 @@
   },
   {
     "word": "AMBIENTE",
-    "nextWordList": ["STANZA", "MUSICA", "LAVORO", "TEMPERATURA", "ACQUATICO"]
+    "nextWordList": [
+      "STANZA",
+      "MUSICA",
+      "LAVORO",
+      "TEMPERATURA",
+      "ACQUATICO",
+      "DOMESTICO"
+    ]
   },
   {
     "word": "TEMPERATURA",
@@ -1929,7 +1943,8 @@
       "ACCORDO",
       "BATTUTA",
       "CANTO",
-      "PALLA"
+      "PALLA",
+      "LEGGERA"
     ]
   },
   {
@@ -2035,7 +2050,8 @@
       "LANCIO",
       "BIBLIOTECA",
       "CAPITOLO",
-      "INDICE"
+      "INDICE",
+      "COPIA"
     ]
   },
   {
@@ -2187,7 +2203,15 @@
   },
   {
     "word": "GARA",
-    "nextWordList": ["ELIMINAZIONE", "SCI", "GIUDICE", "STAFFETTA", "OLIMPICA"]
+    "nextWordList": [
+      "ELIMINAZIONE",
+      "SCI",
+      "GIUDICE",
+      "STAFFETTA",
+      "OLIMPICA",
+      "ATLETICA",
+      "PREPARAZIONE"
+    ]
   },
   {
     "word": "GIUDICE",
@@ -2230,7 +2254,7 @@
   },
   {
     "word": "CHIUSO",
-    "nextWordList": ["CIRCUITO", "GRUPPO", "NASO", "NUMERO"]
+    "nextWordList": ["CIRCUITO", "GRUPPO", "NASO", "NUMERO", "TRAFFICO"]
   },
   {
     "word": "ELETTRICO",
@@ -2247,7 +2271,14 @@
   },
   {
     "word": "APERTA",
-    "nextWordList": ["RELAZIONE", "MENTE", "PARENTESI", "QUESTIONE", "COPPIA"]
+    "nextWordList": [
+      "RELAZIONE",
+      "MENTE",
+      "PARENTESI",
+      "QUESTIONE",
+      "COPPIA",
+      "FERITA"
+    ]
   },
   {
     "word": "APERTO",
@@ -2493,7 +2524,7 @@
   },
   {
     "word": "GHIACCIO",
-    "nextWordList": ["SECCO", "SPRAY", "BORSA", "BLOCCO"]
+    "nextWordList": ["SECCO", "SPRAY", "BORSA", "BLOCCO", "STRATO"]
   },
   {
     "word": "BLOCCO",
@@ -2663,7 +2694,8 @@
       "CARTELLINO",
       "PIANETA",
       "TAPPETO",
-      "TORO"
+      "TORO",
+      "PINO"
     ]
   },
   {
@@ -2724,7 +2756,7 @@
   },
   {
     "word": "CARBONE",
-    "nextWordList": ["VEGETALE", "CARTA", "MINIERA", "NERO"]
+    "nextWordList": ["VEGETALE", "CARTA", "MINIERA", "NERO", "COPIA"]
   },
   {
     "word": "MINIERA",
@@ -2975,7 +3007,8 @@
       "SOTTO",
       "FANTASMA",
       "SACRIFICIO",
-      "CRITICO"
+      "CRITICO",
+      "ANIMALE"
     ]
   },
   {
@@ -3208,7 +3241,15 @@
   },
   {
     "word": "BUONA",
-    "nextWordList": ["STRADA", "SERATA", "CONDOTTA", "FORTUNA", "RAGIONE"]
+    "nextWordList": [
+      "STRADA",
+      "SERATA",
+      "CONDOTTA",
+      "FORTUNA",
+      "RAGIONE",
+      "PREPARAZIONE",
+      "COMPAGNIA"
+    ]
   },
   {
     "word": "CONDOTTA",
@@ -3264,7 +3305,7 @@
   },
   {
     "word": "SOCCORSO",
-    "nextWordList": ["PRONTO", "MEDICO", "OPERAZIONE"]
+    "nextWordList": ["PRONTO", "MEDICO", "OPERAZIONE", "ALPINO"]
   },
   {
     "word": "OPERAZIONE",
@@ -3656,7 +3697,7 @@
   },
   {
     "word": "STAGIONE",
-    "nextWordList": ["VERDURE", "CAMBIO", "FRUTTA", "ALTA"]
+    "nextWordList": ["VERDURE", "CAMBIO", "FRUTTA", "ALTA", "BELLA"]
   },
   {
     "word": "CAMBIO",
@@ -4193,7 +4234,7 @@
   },
   {
     "word": "AGO",
-    "nextWordList": ["PUNTURA", "FILO", "BUSSOLA", "BILANCIA"]
+    "nextWordList": ["PUNTURA", "FILO", "BUSSOLA", "BILANCIA", "PINO"]
   },
   {
     "word": "BUSSOLA",
@@ -4303,7 +4344,7 @@
   },
   {
     "word": "FREDDO",
-    "nextWordList": ["PRENDERE", "SANGUE", "CAFFÈ", "BRIVIDO", "COLPO"]
+    "nextWordList": ["PRENDERE", "SANGUE", "CAFFÈ", "BRIVIDO", "COLPO", "CLIMA"]
   },
   {
     "word": "BRIVIDO",
@@ -4408,7 +4449,7 @@
   },
   {
     "word": "IDEA",
-    "nextWordList": ["OPINIONE", "BRILLANTE", "REGALO", "FISSA"]
+    "nextWordList": ["OPINIONE", "BRILLANTE", "REGALO", "FISSA", "BELLA"]
   },
   {
     "word": "REGALO",
@@ -4667,7 +4708,83 @@
   },
   {
     "word": "ARCO",
-    "nextWordList": ["PACE", "TIRO", "FRECCIA"]
+    "nextWordList": ["PACE", "TIRO", "FRECCIA", "ALPINO"]
+  },
+  {
+    "word": "ALPINO",
+    "nextWordList": ["ARCO", "SCI", "SOCCORSO", "CLIMA"]
+  },
+  {
+    "word": "CLIMA",
+    "nextWordList": ["ALPINO", "FREDDO", "MARITTIMO", "TENSIONE"]
+  },
+  {
+    "word": "TENSIONE",
+    "nextWordList": ["CLIMA", "MOMENTO", "ALTA", "SUPERFICIALE"]
+  },
+  {
+    "word": "SUPERFICIALE",
+    "nextWordList": ["TENSIONE", "FERITA", "STRATO"]
+  },
+  {
+    "word": "STRATO",
+    "nextWordList": ["SUPERFICIALE", "PELLE", "TERRENO", "GHIACCIO"]
+  },
+  {
+    "word": "FERITA",
+    "nextWordList": ["SUPERFICIALE", "APERTA", "LEGGERA", "TAGLIO"]
+  },
+  {
+    "word": "LEGGERA",
+    "nextWordList": ["FERITA", "MUSICA", "ATLETICA", "PIOGGIA", "GIACCA"]
+  },
+  {
+    "word": "ATLETICA",
+    "nextWordList": ["LEGGERA", "GARA", "PREPARAZIONE", "PISTA"]
+  },
+  {
+    "word": "PREPARAZIONE",
+    "nextWordList": [
+      "ATLETICA",
+      "PIATTO",
+      "BASE",
+      "IMPASTO",
+      "BUONA",
+      "GARA",
+      "ESAME"
+    ]
+  },
+  {
+    "word": "MARITTIMO",
+    "nextWordList": ["PINO", "CLIMA", "TRASPORTO", "COMMERCIO", "TRAFFICO"]
+  },
+  {
+    "word": "TRAFFICO",
+    "nextWordList": ["MARITTIMO", "CHIUSO", "AEREO", "RETE", "ISOLA"]
+  },
+  {
+    "word": "PINO",
+    "nextWordList": ["MARITTIMO", "AGO", "ROSSO", "DOMESTICO"]
+  },
+  {
+    "word": "DOMESTICO",
+    "nextWordList": ["PINO", "AMBIENTE", "ANIMALE", "LAVORO"]
+  },
+  {
+    "word": "ANIMALE",
+    "nextWordList": ["DOMESTICO", "SPIRITO", "SOCIALE", "COMPAGNIA"]
+  },
+  {
+    "word": "COMPAGNIA",
+    "nextWordList": ["ANIMALE", "BUONA", "BELLA"]
+  },
+  {
+    "word": "BELLA",
+    "nextWordList": ["COMPAGNIA", "VITA", "STAGIONE", "IDEA", "COPIA"]
+  },
+  {
+    "word": "COPIA",
+    "nextWordList": ["BELLA", "GIORNALE", "DIGITALE", "LIBRO", "CARBONE"]
   },
   {
     "word": "TIRO",
@@ -5028,7 +5145,8 @@
       "RACCHETTA",
       "DISCESA",
       "SLALOM",
-      "PISTA"
+      "PISTA",
+      "ALPINO"
     ]
   },
   {
@@ -5066,7 +5184,7 @@
   },
   {
     "word": "MOMENTO",
-    "nextWordList": ["GIUSTO", "FORZA", "PRIMO", "STORICO"]
+    "nextWordList": ["GIUSTO", "FORZA", "PRIMO", "STORICO", "TENSIONE"]
   },
   {
     "word": "STORICO",
@@ -5244,7 +5362,8 @@
       "CRONACA",
       "RUBRICA",
       "COLONNA",
-      "NOTIZIA"
+      "NOTIZIA",
+      "COPIA"
     ]
   },
   {
@@ -5462,7 +5581,7 @@
   },
   {
     "word": "COMMERCIO",
-    "nextWordList": ["AGENTE", "ECONOMIA", "CAMERA", "DETTAGLIO"]
+    "nextWordList": ["AGENTE", "ECONOMIA", "CAMERA", "DETTAGLIO", "MARITTIMO"]
   },
   {
     "word": "DETTAGLIO",
@@ -5670,7 +5789,8 @@
       "COSCIENZA",
       "PROVA",
       "PRENDERE",
-      "TEORIA"
+      "TEORIA",
+      "PREPARAZIONE"
     ]
   },
   {
@@ -6196,7 +6316,8 @@
       "CENTRO",
       "VITA",
       "RISCATTO",
-      "RAGIONE"
+      "RAGIONE",
+      "ANIMALE"
     ]
   },
   {
@@ -6433,7 +6554,7 @@
   },
   {
     "word": "PISTA",
-    "nextWordList": ["BORDO", "SCI", "BALLO", "CORSA"]
+    "nextWordList": ["BORDO", "SCI", "BALLO", "CORSA", "ATLETICA"]
   },
   {
     "word": "DIARIO",
@@ -6642,7 +6763,8 @@
       "ANGOLO",
       "PRIMO",
       "PLASTICA",
-      "STOP"
+      "STOP",
+      "PREPARAZIONE"
     ]
   },
   {
@@ -6845,7 +6967,15 @@
   },
   {
     "word": "RETE",
-    "nextWordList": ["PESCI", "CANNA", "PESCA", "CALZE", "INTERNET", "CAVO"]
+    "nextWordList": [
+      "PESCI",
+      "CANNA",
+      "PESCA",
+      "CALZE",
+      "INTERNET",
+      "CAVO",
+      "TRAFFICO"
+    ]
   },
   {
     "word": "CALZE",
@@ -7008,7 +7138,8 @@
       "UTILE",
       "SEGNALE",
       "SPERANZA",
-      "RAGIONE"
+      "RAGIONE",
+      "BELLA"
     ]
   },
   {
@@ -7142,7 +7273,14 @@
   },
   {
     "word": "DIGITALE",
-    "nextWordList": ["FIRMA", "IMPRONTA", "CORNICE", "STAMPA", "IDENTITÀ"]
+    "nextWordList": [
+      "FIRMA",
+      "IMPRONTA",
+      "CORNICE",
+      "STAMPA",
+      "IDENTITÀ",
+      "COPIA"
+    ]
   },
   {
     "word": "CORNICE",
@@ -7356,7 +7494,7 @@
   },
   {
     "word": "IMPASTO",
-    "nextWordList": ["FOCACCIA", "PIZZA", "PANE"]
+    "nextWordList": ["FOCACCIA", "PIZZA", "PANE", "PREPARAZIONE"]
   },
   {
     "word": "QUARZO",
@@ -7447,7 +7585,7 @@
   },
   {
     "word": "TRASPORTO",
-    "nextWordList": ["MEZZO", "PUBBLICO", "AEREO"]
+    "nextWordList": ["MEZZO", "PUBBLICO", "AEREO", "MARITTIMO"]
   },
   {
     "word": "BANCO",
