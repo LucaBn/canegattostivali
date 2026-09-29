@@ -1076,6 +1076,74 @@
   },
   {
     "id": 75,
+    "wordList": [
+      "FERRO",
+      "CAVALLO",
+      "RAZZA",
+      "ARIANA",
+      "GRANDE",
+      "FRATELLO",
+      "MINORE",
+      "ASIA",
+      "ARGENTO",
+      "VIVO",
+      "VEGETO"
+    ]
+  },
+  {
+    "id": 76,
+    "wordList": [
+      "UNITÀ",
+      "MISURA",
+      "SICUREZZA",
+      "LAVORO",
+      "MANUALE",
+      "ISTRUZIONI",
+      "MONTAGGIO",
+      "CATENA",
+      "BICICLETTA",
+      "CAMPANELLO",
+      "ALLARME"
+    ]
+  },
+  {
+    "id": 77,
+    "wordList": [
+      "ALABARDA",
+      "SPAZIALE",
+      "STAZIONE",
+      "TERMINI",
+      "SERVIZIO",
+      "LEVA",
+      "CAMBIO",
+      "MEDICO",
+      "LEGALE",
+      "ORA",
+      "ARIA"
+    ]
+  },
+  {
+    "id": 78,
+    "wordList": [
+      "MANTENERE",
+      "PAROLA",
+      "ULTIMA",
+      "CENA",
+      "INVITO",
+      "DECLINARE",
+      "VERBO",
+      "ESSERE",
+      "ALTEZZA",
+      "BASE",
+      "KARAOKE"
+    ]
+  },
+  {
+    "id": 90,
+    "wordList": ["PAURA", "NOVANTA"]
+  },
+  {
+    "id": 100,
     "wordList": ["CANE", "GATTO", "STIVALI"]
   }
 ]
