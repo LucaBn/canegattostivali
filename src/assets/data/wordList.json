@@ -28,7 +28,8 @@
       "CAVALLO",
       "PIANOFORTE",
       "PAGLIA",
-      "OCCHIO"
+      "OCCHIO",
+      "STAMPA"
     ]
   },
   {
@@ -334,7 +335,15 @@
   },
   {
     "word": "ULTIMA",
-    "nextWordList": ["FILA", "CENA", "VOLTA", "ORA", "SPIAGGIA", "POSIZIONE"]
+    "nextWordList": [
+      "FILA",
+      "CENA",
+      "VOLTA",
+      "ORA",
+      "SPIAGGIA",
+      "POSIZIONE",
+      "PAROLA"
+    ]
   },
   {
     "word": "CORTI",
@@ -7156,7 +7165,8 @@
       "DIO",
       "DEFINIZIONE",
       "TERMINE",
-      "LIBERTÀ"
+      "LIBERTÀ",
+      "ULTIMA"
     ]
   },
   {
@@ -7580,7 +7590,8 @@
       "DIGITALE",
       "SILENZIO",
       "SALA",
-      "LIBERTÀ"
+      "LIBERTÀ",
+      "CODA"
     ]
   },
   {
