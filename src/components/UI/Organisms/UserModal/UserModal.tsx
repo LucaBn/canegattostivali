@@ -38,6 +38,10 @@ const UserModal: React.FC<Props> = ({ show, setShow }: Props) => {
   const lastLevelCompleted = storedUserData?.lastLevelCompleted || 0;
 
   useEffect(() => {
+    if (storedUserData?.username) {
+      setUsername(storedUserData?.username);
+    }
+
     if (show) {
       playSound("/assets/sounds/modal-open.wav");
     } else {
@@ -79,23 +83,15 @@ const UserModal: React.FC<Props> = ({ show, setShow }: Props) => {
           <hr />
 
           <p className="mb-1">
-            <span className="d-inline-block stats__icon">🏆</span>Partite vinte:{" "}
-            {matchesWon}
+            <span className="d-inline-block stats__icon">🏆</span>Partite Random
+            vinte: {matchesWon}
           </p>
           <p>
-            <span className="d-inline-block stats__icon">⏳</span>Miglior tempo:{" "}
-            {bestTime === 0 ? "-" : formatTime(bestTime)}
+            <span className="d-inline-block stats__icon">⏳</span>Miglior tempo
+            in Random: {bestTime === 0 ? "-" : formatTime(bestTime)}
           </p>
 
           <Achievements />
-
-          <small className="mt-4">
-            <em>
-              * Le statistiche tengono conto solo delle partite giocate in
-              modalità random, mentre non vengono conteggiate le partite custom
-              create dagli utenti e la modalità a livelli!
-            </em>
-          </small>
         </div>
       </Modal.Body>
       <Modal.Footer>
