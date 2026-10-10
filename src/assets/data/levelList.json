@@ -1,7 +1,14 @@
 [
   {
     "id": 1,
-    "wordList": ["CANE", "INCROCIO", "STRADALE", "POLIZIA", "AGENTE", "CHIMICO"]
+    "wordList": [
+      "INCROCIO",
+      "STRADALE",
+      "POLIZIA",
+      "AGENTE",
+      "CHIMICO",
+      "BAGNO"
+    ]
   },
   {
     "id": 2,
@@ -1077,7 +1084,7 @@
   {
     "id": 75,
     "wordList": [
-      "FERRO",
+      "FEBBRE",
       "CAVALLO",
       "RAZZA",
       "ARIANA",
@@ -1119,7 +1126,7 @@
       "MEDICO",
       "LEGALE",
       "ORA",
-      "ARIA"
+      "PUNTA"
     ]
   },
   {
@@ -1139,11 +1146,331 @@
     ]
   },
   {
+    "id": 79,
+    "wordList": [
+      "IDEM",
+      "PATATE",
+      "FORNO",
+      "GAS",
+      "LUCE",
+      "OCCHI",
+      "MANDORLA",
+      "LATTE",
+      "POLVERE",
+      "SPARO",
+      "VIA"
+    ]
+  },
+  {
+    "id": 80,
+    "wordList": [
+      "OFFRIRE",
+      "PASSAGGIO",
+      "PRIMA",
+      "VISTA",
+      "PUNTO",
+      "METTERE",
+      "FUOCO",
+      "LENTO",
+      "TARTARUGA",
+      "TERRA",
+      "PROMESSA"
+    ]
+  },
+  {
+    "id": 81,
+    "wordList": [
+      "TESI",
+      "DISCUSSIONE",
+      "ARGOMENTO",
+      "TRATTARE",
+      "GUANTI",
+      "PORTIERE",
+      "SECONDO",
+      "FINE",
+      "STORIA",
+      "BUONANOTTE",
+      "FIORELLINO"
+    ]
+  },
+  {
+    "id": 82,
+    "wordList": [
+      "APRITI",
+      "CIELO",
+      "STELLATO",
+      "RISTORANTE",
+      "CINESE",
+      "MANDARINO",
+      "PIANTA",
+      "STABILE",
+      "SALDO",
+      "STRALCIO",
+      "BRANO"
+    ]
+  },
+  {
+    "id": 83,
+    "wordList": [
+      "PURIFICATORE",
+      "ARIA",
+      "COMPRESSA",
+      "PASTIGLIA",
+      "FRENO",
+      "DISCO",
+      "ORARIO",
+      "APERTURA",
+      "SCACCHI",
+      "TOVAGLIA",
+      "ANTIMACCHIA"
+    ]
+  },
+  {
+    "id": 84,
+    "wordList": [
+      "PAPERELLA",
+      "GOMMA",
+      "CANCELLARE",
+      "CRONOLOGIA",
+      "BROWSER",
+      "INTERNET",
+      "CASA",
+      "RIPOSO",
+      "GIORNO",
+      "MEMORIA",
+      "FOTOGRAFICA"
+    ]
+  },
+  {
+    "id": 85,
+    "wordList": [
+      "TERZO",
+      "TEMPO",
+      "PERDERE",
+      "BUSSOLA",
+      "AGO",
+      "PINO",
+      "MARITTIMO",
+      "TRAFFICO",
+      "ARMI",
+      "PORTO",
+      "MERCANTILE"
+    ]
+  },
+  {
+    "id": 86,
+    "wordList": [
+      "GESTO",
+      "OMBRELLO",
+      "MANICO",
+      "SCOPA",
+      "VAPORE",
+      "PIASTRA",
+      "CAPELLI",
+      "TAGLIO",
+      "FERITA",
+      "APERTA",
+      "DIALOGO"
+    ]
+  },
+  {
+    "id": 87,
+    "wordList": [
+      "SCENDERE",
+      "PISTA",
+      "RETTILINEO",
+      "MOTO",
+      "ACQUA",
+      "POMPA",
+      "BENZINA",
+      "VERDE",
+      "NUMERO",
+      "SCARPE",
+      "TREKKING"
+    ]
+  },
+  {
+    "id": 88,
+    "wordList": [
+      "STRIDULA",
+      "VOCE",
+      "CAPITOLO",
+      "CHIUSO",
+      "CIRCUITO",
+      "ELETTRICO",
+      "QUADRO",
+      "CORNICE",
+      "DIGITALE",
+      "COPIA",
+      "INCOLLA"
+    ]
+  },
+  {
+    "id": 89,
+    "wordList": [
+      "CRITICO",
+      "ARTE",
+      "GALLERIA",
+      "VENTO",
+      "POPPA",
+      "NAVE",
+      "FANTASMA",
+      "OPERA",
+      "BENE",
+      "MEGLIO",
+      "TARDI"
+    ]
+  },
+  {
     "id": 90,
     "wordList": ["PAURA", "NOVANTA"]
   },
   {
+    "id": 91,
+    "wordList": [
+      "BOMBA",
+      "MANO",
+      "STRETTA",
+      "VITA",
+      "MAESTRO",
+      "JUDO",
+      "MOSSA",
+      "FOTO",
+      "PATENTE",
+      "LIBRETTO",
+      "ASSENZE"
+    ]
+  },
+  {
+    "id": 92,
+    "wordList": [
+      "ORARIO",
+      "RIDOTTO",
+      "OSSO",
+      "RADIO",
+      "STAZIONE",
+      "METROPOLITANA",
+      "LEGGENDA",
+      "VIVENTE",
+      "PRESEPE",
+      "PASTORE",
+      "TEDESCO"
+    ]
+  },
+  {
+    "id": 93,
+    "wordList": [
+      "PER",
+      "POCO",
+      "FARE",
+      "LEVA",
+      "MONDO",
+      "ALTRO",
+      "AVANTI",
+      "PASSO",
+      "OCA",
+      "PENNA",
+      "STILOGRAFICA"
+    ]
+  },
+  {
+    "id": 94,
+    "wordList": [
+      "TRANCIO",
+      "PIZZA",
+      "METRO",
+      "SARTO",
+      "ABITO",
+      "SPOSA",
+      "BOUQUET",
+      "MAZZO",
+      "ALZARE",
+      "GOMITO",
+      "TENNISTA"
+    ]
+  },
+  {
+    "id": 95,
+    "wordList": [
+      "DOTTORATO",
+      "RICERCA",
+      "SVILUPPO",
+      "ECONOMICO",
+      "DANNO",
+      "ENTITÀ",
+      "IMPORTANZA",
+      "VITALE",
+      "SPAZIO",
+      "AEREO",
+      "PRIVATO"
+    ]
+  },
+  {
+    "id": 96,
+    "wordList": [
+      "SORPRESA",
+      "FESTA",
+      "NATALE",
+      "LUCI",
+      "POSIZIONE",
+      "SCOMODA",
+      "VERITÀ",
+      "OBBLIGO",
+      "FIRMA",
+      "CALCE",
+      "VIVA"
+    ]
+  },
+  {
+    "id": 97,
+    "wordList": [
+      "RIMESSA",
+      "LATERALE",
+      "PENSIERO",
+      "PROFONDO",
+      "SONNO",
+      "RAGIONE",
+      "ESISTERE",
+      "GRAZIE",
+      "ATTENZIONE",
+      "CLIENTE",
+      "ABITUALE"
+    ]
+  },
+  {
+    "id": 98,
+    "wordList": [
+      "MAGNETICO",
+      "POLO",
+      "NORD",
+      "MACEDONIA",
+      "FRUTTA",
+      "ESTRATTO",
+      "CONTO",
+      "TENERE",
+      "BOTTA",
+      "FORTUNA",
+      "CIECA"
+    ]
+  },
+  {
+    "id": 99,
+    "wordList": [
+      "LAVANDA",
+      "PIEDI",
+      "PIATTI",
+      "PRONTI",
+      "VIA",
+      "FUGA",
+      "GAS",
+      "NEON",
+      "LAMPADA",
+      "MURO",
+      "BERLINO"
+    ]
+  },
+  {
     "id": 100,
-    "wordList": ["CANE", "GATTO", "STIVALI"]
+    "wordList": ["CUCCIA", "CANE", "GATTO", "STIVALI"]
   }
 ]
