@@ -6213,7 +6213,7 @@
   },
   {
     "word": "CENA",
-    "nextWordList": ["ULTIMA", "NATALE", "RISTORANTE", "PASTO", "PRANZO"]
+    "nextWordList": ["ULTIMA", "NATALE", "RISTORANTE", "PASTO"]
   },
   {
     "word": "ORA",
@@ -6301,7 +6301,7 @@
   },
   {
     "word": "PRANZO",
-    "nextWordList": ["SACCO", "NATALE", "CENA", "PASTO", "PAUSA", "SALA"]
+    "nextWordList": ["SACCO", "NATALE", "PASTO", "PAUSA", "SALA"]
   },
   {
     "word": "PATATE",
