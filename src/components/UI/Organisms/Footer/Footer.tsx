@@ -9,7 +9,7 @@ import { AUTHOR_NAME, WEBSITE_URL } from "@/constants/app";
 
 const siteUrl: string = WEBSITE_URL;
 const authorName: string = AUTHOR_NAME;
-const authorLink: string = "https://github.com/LucaBn";
+const authorLink: string = "https://luca-apps.pages.dev";
 const googlePlayLink: string =
   "https://play.google.com/store/apps/details?id=it.canegattostivali.app";
 const pimpMyJpgLink: string = "https://www.pimpmyjpg.com/it";
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
               Creato con ♥ da{" "}
               <a
                 href={authorLink}
-                title="Visita la Pagina GitHub di LucaBn"
+                title="Vedi tutti i progetti di LucaBn"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 className="text-white"
