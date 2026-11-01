@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 // Components
 import Navbar from "@/components/UI/Organisms/Navbar/Navbar";
 import Footer from "@/components/UI/Organisms/Footer/Footer";
+import CheatSheet from "@/components/UI/Templates/CheatSheet/CheatSheet";
 
 // Providers
 import { useTheme } from "@/components/providers/ThemeProvider";
@@ -21,7 +22,7 @@ import {
   calculateAverageNextWordListLength,
 } from "@/tests/wordListTest";
 import { runLevelListTest } from "@/tests/levelListTest";
-import { useBackground } from "../providers/BackgroundProvider";
+import { useBackground } from "@/components/providers/BackgroundProvider";
 
 const App: React.FC = () => {
   const { theme } = useTheme();
@@ -56,6 +57,20 @@ const App: React.FC = () => {
       }
     }
   }, []);
+
+  const { pathname } = window.location;
+
+  if (pathname === "/cheat-sheet") {
+    return (
+      <div className={`${textColorClass}`}>
+        <Navbar />
+        <main className={`bg-body-secondary ${backgroundEffect}`}>
+          <CheatSheet />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className={`${textColorClass}`}>

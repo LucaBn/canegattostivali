@@ -35,7 +35,9 @@ const NewsModal: React.FC<Props> = ({ show, setShow }: Props) => {
               <p className="me-auto mb-0 pe-3">{news.title}</p>
               <small className="text-nowrap">{news.date}</small>
             </Toast.Header>
-            <Toast.Body>{news.body}</Toast.Body>
+            <Toast.Body className="white-space-pre-line">
+              {news.body}
+            </Toast.Body>
           </Toast>
         ))}
       </Modal.Body>
